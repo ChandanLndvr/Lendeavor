@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="{% static 'lndvrlogo.png' %}">
+    <title>{% block title %}{% endblock %}Lendeavor USA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'CSS/mainPage.css' %}" />
+</head>
+
+<body class="wrapper d-flex flex-column min-vh-100">
+    {% block body %}{% endblock %}
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-black sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp"
+                    alt="Lendeavor Logo" />
+            </a>
+            <!--    The navbar-toggler button is used for mobile responsiveness. Here's what it does:
+                    Purpose:
+
+                    Desktop: Navigation links are visible in a horizontal row
+                    Mobile/Tablet: Navigation links are hidden and replaced with a "hamburger menu" button (☰)
+                    When clicked: The button toggles the visibility of the navigation menu  -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/aboutUs">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/careers">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contactUs">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/financialNews">Financial News</a></li>
+                            <li><a class="dropdown-item" href="/caseStudy">Case Study</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex ms-auto mt-2 mt-lg-0 gap-2">
+                    <a href="/signin" class="btn btn-outline-light">Sign In</a>
+                    <a href="/login" class="btn btn-success">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3D Background -->
+    <div id="vanta-bg"></div>
+
+    <!-- Vanta.js and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+
+    <script>
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1b74ff, // Soft bluish tone for lines
+            //color: 0xffffff, // White lines/points
+            backgroundColor: 0x000000, // ignored due to CSS background
+            points: 15.0,
+            maxDistance: 20.0,
+            spacing: 15.0
+        });
+    </script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Footer (after all content and Vanta background) -->
+    <footer class="footer bg-black text-white mt-auto">
+        <div class="container-fluid py-4 d-flex flex-column flex-md-row align-items-center position-relative">
+
+            <!-- Left: Logo -->
+            <div class="position-absolute start-0 ms-3">
+                <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp" alt="Lendeavor Logo"
+                    class="footer-logo" />
+            </div>
+
+            <!-- Center: Text & Links -->
+            <div class="mx-auto text-center">
+                <p class="mb-1">&copy; 2025 Lendeavor USA. All rights reserved.</p>
+                <p class="mb-0">
+                    <a href="/prvacyPolicy" class="text-decoration-none">Privacy Policy</a> |
+                    <a href="terms" class="text-decoration-none ">Terms of Service</a> |
+                    <a href="/contactUs" class="text-decoration-none ">Contact</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+
+</html>
