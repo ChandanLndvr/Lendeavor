@@ -5,27 +5,27 @@
     {% load static %}
     <meta charset="UTF-8" />
     <link rel="icon" type="image/png" href="{% static 'lndvrlogo.png' %}">
-    <title>{% block title %}{% endblock %}Lendeavor USA</title>
+    <title>Lndvr / login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'CSS/mainPage.css' %}" />
-    <!-- Font Awesome (for icons like map, phone, email) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-        integrity="sha512-Xxv7AzzFFWAt8E5w4Qgd2vh0v0bR2gJ1P+6gKhFb2D7eVcHcd0Vb93uYkVQ5trB2C4eMDHD9Z1zzYQa/U9qPGg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+    <link rel="stylesheet" href="{% static 'CSS/signUp.css' %}" />
     <!-- TrustBox script -->
-
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-
     <!-- End TrustBox script -->
-
 </head>
 
 <body class="wrapper d-flex flex-column min-vh-100">
-    {% block body %}{% endblock %}
+
+    <!-- Flash Messages (Top-Right Position) -->
+    {% if error %}
+    <div style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
+    {% endif %}
+    {% if message %}
+    <div style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}</div>
+    {% endif %}
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-black sticky-top">
         <div class="container-fluid">
@@ -33,12 +33,6 @@
                 <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp"
                     alt="Lendeavor Logo" />
             </a>
-            <!--    The navbar-toggler button is used for mobile responsiveness. Here's what it does:
-                    Purpose:
-
-                    Desktop: Navigation links are visible in a horizontal row
-                    Mobile/Tablet: Navigation links are hidden and replaced with a "hamburger menu" button (☰)
-                    When clicked: The button toggles the visibility of the navigation menu  -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -47,21 +41,12 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/aboutUs">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/careers">Careers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/contactUs">Contact us</a>
-                    </li>
+                    <li class="nav-item"><a class="nav-link" href="/aboutUs">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/careers">Careers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contactUs">Contact us</a></li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button">
                             More
                         </a>
                         <ul class="dropdown-menu">
@@ -72,12 +57,40 @@
                     </li>
                 </ul>
                 <div class="d-flex ms-auto mt-2 mt-lg-0 gap-2">
-                    <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
-                    <a href="/login" class="btn btn-success">Login</a>
+                    <a href="{% url 'mainPage' %}" class="btn btn-outline-light">Back</a>
                 </div>
             </div>
         </div>
     </nav>
+
+    <!-- Signup Form -->
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="card glass-card p-4 shadow-lg text-white" style="width: 100%; max-width: 500px;">
+            <h2 class="text-center mb-4">Login Here!</h2>
+
+            <form method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address<span style='color:red;'>*</span></label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="password1" class="form-label">Password<span style='color:red;'>*</span></label>
+                    <input type="password" class="form-control" id="password1" name="password1" required>
+                </div>
+
+                <!-- Forgot Password Link -->
+                <div class="mb-3 text-end">
+                    <a href="{% url 'forgot_password' %}" class="text-info text-decoration-none">Forgot Password?</a>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Submit</button>
+
+            </form>
+        </div>
+    </div>
 
     <!-- 3D Background -->
     <div id="vanta-bg"></div>
@@ -95,16 +108,13 @@
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            color: 0x1b74ff, // Soft bluish tone for lines
-            backgroundColor: 0x000000, // ignored due to CSS background
+            color: 0x1b74ff,
+            backgroundColor: 0x000000,
             points: 15.0,
             maxDistance: 20.0,
             spacing: 15.0
         });
     </script>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Footer (after all content and Vanta background) -->
     <footer class="footer bg-black text-white mt-auto">
@@ -116,7 +126,7 @@
                     <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp"
                         alt="Lendeavor Logo" class="mb-2" style="max-width: 160px; margin-left: 35px;" />
                     <a href="https://www.google.com/maps/place/93+Pearl+St,+New+York,+NY+10004" target="_blank"
-                        class="text-white text-decoration-none d-flex align-items-center" style="margin-left: 25px;">
+                        class="text-white text-decoration-none d-flex align-items-center" style = "margin-left: 25px;">
                         <i class="fas fa-map-marker-alt me-2"></i> 93 Pearl St, New York, NY 10004
                     </a>
                 </div>
@@ -158,6 +168,8 @@
             </div>
         </div>
     </footer>
+    <!-- Trustpilot Script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
