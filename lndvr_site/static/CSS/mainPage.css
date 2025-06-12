@@ -39,6 +39,16 @@ html, body {
   box-shadow: none;
 }
 
+/* Force dropdown on hover */
+.navbar-nav .dropdown:hover > .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+.dropdown:hover .dropdown-menu {
+    pointer-events: auto;
+}
+
 .dropdown-item {
   color: #fff;
 }
