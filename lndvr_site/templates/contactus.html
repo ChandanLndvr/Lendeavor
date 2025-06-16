@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock head %}
+
+{% block title %}Contact Us | Lendeavor{% endblock title%}
+
+{% block body %}
+
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="page-header text-center mb-5">
+            <h1 class="page-title">Contact Us</h1>
+            <p class="lead">Have questions or need support? We're here to help you grow your business.</p>
+        </div>
+
+        <div class="row">
+            <!-- Contact Form -->
+            <div class="col-md-6 mb-4">
+                <div class="contact-card p-4 h-100">
+                    <h4>Send Us a Message</h4>
+                    <form method="post" action="{% url 'contact' %}">
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <label for="name"><i class="fas fa-user"></i> Name<span style='color:red;'>*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email"><i class="fas fa-envelope"></i> Email<span
+                                    style='color:red;'>*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="subject"><i class="fas fa-pen"></i> Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="message"><i class="fas fa-comment-dots"></i> Message<span
+                                    style='color:red;'>*</span></label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="col-md-6 mb-4">
+                <div class="contact-card p-4 h-100">
+                    <h4>Get in Touch</h4>
+                    <br />
+                    <p><i class="fas fa-map-marker-alt"></i><a
+                            href="https://www.google.com/maps/place/93+Pearl+St,+New+York,+NY+10004" target="_blank">
+                            &nbsp;93 Pearl St, New York, NY 10004</p></a>
+                    <p><i class="fas fa-phone"></i> <a href="tel:+12123011770" class="text-white text-decoration-none">
+                            &nbsp;+1 (212)-301-1770</p></a>
+                    <p><i class="fas fa-envelope-open-text"></i><a href="mailto:info@lendeavorusa.com"
+                            class="text-white text-decoration-none">&nbsp;info@lendeavorusa.com</p></a>
+                    <hr>
+                    <h5>Business Hours</h5>
+                    <p>Monday – Friday: 9:00 AM – 6:00 PM</p>
+                    <p>Saturday – Sunday: Closed</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock body %}

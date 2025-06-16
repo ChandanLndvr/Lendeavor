@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block title %}Careers | Lendeavor{% endblock %}
+
+{% block body %}
+<section class="container py-5">
+    <div class="text-center mb-4">
+        <h1 class="mb-3">Join Our Team</h1>
+        <p class="lead">We're building something great. Be a part of it.</p>
+    </div>
+
+    <div class="row">
+        {% for job in jobs %}
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm p-4">
+                <h4>{{ job.title }}</h4>
+                <p><strong>Location:</strong> {{ job.location }}</p>
+                <p>{{ job.description }}</p>
+                <a href="mailto:{{ job.email }}?subject=Application for {{ job.title }}" class="btn btn-primary">
+                    Apply Now
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}

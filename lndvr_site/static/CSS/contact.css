@@ -1,0 +1,27 @@
+.contact-card {
+  background: rgba(41, 40, 40, 0.05);
+  backdrop-filter: blur(3px);
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-card input,
+.contact-card textarea {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  outline: none;
+}
+
+/* When input or textarea is focused */
+.contact-card input:focus,
+.contact-card textarea:focus {
+    background-color: #fff;
+    color: #000;
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="{% static 'logo/lndvrlogo.png' %}">
+    <title>{% block title %}{% endblock title %}Lendeavor USA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="{% static 'css/mainPage.css' %}" />
+
+    <!-- sparkling divider and mission part -->
+    <link rel="stylesheet" href="{% static 'css/divider_mission.css' %}" />
+
+    <!-- Font Awesome (for icons like map, phone, email) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Font Styling -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- TrustBox Script -->
+    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+    {% block head %}{% endblock head %}
+</head>
+
+<body class="wrapper d-flex flex-column min-vh-100">
+
+    <!-- Flash Messages -->
+    {% if error %}
+    <div id = "auto-dismiss-alert" style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
+    {% endif %}
+    {% if message %}
+    <div id = "auto-dismiss-alert" style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}</div>
+    {% endif %}
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-black sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="{% static 'logo/logo_writting.png' %}" alt="Lendeavor Logo" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'about' %}active{% endif %}" href="{% url 'aboutus' %}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'products' %}active{% endif %}" href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'careers' %}active{% endif %}" href="/careers">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact us</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            More
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item products" href="/financialNews">Financial News</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}" href="/caseStudy">Case Study</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}" href="/affiliates">Become an Affiliate</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}" href="/lenders">Our Lenders</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}" href="/steps">Funding steps</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="d-flex ms-auto mt-2 mt-lg-0 gap-2">
+                    <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
+                    <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 3D Background -->
+    <div id="vanta-bg"></div>
+
+    <!-- Vanta.js and Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
+    <script>
+        VANTA.NET({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0x1b74ff,
+            backgroundColor: 0x000000,
+            points: 15.0,
+            maxDistance: 20.0,
+            spacing: 15.0
+        });
+    </script>
+
+    {% block body %}{% endblock body %}
+
+    <!-- Footer -->
+    <footer class="footer bg-black text-white mt-auto">
+        <div class="container-fluid py-4">
+            <div class="row align-items-center text-center text-md-start">
+
+                <!-- Left: Logo & Address -->
+                <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
+                    <img src="{% static 'logo/logo_writting.png' %}" alt="Lendeavor Logo" class="mb-2"
+                        style="max-width: 160px; margin-left: 35px;" />
+                    <a href="https://www.google.com/maps/place/93+Pearl+St,+New+York,+NY+10004" target="_blank"
+                        class="text-white text-decoration-none d-flex align-items-center" style="margin-left: 25px;">
+                        <i class="fas fa-map-marker-alt me-2"></i> 93 Pearl St, New York, NY 10004
+                    </a>
+                </div>
+
+                <!-- Center: Contact Info + Social Icons -->
+                <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
+                    <p class="mb-1 small">&copy; 2025 Lendeavor USA. All rights reserved.</p>
+                    <p class="mb-2 small">
+                        <a href="/privacyPolicy" class="text-white text-decoration-none">Privacy Policy</a> |
+                        <a href="/terms" class="text-white text-decoration-none">Terms of Service</a> |
+                        <a href="/contactUs" class="text-white text-decoration-none">Contact</a>
+                    </p>
+                    <p class="mb-0 small">
+                        <i class="fas fa-phone-alt me-2"></i>
+                        <a href="tel:+12123011770" class="text-white text-decoration-none">+1 (212)-301-1770</a>
+                        <span class="mx-2">|</span>
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:info@lendeavorusa.com"
+                            class="text-white text-decoration-none">info@lendeavorusa.com</a>
+                    </p>
+                    <div class="mt-3">
+                        <a href="https://www.linkedin.com/company/lendeavorusa" target="_blank" class="text-white me-3">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lendeavor_/" target="_blank" class="text-white me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Lendeavor/61572405590277/?mibextid=wwXIfr&rdid=XHeZtrvARXo1JjLa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16XNikjfYz%2F%3Fmibextid%3DwwXIfr"
+                            target="_blank" class="text-white">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Trustpilot -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="trustpilot-widget" data-locale="en-US" data-template-id="53aa8807dec7e10d38f59f32"
+                        data-businessunit-id="66fb0da393df50b4875adf1b" data-style-height="150px"
+                        data-style-width="100%"
+                        style="background-color: rgb(255, 255, 255); display: inline-block; border-radius: 8px;">
+                        <a href="https://www.trustpilot.com/review/lendeavorusa.com" target="_blank"
+                            rel="noopener">Trustpilot</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- card swiping script for sutomer feedbcak -->
+    <script src="{% static 'js/swiper_cust.js' %}"></script>
+    <!-- Auto fading of messages-->
+    <script src = "{% static 'js/message_fade.js' %}"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+</body>
+
+</html>
