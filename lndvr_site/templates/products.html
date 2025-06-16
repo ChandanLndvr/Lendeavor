@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel = "stylesheet" href = "{% static 'css/products.css' %}">
+{% endblock head %}
+
+{% block title %}Products | {% endblock title%}
+
+
+
+{% block body %}
+<section class="product-section">
+    <div class="container">
+        <div class="page-header">
+            <h1 class="page-title">Products</h1>
+        </div>
+        <br/>
+        <h1>
+            Fuel Your Business Growth with <br><span>Empowering Funding Solutions</span>
+        </h1>
+
+        <p class="lead">
+            Partnering with Lendeavor means gaining access to a vast network of over 80+ lenders, expert guidance, and tailored financing solutions designed to meet your unique business needs.
+        </p>
+        <p><strong>
+            With Lendeavor, you’re not just choosing a lender you’re choosing a dedicated ally committed to empowering your business’s growth and success!
+        </strong></p>
+
+        <div class="row mt-5">
+            <!-- Working Capital Loan -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h5>Working Capital Loan</h5>
+                    <p><a href="#">Need a quick boost for your business?</a> A cash advance or working capital loan provides fast access to funds. It’s like a financial safety net that lets you focus on what you do best.</p>
+                </div>
+            </div>
+
+            <!-- Business Term Loan -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-briefcase"></i></div>
+                    <h5>Business Term Loan</h5>
+                    <p><a href="#">Looking to invest in your business?</a> A term loan offers a lump sum you repay over time. Perfect for equipment, expansion, or major goals—helping you plan with predictable payments!</p>
+                </div>
+            </div>
+
+            <!-- Line of Credit -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-credit-card"></i></div>
+                    <h5>Line Of Credit</h5>
+                    <p><a href="#">Need flexible funding?</a> A line of credit lets you access cash as needed. Borrow up to a set limit and pay interest only on what you use—ideal for managing unpredictable expenses!</p>
+                </div>
+            </div>
+            <!-- Revenue Based Financing -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-chart-line"></i></div>
+                    <h5>Revenue Based Financing</h5>
+                    <p><a href="#">Looking for upfront capital?</a> RBF is a financing arrangement that provides upfront capital in exchange for a set amount of the business’s future revenue. Payments are auto-debited. Total payment is fixed, even if it takes longer to pay. In some cases payments can be adjusted to match your business’s revenue.</p>
+                </div>
+            </div>
+            <!-- Asset Based Lending -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-university"></i></div>
+                    <h5>Asset Based Lending</h5>
+                    <p><a href="#">Looking to leverage your assets?</a> Asset-based lending allows you to borrow against your business’s assets—like inventory or real estate—to secure funds. It’s a smart way to access cash affordably while keeping your operations running smoothly!</p>
+                </div>
+            </div>
+            <!-- Credit Card Processing -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-credit-card"></i></div>
+                    <h5>Credit Card Processing</h5>
+                    <p><a href="#">Want to make sales easier?</a> Credit card processing enables your business to accept payments from customers via credit and debit cards. It streamlines transactions, improves cash flow, and enhances the shopping experience—making it simple for customers to say “yes”!</p>
+                </div>
+            </div>
+            <!-- SBA Loan -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-hand-holding-usd"></i></div>
+                    <h5>SBA Loan</h5>
+                    <p><a href="#">Looking for the best rate secured by your business?</a> An SBA Loan covers just about every aspect of your business. Some of the most common SBA loans are the 7(a), 504, and SBA Express.</p>
+                </div>
+            </div>
+            <!-- Accounts Receivable Financing -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h5>Accounts Receivable Financing</h5>
+                    <p><a href="#">Are cash flow issues holding your business back?</a> Accounts receivable financing lets you access capital by leveraging your outstanding receivables. Turn your unpaid accounts into working capital to keep operations smooth and fuel growth.</p>
+                </div>
+            </div>
+            <!-- Equipment Financing -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-tools"></i></div>
+                    <h5>Equipment Financing</h5>
+                    <p><a href="#">Are cash flow issues holding your business back?</a> Accounts receivable financing lets you access capital by leveraging your outstanding receivables. Turn your unpaid accounts into working capital to keep operations smooth and fuel growth.</p>
+                </div>
+            </div>
+            <!-- Hard Money Loans -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-money-bill-wave"></i></div>
+                    <h5>Hard Money Loans</h5>
+                    <p><a href="#">Need quick funding for your real estate project?</a> Hard money loans offer fast, flexible financing based on the value of your property, not your credit score. Ideal for investors and developers, these short-term loans provide the cash you need to seize opportunities and close deals quickly.</p>
+                </div>
+            </div>
+            <!-- Invoice Factoring -->
+            <div class="col-md-4 mb-4">
+                <div class="product-card h-100">
+                    <div class="product-icon"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h5>Invoice Factoring</h5>
+                    <p><a href="#">Are delayed payments affecting your cash flow?</a> This financing option allows you to sell your unpaid invoices to a third party for immediate cash. With invoice factoring, you can improve liquidity, cover expenses, and invest in growth without waiting for customers to pay.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,94 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+{% endblock head %}
+
+{% block title %}About Us | {% endblock title %}
+
+{% block body %}
+<div class="about-container">
+
+    <!-- Page Title -->
+    <div class="page-header">
+        <h1 class="page-title">About Us</h1>
+        <p class="page-subtitle">Empowering the businesses with financial solutions tailored to their goals</p>
+    </div>
+
+    <!-- Section 1: Welcome -->
+    <div class="about-grid section">
+        <div class="image-wrapper">
+            <img src="{% static 'welcome.png' %}" alt="Welcome Illustration" class="about-image" />
+        </div>
+        <div class="text-wrapper">
+            <h2 class="section-title">Welcome to Lendeavor</h2>
+            <p class="paragraph">
+                At <strong>Lendeavor</strong>, we believe that every small business has the potential to thrive.
+                We're committed to helping entrepreneurs achieve their dreams by providing access to the funding they
+                need.
+            </p>
+            <p class="paragraph">
+                With our strong network of <span class="highlight">80+ trusted lenders</span>, we make financing fast,
+                secure, and transparent tailored to your unique journey.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: Services -->
+    <div class="about-grid section">
+        <div class="text-wrapper">
+            <h2 class="section-title">Our Services</h2>
+            <p class="paragraph">
+                Finding the right financing shouldn't be overwhelming. That’s why Lendeavor is here to simplify your
+                path to capital.
+            </p>
+            <div class="service-box">
+                Whether you need working capital, equipment financing, or a long-term funding strategy, our team guides
+                you with expertise, clarity, and care.
+            </div>
+        </div>
+        <div class="image-wrapper">
+            <img src="{% static 'services.png' %}" alt="Services Illustration" class="about-image" />
+        </div>
+    </div>
+
+    <div class="sparkle-divider"></div>
+
+    <!-- Section 3: Why Choose Us -->
+    <div class="about-grid choose-us-wrapper">
+        <div class="image-wrapper">
+            <img src="{% static 'nextstep.png' %}" alt="Why Choose Us Image" class="about-image" />
+        </div>
+        <div class="text-wrapper">
+            <h2 class="section-title">Why Choose <span style="color: #0ea5e9;">Lendeavor?</span></h2>
+
+            <div class="choose-point">
+                <span class="icon">➜</span>
+                <strong>Expert Guidance:</strong> Our seasoned professionals understand the intricacies of small
+                business financing and are committed to helping you find the best solutions.
+            </div>
+
+            <div class="choose-point">
+                <span class="icon">➜</span>
+                <strong>Diverse Options:</strong> With access to a broad spectrum of lenders, we offer a variety of
+                financing products designed to meet your specific needs.
+            </div>
+
+            <div class="choose-point">
+                <span class="icon">➜</span>
+                <strong>Transparent Process:</strong> We value your trust and ensure that our process is clear,
+                straightforward, and tailored to your business.
+            </div>
+            <a href="/apply" class="btn btn-success mt-2" style="background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+                background-size: 200% auto;
+                color: white;
+                animation: sparkle 2s linear infinite;
+                border: none;
+                font-weight: 600;">Apply now <span class="arrow">↗</span></a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}

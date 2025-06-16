@@ -1,0 +1,102 @@
+.product-section {
+        padding: 80px 0;
+        background-color: transparent;
+        text-align: center;
+        backdrop-filter: blur(2px); 
+    }
+
+    .product-section .page-title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .sparkle-divider {
+        width: 80px;
+        height: 4px;
+        background-color: #00baff;
+        margin: 20px auto 40px;
+        border-radius: 2px;
+    }
+
+    .product-section h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+
+    .product-section h1 span {
+        color: #00baff;
+        font-weight: 700;
+    }
+
+    .product-section p.lead {
+        color: #9c9898;
+        max-width: 850px;
+        margin: 0 auto 12px;
+        font-size: 1.1rem;
+    }
+
+    .product-section strong {
+        font-weight: 600;
+        display: block;
+        margin-top: 10px;
+        color: white;
+    }
+
+    .product-card {
+        border-radius: 18px;
+        background: black;
+        padding: 30px;
+        text-align: left;
+        height: 100%;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .product-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .product-icon {
+        font-size: 2.4rem;
+        color: #00baff;
+        margin-bottom: 15px;
+    }
+
+    .product-card h5 {
+        font-weight: 600;
+        margin-bottom: 10px;
+        font-size: 1.2rem;
+    }
+
+    .product-card a {
+        color: #00baff;
+        text-decoration: none;
+        font-weight: 500;
+    }
+
+    .product-card a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 767px) {
+        .product-section h1 {
+            font-size: 1.7rem;
+        }
+
+        .product-card {
+            text-align: center;
+        }
+
+        .product-card .product-icon {
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        .product-card p {
+            text-align: justify;
+        }
+    }

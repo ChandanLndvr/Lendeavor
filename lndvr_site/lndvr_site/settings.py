@@ -186,3 +186,6 @@ STATICFILES_DIRS = [
 
 # for local testing of forget password
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+# TESTING CONTACT US WITH BELOW EMAIL (contact us form info will be sent to the below email)
+CONTACT_EMAIL = 'chandan@lendeavorusa.com' 

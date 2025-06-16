@@ -4,7 +4,7 @@
 <head>
     {% load static %}
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="{% static 'lndvrlogo.png' %}">
+    <link rel="icon" type="image/png" href="{% static 'logo/lndvrlogo.png' %}">
     <title>Lndvr / signup</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -12,6 +12,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="{% static 'CSS/mainPage.css' %}" />
     <link rel="stylesheet" href="{% static 'CSS/signUp.css' %}" />
+
+    <!-- Font Awesome (for icons like map, phone, email) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- TrustBox script -->
     <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
@@ -22,17 +25,16 @@
 
     <!-- Flash Messages (Top-Right Position) -->
     {% if error %}
-    <div style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
+    <div id="auto-dismiss-alert" style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
     {% endif %}
     {% if message %}
-    <div style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}</div>
+    <div id="auto-dismiss-alert" style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}</div>
     {% endif %}
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-black sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
-                <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp"
-                    alt="Lendeavor Logo" />
+                <img src="{% static 'logo/logo_writting.png' %}" alt="Lendeavor Logo" />
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -42,18 +44,37 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="/aboutUs">About us</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/products">Products</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/careers">Careers</a></li>
-                    <li class="nav-item"><a class="nav-link" href="/contactUs">Contact us</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'about' %}active{% endif %}"
+                            href="{% url 'aboutus' %}">About us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'products' %}active{% endif %}"
+                            href="{% url 'products' %}">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'careers' %}active{% endif %}"
+                            href="/careers">Careers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if current_page == 'contact' %}active{% endif %}"
+                            href="{% url 'contact' %}">Contact us</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             More
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/financialNews">Financial News</a></li>
-                            <li><a class="dropdown-item" href="/caseStudy">Case Study</a></li>
-                            <li><a class="dropdown-item" href="/caseStudy">Become an Affiliate</a></li>
+                            <li><a class="dropdown-item products" href="/financialNews">Financial News</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
+                                    href="/caseStudy">Case Study</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
+                                    href="/affiliates">Become an Affiliate</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
+                                    href="/lenders">Our Lenders</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
+                                    href="/steps">Funding steps</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -149,8 +170,8 @@
 
                 <!-- Left: Logo & Address -->
                 <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
-                    <img src="https://lendeavorusa.com/wp-content/uploads/2024/08/logo-lendeavor.webp"
-                        alt="Lendeavor Logo" class="mb-2" style="max-width: 160px; margin-left: 35px;" />
+                    <img src="{% static 'logo/logo_writting.png' %}" alt="Lendeavor Logo" class="mb-2"
+                        style="max-width: 160px; margin-left: 35px;" />
                     <a href="https://www.google.com/maps/place/93+Pearl+St,+New+York,+NY+10004" target="_blank"
                         class="text-white text-decoration-none d-flex align-items-center" style="margin-left: 25px;">
                         <i class="fas fa-map-marker-alt me-2"></i> 93 Pearl St, New York, NY 10004
@@ -173,6 +194,18 @@
                         <a href="mailto:info@lendeavorusa.com"
                             class="text-white text-decoration-none">info@lendeavorusa.com</a>
                     </p>
+                    <div class="mt-3">
+                        <a href="https://www.linkedin.com/company/lendeavorusa" target="_blank" class="text-white me-3">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                        <a href="https://www.instagram.com/lendeavor_/" target="_blank" class="text-white me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://www.facebook.com/people/Lendeavor/61572405590277/?mibextid=wwXIfr&rdid=XHeZtrvARXo1JjLa&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F16XNikjfYz%2F%3Fmibextid%3DwwXIfr"
+                            target="_blank" class="text-white">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                    </div>
                 </div>
 
                 <!-- Right: Trustpilot -->
@@ -195,13 +228,10 @@
             </div>
         </div>
     </footer>
-    <!-- Trustpilot Script -->
-    <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-
+    <!-- Auto fading of messages-->
+    <script src="{% static 'js/message_fade.js' %}"></script>
 
 </body>
 

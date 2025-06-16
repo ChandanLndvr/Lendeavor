@@ -1,29 +1,9 @@
-/* style.css */
-
-.navbar {
-    z-index: 1050;
-    padding: 22px;
-    background-color: black;
-}
-
-.navbar-brand img {
-    width: 250px; /* adjust to your desired size */
-    height: auto; /* maintain aspect ratio */
-    margin-left: 20px;
-}
-
-.navbar-brand {
-    margin-right: 20rem; /* adds space between logo and menu */
-}
-
-.nav-item {
-    margin: 20px;
-    color:white;
-}
-
+/* ---------- Base Layout ---------- */
 html, body {
     height: 100%;
     margin: 0;
+    font-family: Arial, sans-serif;
+    color: white;
 }
 
 .wrapper {
@@ -32,28 +12,46 @@ html, body {
     flex-direction: column;
 }
 
-.dropdown-menu {
-  background-color: transparent;
-  backdrop-filter: blur(10px); /* optional blur for a glass effect */
-  border: none;
-  box-shadow: none;
+/* ---------- Navbar ---------- */
+.navbar {
+    z-index: 1050;
+    padding: 22px;
+    background-color: black;
 }
 
-/* Force dropdown on hover */
+.navbar-brand {
+    margin-right: 20rem;
+}
+
+.navbar-brand img {
+    width: 250px;
+    height: auto;
+    margin-left: 20px;
+}
+
+.nav-item {
+    margin: 20px;
+    color: white;
+}
+
+/* Dropdown hover */
+.dropdown-menu {
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    border: none;
+    box-shadow: none;
+}
+
 .navbar-nav .dropdown:hover > .dropdown-menu {
     display: block;
     margin-top: 0;
 }
 
-.dropdown:hover .dropdown-menu {
-    pointer-events: auto;
-}
-
 .dropdown-item {
-  color: #fff;
+    color: #fff;
 }
 
-/* Vanta background covers full screen and stays behind everything */
+/* ---------- Vanta Background ---------- */
 #vanta-bg {
     position: fixed;
     top: 0;
@@ -64,9 +62,101 @@ html, body {
     background: linear-gradient(135deg, #ffffff 0%, #9defff 100%);
 }
 
+/* ---------- Heading ---------- */
+.heading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    padding-top: 50px;
+}
 
+.blurred-heading {
+    color: white;
+    padding: 20px 305px;
+    border-radius: 15px;
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(12px);
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.main-heading {
+    font-size: 64px;
+}
+
+/* ---------- Info Card ---------- */
+.info-image-card {
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    max-width: 1100px;
+    margin: 10px auto;
+    gap: 40px;
+}
+
+.nested-image img.side-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    opacity: 0.9;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nested-info {
+    flex: 1;
+    max-width: 500px;
+    color: white;
+    text-align: left;
+    font-family: 'Raleway', sans-serif;
+    text-align: center; /* ✅ center text horizontally */
+    display: flex;       /* ✅ for vertical centering */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.nested-info h3 {
+    font-size: 24px;
+    margin-top: 0;
+    color: #fff;
+}
+
+.nested-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    margin-bottom: 20px;
+}
+
+.apply-button {
+    display: inline-block;
+    padding: 14px 32px;
+    background-color: #00c3ff;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.apply-button:hover {
+    background-color: #009edc;
+}
+
+/* ---------- Footer ---------- */
 .footer {
     flex-shrink: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: black;
 }
 
 .footer a {
@@ -76,12 +166,34 @@ html, body {
 }
 
 .footer a:hover {
-    text-decoration: underline;
     color: white;
+    text-decoration: underline;
 }
 
 .footer-logo {
     max-width: 160px;
     height: auto;
     padding-left: 30px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .info-image-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .nested-info,
+    .nested-image img {
+        max-width: 100%;
+    }
+
+    .navbar-brand {
+        margin-right: 5rem;
+    }
+
+    .heading-container {
+        height: 150px;
+    }
 }

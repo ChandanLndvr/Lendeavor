@@ -25,5 +25,9 @@ urlpatterns = [
     path('login/', views.login, name = "login"),
     path("forgot-password/", views.forgot_password, name="forgot_password"),
     path("reset-password/<str:token>/", views.reset_password, name="reset_password"),
-
+    path("aboutus/", views.aboutus, name="aboutus"),
+    path("products/", views.products, name="products"),
+    path("contact/", views.contact, name="contact"),
+    path("careers/", views.career_page, name='careers'),
+    path("apply/", views.apply, name = "apply")
 ]

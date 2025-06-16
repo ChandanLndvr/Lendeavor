@@ -124,3 +124,53 @@ def reset_password(request, token):
 
     except PasswordResetToken.DoesNotExist:
         return HttpResponse("Invalid token", status=400)
+    
+
+def mainPage(request):
+    return render(request, "mainPage.html")
+
+def apply(request):
+    return render(request, "apply.html")
+
+def aboutus(request):
+    return render(request, "aboutus.html",{'current_page':'about'})
+
+def products(request):
+    return render(request, "products.html", {'current_page':'products'})
+
+from django.shortcuts import render
+
+def career_page(request):
+    job_list = [
+        {
+            "title": "Frontend Developer",
+            "location": "New York, NY",
+            "description": "Looking for an expert in React.js and UI/UX design.",
+            "email": "careers@lendeavorusa.com",
+        },
+        {
+            "title": "Marketing Analyst",
+            "location": "Remote",
+            "description": "Data-driven marketing specialist with B2B experience.",
+            "email": "careers@lendeavorusa.com",
+        }
+    ]
+    return render(request, 'careers.html', {'jobs': job_list})
+
+
+def contact(request):
+    if request.method == 'POST':
+        name = request.POST.get('name')
+        email = request.POST.get('email')
+        subject = request.POST.get('subject', 'No Subject')
+        msg_body = request.POST.get('message')
+
+        send_mail(
+            subject,
+            f"From: {name} <{email}>\n\n{msg_body}",
+            settings.DEFAULT_FROM_EMAIL,
+            [settings.CONTACT_EMAIL],
+            fail_silently=True,
+        )    
+        return render(request, "contactus.html", {'message': "Thank you for contacting us!"})
+    return render(request, "contactus.html")

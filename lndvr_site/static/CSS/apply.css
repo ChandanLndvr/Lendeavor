@@ -1,0 +1,180 @@
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #fff;
+}
+
+.application-wrapper {
+  background: rgba(20, 20, 20, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 14px;
+  padding: 40px 45px;
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+}
+
+.application-wrapper h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffffcc;
+  letter-spacing: 0.05em;
+}
+
+.step-header.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 2rem;
+  padding: 0 20px;
+}
+
+.tab-button {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tab-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.tab-button.active {
+  background: #0d6efd;
+  box-shadow: 0 4px 12px rgba(13, 110, 253, 0.7);
+}
+
+label.form-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #e0e0e0;
+  font-size: 0.95rem;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="month"],
+input[type="date"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+}
+
+input::placeholder {
+  color: #dcdcdcaa;
+}
+
+input:focus,
+select:focus {
+  border-color: #0d6efd;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+select option {
+  background-color: #000;
+  color: #fff;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-bottom: 1.25rem;
+}
+
+.col-md-6 {
+  flex: 0 0 calc(50% - 10px);
+  max-width: calc(50% - 10px);
+}
+
+.col-md-4 {
+  flex: 0 0 calc((100% - 40px) / 3);
+  max-width: calc((100% - 40px) / 3);
+}
+
+.btn {
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #084cd9;
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.45);
+  color: #0d6efd;
+}
+
+.text-center {
+  text-align: center;
+}
+
+input[type="radio"],
+input[type="checkbox"],
+input[type="file"] {
+  cursor: pointer;
+}
+
+/* Utility spacing */
+.mb-3 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 3rem !important;
+}
+
+.mt-3 {
+  margin-top: 1rem !important;
+}
+
+@media (max-width: 768px) {
+  .col-md-6,
+  .col-md-4 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .application-wrapper {
+    padding: 25px 20px;
+  }
+}
