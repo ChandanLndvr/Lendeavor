@@ -5,6 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
     const nextButtons = document.querySelectorAll('.next-btn');
     const backButtons = document.querySelectorAll('.back-btn');
 
+    // Month number extraction logic
+    const startDateInput = document.getElementById('startdate');
+    const monthNumberInput = document.getElementById('month_number');
+
+    if (startDateInput && monthNumberInput) {
+        startDateInput.addEventListener('change', function () {
+            const value = this.value; // e.g., "2025-06"
+            const monthNumber = value.split('-')[1]; // Extract "06"
+            monthNumberInput.value = monthNumber;
+        });
+    }
+
     nextButtons.forEach(btn => {
         btn.addEventListener('click', () => {
             const currentTab = getCurrentTab();
