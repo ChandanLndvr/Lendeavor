@@ -261,4 +261,7 @@ def contact(request):
     return render(request, "contactus.html")
 
 
+#-------------------------- Funding Steps --------------------------
 
+def funding_steps(request):
+    return render(request, 'funding_steps.html')

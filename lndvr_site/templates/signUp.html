@@ -75,7 +75,7 @@
                             <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
                                     href="/lenders">Our Lenders</a></li>
                             <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
-                                    href="/steps">Funding steps</a></li>
+                                    href="{% url 'steps' %}">Funding steps</a></li>
                         </ul>
                     </li>
                 </ul>

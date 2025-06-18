@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/aboutus.css' %}">
+{% endblock head %}
+
+{% block title %}Funding steps | {% endblock title %}
+
+{% block body %}
+<div class="about-container">
+
+    <!-- Page Title -->
+    <div class="page-header">
+        <h1 class="page-title">How to apply?</h1>
+    </div>
+
+    <!-- Section 1: Welcome -->
+    <div class="about-grid section">
+        <div class="image-wrapper">
+            <img src="{% static 'vision.jpeg' %}" alt="Welcome Illustration" class="about-image" />
+        </div>
+        <div class="text-wrapper">
+            <h6 style = "color:blanchedalmond;">STEP 1.</h6>
+            <h2 class="section-title">Share your vision.</h2>
+            <p class="paragraph">
+                Tell us about your business and your goals. We’ll present your application to our network of 80+ lenders who know small business.
+            </p>
+        </div>
+    </div>
+
+    <!-- Section 2: Services -->
+    <div class="about-grid section">
+        <div class="text-wrapper">
+            <h6 style = "color:blanchedalmond;">STEP 2.</h6>
+            <h2 class="section-title">Compare your options.</h2>
+            <p class="paragraph">
+                We work to match you with the right financial partner and product for your business needs, and can help you understand every option.
+            </p>
+        </div>
+        <div class="image-wrapper">
+            <img src="{% static 'compare_optn.jpg' %}" alt="Services Illustration" class="about-image" />
+        </div>
+    </div>
+
+    <!-- Section 3: Why Choose Us -->
+    <div class="about-grid choose-us-wrapper">
+        <div class="image-wrapper">
+            <img src="{% static 'money.jpg' %}" alt="Why Choose Us Image" class="about-image" />
+        </div>
+        <div class="text-wrapper">
+            <h6 style = "color:blanchedalmond;">STEP 3.</h6>
+            <h2 class="section-title">Get your money.</h2>
+            <p class="paragraph">
+                Once you feel confident about your choice, your business funding can hit your bank account as soon as the next business day.
+            </p>
+            <a href="{% url 'apply' %}" class="btn btn-success mt-2" style="background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+                background-size: 200% auto;
+                color: white;
+                animation: sparkle 2s linear infinite;
+                border: none;
+                font-weight: 600;">Apply now <span class="arrow">↗</span></a>
+        </div>
+
+    </div>
+</div>
+
+{% endblock body %}
