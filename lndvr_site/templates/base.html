@@ -34,10 +34,11 @@
 
     <!-- Flash Messages -->
     {% if error %}
-    <div id = "auto-dismiss-alert" style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
+    <div id="auto-dismiss-alert" style="background: red; color: white; text-align: center;">ERROR: {{ error }}</div>
     {% endif %}
     {% if message %}
-    <div id = "auto-dismiss-alert" style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}</div>
+    <div id="auto-dismiss-alert" style="background: green; color: white; text-align: center;">SUCCESS: {{ message }}
+    </div>
     {% endif %}
 
     <!-- Navbar -->
@@ -55,16 +56,20 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if current_page == 'about' %}active{% endif %}" href="{% url 'aboutus' %}">About us</a>
+                        <a class="nav-link {% if current_page == 'about' %}active{% endif %}"
+                            href="{% url 'aboutus' %}">About us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if current_page == 'products' %}active{% endif %}" href="{% url 'products' %}">Products</a>
+                        <a class="nav-link {% if current_page == 'products' %}active{% endif %}"
+                            href="{% url 'products' %}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if current_page == 'careers' %}active{% endif %}" href="/careers">Careers</a>
+                        <a class="nav-link {% if current_page == 'careers' %}active{% endif %}"
+                            href="/careers">Careers</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if current_page == 'contact' %}active{% endif %}" href="{% url 'contact' %}">Contact us</a>
+                        <a class="nav-link {% if current_page == 'contact' %}active{% endif %}"
+                            href="{% url 'contact' %}">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -73,10 +78,14 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item products" href="/financialNews">Financial News</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}" href="/caseStudy">Case Study</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}" href="/affiliates">Become an Affiliate</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}" href="/lenders">Our Lenders</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}" href="/steps">Funding steps</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
+                                    href="/caseStudy">Case Study</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
+                                    href="/affiliates">Become an Affiliate</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
+                                    href="/lenders">Our Lenders</a></li>
+                            <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
+                                    href="/steps">Funding steps</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -122,8 +131,9 @@
                 <div class="col-12 col-md-4 mb-3 mb-md-0 d-flex flex-column align-items-center align-items-md-start">
                     <img src="{% static 'logo/logo_writting.png' %}" alt="Lendeavor Logo" class="mb-2"
                         style="max-width: 160px; margin-left: 35px;" />
-                    <a href="https://www.google.com/maps/place/93+Pearl+St,+New+York,+NY+10004" target="_blank"
-                        class="text-white text-decoration-none d-flex align-items-center" style="margin-left: 25px;">
+                    <a href="https://tinyurl.com/7b8jzfr9"
+                        target="_blank" class="text-white text-decoration-none d-flex align-items-center"
+                        style="margin-left: 25px;">
                         <i class="fas fa-map-marker-alt me-2"></i> 93 Pearl St, New York, NY 10004
                     </a>
                 </div>
@@ -179,7 +189,7 @@
     <!-- card swiping script for sutomer feedbcak -->
     <script src="{% static 'js/swiper_cust.js' %}"></script>
     <!-- Auto fading of messages-->
-    <script src = "{% static 'js/message_fade.js' %}"></script>
+    <script src="{% static 'js/message_fade.js' %}"></script>
 
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>

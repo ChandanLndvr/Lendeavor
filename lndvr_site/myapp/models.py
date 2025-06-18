@@ -48,3 +48,44 @@ class PasswordResetToken(models.Model):
 
     def __str__(self):
         return f"Reset token for {self.user.Email}"
+    
+# User Application info
+
+class UserApplications(models.Model):
+
+    entity_choice = [('llc','LLC'),
+                     ('corporation','Corporation'),
+                     ('sole_proprietor', 'Sole Proprietor'),
+                     ('partnership','Partnership')]
+    ID = models.AutoField(primary_key=True)
+    Business_name = models.CharField(max_length=250)
+    Doing_business_as = models.CharField(max_length=250)
+    Business_address = models.TextField()
+    Industry = models.CharField(max_length=250)
+    Tax_ID = models.CharField(max_length=12) 
+    Entity = models.CharField(max_length=50, choices = entity_choice)
+    Business_Start_date = models.CharField(max_length=7)
+    
+    Owner_First_Name = models.CharField(max_length=100)
+    Owner_Middle_Name = models.CharField(max_length=100, null=True, blank=True)  # Allow null
+    Owner_Last_Name = models.CharField(max_length=100)
+    Birth_Date = models.DateField()
+    Home_address = models.TextField(max_length=250)  
+    Business_Email = models.EmailField()
+    Phone_no = models.CharField(max_length=10)
+    
+    SSN = models.CharField(max_length=11)  
+    Ownership = models.PositiveIntegerField()
+    Monthly_Revenue = models.PositiveIntegerField()
+    Funds_Requested = models.PositiveIntegerField()
+    Existing_loans = models.CharField(max_length=5)
+
+    Documents = models.FileField(upload_to='uploaded_files/', null=True, blank=True)
+    First_time = models.CharField(max_length=5, default='Yes')  
+    Applied_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'User_Applications'
+
+    def __str__(self):
+        return f"{self.Owner_First_Name} {self.Owner_Last_Name}"

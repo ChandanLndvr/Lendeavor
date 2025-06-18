@@ -1,14 +1,18 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from myapp.models import SignUp
+from myapp.models import SignUp, UserApplications
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from .models import PasswordResetToken
 import uuid
 
+#----------------------- Main page ------------------------
+
 def main(request):
     return render(request, 'mainPage.html')
+
+#------------------------ Signup --------------------------
 
 def signUp(request):
     if request.method == "POST":
@@ -47,7 +51,7 @@ def signUp(request):
     return render(request, "signUp.html")
 
 
-# login with JWT Auth
+#---------------------- login with JWT Auth ----------------------------
 
 def login(request):
     if request.method == "POST":
@@ -71,7 +75,7 @@ def login(request):
 
     return render(request, 'login.html')
 
-# Views for Forgot/Reset
+#----------------------------- Forgot Password ----------------------------------
 
 def forgot_password(request):
     if request.method == "POST":
@@ -98,6 +102,8 @@ def forgot_password(request):
 
     return render(request, "forgot_password.html")
 
+#----------------------------- Reset Password ----------------------------------
+
 def reset_password(request, token):
     try:
         reset_token = PasswordResetToken.objects.get(token=token)
@@ -123,22 +129,100 @@ def reset_password(request, token):
         return render(request, "reset_password.html", {"token": token})
 
     except PasswordResetToken.DoesNotExist:
-        return HttpResponse("Invalid token", status=400)
+        return HttpResponse("Invalid token", status=400) 
     
+#--------------------------------- Sending attached email ----------------------------------
 
-def mainPage(request):
-    return render(request, "mainPage.html")
+def send_attached_email(data):
+    # Prepare email body (skip Documents)
+    email_body = "\n".join(
+        f"{k.replace('_', ' ')}: {v}" for k, v in data.items() if v and k != 'Documents'
+    )
+
+    email = EmailMessage(
+        subject="New / Updated  Business Application",
+        body=email_body,
+        from_email=settings.EMAIL_HOST_USER,
+        to=[data['Business_Email']],
+    )
+
+    if data['Documents']:
+        email.attach(
+            data['Documents'].name,
+            data['Documents'].read(),
+            data['Documents'].content_type,
+        )
+
+    email.send(fail_silently=False)
+
+#------------------------------- Apply Now ----------------------------------------
 
 def apply(request):
-    return render(request, "apply.html")
+    if request.method == "POST":
+        try:
+            # Extract form data
+            data = {
+                'Business_name': request.POST.get('business_name'),
+                'Doing_business_as': request.POST.get('dba'),
+                'Business_address': request.POST.get('business_add'),
+                'Industry': request.POST.get('industry'),
+                'Tax_ID': request.POST.get('taxid'),
+                'Entity': request.POST.get('entity'),
+                'Business_Start_date': request.POST.get('startdate'),
+                'Owner_First_Name': request.POST.get('fname'),
+                'Owner_Middle_Name': request.POST.get('mname'),
+                'Owner_Last_Name': request.POST.get('lname'),
+                'Birth_Date': request.POST.get('dob'),
+                'Home_address': request.POST.get('haddress'),
+                'Business_Email': request.POST.get('bemail'),
+                'Phone_no': request.POST.get('phone'),
+                'SSN': request.POST.get('ssn'),
+                'Ownership': int(request.POST.get('ownership_percent') or 0),
+                'Monthly_Revenue': int(request.POST.get('monthly_revenue') or 0),
+                'Funds_Requested': int(request.POST.get('fund') or 0),
+                'Existing_loans': request.POST.get('existing_loans'),
+                'Documents': request.FILES.get('financial_statement'),
+                'First_time': request.POST.get('application_no', '').lower(),
+            }
+
+            ssn = data['SSN']
+            first_time = data['First_time']
+            ssn_exists = UserApplications.objects.filter(SSN=ssn).exists()
+
+            if not ssn_exists:
+                # Case 1: New SSN — create
+                UserApplications.objects.create(**data)
+                send_attached_email(data)
+                message = "Application submitted successfully!"
+            elif first_time == "yes":
+                # Case 2: SSN exists and first time = yes — update
+                UserApplications.objects.update_or_create(SSN=ssn, defaults=data)
+                send_attached_email(data)
+                message = "Application updated successfully!"
+            else:
+                # Case 3: SSN exists and first time = no — create new
+                UserApplications.objects.create(**data)
+                send_attached_email(data)
+                message = "Application submitted successfully!"
+
+            return render(request, 'apply.html', {'message': message})
+
+        except Exception as e:
+            return render(request, 'apply.html', {'error': str(e)})
+
+    return render(request, 'apply.html')
+
+#----------------------------- About us ----------------------------
 
 def aboutus(request):
     return render(request, "aboutus.html",{'current_page':'about'})
 
+#---------------------------- Products -----------------------------
+
 def products(request):
     return render(request, "products.html", {'current_page':'products'})
 
-from django.shortcuts import render
+#---------------------------- Careers Page -------------------------
 
 def career_page(request):
     job_list = [
@@ -157,6 +241,7 @@ def career_page(request):
     ]
     return render(request, 'careers.html', {'jobs': job_list})
 
+#---------------------------- Contact ----------------------------
 
 def contact(request):
     if request.method == 'POST':
@@ -174,3 +259,6 @@ def contact(request):
         )    
         return render(request, "contactus.html", {'message': "Thank you for contacting us!"})
     return render(request, "contactus.html")
+
+
+
