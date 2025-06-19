@@ -115,7 +115,7 @@ select option {
   max-width: calc((100% - 40px) / 3);
 }
 
-.btn {
+.application-wrapper .btn {
   border-radius: 25px;
   padding: 12px 28px;
   font-weight: 600;
@@ -127,21 +127,21 @@ select option {
   display: inline-block;
 }
 
-.btn-primary {
+.application-wrapper .btn-primary {
   background-color: #0d6efd;
   color: #fff;
 }
 
-.btn-primary:hover {
+.application-wrapper .btn-primary :hover {
   background-color: #084cd9;
 }
 
-.btn-secondary {
+.application-wrapper .btn-secondary {
   background-color: rgba(255, 255, 255, 0.25);
   color: #fff;
 }
 
-.btn-secondary:hover {
+.application-wrapper .btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.45);
   color: #0d6efd;
 }

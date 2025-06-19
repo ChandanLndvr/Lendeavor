@@ -40,15 +40,10 @@ document.addEventListener('DOMContentLoaded', function () {
     tabButtons.forEach(button => {
         button.addEventListener('click', () => {
             const tabId = button.getAttribute('data-tab');
-            const currentTab = getCurrentTab();
-            const currentTabContent = document.getElementById(currentTab);
-
-            if (tabId !== currentTab && validateTab(currentTabContent)) {
-                switchTab(tabId);
-            }
+            switchTab(tabId); // No validation here
         });
     });
-
+    
     function getCurrentTab() {
         for (const content of tabContents) {
             if (content.style.display !== 'none') return content.id;

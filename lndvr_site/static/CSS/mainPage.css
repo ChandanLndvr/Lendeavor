@@ -47,6 +47,13 @@ html, body {
     margin-top: 0;
 }
 
+ .nav-item.active > .nav-link,
+    .nav-item.active > .nav-link.dropdown-toggle {
+        background-color: #0d6efd !important;
+        color: white !important;
+        border-radius: 5px;
+    }
+
 .dropdown-item {
     color: #fff;
 }
@@ -178,22 +185,11 @@ html, body {
 
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
-    .info-image-card {
-        flex-direction: column;
-        padding: 20px;
-        gap: 20px;
+    .main-heading {
+        font-size: 32px;
     }
 
-    .nested-info,
-    .nested-image img {
-        max-width: 100%;
-    }
-
-    .navbar-brand {
-        margin-right: 5rem;
-    }
-
-    .heading-container {
-        height: 150px;
+    .blurred-heading {
+        padding: 40px 20px;
     }
 }

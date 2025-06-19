@@ -32,6 +32,7 @@
     </div>
     {% endif %}
     <!-- Navbar -->
+    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark navbar-black sticky-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">
@@ -44,6 +45,7 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- Left side nav links -->
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
                         <a class="nav-link {% if current_page == 'about' %}active{% endif %}"
@@ -62,26 +64,49 @@
                             href="{% url 'contact' %}">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
+                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' %}active{% endif %}"
+                            href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item products" href="/financialNews">Financial News</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
-                                    href="/caseStudy">Case Study</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
-                                    href="/affiliates">Become an Affiliate</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
-                                    href="/lenders">Our Lenders</a></li>
-                            <li><a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
-                                    href="{% url 'steps' %}">Funding steps</a></li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'finance' %}active{% endif %}"
+                                    href="/financialNews">
+                                    Financial News
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
+                                    href="/caseStudy">
+                                    Case Study
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
+                                    href="/affiliates">
+                                    Become an Affiliate
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
+                                    href="/lenders">
+                                    Our Lenders
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
+                                    href="{% url 'steps' %}">
+                                    Funding Steps
+                                </a>
+                            </li>
                         </ul>
                     </li>
                 </ul>
-                <div class="d-flex ms-auto mt-2 mt-lg-0 gap-2">
+
+                <!-- Right side buttons -->
+                <div class="d-flex mt-2 mt-lg-0 gap-2">
+                    <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
                     <a href="{% url 'login' %}" class="btn btn-success">Login</a>
-                    <a href="{% url 'mainPage' %}" class="btn btn-outline-light">Back</a>
                 </div>
             </div>
         </div>
