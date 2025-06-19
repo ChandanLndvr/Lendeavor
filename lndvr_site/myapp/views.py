@@ -239,7 +239,11 @@ def career_page(request):
             "email": "careers@lendeavorusa.com",
         }
     ]
-    return render(request, 'careers.html', {'jobs': job_list})
+    context = {
+        'jobs': job_list,
+        'current_page': 'careers'
+    }
+    return render(request, 'careers.html', context)
 
 #---------------------------- Contact ----------------------------
 
@@ -257,11 +261,15 @@ def contact(request):
             [settings.CONTACT_EMAIL],
             fail_silently=True,
         )    
-        return render(request, "contactus.html", {'message': "Thank you for contacting us!"})
-    return render(request, "contactus.html")
+        return render(request, "contactus.html", {'message': "Thank you for contacting us!"}, {'current_page':'contact'})
+    return render(request, "contactus.html", {'current_page':'contact'})
 
 
 #-------------------------- Funding Steps --------------------------
 
 def funding_steps(request):
-    return render(request, 'funding_steps.html')
+    return render(request, 'funding_steps.html', {'current_page':'steps'})
+
+#-------------------------- Case Study -----------------------------
+def case_study(request):
+    return render(request, 'case_study.html',{'current_page': 'case_study'})
