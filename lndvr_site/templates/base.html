@@ -73,7 +73,7 @@
                             href="{% url 'contact' %}">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' %}active{% endif %}"
+                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' or current_page == 'faq' %}active{% endif %}"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
@@ -106,6 +106,12 @@
                                 <a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
                                     href="{% url 'steps' %}">
                                     Funding Steps
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item {% if current_page == 'faq' %}active{% endif %}"
+                                    href="{% url 'faq' %}">
+                                    FAQs
                                 </a>
                             </li>
                         </ul>
@@ -144,6 +150,7 @@
             spacing: 15.0
         });
     </script>
+    <!-- color: 0x1b740f - green, 0x1b74ff - blue, cooment out color to get pink colour, 0x00ffff - Bright aqua/cyan, 0xFFFFFF - white, 0xRRGGBB- plain background -->
 
     {% block body %}{% endblock body %}
 
@@ -166,9 +173,17 @@
                 <div class="col-12 col-md-4 mb-3 mb-md-0 text-center">
                     <p class="mb-1 small">&copy; 2025 Lendeavor USA. All rights reserved.</p>
                     <p class="mb-2 small">
-                        <a href="/privacyPolicy" class="text-white text-decoration-none">Privacy Policy</a> |
-                        <a href="/terms" class="text-white text-decoration-none">Terms of Service</a> |
-                        <a href="/contactUs" class="text-white text-decoration-none">Contact</a>
+                        <a href="/privacy"
+                            class="text-white text-decoration-none {% if current_page == 'privacy' %}active{% endif %}">Privacy
+                            Policy</a> |
+                        <a href="/terms"
+                            class="text-white text-decoration-none {% if current_page == 'terms' %}active{% endif %}">Terms
+                            & conditions</a> |
+                        <a href="/contact"
+                            class="text-white text-decoration-none {% if current_page == 'contact' %}active{% endif %}">Contact</a>
+                        |
+                        <a href="/faq"
+                            class="text-white text-decoration-none {% if current_page == 'faq' %}active{% endif %}">FAQs</a>
                     </p>
                     <p class="mb-0 small">
                         <i class="fas fa-phone-alt me-2"></i>

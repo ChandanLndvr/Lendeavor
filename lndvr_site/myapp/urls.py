@@ -31,5 +31,8 @@ urlpatterns = [
     path("careers/", views.career_page, name='careers'),
     path("apply/", views.apply, name = "apply"),
     path("steps/", views.funding_steps, name = "steps"),
-    path('caseStudy/', views.case_study, name = "caseStudy")
+    path("caseStudy/", views.case_study, name = "caseStudy"),
+    path("faq/", views.faq, name = "faq"),
+    path("terms/", views.terms, name = "terms"),
+    path("privacy/", views.privacy, name = "privacy"),
 ]
