@@ -270,6 +270,22 @@ def contact(request):
 def funding_steps(request):
     return render(request, 'funding_steps.html', {'current_page':'steps'})
 
+#-------------------------- FAQs -----------------------------------
+
+def faq(request):
+    return render(request, 'faq.html',{'current_page':'faq'})
+
 #-------------------------- Case Study -----------------------------
+
 def case_study(request):
     return render(request, 'case_study.html',{'current_page': 'case_study'})
+
+#------------------------- Terms and conditions -------------------
+
+def terms(request):
+    return render(request, 'terms.html',{'current_page':'terms'})
+
+#------------------------- Privacy Policy -------------------
+
+def privacy(request):
+    return render(request, 'privacy.html',{'current_page':'privacy'})
