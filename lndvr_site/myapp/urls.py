@@ -35,4 +35,6 @@ urlpatterns = [
     path("faq/", views.faq, name = "faq"),
     path("terms/", views.terms, name = "terms"),
     path("privacy/", views.privacy, name = "privacy"),
+    path("jobDetails/", views.view_job, name = "jobDetails"),
+    path("jobPost/", include("job_posting_app.urls")),
 ]

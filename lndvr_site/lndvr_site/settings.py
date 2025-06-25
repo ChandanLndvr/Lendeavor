@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapp',
     'rest_framework',
+    'job_posting_app',
 ]
 
 REST_FRAMEWORK = {

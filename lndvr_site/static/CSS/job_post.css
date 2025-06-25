@@ -1,0 +1,28 @@
+.job-post-form {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    max-width: 800px;
+    margin: auto;
+    color: white;
+}
+
+.form-control,
+.form-select {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+
+.form-control:focus,
+.form-select:focus {
+    background: white;
+    color: black;
+    border-color: #00f2ff;
+    box-shadow: 0 0 5px rgba(0, 242, 255, 0.5);
+}
