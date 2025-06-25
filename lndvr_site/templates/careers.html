@@ -1,27 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/careers.css' %}">
+{% endblock head %}
 
 {% block title %}Careers | Lendeavor{% endblock %}
 
 {% block body %}
 <section class="container py-5">
-    <div class="text-center mb-4">
-        <h1 class="mb-3">Join Our Team</h1>
-        <p class="lead">We're building something great. Be a part of it.</p>
+
+    <!-- Page Heading -->
+    <div class="text-center mb-5 page-header-blur">
+        <h1 class="page-title">Join Our Team</h1>
+        <p class="lead" style = "color:grey;">We're building something great. Be a part of it.</p>
     </div>
 
+    <!-- Job Cards -->
     <div class="row">
         {% for job in jobs %}
         <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm p-4">
-                <h4>{{ job.title }}</h4>
-                <p><strong>Location:</strong> {{ job.location }}</p>
-                <p>{{ job.description }}</p>
-                <a href="mailto:{{ job.email }}?subject=Application for {{ job.title }}" class="btn btn-primary">
-                    Apply Now
-                </a>
+            <div class="job-card h-100 p-4">
+                <h4 class="text-white">{{ job.Title }}</h4>
+                <p class="text-muted mb-2"><strong>Location:</strong> <span style = "color:grey;">{{ job.Location }}</span></p>
+                <p class="text-light"><strong>Skills:</strong> <span style = "color:grey;">{{ job.Skills}}</span></p>
+                 <p class="text-light"><strong>Descripton:</strong> <span style = "color:grey;">{{ job.Description}}</span></p>
+                <div class="d-flex justify-content-end mt-auto pt-3">
+                    <a href="{% url 'jobDetails' %}" target="_blank"
+                       class="btn btn-success btn-gradient" style="margin-top: -12px;">
+                        Apply Now
+                    </a>
+                </div>
             </div>
         </div>
         {% endfor %}
     </div>
+
+    <!-- Add Job Button -->
+    <div class="text-end mb-4">
+        <a href="{% url 'jobPost' %}" target="_blank"
+           class="btn btn-success btn-gradient1 mt-2" style="margin-right: 2%;">
+            + Add Jobs
+        </a>
+    </div>
+
 </section>
 {% endblock %}

@@ -25,3 +25,10 @@
     outline: none;
     box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
 }
+
+.page-header{
+  background: rgba(41, 40, 40, 0.05);
+  backdrop-filter: blur(3px);
+  color: white;
+  transition: box-shadow 0.3s ease;
+}

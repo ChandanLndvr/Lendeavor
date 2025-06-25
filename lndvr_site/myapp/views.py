@@ -6,6 +6,7 @@ from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from .models import PasswordResetToken
 import uuid
+from job_posting_app.models import JobDetails
 
 #----------------------- Main page ------------------------
 
@@ -225,25 +226,42 @@ def products(request):
 #---------------------------- Careers Page -------------------------
 
 def career_page(request):
-    job_list = [
-        {
-            "title": "Frontend Developer",
-            "location": "New York, NY",
-            "description": "Looking for an expert in React.js and UI/UX design.",
-            "email": "careers@lendeavorusa.com",
-        },
-        {
-            "title": "Marketing Analyst",
-            "location": "Remote",
-            "description": "Data-driven marketing specialist with B2B experience.",
-            "email": "careers@lendeavorusa.com",
-        }
-    ]
+    # job_list = [
+    #     {
+    #         "title": "Frontend Developer",
+    #         "location": "New York, NY",
+    #         "description": "Looking for an expert in React.js and UI/UX design.",
+    #         "email": "careers@lendeavorusa.com",
+    #     },
+    #     {
+    #         "title": "Marketing Analyst",
+    #         "location": "Remote",
+    #         "description": "Data-driven marketing specialist with B2B experience.",
+    #         "email": "careers@lendeavorusa.com",
+    #     },
+    #     {
+    #         "title": "Backend Developer",
+    #         "location": "New York, NY",
+    #         "description": "Looking for an expert in Python, AWS, SQL.",
+    #         "email": "careers@lendeavorusa.com",
+    #     },
+    #     {
+    #         "title": "Sales Person",
+    #         "location": "Remote",
+    #         "description": "Sales specialist with B2B experience.",
+    #         "email": "careers@lendeavorusa.com",
+    #     }
+    # ]
     context = {
-        'jobs': job_list,
+        'jobs': JobDetails.objects.all(),
         'current_page': 'careers'
     }
     return render(request, 'careers.html', context)
+
+#------------------------ view jobs -------------------------
+
+def view_job(request):
+    return render(request, 'view_job.html', {'current_page':'careers'})
 
 #---------------------------- Contact ----------------------------
 
@@ -289,3 +307,4 @@ def terms(request):
 
 def privacy(request):
     return render(request, 'privacy.html',{'current_page':'privacy'})
+
