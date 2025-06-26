@@ -19,5 +19,5 @@ from django.urls import path, include
 from job_posting_app import views
 
 urlpatterns = [
-    path("", views.add_job, name = "jobPost")
+    path("", views.add_job, name = "jobPost"),
 ]

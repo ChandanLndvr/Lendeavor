@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from myapp.models import SignUp, UserApplications
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
@@ -226,42 +226,17 @@ def products(request):
 #---------------------------- Careers Page -------------------------
 
 def career_page(request):
-    # job_list = [
-    #     {
-    #         "title": "Frontend Developer",
-    #         "location": "New York, NY",
-    #         "description": "Looking for an expert in React.js and UI/UX design.",
-    #         "email": "careers@lendeavorusa.com",
-    #     },
-    #     {
-    #         "title": "Marketing Analyst",
-    #         "location": "Remote",
-    #         "description": "Data-driven marketing specialist with B2B experience.",
-    #         "email": "careers@lendeavorusa.com",
-    #     },
-    #     {
-    #         "title": "Backend Developer",
-    #         "location": "New York, NY",
-    #         "description": "Looking for an expert in Python, AWS, SQL.",
-    #         "email": "careers@lendeavorusa.com",
-    #     },
-    #     {
-    #         "title": "Sales Person",
-    #         "location": "Remote",
-    #         "description": "Sales specialist with B2B experience.",
-    #         "email": "careers@lendeavorusa.com",
-    #     }
-    # ]
     context = {
         'jobs': JobDetails.objects.all(),
         'current_page': 'careers'
     }
     return render(request, 'careers.html', context)
 
-#------------------------ view jobs -------------------------
+#------------------------ Apply for jobs -------------------------
 
-def view_job(request):
-    return render(request, 'view_job.html', {'current_page':'careers'})
+def job_application(request, job_id):
+    jobs = get_object_or_404(JobDetails, Job_id = job_id) 
+    return render(request,'job_apply.html', {'jobs':jobs})
 
 #---------------------------- Contact ----------------------------
 

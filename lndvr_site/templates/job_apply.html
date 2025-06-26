@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/job_apply.css' %}">
+{% endblock head %}
+
+{% block title %}Job Application | {% endblock title %}
+
+
+{% block body %}
+<div class="job-application-container">
+    <h3>{{jobs.Title}}</h3>
+    <!-- <p>Job id: {{jobs.Job_id}}</p> -->
+    <p><strong>Location:</strong> <span style = "color:grey;">{{jobs.Location}}</span></p>
+    <p><strong>Job type:</strong> <span style = "color:grey;">{{jobs.Job_type}}</span></p>
+    <p><strong>Work mode:</strong> <span style = "color:grey;">{{jobs.Work_mode}}</span></p>
+    <p><strong>Description:</strong> <span style = "color:grey;">{{jobs.Description}}</span></p>
+    <p><strong>Skills:</strong> <span style = "color:grey;">{{jobs.Skills}}</span></p>
+    <p><strong>Email:</strong> <span style = "color:grey;">{{jobs.Email}}</span></p>
+    <p><strong>About Us:</strong><span style = "color:grey;">
+        At Lendeavor, we believe that every small business has the potential to thrive. We're committed to
+        helping entrepreneurs achieve their dreams by providing access to the funding they need.
+        With our strong network of 80+ trusted lenders, we make financing fast, secure, and transparent tailored to your
+        unique journey.
+    </span>
+    </p>
+    <p><strong>Our services:</strong><span style = "color:grey;">
+        Finding the right financing shouldn't be overwhelming. That’s why Lendeavor is here to simplify your path to
+        capital.
+        Whether you need working capital, equipment financing, or a long-term funding strategy, our team guides you with
+        expertise, clarity, and care.
+    </span>
+    </p>
+    <br/>
+    <h5>Fill the form to apply for this position:</h5>
+    <div class="sparkle-divider"></div>
+    <br/>
+    <form method = "POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label class="form-label text-white">First Name:<span style = "color:red;">*</span></label>
+            <input type = 'text' class="fname" id="fname" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Last Name:<span style = "color:red;">*</span></label>
+            <input type = 'text' class="lname" id="lname" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Email:<span style = "color:red;">*</span></label>
+            <input type = 'email' class="email" id="email" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Phone Number<span style = "color:red;">*</span></label>
+            <input type = 'text' class="phone" id="phone" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Experience:<span style = "color:red;">*</span></label>
+                <select name="experience" class="form-select" required>
+                    <option value="">-- Select Mode --</option>
+                    <option value="fresher">Fresher</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-4">3-4</option>
+                    <option value="5-7">5-7</option>
+                    <option value="8-10">8-10</option>
+                    <option value="10+">10+</option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Qualification Level:<span style = "color:red;">*</span></label>
+                <select name="qualification" class="form-select" required>
+                    <option value="">-- Select Mode --</option>
+                    <option value="undergrad">Under Graduation</option>
+                    <option value="grad">Graduation</option>
+                    <option value="postgrad">Post graduation</option>
+                </select>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Major:<span style = "color:red;">*</span></label>
+            <input type="text" class="major" id="major" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">School Name:<span style = "color:red;">*</span></label>
+            <input type="text" class="school" id="school" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Degree Completion Year:<span style = "color:red;">*</span></label>
+            <input type="text" class="year" id="year" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Expected salary:<span style = "color:red;">*</span></label>
+            <input type = 'text' class="fname" id="fname" required>
+        </div>
+        <div class="mb-3">
+            <label class="form-label text-white">Gender:<span style = "color:red;">*</span></label>
+            <input type="radio" class="male" id="male" required>Male
+            <input type="radio" class="female" id="female" required>Female
+        </div>
+        <div>
+            <button type="submit" class="btn btn-success w-100 mt-4" style="background: linear-gradient(90deg, #00f2ff, #007bff); color: white; font-weight: bold;">Submit</button>
+        </div>
+    </form>  
+</div>
+{% endblock body %}
