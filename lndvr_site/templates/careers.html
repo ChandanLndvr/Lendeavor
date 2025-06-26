@@ -24,9 +24,9 @@
                 <h4 class="text-white">{{ job.Title }}</h4>
                 <p class="text-muted mb-2"><strong>Location:</strong> <span style = "color:grey;">{{ job.Location }}</span></p>
                 <p class="text-light"><strong>Skills:</strong> <span style = "color:grey;">{{ job.Skills}}</span></p>
-                 <p class="text-light"><strong>Descripton:</strong> <span style = "color:grey;">{{ job.Description}}</span></p>
+                <p class="text-light"><strong>Salary:</strong> <span style = "color:grey;">{{ job.Salary}}$</span></p>
                 <div class="d-flex justify-content-end mt-auto pt-3">
-                    <a href="{% url 'jobDetails' %}" target="_blank"
+                    <a href="{% url 'jobApplication' job.Job_id %}"
                        class="btn btn-success btn-gradient" style="margin-top: -12px;">
                         Apply Now
                     </a>
@@ -38,7 +38,7 @@
 
     <!-- Add Job Button -->
     <div class="text-end mb-4">
-        <a href="{% url 'jobPost' %}" target="_blank"
+        <a href="{% url 'jobPost' %}"
            class="btn btn-success btn-gradient1 mt-2" style="margin-right: 2%;">
             + Add Jobs
         </a>

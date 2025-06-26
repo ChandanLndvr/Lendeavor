@@ -14,6 +14,7 @@ def add_job(request):
             work_mode = request.POST.get('work_mode')
             description = request.POST.get('description')
             skills = request.POST.get('skills')
+            salary = request.POST.get('salary')
             email = request.POST.get('email')
             added_by = request.POST.get('added_by')
 
@@ -26,11 +27,13 @@ def add_job(request):
                          Work_mode = work_mode, 
                          Description = description, 
                          Skills = skills, 
+                         Salary = salary,
                          Email = email, 
                          Added_by = added_by)
             job_obj.save()
             return render(request, 'add_job.html', {'message':'Data added successfully!'})
             
         except Exception as e:
-            return (request, 'add_job.html', {'error':str(e)})
+            return render(request, 'add_job.html', {'error':str(e)})
     return render(request, 'add_job.html', {'current_page':'careers'})
+
