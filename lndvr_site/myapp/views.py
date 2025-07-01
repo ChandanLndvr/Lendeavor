@@ -226,17 +226,25 @@ def products(request):
 #---------------------------- Careers Page -------------------------
 
 def career_page(request):
+    all_jobs = JobDetails.objects.all()
+    message = request.GET.get("message") # to send edit and delete msgs of  jobs CRUD oprn
+    error = request.GET.get("error") # to send edit and delete msgs of  jobs CRUD oprn
     context = {
-        'jobs': JobDetails.objects.all(),
-        'current_page': 'careers'
+        'jobs': all_jobs,
+        'current_page': 'careers',
+        'message': message,
+        'error': error
     }
     return render(request, 'careers.html', context)
 
 #------------------------ Apply for jobs -------------------------
 
 def job_application(request, job_id):
-    jobs = get_object_or_404(JobDetails, Job_id = job_id) 
-    return render(request,'job_apply.html', {'jobs':jobs})
+    context = {
+        'jobs': get_object_or_404(JobDetails, Job_id = job_id),
+        'current_page': 'careers'
+    } 
+    return render(request,'job_apply.html', context)
 
 #---------------------------- Contact ----------------------------
 

@@ -19,5 +19,7 @@ from django.urls import path, include
 from job_posting_app import views
 
 urlpatterns = [
-    path("", views.add_job, name = "jobPost"),
+    path("create/", views.add_job, name = "jobPost"),
+    path("edit/<uuid:job_id>/", views.update_or_delete_job, name="editJob"),
+    path("bulkdelete/", views.bulk_delete_jobs, name="bulkDeleteJobs")
 ]

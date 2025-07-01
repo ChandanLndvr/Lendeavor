@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/job_post.css' %}">
+{% endblock %}
+
+{% block title %}Update Job | Lendeavor{% endblock %}
+
+{% block body %}
+<section class="container">
+    <div class="job-post-form p-5">
+        <h2 class="text-white text-center mb-4">Update a Job</h2>
+        <form method="POST">
+            {% csrf_token %}
+
+            <div class="mb-3">
+                <label class="form-label text-white">Job Title<span style="color:red;">*</span></label>
+                <input type="text" name="title" class="form-control" required value="{{ jobs.Title }}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Location<span style="color:red;">*</span></label>
+                <input type="text" name="location" class="form-control" required value="{{ jobs.Location }}">
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Job Type<span style="color:red;">*</span></label>
+                <select name="job_type" class="form-select" required>
+                    <option value="">-- Select Type --</option>
+                    <option value="contract" {% if jobs.Job_type == "contract" %}selected{% endif %}>Contract</option>
+                    <option value="part_time" {% if jobs.Job_type == "part_time" %}selected{% endif %}>Part Time</option>
+                    <option value="full_time" {% if jobs.Job_type == "full_time" %}selected{% endif %}>Full Time</option>
+                    <option value="internship" {% if jobs.Job_type == "internship" %}selected{% endif %}>Internship
+                    </option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Work Mode<span style="color:red;">*</span></label>
+                <select name="work_mode" class="form-select" required>
+                    <option value="">-- Select Mode --</option>
+                    <option value="in office" {% if jobs.Work_mode == "in office" %}selected{% endif %}>In Office</option>
+                    <option value="hybrid" {% if jobs.Work_mode == "hybrid" %}selected{% endif %}>Hybrid</option>
+                    <option value="remote" {% if jobs.Work_mode == "remote" %}selected{% endif %}>Remote</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Description<span style="color:red;">*</span></label>
+                <textarea name="description" class="form-control" rows="4" required>{{ jobs.Description }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Skills Required<span style="color:red;">*</span></label>
+                <textarea name="skills" class="form-control" rows="3" required>{{ jobs.Skills }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Salary</label>
+                <textarea name="salary" class="form-control" rows="1">{{ jobs.Salary }}</textarea>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Contact Email<span style="color:red;">*</span></label>
+                <input type="email" name="email" class="form-control" value="{{ jobs.Email }}" required>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label text-white">Added By<span style="color:red;">*</span></label>
+                <input type="email" name="added_by" class="form-control" required value="{{ jobs.Added_by }}">
+            </div>
+            <div class="d-flex justify-content-between gap-2 mt-4">
+                <button type="submit" name="action" value="delete" class="btn btn-danger flex-fill"
+                    style="background: linear-gradient(90deg, #daad59, #ff0055); color: white; font-weight: bold;">
+                    Delete Job
+                </button>
+                <button type="submit" name="action" value="update" class="btn btn-success flex-fill"
+                    style="background: linear-gradient(90deg, #00f2ff, #00ff37); color: white; font-weight: bold;">
+                    Update Job
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+<script src = "{% static 'js/job_crud_popup.js' %}"></script>
+{% endblock %}

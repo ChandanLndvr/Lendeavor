@@ -22,7 +22,7 @@ class JobDetails(models.Model):
     Job_type = models.CharField(max_length=50, choices=job_type_choices)
     Description = models.TextField()
     Skills = models.TextField()
-    Salary = models.IntegerField(max_length=12)
+    Salary = models.CharField(max_length=12, null=True, blank=True)
     Email = models.EmailField(default=" info@lendeavorusa.com")
     Added_by = models.EmailField()
     Date = models.DateField(auto_now_add=True)
