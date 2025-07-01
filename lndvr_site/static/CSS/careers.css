@@ -21,9 +21,9 @@
     height: 100%;
 }
 
-.job-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 123, 255, 0.3);
+.job-checkbox:hover {
+    transform: scale(0.9);
+    filter: drop-shadow(0 0 4px rgba(0, 242, 255, 0.9)); /* brighter glow on hover */
 }
 
 /* ==== Text Colors ==== */
