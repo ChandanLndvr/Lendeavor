@@ -27,6 +27,8 @@
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 
+    <link rel="stylesheet" href="{% static 'css/affiliate.css' %}">
+
     {% block head %}{% endblock head %}
 </head>
 
@@ -92,7 +94,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
-                                    href="/affiliates">
+                                    href="{% url 'affiliates' %}">
                                     Become an Affiliate
                                 </a>
                             </li>
@@ -120,9 +122,21 @@
 
                 <!-- Right side buttons -->
                 <div class="d-flex mt-2 mt-lg-0 gap-2">
+
                     <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
                     <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                    <!-- user.is_authenticated is coming from myapp.middleware.jwt_auth_middleware.JWTAuthMiddleware-->
+                    <!-- {% if user.is_authenticated %} 
+                    <form method="POST" action="{% url 'logout' %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-outline-light">Logout</button>
+                    </form>
+                    {% else %}
+                    <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
+                    <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                    {% endif %} -->
                 </div>
+
             </div>
         </div>
     </nav>

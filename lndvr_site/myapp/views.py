@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
-from myapp.models import SignUp, UserApplications
+from myapp.models import SignUp, UserApplications, JobApplications
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from .models import PasswordResetToken
 import uuid
 from job_posting_app.models import JobDetails
+from datetime import date, timedelta
+# from django.views.decorators.csrf import csrf_exempt
 
 #----------------------- Main page ------------------------
 
@@ -75,6 +77,14 @@ def login(request):
             return render(request, 'login.html', {"error": "No account found with that email."})
 
     return render(request, 'login.html')
+
+#----------------------------- logout ----------------------------------------
+
+# @csrf_exempt
+# def logout_view(request):
+#     response = redirect('mainPage')  # or your desired page
+#     response.delete_cookie('jwt_token')
+#     return response
 
 #----------------------------- Forgot Password ----------------------------------
 
@@ -237,14 +247,101 @@ def career_page(request):
     }
     return render(request, 'careers.html', context)
 
-#------------------------ Apply for jobs -------------------------
+#------------------------ job applications ------------------------
 
-def job_application(request, job_id):
+def job_applications(request, job_id):
+    job = get_object_or_404(JobDetails, Job_id=job_id)
     context = {
-        'jobs': get_object_or_404(JobDetails, Job_id = job_id),
-        'current_page': 'careers'
-    } 
-    return render(request,'job_apply.html', context)
+        'job': job,
+        'current_page': 'careers',
+    }
+
+    if request.method == "POST":
+        try:
+            f_name = request.POST.get('fname')
+            l_name = request.POST.get("lname")
+            email = request.POST.get("email")
+            phone_no = request.POST.get("phone")
+            experience = request.POST.get("experience")
+            qualification = request.POST.get("qualification")
+            major = request.POST.get("major")
+            school = request.POST.get("school")
+            degree_year = request.POST.get("year")
+            expected_salary = request.POST.get("salary")
+            gender = request.POST.get("gender")
+            resume_file = request.FILES.get("resume")
+
+            twenty_days_ago = date.today() - timedelta(days=20)
+            duplicate = JobApplications.objects.filter(
+                Email=email,
+                Job=job,
+                Applied_on__gte=twenty_days_ago
+            ).exists()
+
+            if duplicate:
+                context['error'] = "You have already applied for this job within the last 20 days."
+                return render(request, "job_apply.html", context)
+
+            JobApplications.objects.create(
+                Job=job,
+                Job_title=job.Title,
+                First_name=f_name,
+                Last_name=l_name,
+                Email=email,
+                Phone_no=phone_no,
+                Expirence=experience,
+                Qualification_level=qualification,
+                Major=major,
+                School_name=school,
+                Degree_year=degree_year,
+                Expected_salary=expected_salary if expected_salary else None,
+                Gender=gender,
+                Resume=resume_file
+            )
+
+            # Prepare email with attachment
+            subject = f"New Job Application for {job.Title}"
+            message = f"""
+                        Dear HR,
+
+                        A new job application has been submitted.
+
+                        Job: {job.Title}
+                        Applicant Name: {f_name} {l_name}
+                        Email: {email}
+                        Phone: {phone_no}
+                        Experience: {experience}
+                        Qualification Level: {qualification}
+                        Major: {major}
+                        School: {school}
+                        Degree Year: {degree_year}
+                        Expected Salary: {expected_salary}
+                        Gender: {gender}
+
+                        Please find the attached resume for further details.
+
+                        Regards,
+                        Lendeavor Careers Bot
+                        """
+
+            email_message = EmailMessage(
+                subject,
+                message,
+                settings.DEFAULT_FROM_EMAIL,
+                [job.Email, settings.DEFAULT_FROM_EMAIL],  # HR and archive
+            )
+
+            if resume_file:
+                email_message.attach(resume_file.name, resume_file.read(), resume_file.content_type)
+
+            email_message.send(fail_silently=False)
+
+            context['message'] = "You have successfully applied for this job, and your resume has been sent to HR."
+
+        except Exception as e:
+            context['error'] = f"An error occurred: {str(e)}"
+
+    return render(request, "job_apply.html", context)
 
 #---------------------------- Contact ----------------------------
 

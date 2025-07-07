@@ -22,7 +22,7 @@
         {% csrf_token %}
 
         <!-- Select All and Delete Selected -->
-        <div class="d-flex justify-content-end align-items-center gap-2 mb-4 pb-2"
+        <div class="d-flex justify-content-end align-items-center gap-2 mb-2 mt-2 pb-2 pt-1"
              style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
             
             <!-- Select All -->
@@ -78,7 +78,7 @@
                     <p class="text-light">
                         <strong>Description:</strong>
                         <a href="{% url 'jobApplication' job.Job_id %}"
-                           style="color: rgb(0, 204, 255); text-decoration: none;">
+                           style="color: rgb(0, 204, 255);">
                             View
                         </a>
                     </p>

@@ -40,7 +40,7 @@
                 <label class="form-label text-white">Work Mode<span style="color:red;">*</span></label>
                 <select name="work_mode" class="form-select" required>
                     <option value="">-- Select Mode --</option>
-                    <option value="in office" {% if jobs.Work_mode == "in office" %}selected{% endif %}>In Office</option>
+                    <option value="in_office" {% if jobs.Work_mode == "in_office" %}selected{% endif %}>In Office</option>
                     <option value="hybrid" {% if jobs.Work_mode == "hybrid" %}selected{% endif %}>Hybrid</option>
                     <option value="remote" {% if jobs.Work_mode == "remote" %}selected{% endif %}>Remote</option>
                 </select>
@@ -83,5 +83,5 @@
         </form>
     </div>
 </section>
-<script src = "{% static 'js/job_crud_popup.js' %}"></script>
+<script src="{% static 'js/job_crud_popup.js' %}"></script>
 {% endblock %}

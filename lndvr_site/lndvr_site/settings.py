@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'myapp',
     'rest_framework',
     'job_posting_app',
+    'affiliate_app',
 ]
 
 REST_FRAMEWORK = {
@@ -64,6 +65,8 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.contrib.auth.middleware.AuthenticationMiddleware', 
+    # 'lndvr_site.middleware.jwt_auth_middleware.JWTAuthMiddleware',
 ]
 
 ROOT_URLCONF = 'lndvr_site.urls'

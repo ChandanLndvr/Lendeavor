@@ -2,52 +2,70 @@
 
 {% block head %}
 {% load static %}
-<link rel = "stylesheet" href = "{% static 'css/case_study.css' %}">
+<link rel="stylesheet" href="{% static 'css/case_study.css' %}">
+<!-- Load customer feedback page css -->
+<link rel="stylesheet" href="{% static 'css/cust_feedback.css' %}">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
 {% endblock head %}
 
 {% block title %}Case Studies | {% endblock title %}
 
 {% block body %}
-<section class="case-section">
-    <div class="case-container">
-        <div class="case-header">
-            <h1>Success Stories</h1>
-            <p>Real clients. Real growth. See how Lendeavor helped fuel their businesses.</p>
-        </div>
 
-        <div class="row justify-content-center">
-            <!-- Case Study 1 -->
-            <div class="col-md-6 col-lg-5 mb-4 d-flex">
-                <div class="case-card w-100">
-                    <img src="{% static 'case_study1.webp' %}" alt="Restaurant Case Study">
-                    <h5>Restaurant Industry Transformation</h5>
-                    <a href="https://storage.googleapis.com/msgsndr/DKSmQL2xZeyMFNvH64IA/media/6802886e8970b0109ff1dbe8.pdf" target="_blank">
-                        View Case Study &rarr;
-                    </a>
+<div class="blur-background">
+    <section class="case-section">
+        <div class="case-container">
+            <div class="case-header">
+                <h1>Success Stories</h1>
+                <p>Real clients. Real growth. See how Lendeavor helped fuel their businesses.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <!-- Case Study 1 -->
+                <div class="col-md-6 col-lg-5 mb-4 d-flex">
+                    <div class="case-card w-100">
+                        <img src="{% static 'case_study1.webp' %}" alt="Restaurant Case Study" loading="lazy">
+                        <h5>Restaurant Industry Transformation</h5>
+                        <a href="https://storage.googleapis.com/msgsndr/DKSmQL2xZeyMFNvH64IA/media/6802886e8970b0109ff1dbe8.pdf" target="_blank" rel="noopener noreferrer">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="col-md-6 col-lg-5 mb-4 d-flex">
+                    <div class="case-card w-100">
+                        <img src="{% static 'case_study2.webp' %}" alt="Cannabis Case Study" loading="lazy">
+                        <h5>Cannabis Industry Expansion</h5>
+                        <a href="https://storage.googleapis.com/msgsndr/DKSmQL2xZeyMFNvH64IA/media/68067329a667950fe71cdb7e.pdf" target="_blank" rel="noopener noreferrer">
+                            View Case Study &rarr;
+                        </a>
+                    </div>
                 </div>
             </div>
 
-            <!-- Case Study 2 -->
-            <div class="col-md-6 col-lg-5 mb-4 d-flex">
-                <div class="case-card w-100">
-                    <img src="{% static 'case_study2.webp' %}" alt="Cannabis Case Study">
-                    <h5>Cannabis Industry Expansion</h5>
-                    <a href="https://storage.googleapis.com/msgsndr/DKSmQL2xZeyMFNvH64IA/media/68067329a667950fe71cdb7e.pdf" target="_blank">
-                        View Case Study &rarr;
-                    </a>
-                </div>
+            <div class="d-flex justify-content-end mt-4">
+                <a href="{% url 'apply' %}" class="btn btn-success mt-2" style="
+                    background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+                    background-size: 200% auto;
+                    color: white;
+                    animation: sparkle 2s linear infinite;
+                    border: none;
+                    font-weight: 600;
+                    text-align: right;
+                    margin-right: 8.5%;
+                ">
+                    Apply now <span class="arrow">↗</span>
+                </a>
             </div>
         </div>
-        <div class = "d-flex justify-content-end mt-4">
-            <a href="{% url 'apply' %}" class="btn btn-success mt-2" style="background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
-                background-size: 200% auto;
-                color: white;
-                animation: sparkle 2s linear infinite;
-                border: none;
-                font-weight: 600;
-                text-align: right;
-                margin-right: 8.5%;">Apply now <span class = "arrow">↗</span></a>
-        </div>
-    </div>   
-</section>
+    </section>
+
+    <!-- Customer Feedback Section -->
+    <section class="case-section container mt-0">
+        {% include 'cust_feedback.html' %}
+    </section>
+</div>
 {% endblock %}

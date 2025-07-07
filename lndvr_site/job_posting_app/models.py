@@ -32,3 +32,4 @@ class JobDetails(models.Model):
     
     def __str__(self):
         return f"{self.Title} - {self.Location}"
+    

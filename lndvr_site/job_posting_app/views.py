@@ -104,6 +104,3 @@ def bulk_delete_jobs(request):
 
     # If GET, redirect safely
     return redirect(reverse("careers") + "?error=Invalid request method for bulk deletion.")
-
-
-

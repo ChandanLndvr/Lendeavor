@@ -3,6 +3,7 @@ from django.contrib.auth.hashers import make_password, check_password
 import uuid
 from datetime import timedelta
 from django.utils import timezone
+from job_posting_app.models import JobDetails
 
 # Create your models here.
 
@@ -89,3 +90,63 @@ class UserApplications(models.Model):
 
     def __str__(self):
         return f"{self.Owner_First_Name} {self.Owner_Last_Name}"
+    
+
+
+class JobApplications(models.Model):
+    experience_choices = [
+        ('fresher','Fresher'),
+        ('1-2','1-2'),
+        ('3-4','3-4'),
+        ('5-7','5-7'),
+        ('8-10','8-10'),
+        ('10+','10+')
+    ]
+
+    qualification_level = [
+        ('undergrad','Under Graduation'),
+        ('grad','Graduation'),
+        ('postgrad','Post Graduation')
+    ]
+
+    Application_id = models.CharField(max_length=10, primary_key=True, unique=True)
+    Job = models.ForeignKey(JobDetails, on_delete=models.CASCADE, related_name='applications')
+    Job_title = models.CharField(max_length=255, null=True, blank=True)
+    First_name = models.CharField(max_length=150)
+    Last_name = models.CharField(max_length=150)
+    Email = models.EmailField()
+    Phone_no = models.CharField(max_length=15)
+    Expirence = models.CharField(max_length=150, choices=experience_choices)
+    Qualification_level = models.CharField(max_length=200, choices=qualification_level)
+    Major = models.CharField(max_length=200)
+    School_name = models.CharField(max_length=200)
+    Degree_year = models.IntegerField()
+    Expected_salary  = models.IntegerField(null=True, blank=True)
+    Gender = models.CharField(max_length=50)
+    Resume = models.FileField(upload_to='uploaded_files/resume/', null=True, blank=True)
+    Applied_on = models.DateField(auto_now=True)
+
+    def save(self, *args, **kwargs):
+        if not self.Application_id:  # Only generate ID if it doesn't already exist
+            # Get the last Application_id, if available
+            last_appln_id = JobApplications.objects.order_by('Application_id').last()
+            
+            # Determine the next ID
+            if last_appln_id and last_appln_id.Application_id.startswith('JA'):
+                # Extract the numeric part and increment it
+                next_id_num = int(last_appln_id.Application_id[2:]) + 1
+            else:
+                # Start from 101 if no valid last ID exists
+                next_id_num = 101
+            
+            # Set the new Application_id with prefix 'CR'
+            self.Application_id = f'JA{next_id_num}'
+        
+        # Call the parent save method
+        super().save(*args, **kwargs)
+
+    class Meta:
+        db_table = 'Job_applications'
+
+    def __str__(self):
+        return f"{self.First_name} + {self.Last_name}"
