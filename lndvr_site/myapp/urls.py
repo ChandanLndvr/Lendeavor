@@ -35,7 +35,7 @@ urlpatterns = [
     path("faq/", views.faq, name = "faq"),
     path("terms/", views.terms, name = "terms"),
     path("privacy/", views.privacy, name = "privacy"),
-    path("careers/application/<uuid:job_id>/", views.job_application, name = "jobApplication"),
+    path("careers/application/<uuid:job_id>/", views.job_applications, name = "jobApplication"),
     path("job/", include("job_posting_app.urls")),
     path("affiliate/", include("affiliate_app.urls")),
 ]
