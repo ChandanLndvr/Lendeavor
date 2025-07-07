@@ -37,4 +37,5 @@ urlpatterns = [
     path("privacy/", views.privacy, name = "privacy"),
     path("careers/application/<uuid:job_id>/", views.job_application, name = "jobApplication"),
     path("job/", include("job_posting_app.urls")),
+    path("affiliate/", include("affiliate_app.urls")),
 ]
