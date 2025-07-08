@@ -22,25 +22,28 @@
         {% csrf_token %}
 
         <!-- Select All and Delete Selected -->
+         {% if show_admin_tools %}
         <div class="d-flex justify-content-end align-items-center gap-2 mb-4 pb-2"
-             style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
-            
+            style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
+
             <!-- Select All -->
+            
             <input type="checkbox" id="select-all" class="form-check-input" style="cursor: pointer;">
             <label for="select-all" class="text-light mt-1" style="cursor: pointer;">
                 Select All
             </label>
+            
 
             <!-- Divider -->
             <span class="text-light">|</span>
 
             <!-- Delete Selected Button -->
-            <button type="submit" id="delete-selected-button"
-                    class="btn btn-link p-0"
-                    style="font-weight: 550; color: #ddecec; display: none; text-decoration: none;">
+            <button type="submit" id="delete-selected-button" class="btn btn-link p-0"
+                style="font-weight: 550; color: #ddecec; display: none; text-decoration: none;">
                 <i class="bi bi-trash"></i> Delete Selected
             </button>
         </div>
+        {% endif %}
 
         <!-- Job Cards -->
         <div class="row">
@@ -49,10 +52,12 @@
                 <div class="job-card h-100 p-4 position-relative">
 
                     <!-- Checkbox for selection (top-left corner) -->
+                    {% if show_admin_tools %}
                     <div class="position-absolute top-0 start-0 mt-1 ms-2">
                         <input class="form-check-input" type="checkbox" name="job_ids" value="{{ job.Job_id }}"
-                               id="jobCheck{{ forloop.counter }}" style="cursor: pointer;">
+                            id="jobCheck{{ forloop.counter }}" style="cursor: pointer;">
                     </div>
+                    {% endif %}
 
                     <!-- Job Header -->
                     <div class="d-flex justify-content-between align-items-center mb-3">
@@ -61,9 +66,11 @@
                                 <span style="color: rgb(0, 255, 170); font-weight: 600;">{{ job.Title }}</span>
                             </h4>
                         </a>
+                        {% if show_admin_tools %}
                         <a href="{% url 'editJob' job.Job_id %}" class="btn btn-sm btn-light">
                             <i class="fas fa-edit"></i>
                         </a>
+                        {% endif %}
                     </div>
 
                     <!-- Job Details -->
@@ -78,14 +85,15 @@
                     <p class="text-light">
                         <strong>Description:</strong>
                         <a href="{% url 'jobApplication' job.Job_id %}"
-                           style="color: rgb(0, 204, 255); text-decoration: none;">
+                            style="color: rgb(0, 204, 255); text-decoration: none;">
                             View
                         </a>
                     </p>
 
                     <!-- Apply Now Button -->
                     <div class="d-flex justify-content-end mt-auto pt-3">
-                        <a href="{% url 'jobApplication' job.Job_id %}" class="btn btn-success btn-gradient" style="margin-top: -12px;">
+                        <a href="{% url 'jobApplication' job.Job_id %}" class="btn btn-success btn-gradient"
+                            style="margin-top: -12px;">
                             Apply Now <span class="arrow">↗</span>
                         </a>
                     </div>
@@ -96,11 +104,15 @@
         </div>
 
         <!-- Add Job Button -->
+
         <div class="text-end mb-4">
+            {% if show_admin_tools %}
             <a href="{% url 'jobPost' %}" class="btn btn-success btn-gradient1 mt-2" style="margin-right: 2%;">
                 + Add Jobs
             </a>
+            {% endif %}
         </div>
+
 
     </form>
 </section>
