@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.urls import reverse
 from django.http import HttpResponse
 from myapp.models import SignUp, UserApplications, JobApplications
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
@@ -75,7 +76,14 @@ def login(request):
         except SignUp.DoesNotExist:
             return render(request, 'login.html', {"error": "No account found with that email."})
 
-    return render(request, 'login.html')
+    # Handle GET request — check if there is a message or error in query params
+    message = request.GET.get('message')
+    error = request.GET.get('error')
+
+    return render(request, 'login.html', {
+        "message": message,
+        "error": error
+    })
 
 #----------------------------- Forgot Password ----------------------------------
 
@@ -98,11 +106,28 @@ def forgot_password(request):
                 fail_silently=False,
             )
 
-            return render(request, "forgot_password.html", {"message": "Check your email for a reset link."})
-        except SignUp.DoesNotExist:
-            return render(request, "forgot_password.html", {"error": "No account with that email."})
+            # Add message in GET parameters for the login page
+            login_url = reverse("login") + "?message=Check your email for a reset link."
+            print("Redirecting to:", login_url)
+            return redirect(login_url)
 
-    return render(request, "forgot_password.html")
+        except SignUp.DoesNotExist:
+            # Stay on the same page with an error message in GET parameters
+            forgot_url = reverse("forgot_password") + "?error=No account with that email."
+            print("Redirecting to:", forgot_url)
+            return redirect(forgot_url)
+
+    # Correctly read from GET, not POST
+    message = request.GET.get('message')
+    error = request.GET.get('error')
+
+    print("Message:", message)
+    print("Error:", error)
+
+    return render(request, "forgot_password.html", {
+        "message": message,
+        "error": error
+    })
 
 #----------------------------- Reset Password ----------------------------------
 
