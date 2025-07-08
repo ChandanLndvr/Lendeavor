@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.http import HttpResponse
-from myapp.models import SignUp, UserApplications, JobApplications
+from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
@@ -9,6 +9,8 @@ from .models import PasswordResetToken
 import uuid
 from job_posting_app.models import JobDetails
 from datetime import date, timedelta
+import jwt
+from datetime import datetime, timezone as dt_timezone
 
 #----------------------- Main page ------------------------
 
@@ -56,7 +58,7 @@ def signUp(request):
 
 #---------------------- login with JWT Auth ----------------------------
 
-def login(request):
+def login_user(request):
     if request.method == "POST":
         email = request.POST.get('email')
         password = request.POST.get('password1')
@@ -84,6 +86,25 @@ def login(request):
         "message": message,
         "error": error
     })
+
+
+#---------------------------- logout -------------------------------------------
+
+def logout_user(request):
+    token = request.COOKIES.get('jwt_token')
+    if token:
+        try:
+            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+            expiry_timestamp = payload.get('exp')
+            expires_at = datetime.fromtimestamp(expiry_timestamp, tz=dt_timezone.utc)   
+
+            BlacklistedToken.objects.get_or_create(token=token, defaults={'expires_at': expires_at})
+        except jwt.InvalidTokenError:
+            pass
+
+    response = redirect(reverse('mainPage') + "?message=You have successfully logged out.")
+    response.delete_cookie('jwt_token')
+    return response
 
 #----------------------------- Forgot Password ----------------------------------
 

@@ -22,7 +22,8 @@ from django.contrib.auth import views as auth_views #inbuilt views by django
 urlpatterns = [
     path('', views.main, name = "mainPage"),
     path('signup/', views.signUp, name = "signup"),
-    path('login/', views.login, name = "login"),
+    path('login/', views.login_user, name = "login"),
+    path('logout/', views.logout_user, name='logout'),
     path("forgot-password/", views.forgot_password, name="forgot_password"),
     path("reset-password/<str:token>/", views.reset_password, name="reset_password"),
     path("aboutus/", views.aboutus, name="aboutus"),

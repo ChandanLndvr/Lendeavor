@@ -120,8 +120,12 @@
 
                 <!-- Right side buttons -->
                 <div class="d-flex mt-2 mt-lg-0 gap-2">
+                    {% if request.COOKIES.jwt_token %}
+                    <a href="{% url 'logout' %}" class="btn btn-success">Logout</a>
+                    {% else %}
                     <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
                     <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                    {% endif %}
                 </div>
             </div>
         </div>
