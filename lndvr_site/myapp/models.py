@@ -150,4 +150,17 @@ class JobApplications(models.Model):
 
     def __str__(self):
         return f"{self.First_name} + {self.Last_name}"
+    
+# blacklisted tokens for logout
+
+class BlacklistedToken(models.Model):
+    token = models.CharField(max_length=500, unique=True)
+    blacklisted_at = models.DateTimeField(auto_now_add=True)
+    expires_at = models.DateTimeField()
+
+    class Meta:
+        db_table = 'blacklisted_tokens'
+
+    def __str__(self):
+        return f"Token {self.token[:10]}... expires at {self.expires_at}"
 
