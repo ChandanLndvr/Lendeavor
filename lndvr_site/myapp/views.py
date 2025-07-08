@@ -11,6 +11,7 @@ from job_posting_app.models import JobDetails
 from datetime import date, timedelta
 import jwt
 from datetime import datetime, timezone as dt_timezone
+from .utils.auth_utils import decode_jwt
 
 #----------------------- Main page ------------------------
 
@@ -48,7 +49,7 @@ def signUp(request):
             signup_obj.set_password(password)
             signup_obj.save()
 
-            return render(request, "signUp.html", {"message": "User registered successfully, now you can login!"})
+            return render(request, "login.html", {"message": "User registered successfully, now you can login!"})
 
         except Exception as e:
             return render(request, "signUp.html", {"error": str(e)})
@@ -274,13 +275,26 @@ def products(request):
 
 def career_page(request):
     all_jobs = JobDetails.objects.all()
-    message = request.GET.get("message") # to send edit and delete msgs of  jobs CRUD oprn
-    error = request.GET.get("error") # to send edit and delete msgs of  jobs CRUD oprn
+
+    message = request.GET.get("message")
+    error = request.GET.get("error")
+
+    token = request.COOKIES.get('jwt_token')
+    user_type = None
+
+    if token:
+        payload = decode_jwt(token)
+        if payload:
+            user_type = payload.get('user_type')
+
+    show_admin_tools = (user_type == 'Admin')
+
     context = {
         'jobs': all_jobs,
         'current_page': 'careers',
         'message': message,
-        'error': error
+        'error': error,
+        'show_admin_tools': show_admin_tools,
     }
     return render(request, 'careers.html', context)
 
