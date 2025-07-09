@@ -176,10 +176,10 @@ STATICFILES_DIRS = [
 # EMAIL_HOST_PASSWORD = 'V&017233299066uk'
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 
-# gmail
+# gmail, lendeavorusa
 
 # EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST = 'smtp.Lendeavorusa.com'
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 # EMAIL_HOST_USER = 'Info@Lendeavorusa.com'
@@ -188,7 +188,9 @@ STATICFILES_DIRS = [
 
 
 # for local testing of forget password
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #---- recent comment 07/9/2025 
 
 # TESTING CONTACT US WITH BELOW EMAIL (contact us form info will be sent to the below email)
-CONTACT_EMAIL = 'chandan@lendeavorusa.com' 
+CONTACT_EMAIL = 'chandan@lendeavorusa.com' #--- recent comment 07/9/2025
+
+#CONTACT_EMAIL = 'Info@Lendeavorusa.com'
