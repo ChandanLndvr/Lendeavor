@@ -28,6 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 env = environ.Env()
 environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
 SECRET_KEY = env("DJANGO_SECRET_KEY")
+EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
  
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -173,8 +174,9 @@ STATICFILES_DIRS = [
 # EMAIL_PORT = 587
 # EMAIL_USE_TLS = True
 # EMAIL_HOST_USER = 'Info@Lendeavorusa.com'
-# EMAIL_HOST_PASSWORD = 'V&017233299066uk'
+# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD 
 # DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
 
 # gmail
 
@@ -191,6 +193,6 @@ STATICFILES_DIRS = [
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #---- recent comment 07/9/2025 
 
 # TESTING CONTACT US WITH BELOW EMAIL (contact us form info will be sent to the below email)
-CONTACT_EMAIL = 'chandan@lendeavorusa.com' #--- recent comment 07/9/2025
+CONTACT_EMAIL = 'Info@Lendeavorusa.com' #'chandan@lendeavorusa.com' #--- recent comment 07/9/2025
 
-#CONTACT_EMAIL = 'Info@Lendeavorusa.com'
+# CONTACT_EMAIL = 'Info@Lendeavorusa.com'
