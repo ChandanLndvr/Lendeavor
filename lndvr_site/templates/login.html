@@ -76,7 +76,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
-                                    href="/caseStudy">
+                                    href="{% url 'caseStudy' %}">
                                     Case Study
                                 </a>
                             </li>
@@ -88,7 +88,7 @@
                             </li>
                             <li>
                                 <a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
-                                    href="/lenders">
+                                    href="{% url 'lenders' %}">
                                     Our Lenders
                                 </a>
                             </li>

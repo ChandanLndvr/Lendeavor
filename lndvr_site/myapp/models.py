@@ -163,4 +163,22 @@ class BlacklistedToken(models.Model):
 
     def __str__(self):
         return f"Token {self.token[:10]}... expires at {self.expires_at}"
+    
+
+# Lenders info table 
+
+class Lenders(models.Model):
+    Lender_name = models.CharField(max_length=150)
+    Funding_type = models.CharField(max_length=250)
+    Funding_amount = models.CharField(max_length=25)
+    Min_credit_score = models.CharField(max_length=10)
+    Time_to_fund = models.CharField(max_length=50)
+    Terms = models.CharField(max_length=100)
+    Added_on = models.DateTimeField(default=timezone.now)
+
+    class Meta:
+        db_table = "Lenders_info"
+
+    def __str__(self):
+        return f"{self.Lender_name}"
 

@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block title %}Marketplace{% endblock title %}
+
+{% block head %}
+<style>
+    body {
+        background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+        color: white;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    .page-title {
+        font-weight: 700;
+        font-size: 2.2rem;
+        color: #00f2ff;
+    }
+
+    .table-container {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(8px);
+        border-radius: 16px;
+        padding: 24px;
+        overflow-x: auto;
+        max-width: 1200px;
+        margin: 0 auto;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+        max-height: 600px; 
+        overflow-y: auto;
+    }
+
+    table {
+        width: 100%;
+        min-width: 900px;
+        border-collapse: collapse;
+        font-size: 1.05rem;
+        table-layout: fixed;  
+    }
+
+    th, td {
+        padding: 16px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: center;
+    }
+
+    th {
+        background: rgba(0, 186, 255, 0.2);
+        color: #00f2ff;
+        font-weight: 600;
+        position: sticky;
+        top: 0;
+        z-index: 2;
+    }
+
+    tr:hover {
+        background: rgba(255, 255, 255, 0.05);
+        transition: background 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+        .table-container {
+            padding: 12px;
+        }
+
+        th, td {
+            padding: 10px 8px;
+            font-size: 0.9rem;
+        }
+
+        .page-title {
+            font-size: 1.6rem;
+        }
+    }
+</style>
+{% endblock head %}
+
+{% block body %}
+<!-- Page Title -->
+<div class="text-center my-5">
+    <h1 class="page-title">Lenders Marketplace</h1>
+    <p class="text-muted">Compare lenders, funding types, ranges, and timelines at a glance.</p>
+</div>
+
+<!-- Lenders Table -->
+<div class="table-container my-4">
+    <table>
+        <thead>
+            <tr>
+                <th>Lender</th>
+                <th>Funding Type</th>
+                <th>Funding Range</th>
+                <th>Min Credit Score</th>
+                <th>Time to Fund</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lender in lenders_info %}
+            <tr>
+                <td>{{ lender.Lender_name }}</td>
+                <td>{{ lender.Funding_type }}</td>
+                <td>{{ lender.Funding_amount }}</td>
+                <td>{{ lender.Min_credit_score }}</td>
+                <td>{{ lender.Time_to_fund }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No lenders available at this time.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock body %}
