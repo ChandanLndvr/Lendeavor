@@ -106,7 +106,6 @@
     flex-wrap: wrap;
 }
 
-.btn-offer,
 .btn-learn {
     display: inline-block;
     padding: 12px 24px; /* larger touch area */
@@ -118,8 +117,18 @@
 }
 
 .btn-offer {
-    background: #00baff;
+    display: inline-block;
+    padding: 12px 24px; /* larger touch area */
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 1rem; /* slightly larger */
+    text-decoration: none;
     color: white;
+    border: none;
+    background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+    background-size: 200% auto;
+    animation: sparkle 2s linear infinite;
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
 }
 
 .btn-offer:hover {
