@@ -33,6 +33,7 @@ urlpatterns = [
     path("apply/", views.apply, name = "apply"),
     path("steps/", views.funding_steps, name = "steps"),
     path("caseStudy/", views.case_study, name = "caseStudy"),
+    path("lenders/marketplace/", views.lenders_marketplace, name="lenders"),
     path("faq/", views.faq, name = "faq"),
     path("terms/", views.terms, name = "terms"),
     path("privacy/", views.privacy, name = "privacy"),

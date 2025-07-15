@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.http import HttpResponse
-from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken
+from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken, Lenders
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
 from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
@@ -414,6 +414,11 @@ def contact(request):
         return render(request, "contactus.html", {'message': "Thank you for contacting us!"}, {'current_page':'contact'})
     return render(request, "contactus.html", {'current_page':'contact'})
 
+#-------------------------- lenders / Marketplace ---------------------
+
+def lenders_marketplace(request):
+    lenders_info = Lenders.objects.all().order_by('Lender_name')
+    return render(request, 'lenders_marketplace.html', {'lenders_info': lenders_info})
 
 #-------------------------- Funding Steps --------------------------
 

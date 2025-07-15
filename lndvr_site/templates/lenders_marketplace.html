@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Marketplace{% endblock title %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/lenders_marketplace.css' %}">
+{% endblock head %}
+
+{% block body %}
+<div class="heading">
+    <h1 class="page-title">Lenders / Marketplace</h1>
+    <p class="subheading">Empowering Your Practice with Smarter Financing Options.</p>
+</div>
+
+
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th>Lender</th>
+                <th>Funding Type</th>
+                <th>Funding Range</th>
+                <th>Min Credit Score</th>
+                <th>Time to Fund</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for lender in lenders_info %}
+            <tr>
+                <td>{{ lender.Lender_name }}</td>
+                <td>{{ lender.Funding_type }}</td>
+                <td>{{ lender.Funding_amount }}</td>
+                <td>{{ lender.Min_credit_score }}</td>
+                <td>{{ lender.Time_to_fund }}</td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="5">No lenders available at this time.</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock body %}
