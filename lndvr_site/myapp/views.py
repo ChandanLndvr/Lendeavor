@@ -13,6 +13,9 @@ import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
 from lndvr_site.utils.graph_email import send_graph_email
+from msal import ConfidentialClientApplication
+import requests
+import base64
 
 #----------------------- Main page ------------------------
 
@@ -184,36 +187,11 @@ def reset_password(request, token):
     except PasswordResetToken.DoesNotExist:
         return HttpResponse("Invalid token", status=400) 
     
-#--------------------------------- Sending attached email ----------------------------------
-
-def send_attached_email(data):
-    # Prepare email body (skip Documents)
-    email_body = "\n".join(
-        f"{k.replace('_', ' ')}: {v}" for k, v in data.items() if v and k != 'Documents'
-    )
-
-    email = EmailMessage(
-        subject="New / Updated  Business Application",
-        body=email_body,
-        from_email=settings.EMAIL_HOST_USER,
-        to=[data['Business_Email']],
-    )
-
-    if data['Documents']:
-        email.attach(
-            data['Documents'].name,
-            data['Documents'].read(),
-            data['Documents'].content_type,
-        )
-
-    email.send(fail_silently=False)
-
 #------------------------------- Apply Now ----------------------------------------
 
 def apply(request):
     if request.method == "POST":
         try:
-            # Extract form data
             data = {
                 'Business_name': request.POST.get('business_name'),
                 'Doing_business_as': request.POST.get('dba'),
@@ -243,22 +221,49 @@ def apply(request):
             ssn_exists = UserApplications.objects.filter(SSN=ssn).exists()
 
             if not ssn_exists:
-                # Case 1: New SSN — create
                 UserApplications.objects.create(**data)
-                send_attached_email(data)
-                message = "Application submitted successfully!"
+                message_text = "Application submitted successfully!"
             elif first_time == "yes":
-                # Case 2: SSN exists and first time = yes — update
                 UserApplications.objects.update_or_create(SSN=ssn, defaults=data)
-                send_attached_email(data)
-                message = "Application updated successfully!"
+                message_text = "Application updated successfully!"
             else:
-                # Case 3: SSN exists and first time = no — create new
                 UserApplications.objects.create(**data)
-                send_attached_email(data)
-                message = "Application submitted successfully!"
+                message_text = "Application submitted successfully!"
 
-            return render(request, 'apply.html', {'message': message})
+            # ---------------- SEND EMAIL USING EXISTING FUNCTION ----------------
+
+            # Prepare email body with clean bold HTML labels
+            body_lines = [
+                f"<b>{k.replace('_', ' ')}:</b> {v}<br>"
+                for k, v in data.items() if v and k != 'Documents'
+            ]
+            email_body = "<h3>New / Updated Business Application</h3>" + "".join(body_lines)
+
+            # Prepare attachment if exists
+            attachments = []
+            doc = data['Documents']
+            if doc:
+                content = doc.read()
+                attachments.append({
+                    "@odata.type": "#microsoft.graph.fileAttachment",
+                    "name": doc.name,
+                    "contentType": doc.content_type,
+                    "contentBytes": base64.b64encode(content).decode('utf-8')
+                })
+
+            # Modify your `send_graph_email` to accept an `attachments` parameter (if not already done),
+            # and handle adding the attachments inside the function.
+            send_graph_email(
+                subject="New / Updated Business Application",
+                body=email_body,
+                to_emails=[data['Business_Email'], settings.CONTACT_EMAIL],
+                is_html=True,
+                attachments=attachments  # Pass directly
+            )
+
+            # ----------------------------------------------------------------------
+
+            return render(request, 'apply.html', {'message': message_text})
 
         except Exception as e:
             return render(request, 'apply.html', {'error': str(e)})
