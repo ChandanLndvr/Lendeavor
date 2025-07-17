@@ -12,6 +12,7 @@ from datetime import date, timedelta
 import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
+from lndvr_site.utils.graph_email import send_graph_email
 
 #----------------------- Main page ------------------------
 
@@ -120,18 +121,21 @@ def forgot_password(request):
 
             reset_link = f"http://localhost:8000/reset-password/{token}/"
 
-            send_mail(
-                'Reset Your Password',
-                f'Click the link to reset your password: {reset_link}',
-                settings.DEFAULT_FROM_EMAIL,
-                [user.Email],
-                fail_silently=False,
+            email_sent = send_graph_email(
+            'Reset Your Password',
+            f'Click the link to reset your password: {reset_link}',
+            [user.Email]
             )
 
-            # Add message in GET parameters for the login page
-            login_url = reverse("login") + "?message=Check your email for a reset link."
-            print("Redirecting to:", login_url)
-            return redirect(login_url)
+            if not email_sent:
+                forgot_url = reverse("forgot_password") + "?error=Failed to send reset email."
+                print("Redirecting to:", forgot_url)
+                return redirect(forgot_url)
+            else:
+                # Add message in GET parameters for the login page
+                login_url = reverse("login") + "?message=Check your email for a reset link."
+                print("Redirecting to:", login_url)
+                return redirect(login_url)  
 
         except SignUp.DoesNotExist:
             # Stay on the same page with an error message in GET parameters
@@ -404,15 +408,31 @@ def contact(request):
         subject = request.POST.get('subject', 'No Subject')
         msg_body = request.POST.get('message')
 
-        send_mail(
+        # Construct message body with sender info
+        body = f"From: {name} <{email}>\n\n{msg_body}"
+
+        # Send via Graph API
+        email_sent = send_graph_email(
             subject,
-            f"From: {name} <{email}>\n\n{msg_body}",
-            settings.DEFAULT_FROM_EMAIL,
-            [settings.CONTACT_EMAIL],
-            fail_silently=True,
-        )    
-        return render(request, "contactus.html", {'message': "Thank you for contacting us!"}, {'current_page':'contact'})
-    return render(request, "contactus.html", {'current_page':'contact'})
+            body,
+            [settings.CONTACT_EMAIL]
+        )
+
+        if email_sent:
+            message = "Thank you for contacting us!"
+        else:
+            message = "We could not send your message at this time. Please try again later."
+
+        return render(
+            request,
+            "contactus.html",
+            {
+                'message': message,
+                'current_page': 'contact'
+            }
+        )
+
+    return render(request, "contactus.html", {'current_page': 'contact'})
 
 #-------------------------- lenders / Marketplace ---------------------
 
