@@ -16,19 +16,6 @@ import environ
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# Manually added
-# SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-hl3jr($yst6fz_ndf)rb4us=p&fu6+%+*ia6w68w2-*($a0q8p'
-
-env = environ.Env()
-environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
-SECRET_KEY = env("DJANGO_SECRET_KEY")
-EMAIL_HOST_PASSWORD = env("EMAIL_HOST_PASSWORD")
  
 
 # SECURITY WARNING: don't run with debug turned on in production!
@@ -167,32 +154,27 @@ STATICFILES_DIRS = [
 
 # Manually added
 
-# outlook
+# # for local testing of forget password
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #---- recent comment 07/9/2025 
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.office365.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'Info@Lendeavorusa.com'
-# EMAIL_HOST_PASSWORD = EMAIL_HOST_PASSWORD 
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+# # TESTING CONTACT US WITH BELOW EMAIL (contact us form info will be sent to the below email)
+# CONTACT_EMAIL = 'info@lendeavorusa.com' #'chandan@lendeavorusa.com' #--- recent comment 07/9/2025
+
+# CONTACT_EMAIL = 'info@lendeavorusa.com'
 
 
-# gmail
 
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'Info@Lendeavorusa.com'
-# EMAIL_HOST_PASSWORD = 'V&017233299066uk'
-# DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+#----------------- graph api for smtp ----------------
+
+env = environ.Env()
+environ.Env.read_env(os.path.join(BASE_DIR, '.env'))
+
+print("Loading .env from:", os.path.join(BASE_DIR, '.env'))
 
 
-# for local testing of forget password
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #---- recent comment 07/9/2025 
-
-# TESTING CONTACT US WITH BELOW EMAIL (contact us form info will be sent to the below email)
-CONTACT_EMAIL = 'Info@Lendeavorusa.com' #'chandan@lendeavorusa.com' #--- recent comment 07/9/2025
-
-# CONTACT_EMAIL = 'Info@Lendeavorusa.com'
+SECRET_KEY = env("SECRET_KEY")
+MS_GRAPH_CLIENT_ID = env("MS_GRAPH_CLIENT_ID")
+MS_GRAPH_CLIENT_SECRET = env("MS_GRAPH_CLIENT_SECRET")
+MS_GRAPH_TENANT_ID = env("MS_GRAPH_TENANT_ID")
+GRAPH_SENDER_EMAIL = env("GRAPH_SENDER_EMAIL")
+CONTACT_EMAIL = env("CONTACT_EMAIL")
