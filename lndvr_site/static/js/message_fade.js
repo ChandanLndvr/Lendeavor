@@ -6,6 +6,6 @@ setTimeout(function () {
         // Bootstrap fade out (optional smooth transition)
         alert.classList.remove("show");
         alert.classList.add("fade");
-        setTimeout(() => alert.remove(), 500); // Remove from DOM after fade
+        setTimeout(() => alert.remove(), 800); // Remove from DOM after fade
     }
 }, 2000); // 2000 ms = 2 seconds

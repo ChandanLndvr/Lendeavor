@@ -60,7 +60,7 @@ class UserApplications(models.Model):
                      ('partnership','Partnership')]
     ID = models.AutoField(primary_key=True)
     Business_name = models.CharField(max_length=250)
-    Doing_business_as = models.CharField(max_length=250)
+    Doing_business_as = models.CharField(max_length=250, null=True, blank=True)
     Business_address = models.TextField()
     Industry = models.CharField(max_length=250)
     Tax_ID = models.CharField(max_length=12) 
@@ -105,7 +105,7 @@ class JobApplications(models.Model):
 
     qualification_level = [
         ('undergrad','Under Graduation'),
-        ('grad','Graduation'),
+        ('graduate','Graduation'),
         ('postgrad','Post Graduation')
     ]
 
@@ -165,7 +165,7 @@ class BlacklistedToken(models.Model):
         return f"Token {self.token[:10]}... expires at {self.expires_at}"
     
 
-# Lenders info table 
+# Lenders info table ----- Record insertion is done through DB
 
 class Lenders(models.Model):
     Lender_name = models.CharField(max_length=150)
