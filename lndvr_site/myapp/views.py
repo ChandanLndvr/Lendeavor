@@ -17,6 +17,8 @@ from msal import ConfidentialClientApplication
 import requests
 import base64
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
+from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
+
 
 #----------------------- Main page ------------------------
 
@@ -27,38 +29,36 @@ def main(request):
 
 def signUp(request):
     if request.method == "POST":
-        try:
-            fname = request.POST.get('first_name')
-            lname = request.POST.get('last_name')
-            user_type = request.POST.get('user_type', '').title()
-            email = request.POST.get('email', '').strip()
-            password = request.POST.get('password1')
-            confirm_pass = request.POST.get('password2')
+        # Collect form data from POST request, normalizing where needed
+        data = {
+            "First_name": request.POST.get("first_name"),
+            "Last_name": request.POST.get("last_name"),
+            "User_type": request.POST.get("user_type", "").lower(),  # normalize to lowercase for choice matching
+            "Email": request.POST.get("email", "").strip(),         # remove surrounding spaces
+            "password1": request.POST.get("password1"),
+            "password2": request.POST.get("password2"),
+        }
 
-            if password != confirm_pass:
-                return render(request, "signUp.html", {"error": "Passwords do not match!"})
+        # Additional business rule: Admin emails must end with specific domain
+        if data["User_type"] == "admin" and not data["Email"].endswith("@lendeavorusa.com"):
+            return render(request, "signUp.html", {"error": "Admin email must end with @lendeavorusa.com"})
 
-            if SignUp.objects.filter(Email=email).exists():
-                return render(request, "signUp.html", {"error": "Email already exists!"})
+        # Check if user with the given email already exists in database
+        if SignUp.objects.filter(Email=data["Email"]).exists():
+            return render(request, "signUp.html", {"error": "Email already exists."})
 
-            if user_type == "Admin" and not email.lower().endswith("@lendeavorusa.com"):
-                return render(request, "signUp.html", {"error": "You can't be registered as Admin."})
+        # Pass data to serializer for validation and user creation logic
+        serializer = SignUpSerializer(data=data)
+        if serializer.is_valid():
+            # Save new user if data is valid (calls create method in serializer)
+            serializer.save()
+            # On success, redirect to login page with a success message
+            return render(request, "login.html", {"message": "Registration successful. Please login."})
 
-            signup_obj = SignUp(
-                First_name=fname,
-                Last_name=lname,
-                User_type=user_type,
-                Email=email
-            )
+        # If serializer validation fails, re-render signup form with errors
+        return render(request, "signUp.html", {"error": serializer.errors})
 
-            signup_obj.set_password(password)
-            signup_obj.save()
-
-            return render(request, "login.html", {"message": "User registered successfully, now you can login!"})
-
-        except Exception as e:
-            return render(request, "signUp.html", {"error": str(e)})
-
+    # For GET requests, just render the signup page
     return render(request, "signUp.html")
 
 
@@ -193,83 +193,72 @@ def reset_password(request, token):
 def apply(request):
     if request.method == "POST":
         try:
-            data = {
-                'Business_name': request.POST.get('business_name'),
-                'Doing_business_as': request.POST.get('dba'),
-                'Business_address': request.POST.get('business_add'),
-                'Industry': request.POST.get('industry'),
-                'Tax_ID': request.POST.get('taxid'),
-                'Entity': request.POST.get('entity'),
-                'Business_Start_date': request.POST.get('startdate'),
-                'Owner_First_Name': request.POST.get('fname'),
-                'Owner_Middle_Name': request.POST.get('mname'),
-                'Owner_Last_Name': request.POST.get('lname'),
-                'Birth_Date': request.POST.get('dob'),
-                'Home_address': request.POST.get('haddress'),
-                'Business_Email': request.POST.get('bemail'),
-                'Phone_no': request.POST.get('phone'),
-                'SSN': request.POST.get('ssn'),
-                'Ownership': int(request.POST.get('ownership_percent') or 0),
-                'Monthly_Revenue': int(request.POST.get('monthly_revenue') or 0),
-                'Funds_Requested': int(request.POST.get('fund') or 0),
-                'Existing_loans': request.POST.get('existing_loans'),
-                'Documents': request.FILES.get('financial_statement'),
-                'First_time': request.POST.get('application_no', '').lower(),
+            data = request.POST.dict()
+            files = request.FILES.getlist('financial_statement')
+            doc = files[0] if files else None
+
+            # Map POST keys to serializer fields, normalize entity & first_time
+            cleaned_data = {
+                'Business_name': data.get('business_name'),
+                'Doing_business_as': data.get('dba'),
+                'Business_address': data.get('business_add'),
+                'Industry': data.get('industry'),
+                'Tax_ID': data.get('taxid'),
+                'Entity': data.get('entity', '').lower() or None,
+                'Business_Start_date': data.get('startdate'),
+                'Owner_First_Name': data.get('fname'),
+                'Owner_Middle_Name': data.get('mname'),
+                'Owner_Last_Name': data.get('lname'),
+                'Birth_Date': data.get('dob'),
+                'Home_address': data.get('haddress'),
+                'Business_Email': data.get('bemail'),
+                'Phone_no': data.get('phone'),
+                'SSN': data.get('ssn'),
+                'Ownership': data.get('ownership_percent'),
+                'Monthly_Revenue': data.get('monthly_revenue'),
+                'Funds_Requested': data.get('fund'),
+                'Existing_loans': data.get('existing_loans'),
+                'First_time': data.get('application_no', '').lower(),
+                'Documents': doc,
             }
 
-            ssn = data['SSN']
-            first_time = data['First_time']
-            ssn_exists = UserApplications.objects.filter(SSN=ssn).exists()
+            # Check existing instance for update
+            instance = UserApplications.objects.filter(SSN=cleaned_data['SSN']).first() if cleaned_data['First_time'] == "yes" else None
+            
+            serializer = UserApplicationsSerializer(instance, data=cleaned_data)
+            if serializer.is_valid():
+                serializer.save()
+                message_text = "Application updated successfully!" if instance else "Application submitted successfully!"
 
-            if not ssn_exists:
-                UserApplications.objects.create(**data)
-                message_text = "Application submitted successfully!"
-            elif first_time == "yes":
-                UserApplications.objects.update_or_create(SSN=ssn, defaults=data)
-                message_text = "Application updated successfully!"
-            else:
-                UserApplications.objects.create(**data)
-                message_text = "Application submitted successfully!"
+                # Build HTML table email body with bold labels
+                rows = ''.join(
+                    f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
+                    f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+                    for field, value in serializer.validated_data.items() if field != 'Documents'
+                )
+                email_body = f"<h3>New / Updated Business Application</h3><table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
 
-            # ---------------- SEND EMAIL USING EXISTING FUNCTION ----------------
+                # Prepare attachments for async email (pass actual file obj)
+                send_graph_email_async(
+                    subject="New / Updated Business Application",
+                    body=email_body,
+                    to_emails=[cleaned_data['Business_Email'], settings.CONTACT_EMAIL],
+                    is_html=True,
+                    files=[doc] if doc else None
+                )
 
-            # Prepare email body with clean bold HTML labels
-            body_lines = [
-                f"<b>{k.replace('_', ' ')}:</b> {v}<br>"
-                for k, v in data.items() if v and k != 'Documents'
-            ]
-            email_body = "<h3>New / Updated Business Application</h3>" + "".join(body_lines)
+                # Redirect to prevent form resubmission
+                return redirect(f"{reverse('apply')}?message={message_text}")
 
-            # Prepare attachment if exists
-            attachments = []
-            doc = data['Documents']
-            if doc:
-                content = doc.read()
-                attachments.append({
-                    "@odata.type": "#microsoft.graph.fileAttachment",
-                    "name": doc.name,
-                    "contentType": doc.content_type,
-                    "contentBytes": base64.b64encode(content).decode('utf-8')
-                })
-
-            # Modify your `send_graph_email` to accept an `attachments` parameter (if not already done),
-            # and handle adding the attachments inside the function.
-            send_graph_email(
-                subject="New / Updated Business Application",
-                body=email_body,
-                to_emails=[data['Business_Email'], settings.CONTACT_EMAIL],
-                is_html=True,
-                attachments=attachments  # Pass directly
-            )
-
-            # ----------------------------------------------------------------------
-
-            return render(request, 'apply.html', {'message': message_text})
-
+            return render(request, 'apply.html', {'error': serializer.errors})
         except Exception as e:
             return render(request, 'apply.html', {'error': str(e)})
 
-    return render(request, 'apply.html')
+    # GET request: show form with optional messages
+    return render(request, 'apply.html', {
+        'message': request.GET.get('message'),
+        'error': request.GET.get('error')
+    })
 
 #----------------------------- About us ----------------------------
 
@@ -310,72 +299,81 @@ def career_page(request):
 
 #------------------------ Apply for jobs -------------------------
 
+
 def job_applications(request, job_id):
     job = get_object_or_404(JobDetails, Job_id=job_id)
     context = {'job': job, 'current_page': 'careers'}
 
     if request.method == "POST":
-        try:
-            data = {
-                'Job': job,
-                'Job_title': job.Title,
-                'First_name': request.POST.get('fname'),
-                'Last_name': request.POST.get('lname'),
-                'Email': request.POST.get('email'),
-                'Phone_no': request.POST.get('phone'),
-                'Expirence': request.POST.get('experience'),
-                'Qualification_level': request.POST.get('qualification'),
-                'Major': request.POST.get('major'),
-                'School_name': request.POST.get('school'),
-                'Degree_year': request.POST.get('year'),
-                'Expected_salary': request.POST.get('salary') or None,
-                'Gender': request.POST.get('gender'),
-                'Resume': request.FILES.get('resume')
-            }
+        data = request.POST.dict()
+        resume_file = request.FILES.get('resume')
 
-            twenty_days_ago = date.today() - timedelta(days=20)
-            if JobApplications.objects.filter(
-                Email=data['Email'], Job=job, Applied_on__gte=twenty_days_ago
-            ).exists():
-                context['error'] = "You have already applied for this job within the last 20 days."
-                return render(request, "job_apply.html", context)
+        cleaned_data = {
+            'Job': job.pk,  # Pass PK for serializer foreign key
+            'First_name': data.get('fname'),
+            'Last_name': data.get('lname'),
+            'Email': data.get('email'),
+            'Phone_no': data.get('phone'),
+            'Expirence': data.get('experience'),
+            'Qualification_level': data.get('qualification'),
+            'Major': data.get('major'),
+            'School_name': data.get('school'),
+            'Degree_year': data.get('year'),
+            'Expected_salary': data.get('salary') or None,
+            'Gender': data.get('gender'),
+            'Resume': resume_file
+        }
 
-            JobApplications.objects.create(**data)
+        # Prevent re-application within 20 days
+        twenty_days_ago = date.today() - timedelta(days=20)
+        if JobApplications.objects.filter(
+            Email=cleaned_data['Email'], Job=job, Applied_on__gte=twenty_days_ago
+        ).exists():
+            return redirect(
+                f"{reverse('jobApplication', args=[job_id])}?error=You have already applied for this job within the last 20 days."
+            )
 
-            message = "\n".join([
-                f"Job:- {job.Title}",
-                f"Applicant Name:- {data['First_name']} {data['Last_name']}",
-                f"Email:- {data['Email']}",
-                f"Phone:- {data['Phone_no']}",
-                f"Experience:- {data['Expirence']}",
-                f"Qualification Level:- {data['Qualification_level']}",
-                f"Major:- {data['Major']}",
-                f"School:- {data['School_name']}",
-                f"Degree Year:- {data['Degree_year']}",
-                f"Expected Salary:- {data['Expected_salary']}",
-                f"Gender:- {data['Gender']}",
-                "",
-                "Please find the attached resume for further details.",
-                "",
-                "Regards,",
-                "Lendeavor Careers Bot"
-            ])
+        serializer = JobApplicationsSerializer(data=cleaned_data)
+        if serializer.is_valid():
+            instance = serializer.save()  # save to DB
 
-            files = [data['Resume']] if data['Resume'] else []
+            # Prepare tabular HTML email
+            table_rows = ""
+            for field, value in serializer.validated_data.items():
+                if field == 'Resume':
+                    continue  # do not include file in the email body
+                pretty_field = field.replace('_', ' ').title()
+                table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{pretty_field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+
+            email_body = f"""
+                <h3>New Job Application for {job.Title}</h3>
+                <table style='border-collapse:collapse;width:90%;margin-top:10px;'>{table_rows}</table>
+                <p>Please find the attached resume for further details.</p>
+            """
+
+            # Send email asynchronously with resume attachment
+            files = [resume_file] if resume_file else []
 
             send_graph_email_async(
                 subject=f"New Job Application for {job.Title}",
-                body=message,
+                body=email_body,
                 to_emails=[job.Email, settings.CONTACT_EMAIL],
-                is_html=False,
+                is_html=True,
                 files=files
             )
 
-            context['message'] = "You have successfully applied for this job, and your resume has been sent to HR."
+            # Redirect to prevent form re-submission
+            return redirect(
+                f"{reverse('jobApplication', args=[job_id])}?message=You have successfully applied for this job."
+            )
 
-        except Exception as e:
-            context['error'] = f"An error occurred: {str(e)}"
+        # If serializer invalid, show errors
+        context['error'] = serializer.errors
+        return render(request, "job_apply.html", context)
 
+    # Handle GET with optional message/error from redirect
+    context['message'] = request.GET.get('message')
+    context['error'] = request.GET.get('error')
     return render(request, "job_apply.html", context)
 
 
