@@ -4,11 +4,12 @@ from django.conf import settings
 from affiliate_app.models import AffiliateApplications
 from django.urls import reverse
 import jwt
+from lndvr_site.utils.graph_email import send_graph_email
 
 
 def affiliate(request):
     # Check if user is logged in by decoding JWT token cookie
-    token = request.COOKIES.get('jwt_token') # jwt_token is coming from login_user function
+    token = request.COOKIES.get('jwt_token')
     user_email = None
     if token:
         try:
@@ -19,16 +20,15 @@ def affiliate(request):
 
     if request.method == 'POST':
         if not user_email:
-            # User not logged in, show error but don't hide form
             error = "You must be signed up and logged in to apply for the affiliate program."
             return render(request, 'affiliate.html', {
                 'current_page': 'affiliates',
                 'error': error,
-                'form_data': request.POST,  # Pass back entered data to re-fill form if you want
+                'form_data': request.POST,
             })
 
         try:
-            # Proceed with saving form if logged in
+            # Collect form data
             first_name = request.POST.get('first_name')
             last_name = request.POST.get('last_name')
             email = request.POST.get('email')
@@ -41,6 +41,7 @@ def affiliate(request):
             is_influencer = request.POST.get('is_influencer')
             terms = request.POST.get('terms') == 'on'
 
+            # Save to database
             AffiliateApplications.objects.create(
                 First_name=first_name,
                 Last_name=last_name,
@@ -55,37 +56,41 @@ def affiliate(request):
                 Terms_accepted=terms
             )
 
-            # Send email notification
-            subject = "New Affiliate Application Received"
-            message = (
-                f"New Affiliate Application:\n\n"
-                f"Name: {first_name} {last_name}\n"
-                f"Email: {email}\n"
-                f"Phone: {phone}\n"
-                f"Company: {company}\n"
-                f"Title: {title}\n"
-                f"Website: {website}\n"
-                f"Business Phone: {business_phone}\n"
-                f"Can Receive Payments: {is_payment}\n"
-                f"Is Social Media Influencer: {is_influencer}\n"
-                f"Terms Accepted: {terms}\n"
-            )
-            email_message = EmailMessage(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [settings.CONTACT_EMAIL],
-            )
-            email_message.send(fail_silently=False)
+            # Prepare email
+            message = f"""
+                    New Affiliate Application Received
 
-            # Redirect with success message
+                    Name: {first_name} {last_name}
+                    Email: {email}
+                    Phone: {phone}
+                    Company: {company}
+                    Title: {title}
+                    Website: {website}
+                    Business Phone: {business_phone}
+                    Can Receive Payments: {is_payment}
+                    Is Social Media Influencer: {is_influencer}
+                    Terms Accepted: {terms}
+                    
+                    """
+
+            # Send email via Graph
+            try:
+                send_graph_email(
+                    subject="New Affiliate Application Received",
+                    body=message,  # plain text or HTML based on your need
+                    to_emails=[settings.CONTACT_EMAIL],
+                    is_html=False  # or True if sending HTML
+                )
+            except Exception as e:
+                return redirect(reverse("affiliates") + f"?error=Failed to send notification email: {str(e)}")
+
+            # Redirect with success
             return redirect(reverse("affiliates") + "?message=Your application has been submitted successfully!")
 
         except Exception as e:
-            # Redirect with error message
             return redirect(reverse("affiliates") + f"?error={str(e)}")
 
-    # Handle GET request - just render form and messages
+    # GET Request
     message = request.GET.get('message')
     error = request.GET.get('error')
 

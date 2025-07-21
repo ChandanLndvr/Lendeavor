@@ -13,6 +13,10 @@ import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
 from lndvr_site.utils.graph_email import send_graph_email
+from msal import ConfidentialClientApplication
+import requests
+import base64
+from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 
 #----------------------- Main page ------------------------
 
@@ -184,36 +188,11 @@ def reset_password(request, token):
     except PasswordResetToken.DoesNotExist:
         return HttpResponse("Invalid token", status=400) 
     
-#--------------------------------- Sending attached email ----------------------------------
-
-def send_attached_email(data):
-    # Prepare email body (skip Documents)
-    email_body = "\n".join(
-        f"{k.replace('_', ' ')}: {v}" for k, v in data.items() if v and k != 'Documents'
-    )
-
-    email = EmailMessage(
-        subject="New / Updated  Business Application",
-        body=email_body,
-        from_email=settings.EMAIL_HOST_USER,
-        to=[data['Business_Email']],
-    )
-
-    if data['Documents']:
-        email.attach(
-            data['Documents'].name,
-            data['Documents'].read(),
-            data['Documents'].content_type,
-        )
-
-    email.send(fail_silently=False)
-
 #------------------------------- Apply Now ----------------------------------------
 
 def apply(request):
     if request.method == "POST":
         try:
-            # Extract form data
             data = {
                 'Business_name': request.POST.get('business_name'),
                 'Doing_business_as': request.POST.get('dba'),
@@ -243,22 +222,49 @@ def apply(request):
             ssn_exists = UserApplications.objects.filter(SSN=ssn).exists()
 
             if not ssn_exists:
-                # Case 1: New SSN — create
                 UserApplications.objects.create(**data)
-                send_attached_email(data)
-                message = "Application submitted successfully!"
+                message_text = "Application submitted successfully!"
             elif first_time == "yes":
-                # Case 2: SSN exists and first time = yes — update
                 UserApplications.objects.update_or_create(SSN=ssn, defaults=data)
-                send_attached_email(data)
-                message = "Application updated successfully!"
+                message_text = "Application updated successfully!"
             else:
-                # Case 3: SSN exists and first time = no — create new
                 UserApplications.objects.create(**data)
-                send_attached_email(data)
-                message = "Application submitted successfully!"
+                message_text = "Application submitted successfully!"
 
-            return render(request, 'apply.html', {'message': message})
+            # ---------------- SEND EMAIL USING EXISTING FUNCTION ----------------
+
+            # Prepare email body with clean bold HTML labels
+            body_lines = [
+                f"<b>{k.replace('_', ' ')}:</b> {v}<br>"
+                for k, v in data.items() if v and k != 'Documents'
+            ]
+            email_body = "<h3>New / Updated Business Application</h3>" + "".join(body_lines)
+
+            # Prepare attachment if exists
+            attachments = []
+            doc = data['Documents']
+            if doc:
+                content = doc.read()
+                attachments.append({
+                    "@odata.type": "#microsoft.graph.fileAttachment",
+                    "name": doc.name,
+                    "contentType": doc.content_type,
+                    "contentBytes": base64.b64encode(content).decode('utf-8')
+                })
+
+            # Modify your `send_graph_email` to accept an `attachments` parameter (if not already done),
+            # and handle adding the attachments inside the function.
+            send_graph_email(
+                subject="New / Updated Business Application",
+                body=email_body,
+                to_emails=[data['Business_Email'], settings.CONTACT_EMAIL],
+                is_html=True,
+                attachments=attachments  # Pass directly
+            )
+
+            # ----------------------------------------------------------------------
+
+            return render(request, 'apply.html', {'message': message_text})
 
         except Exception as e:
             return render(request, 'apply.html', {'error': str(e)})
@@ -306,90 +312,64 @@ def career_page(request):
 
 def job_applications(request, job_id):
     job = get_object_or_404(JobDetails, Job_id=job_id)
-    context = {
-        'job': job,
-        'current_page': 'careers',
-    }
+    context = {'job': job, 'current_page': 'careers'}
 
     if request.method == "POST":
         try:
-            f_name = request.POST.get('fname')
-            l_name = request.POST.get("lname")
-            email = request.POST.get("email")
-            phone_no = request.POST.get("phone")
-            experience = request.POST.get("experience")
-            qualification = request.POST.get("qualification")
-            major = request.POST.get("major")
-            school = request.POST.get("school")
-            degree_year = request.POST.get("year")
-            expected_salary = request.POST.get("salary")
-            gender = request.POST.get("gender")
-            resume_file = request.FILES.get("resume")
+            data = {
+                'Job': job,
+                'Job_title': job.Title,
+                'First_name': request.POST.get('fname'),
+                'Last_name': request.POST.get('lname'),
+                'Email': request.POST.get('email'),
+                'Phone_no': request.POST.get('phone'),
+                'Expirence': request.POST.get('experience'),
+                'Qualification_level': request.POST.get('qualification'),
+                'Major': request.POST.get('major'),
+                'School_name': request.POST.get('school'),
+                'Degree_year': request.POST.get('year'),
+                'Expected_salary': request.POST.get('salary') or None,
+                'Gender': request.POST.get('gender'),
+                'Resume': request.FILES.get('resume')
+            }
 
             twenty_days_ago = date.today() - timedelta(days=20)
-            duplicate = JobApplications.objects.filter(
-                Email=email,
-                Job=job,
-                Applied_on__gte=twenty_days_ago
-            ).exists()
-
-            if duplicate:
+            if JobApplications.objects.filter(
+                Email=data['Email'], Job=job, Applied_on__gte=twenty_days_ago
+            ).exists():
                 context['error'] = "You have already applied for this job within the last 20 days."
                 return render(request, "job_apply.html", context)
 
-            JobApplications.objects.create(
-                Job=job,
-                Job_title=job.Title,
-                First_name=f_name,
-                Last_name=l_name,
-                Email=email,
-                Phone_no=phone_no,
-                Expirence=experience,
-                Qualification_level=qualification,
-                Major=major,
-                School_name=school,
-                Degree_year=degree_year,
-                Expected_salary=expected_salary if expected_salary else None,
-                Gender=gender,
-                Resume=resume_file
+            JobApplications.objects.create(**data)
+
+            message = "\n".join([
+                f"Job:- {job.Title}",
+                f"Applicant Name:- {data['First_name']} {data['Last_name']}",
+                f"Email:- {data['Email']}",
+                f"Phone:- {data['Phone_no']}",
+                f"Experience:- {data['Expirence']}",
+                f"Qualification Level:- {data['Qualification_level']}",
+                f"Major:- {data['Major']}",
+                f"School:- {data['School_name']}",
+                f"Degree Year:- {data['Degree_year']}",
+                f"Expected Salary:- {data['Expected_salary']}",
+                f"Gender:- {data['Gender']}",
+                "",
+                "Please find the attached resume for further details.",
+                "",
+                "Regards,",
+                "Lendeavor Careers Bot"
+            ])
+
+            files = [data['Resume']] if data['Resume'] else []
+
+            send_graph_email_async(
+                subject=f"New Job Application for {job.Title}",
+                body=message,
+                to_emails=[job.Email, settings.CONTACT_EMAIL],
+                is_html=False,
+                files=files
             )
-
-            # Prepare email with attachment
-            subject = f"New Job Application for {job.Title}"
-            message = f"""
-                        Dear HR,
-
-                        A new job application has been submitted.
-
-                        Job: {job.Title}
-                        Applicant Name: {f_name} {l_name}
-                        Email: {email}
-                        Phone: {phone_no}
-                        Experience: {experience}
-                        Qualification Level: {qualification}
-                        Major: {major}
-                        School: {school}
-                        Degree Year: {degree_year}
-                        Expected Salary: {expected_salary}
-                        Gender: {gender}
-
-                        Please find the attached resume for further details.
-
-                        Regards,
-                        Lendeavor Careers Bot
-                        """
-
-            email_message = EmailMessage(
-                subject,
-                message,
-                settings.DEFAULT_FROM_EMAIL,
-                [job.Email, settings.DEFAULT_FROM_EMAIL],  # HR and archive
-            )
-
-            if resume_file:
-                email_message.attach(resume_file.name, resume_file.read(), resume_file.content_type)
-
-            email_message.send(fail_silently=False)
 
             context['message'] = "You have successfully applied for this job, and your resume has been sent to HR."
 
