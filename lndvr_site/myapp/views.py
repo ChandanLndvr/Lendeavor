@@ -18,7 +18,12 @@ import requests
 import base64
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
+import logging
 
+#------------------- created a logger -----------------
+
+logger = logging.getLogger('django_actions')
+logger.info("Action details here")
 
 #----------------------- Main page ------------------------
 
@@ -29,36 +34,38 @@ def main(request):
 
 def signUp(request):
     if request.method == "POST":
-        # Collect form data from POST request, normalizing where needed
-        data = {
-            "First_name": request.POST.get("first_name"),
-            "Last_name": request.POST.get("last_name"),
-            "User_type": request.POST.get("user_type", "").lower(),  # normalize to lowercase for choice matching
-            "Email": request.POST.get("email", "").strip(),         # remove surrounding spaces
-            "password1": request.POST.get("password1"),
-            "password2": request.POST.get("password2"),
-        }
+        try:
+            data = {
+                "First_name": request.POST.get("first_name", "").strip(),
+                "Last_name": request.POST.get("last_name", "").strip(),
+                "User_type": request.POST.get("user_type", "").lower().strip(),
+                "Email": request.POST.get("email", "").strip(),
+                "password1": request.POST.get("password1"),
+                "password2": request.POST.get("password2"),
+            }
 
-        # Additional business rule: Admin emails must end with specific domain
-        if data["User_type"] == "admin" and not data["Email"].endswith("@lendeavorusa.com"):
-            return render(request, "signUp.html", {"error": "Admin email must end with @lendeavorusa.com"})
+            # Business rule for admin email
+            if data["User_type"] == "admin" and not data["Email"].endswith("@lendeavorusa.com"):
+                return render(request, "signUp.html", {"error": "Admin email must end with @lendeavorusa.com"})
 
-        # Check if user with the given email already exists in database
-        if SignUp.objects.filter(Email=data["Email"]).exists():
-            return render(request, "signUp.html", {"error": "Email already exists."})
+            # Check for existing user
+            if SignUp.objects.filter(Email=data["Email"]).exists():
+                return render(request, "signUp.html", {"error": "Email already exists."})
 
-        # Pass data to serializer for validation and user creation logic
-        serializer = SignUpSerializer(data=data)
-        if serializer.is_valid():
-            # Save new user if data is valid (calls create method in serializer)
-            serializer.save()
-            # On success, redirect to login page with a success message
-            return render(request, "login.html", {"message": "Registration successful. Please login."})
+            serializer = SignUpSerializer(data=data)
+            if serializer.is_valid():
+                serializer.save()  # instance of your SignUp (userDetails) model
+                
+                # Redirect with message
+                return redirect(reverse("login") + "?message=Registration successful. Please login.")
 
-        # If serializer validation fails, re-render signup form with errors
-        return render(request, "signUp.html", {"error": serializer.errors})
+            # If serializer invalid
+            return render(request, "signUp.html", {"error": serializer.errors})
 
-    # For GET requests, just render the signup page
+        except Exception as e:
+            return render(request, "signUp.html", {"error": "An unexpected error occurred. Please try again."})
+
+    # GET
     return render(request, "signUp.html")
 
 

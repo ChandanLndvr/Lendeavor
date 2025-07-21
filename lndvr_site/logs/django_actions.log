@@ -1,0 +1,50 @@
+INFO 2025-07-21 16:35:02,704 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:35:49,214 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\lndvr_site\settings.py changed, reloading.
+INFO 2025-07-21 16:35:49,588 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:35:57,018 django.server "GET /careers/application/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/?message=You%20have%20successfully%20applied%20for%20this%20job. HTTP/1.1" 200 16367
+INFO 2025-07-21 16:35:57,052 django.server "GET /static/js/message_fade.js HTTP/1.1" 304 0
+INFO 2025-07-21 16:36:32,983 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-07-21 16:36:32,990 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20301
+INFO 2025-07-21 16:36:53,111 django.server "GET /signup/ HTTP/1.1" 200 12977
+INFO 2025-07-21 16:37:25,917 django.server "POST /signup/ HTTP/1.1" 302 0
+INFO 2025-07-21 16:37:25,921 django.server "GET /login/?message=Registration%20successful.%20Please%20login. HTTP/1.1" 200 11676
+INFO 2025-07-21 16:44:51,186 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\lndvr_site\settings.py changed, reloading.
+INFO 2025-07-21 16:44:51,619 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:47:14,925 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\lndvr_site\settings.py changed, reloading.
+INFO 2025-07-21 16:47:15,314 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:47:15,602 django_actions Action details here
+INFO 2025-07-21 16:47:50,459 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\lndvr_site\settings.py changed, reloading.
+INFO 2025-07-21 16:47:50,868 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:47:51,176 django_actions Action details here
+INFO 2025-07-21 16:48:04,038 django_actions Request from IP: 127.0.0.1 Method: GET Path: /login/
+INFO 2025-07-21 16:48:04,050 django.server "GET /login/?message=Registration%20successful.%20Please%20login. HTTP/1.1" 200 11676
+INFO 2025-07-21 16:48:21,032 django_actions Request from IP: 127.0.0.1 Method: GET Path: /
+INFO 2025-07-21 16:48:21,037 django.server "GET / HTTP/1.1" 200 20301
+INFO 2025-07-21 16:51:28,673 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\custom_middleware\log_ip.py changed, reloading.
+INFO 2025-07-21 16:51:29,068 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:51:29,354 django_actions Action details here
+INFO 2025-07-21 16:51:51,993 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\custom_middleware\log_ip.py changed, reloading.
+INFO 2025-07-21 16:51:52,369 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:51:52,650 django_actions Action details here
+INFO 2025-07-21 16:52:03,876 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /
+INFO 2025-07-21 16:52:03,894 django.server "GET / HTTP/1.1" 200 20301
+INFO 2025-07-21 16:52:19,676 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /login/
+INFO 2025-07-21 16:52:19,679 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-07-21 16:52:27,130 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: POST, Path: /login/
+INFO 2025-07-21 16:52:27,488 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-07-21 16:52:27,492 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /
+INFO 2025-07-21 16:52:27,494 django.server "GET / HTTP/1.1" 200 20222
+INFO 2025-07-21 16:52:30,407 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /contact/
+INFO 2025-07-21 16:52:30,409 django.server "GET /contact/ HTTP/1.1" 200 13705
+INFO 2025-07-21 16:52:31,657 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /careers/
+INFO 2025-07-21 16:52:31,665 django.server "GET /careers/ HTTP/1.1" 200 22768
+INFO 2025-07-21 16:52:33,406 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /job/edit/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/
+INFO 2025-07-21 16:52:33,409 django.server "GET /job/edit/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/ HTTP/1.1" 200 14410
+INFO 2025-07-21 16:52:45,877 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: POST, Path: /job/edit/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/
+INFO 2025-07-21 16:52:45,884 django.server "POST /job/edit/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/ HTTP/1.1" 302 0
+INFO 2025-07-21 16:52:45,894 django_actions Request from IP: 127.0.0.1, Hostname: Lendeavor-025, Method: GET, Path: /careers/
+INFO 2025-07-21 16:52:45,897 django.server "GET /careers/?message=Job%20updated%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-21 16:52:45,925 django.server "GET /static/js/message_fade.js HTTP/1.1" 304 0
+INFO 2025-07-21 16:54:14,878 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-21 16:54:15,420 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-21 16:54:15,794 django_actions Action details here

@@ -54,6 +54,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'myapp.middleware.JWTBlacklistMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'myapp.custom_middleware.log_ip.LogClientIPMiddleware',
 ]
 
 ROOT_URLCONF = 'lndvr_site.urls'
@@ -178,3 +179,52 @@ MS_GRAPH_CLIENT_SECRET = env("MS_GRAPH_CLIENT_SECRET")
 MS_GRAPH_TENANT_ID = env("MS_GRAPH_TENANT_ID")
 GRAPH_SENDER_EMAIL = env("GRAPH_SENDER_EMAIL")
 CONTACT_EMAIL = env("CONTACT_EMAIL")
+
+#----------------- maually added for creating logs of important actions -----------------------
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+
+    'formatters': {
+        'verbose': {
+            'format': '{levelname} {asctime} {name} {message}',
+            'style': '{',
+        },
+        'simple': {
+            'format': '{levelname} {message}',
+            'style': '{',
+        },
+    },
+
+    'handlers': {
+        'console': {   
+            'class': 'logging.StreamHandler',
+            'formatter': 'simple',
+        },
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'logs/django_actions.log'),
+            'formatter': 'verbose',
+        },
+    },
+
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'myapp': {
+            'handlers': ['file', 'console'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+        'django_actions': {
+        'handlers': ['file', 'console'],
+        'level': 'INFO',
+        'propagate': False,
+        },
+    },
+}
