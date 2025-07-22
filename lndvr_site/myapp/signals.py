@@ -2,6 +2,8 @@ from django.contrib.auth.signals import user_logged_in, user_logged_out, user_lo
 from django.dispatch import receiver
 import logging
 
+# Automatically log login, logout, and login failure events across your entire Django app.
+
 logger = logging.getLogger('django_actions')
 
 @receiver(user_logged_in)

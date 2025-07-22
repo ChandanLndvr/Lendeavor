@@ -48,3 +48,297 @@ INFO 2025-07-21 16:52:45,925 django.server "GET /static/js/message_fade.js HTTP/
 INFO 2025-07-21 16:54:14,878 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
 INFO 2025-07-21 16:54:15,420 django.utils.autoreload Watching for file changes with StatReloader
 INFO 2025-07-21 16:54:15,794 django_actions Action details here
+INFO 2025-07-22 10:47:37,796 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:51:00,703 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\lndvr_site\settings.py changed, reloading.
+INFO 2025-07-22 10:51:01,131 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:51:05,183 django.server "GET / HTTP/1.1" 200 20301
+INFO 2025-07-22 10:51:05,209 django.server "GET /static/css/divider_mission.css HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,210 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,214 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,217 django.server "GET /static/people/lucas.png HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,217 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,217 django.server "GET /static/landing_img2.jpg HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,221 django.server "GET /static/people/kat.png HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,221 django.server "GET /static/people/anish.png HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,223 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,224 django.server "GET /static/people/casey.png HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:05,224 django.server "GET /static/js/message_fade.js HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:08,187 django.server "GET /signup/ HTTP/1.1" 200 12977
+INFO 2025-07-22 10:51:08,203 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-07-22 10:51:08,203 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-07-22 10:52:13,353 django_actions Method: POST | Action: Signup attempt | IP: 127.0.0.1 | User: test6@gmail.com
+INFO 2025-07-22 10:52:13,745 django.server "POST /signup/ HTTP/1.1" 302 0
+INFO 2025-07-22 10:52:13,778 django.server "GET /login/?message=Registration%20successful.%20Please%20login. HTTP/1.1" 200 11676
+INFO 2025-07-22 10:53:01,677 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-07-22 10:53:01,683 django.server "GET / HTTP/1.1" 200 20222
+INFO 2025-07-22 10:54:05,567 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 10:54:06,411 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:54:48,194 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 10:54:49,077 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:55:10,173 django_actions Method: GET | Action: Signup attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-07-22 10:55:10,191 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-07-22 10:55:10,204 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20301
+INFO 2025-07-22 10:56:12,807 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 10:56:13,587 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:56:37,747 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 10:56:38,550 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 10:57:02,144 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-07-22 10:57:10,295 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 10:57:10,652 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-07-22 10:57:10,659 django.server "GET / HTTP/1.1" 200 20222
+ERROR 2025-07-22 10:57:12,575 django.request Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 108, in logout_user
+    log_action(request, "logout attempt", user_info=token.user.Email)
+                                                    ^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'user'. Did you mean: 'upper'?
+ERROR 2025-07-22 10:57:12,578 django.server "GET /logout/ HTTP/1.1" 500 71415
+WARNING 2025-07-22 10:57:12,656 django.request Not Found: /favicon.ico
+WARNING 2025-07-22 10:57:12,656 django.server "GET /favicon.ico HTTP/1.1" 404 7388
+INFO 2025-07-22 10:59:42,337 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 10:59:42,830 django.utils.autoreload Watching for file changes with StatReloader
+ERROR 2025-07-22 10:59:46,193 django.request Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 108, in logout_user
+    log_action(request, "logout attempt", user_info=payload.get('email', 'Anonymuous'))
+                                                    ^^^^^^^
+UnboundLocalError: cannot access local variable 'payload' where it is not associated with a value
+ERROR 2025-07-22 10:59:46,194 django.server "GET /logout/ HTTP/1.1" 500 71768
+ERROR 2025-07-22 10:59:49,362 django.request Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 108, in logout_user
+    log_action(request, "logout attempt", user_info=payload.get('email', 'Anonymuous'))
+                                                    ^^^^^^^
+UnboundLocalError: cannot access local variable 'payload' where it is not associated with a value
+ERROR 2025-07-22 10:59:49,363 django.server "GET /logout/ HTTP/1.1" 500 71631
+INFO 2025-07-22 11:00:09,136 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 11:00:09,659 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:00:12,738 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:00:12,749 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:00:12,759 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20301
+INFO 2025-07-22 11:01:24,129 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-07-22 11:01:25,547 django.server "GET /forgot-password/ HTTP/1.1" 200 7376
+INFO 2025-07-22 11:01:25,568 django.server "GET /static/css/password_reset.css HTTP/1.1" 304 0
+INFO 2025-07-22 11:01:34,870 django_actions Method: POST | Action: Forgot password attempt | IP: 127.0.0.1 | User: test6@gmail.com
+INFO 2025-07-22 11:01:35,571 django.server "POST /forgot-password/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:01:35,577 django.server "GET /login/?message=Check%20your%20email%20for%20a%20reset%20link. HTTP/1.1" 200 11672
+INFO 2025-07-22 11:02:48,896 django_actions Method: POST | Action: Forgot password attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:02:49,547 django.server "POST /forgot-password/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:02:49,550 django.server "GET /login/?message=Check%20your%20email%20for%20a%20reset%20link. HTTP/1.1" 200 11672
+ERROR 2025-07-22 11:03:12,036 django.request Internal Server Error: /reset-password/641613bd-d528-4bbc-9859-c0486689d433/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 174, in reset_password
+    log_action(request, "Reset password attempt", user_info=reset_token.user.Email)
+                                                            ^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'reset_token' where it is not associated with a value
+ERROR 2025-07-22 11:03:12,037 django.server "GET /reset-password/641613bd-d528-4bbc-9859-c0486689d433/ HTTP/1.1" 500 71444
+WARNING 2025-07-22 11:03:12,111 django.request Not Found: /favicon.ico
+WARNING 2025-07-22 11:03:12,112 django.server "GET /favicon.ico HTTP/1.1" 404 7388
+INFO 2025-07-22 11:04:07,535 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 11:04:08,608 django.utils.autoreload Watching for file changes with StatReloader
+ERROR 2025-07-22 11:04:12,004 django.request Internal Server Error: /reset-password/641613bd-d528-4bbc-9859-c0486689d433/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 258, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 174, in reset_password
+    payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jwt.py", line 211, in decode
+    decoded = self.decode_complete(
+        jwt,
+    ...<7 lines>...
+        leeway=leeway,
+    )
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jwt.py", line 152, in decode_complete
+    decoded = api_jws.decode_complete(
+        jwt,
+    ...<3 lines>...
+        detached_payload=detached_payload,
+    )
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 199, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ~~~~~~~~~~^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 261, in _load
+    raise DecodeError("Not enough segments") from err
+jwt.exceptions.DecodeError: Not enough segments
+ERROR 2025-07-22 11:04:12,007 django.server "GET /reset-password/641613bd-d528-4bbc-9859-c0486689d433/ HTTP/1.1" 500 95675
+INFO 2025-07-22 11:04:17,677 django_actions Method: POST | Action: Forgot password attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:04:18,228 django.server "POST /forgot-password/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:04:18,238 django.server "GET /login/?message=Check%20your%20email%20for%20a%20reset%20link. HTTP/1.1" 200 11672
+ERROR 2025-07-22 11:04:24,092 django.request Internal Server Error: /reset-password/6acdac0b-6540-4a98-a173-4085694f7f81/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 258, in _load
+    signing_input, crypto_segment = jwt.rsplit(b".", 1)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: not enough values to unpack (expected 2, got 1)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 174, in reset_password
+    payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jwt.py", line 211, in decode
+    decoded = self.decode_complete(
+        jwt,
+    ...<7 lines>...
+        leeway=leeway,
+    )
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jwt.py", line 152, in decode_complete
+    decoded = api_jws.decode_complete(
+        jwt,
+    ...<3 lines>...
+        detached_payload=detached_payload,
+    )
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 199, in decode_complete
+    payload, signing_input, header, signature = self._load(jwt)
+                                                ~~~~~~~~~~^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\jwt\api_jws.py", line 261, in _load
+    raise DecodeError("Not enough segments") from err
+jwt.exceptions.DecodeError: Not enough segments
+ERROR 2025-07-22 11:04:24,094 django.server "GET /reset-password/6acdac0b-6540-4a98-a173-4085694f7f81/ HTTP/1.1" 500 95538
+INFO 2025-07-22 11:05:59,502 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 11:05:59,929 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:06:06,214 django_actions Method: GET | Action: Reset password attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:06:06,231 django.server "GET /reset-password/6acdac0b-6540-4a98-a173-4085694f7f81/ HTTP/1.1" 200 7806
+INFO 2025-07-22 11:06:06,242 django.server "GET /static/css/password_reset.css HTTP/1.1" 304 0
+INFO 2025-07-22 11:06:06,243 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-07-22 11:06:06,247 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 304 0
+INFO 2025-07-22 11:06:06,288 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-07-22 11:06:16,591 django_actions Method: POST | Action: Reset password attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:06:16,961 django.server "POST /reset-password/6acdac0b-6540-4a98-a173-4085694f7f81/ HTTP/1.1" 200 11664
+INFO 2025-07-22 11:06:16,986 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 431
+INFO 2025-07-22 11:07:00,720 django.server "GET / HTTP/1.1" 200 20301
+INFO 2025-07-22 11:07:00,751 django.server "GET /static/landing_img2.jpg HTTP/1.1" 200 103797
+INFO 2025-07-22 11:07:00,756 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 3792
+INFO 2025-07-22 11:07:00,756 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-07-22 11:07:00,758 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-07-22 11:07:00,760 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-07-22 11:07:00,761 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-07-22 11:07:00,761 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-07-22 11:07:00,763 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-07-22 11:07:00,771 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-07-22 11:07:06,490 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-07-22 11:07:14,659 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:07:15,023 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:07:15,030 django.server "GET / HTTP/1.1" 200 20222
+INFO 2025-07-22 11:07:18,582 django.server "GET /aboutus/ HTTP/1.1" 200 13963
+INFO 2025-07-22 11:07:18,600 django.server "GET /static/services.png HTTP/1.1" 200 28124
+INFO 2025-07-22 11:07:18,601 django.server "GET /static/nextstep.png HTTP/1.1" 200 45531
+INFO 2025-07-22 11:07:18,601 django.server "GET /static/welcome.png HTTP/1.1" 200 45260
+INFO 2025-07-22 11:07:18,609 django.server "GET /static/css/aboutus.css HTTP/1.1" 200 2788
+INFO 2025-07-22 11:07:35,016 django.server "GET /products/ HTTP/1.1" 200 25031
+INFO 2025-07-22 11:07:35,048 django.server "GET /static/css/products.css HTTP/1.1" 200 4030
+INFO 2025-07-22 11:08:01,907 django.server "GET /careers HTTP/1.1" 301 0
+INFO 2025-07-22 11:08:01,946 django.server "GET /careers/ HTTP/1.1" 200 22768
+INFO 2025-07-22 11:08:01,974 django.server "GET /static/css/careers.css HTTP/1.1" 200 1569
+INFO 2025-07-22 11:08:01,983 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1467
+INFO 2025-07-22 11:08:01,983 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-07-22 11:08:06,107 django.server "GET /job/create/ HTTP/1.1" 200 13699
+INFO 2025-07-22 11:08:06,131 django.server "GET /static/css/job_post.css HTTP/1.1" 200 603
+INFO 2025-07-22 11:08:32,041 django_actions Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: info@lendeavorusa.com
+INFO 2025-07-22 11:08:32,077 django.server "POST /job/create/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:08:32,089 django.server "GET /careers/?message=Job%20posted%20successfully! HTTP/1.1" 200 25450
+INFO 2025-07-22 11:09:21,941 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:09:22,553 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:09:31,033 django.server "GET /job/create/ HTTP/1.1" 200 13699
+INFO 2025-07-22 11:09:52,777 django_actions Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:09:52,805 django.server "POST /job/create/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:09:52,818 django.server "GET /careers/?message=Job%20posted%20successfully! HTTP/1.1" 200 27982
+INFO 2025-07-22 11:10:07,193 django.server "GET /job/edit/2beb3a53-edd3-4632-b830-8f3d13fdeffc/ HTTP/1.1" 200 14271
+INFO 2025-07-22 11:10:11,207 django_actions Method: POST | Action: Single job delete attempt | IP: 127.0.0.1 | User: info@lendeavorusa.com
+INFO 2025-07-22 11:10:11,217 django.server "POST /job/edit/2beb3a53-edd3-4632-b830-8f3d13fdeffc/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:10:11,228 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 25445
+INFO 2025-07-22 11:12:18,982 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:12:19,403 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:12:38,839 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 25445
+INFO 2025-07-22 11:12:39,054 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-07-22 11:12:51,696 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 25445
+INFO 2025-07-22 11:12:55,588 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 25445
+INFO 2025-07-22 11:13:06,482 django.server "GET /job/edit/4a09342c-53c8-4473-ab4b-efc7a34e56c5/ HTTP/1.1" 200 14261
+INFO 2025-07-22 11:13:09,061 django_actions Method: POST | Action: Single job delete attempt | IP: 127.0.0.1 | User: info@lendeavorusa.com
+INFO 2025-07-22 11:13:09,068 django.server "POST /job/edit/4a09342c-53c8-4473-ab4b-efc7a34e56c5/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:13:09,083 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-22 11:14:17,454 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:14:18,036 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:14:19,475 django.server "GET /job/create/ HTTP/1.1" 200 13699
+INFO 2025-07-22 11:14:31,933 django_actions Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:14:31,962 django.server "POST /job/create/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:14:31,974 django.server "GET /careers/?message=Job%20posted%20successfully! HTTP/1.1" 200 25447
+INFO 2025-07-22 11:14:56,874 django.server "GET /job/edit/eda34f81-6c1e-4929-bee3-091d26435da1/ HTTP/1.1" 200 14265
+INFO 2025-07-22 11:15:02,069 django_actions Method: POST | Action: Single job delete attempt | IP: 127.0.0.1 | User: Anonymous
+INFO 2025-07-22 11:15:02,078 django.server "POST /job/edit/eda34f81-6c1e-4929-bee3-091d26435da1/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:15:02,091 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-22 11:19:49,424 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:19:49,814 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:23:43,039 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:23:43,450 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:24:16,641 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:24:17,016 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:24:54,223 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\job_posting_app\views.py changed, reloading.
+INFO 2025-07-22 11:24:54,596 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:25:00,178 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-22 11:25:02,894 django.server "GET /job/create/ HTTP/1.1" 200 13699
+INFO 2025-07-22 11:25:12,301 django_actions Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:25:12,329 django.server "POST /job/create/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:25:12,338 django.server "GET /careers/?message=Job%20posted%20successfully! HTTP/1.1" 200 25447
+INFO 2025-07-22 11:25:15,810 django.server "GET /job/edit/dcafab69-1d7f-4eaf-b1b7-2595c49c9af1/ HTTP/1.1" 200 14268
+INFO 2025-07-22 11:25:31,014 django_actions Method: POST | Action: Single job delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:25:31,022 django.server "POST /job/edit/dcafab69-1d7f-4eaf-b1b7-2595c49c9af1/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:25:31,036 django.server "GET /careers/?message=Job%20deleted%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-22 11:25:40,074 django.server "GET /job/edit/f4605b2c-6d9c-41ce-ab96-27191e75634a/ HTTP/1.1" 200 14272
+INFO 2025-07-22 11:25:46,154 django_actions Method: POST | Action: Single job update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:25:46,158 django.server "POST /job/edit/f4605b2c-6d9c-41ce-ab96-27191e75634a/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:25:46,167 django.server "GET /careers/?message=Job%20updated%20successfully. HTTP/1.1" 200 22913
+INFO 2025-07-22 11:36:53,251 django.server "GET /contact/ HTTP/1.1" 200 13705
+INFO 2025-07-22 11:36:53,297 django.server "GET /static/css/contact.css HTTP/1.1" 200 786
+INFO 2025-07-22 11:37:06,029 django.server "POST /contact/ HTTP/1.1" 200 13853
+INFO 2025-07-22 11:37:18,748 django_actions Method: GET | Action: Affiliate application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-07-22 11:37:18,768 django.server "GET /affiliate/ HTTP/1.1" 200 18806
+INFO 2025-07-22 11:37:18,808 django.server "GET /static/landing_img4.png HTTP/1.1" 200 290561
+INFO 2025-07-22 11:37:18,818 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 2807
+INFO 2025-07-22 11:37:33,895 django_actions Method: POST | Action: Affiliate application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-07-22 11:37:33,906 django.server "POST /affiliate/ HTTP/1.1" 302 0
+INFO 2025-07-22 11:37:33,916 django_actions Method: GET | Action: Affiliate application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-07-22 11:37:33,918 django.server "GET /affiliate/?message=Your%20application%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18975
+INFO 2025-07-22 11:40:00,418 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\affiliate_app\views.py changed, reloading.
+INFO 2025-07-22 11:40:00,810 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:42:18,130 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\affiliate_app\views.py changed, reloading.
+INFO 2025-07-22 11:42:18,524 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:42:38,162 django_actions Method: POST | Action: Affiliate application attempt | IP: 127.0.0.1 | User: chandan@lendeavor.com
+INFO 2025-07-22 11:42:38,197 django.server "POST /affiliate/?message=Your%20application%20has%20been%20submitted%20successfully! HTTP/1.1" 302 0
+INFO 2025-07-22 11:42:38,213 django.server "GET /affiliate/?message=Your%20application%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18975
+INFO 2025-07-22 11:43:20,612 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\affiliate_app\views.py changed, reloading.
+INFO 2025-07-22 11:43:21,275 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:43:32,659 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 11:43:33,475 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-07-22 11:43:37,498 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-07-22 11:43:38,186 django.utils.autoreload Watching for file changes with StatReloader

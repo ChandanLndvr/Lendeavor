@@ -54,7 +54,6 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'myapp.middleware.JWTBlacklistMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'myapp.custom_middleware.log_ip.LogClientIPMiddleware',
 ]
 
 ROOT_URLCONF = 'lndvr_site.urls'

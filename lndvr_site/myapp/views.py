@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.http import HttpResponse
 from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken, Lenders
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
-from django.core.mail import send_mail, EmailMessage
 from django.conf import settings
 from .models import PasswordResetToken
 import uuid
@@ -13,17 +12,11 @@ import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
 from lndvr_site.utils.graph_email import send_graph_email
-from msal import ConfidentialClientApplication
-import requests
 import base64
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
 import logging
-
-#------------------- created a logger -----------------
-
-logger = logging.getLogger('django_actions')
-logger.info("Action details here")
+from myapp.custom_middleware.log_ip import log_action
 
 #----------------------- Main page ------------------------
 
@@ -35,6 +28,7 @@ def main(request):
 def signUp(request):
     if request.method == "POST":
         try:
+            log_action(request, "Signup attempt", user_info=request.POST.get('email'))
             data = {
                 "First_name": request.POST.get("first_name", "").strip(),
                 "Last_name": request.POST.get("last_name", "").strip(),
@@ -73,6 +67,7 @@ def signUp(request):
 
 def login_user(request):
     if request.method == "POST":
+        log_action(request, "login attempt", user_info=request.POST.get('email'))
         email = request.POST.get('email')
         password = request.POST.get('password1')
 
@@ -108,6 +103,8 @@ def logout_user(request):
     if token:
         try:
             payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+            log_action(request, "logout attempt", user_info=payload.get('email', 'Anonymuous'))
+            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
             expiry_timestamp = payload.get('exp')
             expires_at = datetime.fromtimestamp(expiry_timestamp, tz=dt_timezone.utc)   
 
@@ -125,6 +122,7 @@ def forgot_password(request):
     if request.method == "POST":
         email = request.POST.get("email")
         try:
+            log_action(request, "Forgot password attempt", user_info=request.POST.get('email'))
             user = SignUp.objects.get(Email=email)
             token = str(uuid.uuid4())
 
@@ -171,6 +169,8 @@ def forgot_password(request):
 def reset_password(request, token):
     try:
         reset_token = PasswordResetToken.objects.get(token=token)
+        log_action(request, "Reset password attempt", user_info=reset_token.user.Email)
+        reset_token = PasswordResetToken.objects.get(token=token)
         if not reset_token.is_valid():
             return HttpResponse("Token expired or already used.", status=400)
 
@@ -195,11 +195,12 @@ def reset_password(request, token):
     except PasswordResetToken.DoesNotExist:
         return HttpResponse("Invalid token", status=400) 
     
-#------------------------------- Apply Now ----------------------------------------
+#------------------------------- Apply Now for funding ----------------------------------------
 
 def apply(request):
     if request.method == "POST":
         try:
+            log_action(request, "Funding application attempt", user_info=request.POST.get('bemail'))
             data = request.POST.dict()
             files = request.FILES.getlist('financial_statement')
             doc = files[0] if files else None
@@ -306,118 +307,126 @@ def career_page(request):
 
 #------------------------ Apply for jobs -------------------------
 
-
 def job_applications(request, job_id):
-    job = get_object_or_404(JobDetails, Job_id=job_id)
-    context = {'job': job, 'current_page': 'careers'}
+    try:
+        log_action(request, "Job application attempt", user_info=request.POST.get('email'))
+        job = get_object_or_404(JobDetails, Job_id=job_id)
+        context = {'job': job, 'current_page': 'careers'}
 
-    if request.method == "POST":
-        data = request.POST.dict()
-        resume_file = request.FILES.get('resume')
+        if request.method == "POST":
+            data = request.POST.dict()
+            resume_file = request.FILES.get('resume')
 
-        cleaned_data = {
-            'Job': job.pk,  # Pass PK for serializer foreign key
-            'First_name': data.get('fname'),
-            'Last_name': data.get('lname'),
-            'Email': data.get('email'),
-            'Phone_no': data.get('phone'),
-            'Expirence': data.get('experience'),
-            'Qualification_level': data.get('qualification'),
-            'Major': data.get('major'),
-            'School_name': data.get('school'),
-            'Degree_year': data.get('year'),
-            'Expected_salary': data.get('salary') or None,
-            'Gender': data.get('gender'),
-            'Resume': resume_file
-        }
+            cleaned_data = {
+                'Job': job.pk,
+                'First_name': data.get('fname'),
+                'Last_name': data.get('lname'),
+                'Email': data.get('email'),
+                'Phone_no': data.get('phone'),
+                'Expirence': data.get('experience'),
+                'Qualification_level': data.get('qualification'),
+                'Major': data.get('major'),
+                'School_name': data.get('school'),
+                'Degree_year': data.get('year'),
+                'Expected_salary': data.get('salary') or None,
+                'Gender': data.get('gender'),
+                'Resume': resume_file
+            }
 
-        # Prevent re-application within 20 days
-        twenty_days_ago = date.today() - timedelta(days=20)
-        if JobApplications.objects.filter(
-            Email=cleaned_data['Email'], Job=job, Applied_on__gte=twenty_days_ago
-        ).exists():
-            return redirect(
-                f"{reverse('jobApplication', args=[job_id])}?error=You have already applied for this job within the last 20 days."
-            )
+            twenty_days_ago = date.today() - timedelta(days=20)
+            if JobApplications.objects.filter(
+                Email=cleaned_data['Email'], Job=job, Applied_on__gte=twenty_days_ago
+            ).exists():
+                return redirect(
+                    f"{reverse('jobApplication', args=[job_id])}?error=You have already applied for this job within the last 20 days."
+                )
 
-        serializer = JobApplicationsSerializer(data=cleaned_data)
-        if serializer.is_valid():
-            instance = serializer.save()  # save to DB
+            serializer = JobApplicationsSerializer(data=cleaned_data)
+            if serializer.is_valid():
+                instance = serializer.save()
 
-            # Prepare tabular HTML email
-            table_rows = ""
-            for field, value in serializer.validated_data.items():
-                if field == 'Resume':
-                    continue  # do not include file in the email body
-                pretty_field = field.replace('_', ' ').title()
-                table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{pretty_field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+                table_rows = ""
+                for field, value in serializer.validated_data.items():
+                    if field == 'Resume':
+                        continue
+                    pretty_field = field.replace('_', ' ').title()
+                    table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{pretty_field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
 
-            email_body = f"""
-                <h3>New Job Application for {job.Title}</h3>
-                <table style='border-collapse:collapse;width:90%;margin-top:10px;'>{table_rows}</table>
-                <p>Please find the attached resume for further details.</p>
-            """
+                email_body = f"""
+                    <h3>New Job Application for {job.Title}</h3>
+                    <table style='border-collapse:collapse;width:90%;margin-top:10px;'>{table_rows}</table>
+                    <p>Please find the attached resume for further details.</p>
+                """
 
-            # Send email asynchronously with resume attachment
-            files = [resume_file] if resume_file else []
+                files = [resume_file] if resume_file else []
 
-            send_graph_email_async(
-                subject=f"New Job Application for {job.Title}",
-                body=email_body,
-                to_emails=[job.Email, settings.CONTACT_EMAIL],
-                is_html=True,
-                files=files
-            )
+                send_graph_email_async(
+                    subject=f"New Job Application for {job.Title}",
+                    body=email_body,
+                    to_emails=[job.Email, settings.CONTACT_EMAIL],
+                    is_html=True,
+                    files=files
+                )
 
-            # Redirect to prevent form re-submission
-            return redirect(
-                f"{reverse('jobApplication', args=[job_id])}?message=You have successfully applied for this job."
-            )
+                return redirect(
+                    f"{reverse('jobApplication', args=[job_id])}?message=You have successfully applied for this job."
+                )
 
-        # If serializer invalid, show errors
-        context['error'] = serializer.errors
+            context['error'] = serializer.errors
+            return render(request, "job_apply.html", context)
+
+        context['message'] = request.GET.get('message')
+        context['error'] = request.GET.get('error')
         return render(request, "job_apply.html", context)
 
-    # Handle GET with optional message/error from redirect
-    context['message'] = request.GET.get('message')
-    context['error'] = request.GET.get('error')
-    return render(request, "job_apply.html", context)
+    except Exception as e:
+        context['error'] = "An unexpected error occurred. Please try again later."
+        return render(request, "job_apply.html", context)
 
 
 #---------------------------- Contact ----------------------------
 
 def contact(request):
-    if request.method == 'POST':
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        subject = request.POST.get('subject', 'No Subject')
-        msg_body = request.POST.get('message')
+    try:
+        if request.method == 'POST':
+            name = request.POST.get('name')
+            email = request.POST.get('email')
+            subject = request.POST.get('subject', 'No Subject')
+            msg_body = request.POST.get('message')
 
-        # Construct message body with sender info
-        body = f"From: {name} <{email}>\n\n{msg_body}"
+            body = f"From: {name} <{email}>\n\n{msg_body}"
 
-        # Send via Graph API
-        email_sent = send_graph_email(
-            subject,
-            body,
-            [settings.CONTACT_EMAIL]
-        )
+            email_sent = send_graph_email(
+                subject,
+                body,
+                [settings.CONTACT_EMAIL]
+            )
 
-        if email_sent:
-            message = "Thank you for contacting us!"
-        else:
-            message = "We could not send your message at this time. Please try again later."
+            if email_sent:
+                message = "Thank you for contacting us!"
+            else:
+                message = "We could not send your message at this time. Please try again later."
 
+            return render(
+                request,
+                "contactus.html",
+                {
+                    'message': message,
+                    'current_page': 'contact'
+                }
+            )
+
+        return render(request, "contactus.html", {'current_page': 'contact'})
+
+    except Exception as e:
         return render(
             request,
             "contactus.html",
             {
-                'message': message,
+                'message': "An unexpected error occurred. Please try again later.",
                 'current_page': 'contact'
             }
         )
-
-    return render(request, "contactus.html", {'current_page': 'contact'})
 
 #-------------------------- lenders / Marketplace ---------------------
 
