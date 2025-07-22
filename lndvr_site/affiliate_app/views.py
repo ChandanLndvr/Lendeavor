@@ -1,11 +1,10 @@
 from django.shortcuts import render, redirect
-from django.core.mail import EmailMessage
 from django.conf import settings
-from affiliate_app.models import AffiliateApplications
 from django.urls import reverse
 import jwt
 from .serializers import AffiliateApplicationsSerializer
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
+from myapp.custom_middleware.log_ip import log_action
 
 def affiliate(request):
     token = request.COOKIES.get('jwt_token')
@@ -19,6 +18,7 @@ def affiliate(request):
             user_email = None
 
     if request.method == 'POST':
+        log_action(request, "Affiliate application attempt", user_info=request.POST.get('email'))
         if not user_email:
             return render(request, 'affiliate.html', {
                 'current_page': 'affiliates',
