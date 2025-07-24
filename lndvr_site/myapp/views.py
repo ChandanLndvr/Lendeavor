@@ -15,7 +15,6 @@ from lndvr_site.utils.graph_email import send_graph_email
 import base64
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
-import logging
 from myapp.custom_middleware.log_ip import log_action
 
 #----------------------- Main page ------------------------

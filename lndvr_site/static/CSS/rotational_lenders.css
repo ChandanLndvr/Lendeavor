@@ -1,0 +1,101 @@
+body {
+    background: #000;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    overflow-x: auto;   /* enables scrolling */
+    overflow-y: auto;
+}
+.marketplace-container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1500px;
+}
+.spider-diagram {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    perspective: 1000px;
+}
+.lender {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    color: white;
+    text-align: center;
+    line-height: 90px;
+    border-radius: 50%;
+    cursor: pointer;
+    transform: translate(var(--x, 0), var(--y, 0));
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0, 186, 255, 0.5);
+    color: #f0f0f0;
+    text-shadow: 0 0 7px rgba(0,0,0,0.8);
+}
+.lender.central {
+    width: 110px;
+    height: 110px;
+    font-size: 1rem;
+    line-height: 110px;
+    background: linear-gradient(135deg, #00ff9d, #00c3ff);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff66;
+}
+.lender:hover {
+    transform: translate(var(--x, 0), var(--y, 0)) scale(1.1) rotateX(10deg);
+    box-shadow: 0 0 40px white;
+}
+
+/* Different colors for each lender */
+#iou { background: linear-gradient(135deg, #00f2ff, #007bff); }
+#kalamata { background: linear-gradient(135deg, #ff00f2, #8b00ff); }
+#pirs { background: linear-gradient(135deg, #00ff95, #00ffcc); }
+#wallstreet { background: linear-gradient(135deg, #ff7b00, #ffcc00); }
+#channel { background: linear-gradient(135deg, #ff0033, #ff6600); }
+#libertas { background: linear-gradient(135deg, #ff00aa, #ff55ff); }
+#peac { background: linear-gradient(135deg, #5500ff, #00aaff); }
+#mulligan { background: linear-gradient(135deg, #00ffaa, #00ff55); }
+#northeastern { background: linear-gradient(135deg, #aa00ff, #ff00aa); }
+#tabbank { background: linear-gradient(135deg, #00ffff, #00ffaa); }
+#idea { background: linear-gradient(135deg, #ff4444, #ff8800); }
+#headway { background: linear-gradient(135deg, #4488ff, #44ffaa); }
+#ondeck { background: linear-gradient(135deg, #88ff44, #44ff88); }
+#finpart { background: linear-gradient(135deg, #ffaa00, #ff5500); }
+
+.lender-info-panel {
+    max-width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    min-height: 180px;
+    font-size: 0.95rem;
+}
+.lender-info-panel h2 {
+    color: #00f2ff;
+    margin-top: 0;
+    font-size: 1.3rem;
+}
+svg.lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 1;
+}
