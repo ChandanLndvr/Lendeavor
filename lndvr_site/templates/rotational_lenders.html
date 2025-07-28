@@ -1,42 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     {% block head %}
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/rotational_lenders.css' %}"> 
-    {% endblock head %}
-<meta charset="UTF-8">
-{% comment %} <title>Lendeavor Marketplace Spider Diagram</title> {% endcomment %}
-</head>
-<body>
+      {% load static %}
+      <link rel="stylesheet" href="{% static 'css/rotational_lenders.css' %}" />
+    {% endblock %}
+    <meta charset="UTF-8" />
+  </head>
+  <body>
     {% block body %}
-<div class="marketplace-container">
-    <div class="spider-diagram" id="spiderDiagram">
-        <svg class="lines" width="600" height="600"></svg>
+      <div class="marketplace-container">
+        <div class="spider-diagram" id="spiderDiagram">
+          <svg class="lines" width="900" height="900"></svg>
 
-        <div class="lender central" id="lendeavor">Lendeavor</div>
-        <div class="lender" id="iou">IOU</div>
-        <div class="lender" id="kalamata">Kalamata</div>
-        <div class="lender" id="pirs">PIRS</div>
-        <div class="lender" id="wallstreet">Wall Street</div>
-        <div class="lender" id="channel">Channel</div>
-        <div class="lender" id="libertas">Libertas</div>
-        <div class="lender" id="peac">PEAC</div>
-        <div class="lender" id="mulligan">Mulligan</div>
-        <div class="lender" id="northeastern">Northeastern</div>
-        <div class="lender" id="tabbank">Tab Bank</div>
-        <div class="lender" id="idea">Idea</div>
-        <div class="lender" id="headway">Headway</div>
-        <div class="lender" id="ondeck">On Deck</div>
-        <div class="lender" id="finpart">Fin Part</div>
-    </div>
-    <div class="lender-info-panel" id="lenderInfo">
-        <h2>Lendeavor</h2>
-        <p>Lendeavor is a financing platform that partners with various lenders to provide smart funding options for your practice.</p>
-    </div>
-</div>
+          <div class="lender central" id="lendeavor">Lendeavor</div>
+          <div class="lender" id="iou">IOU</div>
+          <div class="lender" id="kalamata">Kalamata</div>
+          <div class="lender" id="pirs">PIRS</div>
+          <div class="lender" id="wallstreet">Wall Street</div>
+          <div class="lender" id="channel">Channel</div>
+          <div class="lender" id="libertas">Libertas</div>
+          <div class="lender" id="peac">PEAC</div>
+          <div class="lender" id="mulligan">Mulligan</div>
+          <div class="lender" id="northeastern">Northeastern</div>
+          <div class="lender" id="tabbank">Tab Bank</div>
+          <div class="lender" id="idea">Idea</div>
+          <div class="lender" id="headway">Headway</div>
+          <div class="lender" id="ondeck">On Deck</div>
+          <div class="lender" id="finpart">Fin Part</div>
+        </div>
+        <div class="lender-info-panel" id="lenderInfo">
+          <h2>Lendeavor</h2>
+          <p>Lendeavor is a financing platform that partners with various lenders to provide smart funding options for your practice.</p>
+        </div>
+      </div>
 
-<script src="{% static 'js/rotational_lenders.js' %}"></script>
-{% endblock body %}
-</body>
+      <script src="{% static 'js/rotational_lenders.js' %}"></script>
+    {% endblock %}
+  </body>
 </html>

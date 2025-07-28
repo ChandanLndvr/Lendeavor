@@ -19,9 +19,10 @@ body {
     background: rgba(19, 18, 18, 0.05);
     backdrop-filter: blur(4px);
     max-width: 95%;
-    margin: 28px auto 20px auto;
+    /* margin: 28px auto 20px auto; */
     text-align: center;
-    padding: 30px 20px;
+    margin: 5px auto 10px auto;
+    padding: 3px 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
@@ -59,7 +60,6 @@ body {
     overflow-y: auto;
     overflow-x: auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
-    padding: 0;
 }
 
 table {

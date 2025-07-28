@@ -28,7 +28,7 @@ let rotationAngle = 0;
 
 function positionLenders(angleOffset = 0) {
     const spider = document.getElementById('spiderDiagram');
-    const radius = 220;
+    const radius = 280;
     const centerX = spider.offsetWidth / 2 - 45; // 45 = lender width/2
     const centerY = spider.offsetHeight / 2 - 45; // 45 = lender height/2
     const outerLenders = document.querySelectorAll('.lender:not(.central)');

@@ -4,98 +4,130 @@ body {
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    overflow: hidden;
-    overflow-x: auto;   /* enables scrolling */
+    overflow-x: auto;
     overflow-y: auto;
-}
-.marketplace-container {
+  }
+
+  .marketplace-container {
     display: flex;
-    gap: 30px;
+    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 10px;
     max-width: 1500px;
-}
-.spider-diagram {
+    margin: 0 auto;
+    justify-content: center;
+  }
+
+  .spider-diagram {
     position: relative;
-    width: 800px;
-    height: 800px;
+    width: 900px;
+    height: 900px;
     perspective: 1000px;
-}
-.lender {
+    margin-bottom: -90px;
+    margin-left: -30px;
+  }
+
+  svg.lines {
     position: absolute;
-    width: 90px;
-    height: 90px;
-    color: white;
+    top: 0;
+    left: 0;
+    width: 900px;
+    height: 900px;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .lender {
+    position: absolute;
+    width: 110px;
+    height: 110px;
+    color: #f0f0f0;
     text-align: center;
-    line-height: 90px;
+    line-height: 110px;
     border-radius: 50%;
     cursor: pointer;
     transform: translate(var(--x, 0), var(--y, 0));
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    font-size: 0.8rem;
+    font-size: 1rem;
     font-weight: 600;
     padding: 5px;
     box-sizing: border-box;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 0 20px rgba(0, 186, 255, 0.5);
-    color: #f0f0f0;
     text-shadow: 0 0 7px rgba(0,0,0,0.8);
-}
-.lender.central {
-    width: 110px;
-    height: 110px;
-    font-size: 1rem;
-    line-height: 110px;
+    user-select: none;
+  }
+
+  .lender.central {
+    width: 130px;
+    height: 130px;
+    font-size: 1.1rem;
+    line-height: 130px;
     background: linear-gradient(135deg, #00ff9d, #00c3ff);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 2;
+    z-index: 3;
     box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff66;
-}
-.lender:hover {
+  }
+
+  .lender:hover {
     transform: translate(var(--x, 0), var(--y, 0)) scale(1.1) rotateX(10deg);
     box-shadow: 0 0 40px white;
+  }
+
+  /* Add this new rule to override hover for central circle */
+.lender.central:hover {
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff66;
 }
 
-/* Different colors for each lender */
-#iou { background: linear-gradient(135deg, #00f2ff, #007bff); }
-#kalamata { background: linear-gradient(135deg, #ff00f2, #8b00ff); }
-#pirs { background: linear-gradient(135deg, #00ff95, #00ffcc); }
-#wallstreet { background: linear-gradient(135deg, #ff7b00, #ffcc00); }
-#channel { background: linear-gradient(135deg, #ff0033, #ff6600); }
-#libertas { background: linear-gradient(135deg, #ff00aa, #ff55ff); }
-#peac { background: linear-gradient(135deg, #5500ff, #00aaff); }
-#mulligan { background: linear-gradient(135deg, #00ffaa, #00ff55); }
-#northeastern { background: linear-gradient(135deg, #aa00ff, #ff00aa); }
-#tabbank { background: linear-gradient(135deg, #00ffff, #00ffaa); }
-#idea { background: linear-gradient(135deg, #ff4444, #ff8800); }
-#headway { background: linear-gradient(135deg, #4488ff, #44ffaa); }
-#ondeck { background: linear-gradient(135deg, #88ff44, #44ff88); }
-#finpart { background: linear-gradient(135deg, #ffaa00, #ff5500); }
+  /* Lender circle color variants */
+  #iou          { background: linear-gradient(135deg, #00f2ff, #007bff); }
+  #kalamata     { background: linear-gradient(135deg, #ff00f2, #8b00ff); }
+  #pirs         { background: linear-gradient(135deg, #00ff95, #00ffcc); }
+  #wallstreet   { background: linear-gradient(135deg, #ff7b00, #ffcc00); }
+  #channel      { background: linear-gradient(135deg, #ff0033, #ff6600); }
+  #libertas     { background: linear-gradient(135deg, #ff00aa, #ff55ff); }
+  #peac         { background: linear-gradient(135deg, #5500ff, #00aaff); }
+  #mulligan     { background: linear-gradient(135deg, #00ffaa, #00ff55); }
+  #northeastern { background: linear-gradient(135deg, #aa00ff, #ff00aa); }
+  #tabbank      { background: linear-gradient(135deg, #00ffff, #00ffaa); }
+  #idea         { background: linear-gradient(135deg, #ff4444, #ff8800); }
+  #headway      { background: linear-gradient(135deg, #4488ff, #44ffaa); }
+  #ondeck       { background: linear-gradient(135deg, #88ff44, #44ff88); }
+  #finpart      { background: linear-gradient(135deg, #ffaa00, #ff5500); }
 
-.lender-info-panel {
-    max-width: 300px;
-    padding: 20px;
+  .lender-info-panel {
+    max-width: 550px;
+    padding-left: 10px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     backdrop-filter: blur(6px);
     min-height: 180px;
     font-size: 0.95rem;
-}
-.lender-info-panel h2 {
+  }
+
+  .lender-info-panel h2 {
     color: #00f2ff;
     margin-top: 0;
-    font-size: 1.3rem;
-}
-svg.lines {
-    position: absolute;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 1;
-}
+    font-size: 3rem;
+  }
+
+  @media (max-width: 1000px) {
+    .marketplace-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .spider-diagram {
+      width: 100%;
+      max-width: 600px;
+      height: 600px;
+    }
+
+    svg.lines {
+      width: 100%;
+      height: 600px;
+    }
+  }

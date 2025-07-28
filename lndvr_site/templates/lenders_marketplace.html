@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
-{% load static %}
 
 {% block title %}Marketplace{% endblock title %}
 
 {% block head %}
+{% load static %}
 <link rel="stylesheet" href="{% static 'css/lenders_marketplace.css' %}">
 {% endblock head %}
 
@@ -12,15 +12,17 @@
     <h1 class="page-title">Lenders / Marketplace</h1>
     <p class="subheading">Empowering Your Practice with Smarter Financing Options.</p>
 </div>
-{% comment %} {% include 'rotational_lenders.html' %} {% endcomment %}
-<div class="page-divider"></div>
+<div class="spider-diagram-container">
+    {% include 'rotational_lenders.html' %}
+</div>
 
-<div class='container'>
+
+<div class="container">
     <div class="table-container">
         <table>
             <thead>
                 <tr>
-                    <th>Lender</th>
+                    <th>Lenders</th>
                     <th>Funding Type</th>
                     <th>Funding Range</th>
                     <th>Min Credit Score</th>
@@ -48,614 +50,50 @@
     <div class="page-divider"></div>
     <br/>
 
-    <!--Merchant Cash Advance / Revenue-Based Financing-->
-    <div class='funding-heading'><h1>Merchant Cash Advance / Revenue-Based Financing</h1></div>
+    {% for category_name, lenders in grouped_lenders.items %}
     
-    <div class="product-card-container">
-        <table class="product-card-table">
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'IOU' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/iou.png' %}" alt="iou"/>
-                            <h3>IOU</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Kalamata' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/kalamata.png' %}" alt="kalamata"/>
-                            <h3>Kalamata</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'PIRS' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/pirs.png' %}" alt="pirs"/>
-                            <h3>PIRS</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Wall Street' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/wallstreet.png' %}" alt="wallstreet"/>
-                            <h3>Wall Street</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </div>
-    <div class='page-divider' style='max-width: 1300px;'></div>
-    <!--SBA loans-->  
-    <div class='funding-heading'><h1>SBA Loans</h1></div>
-    
-    <div class="product-card-container">
-        <table class="product-card-table">
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Northeastern' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/northeastern.png' %}" alt="northeastern"/>
-                            <h3>Northeastern</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'TAB Bank' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/tabbank.png' %}" alt="tabbank"/>
-                            <h3>TAB Bank</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </div>
-    <div class='page-divider' style='max-width: 1300px;'></div>
-    <!--Business line of credits-->  
-    <div class='funding-heading'><h1>Business Line Of Credits</h1></div>
+    <div class="funding-heading"><h1>{{ category_name }}</h1></div>
 
-    <div class="product-card-container">
-        <table class="product-card-table">
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Idea Financial' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/idea.png' %}" alt="idea"/>
-                            <h3>Idea Financial</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
+        <div class="product-card-container">
+            <table class="product-card-table">
+                {% for lender in lenders %}
+                    <tr>
+                        <td class="product-card-heading-td">
+                            <div class="product-card-heading">
+                                <img src="{% static lender.logo_path %}" alt="{{ lender.Lender_name|lower }}">
+                                <h3>{{ lender.Lender_name }}</h3>
+                            </div>
+                        </td>
+                        <td class="product-card-content-td">
+                            <div class="product-card-new">
+                                <div class="product-card-middle">
+                                    <div class="product-stat">
+                                        <div class="label">Funding Amount</div>
+                                        <div class="value">{{ lender.Funding_amount }}</div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <div class="label">Terms</div>
+                                        <div class="value">{{ lender.Terms }}</div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <div class="label">Min Credit Score</div>
+                                        <div class="value">{{ lender.Min_credit_score }}</div>
+                                    </div>
+                                    <div class="product-stat">
+                                        <div class="label">Time to Fund</div>
+                                        <div class="value">{{ lender.Time_to_fund }}</div>
+                                    </div>
                                 </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
+                                <div class="product-card-buttons">
+                                    <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
                                 </div>
                             </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Headway' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/headway.png' %}" alt="headway"/>
-                            <h3>Headway</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'OnDeck' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/ondeck.png' %}" alt="ondeck"/>
-                            <h3>OnDeck</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </div>
-    <div class='page-divider' style='max-width: 1300px;'></div>
-    <!--Business term loans-->  
-    <div class='funding-heading'><h1>Business Term Loans</h1></div>
-    
-    <div class="product-card-container">
-        <table class="product-card-table">
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Channel' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/channel.png' %}" alt="channel"/>
-                            <h3>Channel</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Libertas' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/libertas.png' %}" alt="libertas"/>
-                            <h3>Libertas</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'PEAC' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/peac.png' %}" alt="peac"/>
-                            <h3>PEAC</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Mulligan' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/mulligan.png' %}" alt="mulligan"/>
-                            <h3>Mulligan</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </div>
-    <div class='page-divider' style='max-width: 1300px;'></div>
-    <!--Equipment Financing-->  
-    <div class='funding-heading'><h1>Equipment Financing</h1></div>
-    
-    <div class="product-card-container">
-        <table class="product-card-table">
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'Fin Part Group' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/finpart.png' %}" alt="finpart"/>
-                            <h3>Fin Part Group</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-            {% for lender in lenders_info %}
-                {% if lender.Lender_name == 'PEAC' %}
-                <tr>
-                    <td class="product-card-heading-td">
-                        <div class="product-card-heading">
-                            <img src="{% static 'lenders_logo/peac.png' %}" alt="peac"/>
-                            <h3>PEAC</h3>
-                        </div>
-                    </td>
-                    
-                    <td class="product-card-content-td">
-                        <div class="product-card-new">
-                            <div class="product-card-middle">
-                                <div class="product-stat">
-                                    <div class="label">Funding Amount</div>
-                                    <div class="value">{{lender.Funding_amount}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Terms</div>
-                                    <div class="value">{{lender.Terms}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Min Credit Score</div>
-                                    <div class="value">{{lender.Min_credit_score}}</div>
-                                </div>
-                                <div class="product-stat">
-                                    <div class="label">Time to Fund</div>
-                                    <div class="value">{{lender.Time_to_fund}}</div>
-                                </div>
-                            </div>
-                            <div class="product-card-buttons">
-                                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                            </div>
-                        </div>
-                    </td>
-                </tr>
-                {% endif %}
-            {% endfor %}
-        </table>
-    </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+        <div class="page-divider" style="max-width: 1300px;"></div>
+    {% endfor %}
 </div>
 {% endblock body %}
