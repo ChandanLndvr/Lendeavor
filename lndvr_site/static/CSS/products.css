@@ -60,7 +60,7 @@
 
 .product-card-new {
     background: rgba(0, 0, 0, 0.5);
-    color: white;
+    color: white; /*#rgb(0, 255, 170); */
     border-radius: 16px;
     padding: 28px 32px;
     max-width: 1100px;

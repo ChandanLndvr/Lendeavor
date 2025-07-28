@@ -12,11 +12,10 @@ import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
 from lndvr_site.utils.graph_email import send_graph_email
-import base64
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
-import logging
 from myapp.custom_middleware.log_ip import log_action
+from collections import defaultdict
 
 #----------------------- Main page ------------------------
 
@@ -430,9 +429,66 @@ def contact(request):
 
 #-------------------------- lenders / Marketplace ---------------------
 
+from collections import defaultdict
+
 def lenders_marketplace(request):
     lenders_info = Lenders.objects.all().order_by('Lender_name')
-    return render(request, 'lenders_marketplace.html', {'lenders_info': lenders_info})
+
+    logo_map = {
+        'IOU': 'lenders_logo/iou.png',
+        'Kalamata': 'lenders_logo/kalamata.png',
+        'PIRS': 'lenders_logo/pirs.png',
+        'Wall Street': 'lenders_logo/wallstreet.png',
+        'Northeastern': 'lenders_logo/northeastern.png',
+        'TAB Bank': 'lenders_logo/tabbank.png',
+        'Idea Financial': 'lenders_logo/idea.png',
+        'Headway': 'lenders_logo/headway.png',
+        'OnDeck': 'lenders_logo/ondeck.png',
+        'Channel': 'lenders_logo/channel.png',
+        'Libertas': 'lenders_logo/libertas.png',
+        'PEAC': 'lenders_logo/peac.png',
+        'Mulligan': 'lenders_logo/mulligan.png',
+        'Fin Part Group': 'lenders_logo/finpart.png',
+    }
+
+    category_map = {
+        'IOU': 'Merchant Cash Advance / Revenue-Based Financing',
+        'Kalamata': 'Merchant Cash Advance / Revenue-Based Financing',
+        'PIRS': 'Merchant Cash Advance / Revenue-Based Financing',
+        'Wall Street': 'Merchant Cash Advance / Revenue-Based Financing',
+        'Northeastern': 'SBA Loans',
+        'TAB Bank': 'SBA Loans',
+        'Idea Financial': 'Business Line of Credits',
+        'Headway': 'Business Line of Credits',
+        'OnDeck': 'Business Line of Credits',
+        'Channel': 'Business Term Loans',
+        'Libertas': 'Business Term Loans',
+        'PEAC': 'Business Term Loans',
+        'Mulligan': 'Business Term Loans',
+        'Fin Part Group': 'Equipment Financing',
+    }
+
+    grouped_lenders = defaultdict(list)
+
+    for lender in lenders_info:
+        name = lender.Lender_name.strip()
+        
+        # only categorize lenders that are in your category_map
+        if name in category_map:
+            lender.logo_path = logo_map.get(name, 'lenders_logo/default.png')
+            category = category_map[name]
+            grouped_lenders[category].append(lender)
+        else:
+            # Skip lenders not in your predefined list
+            continue
+
+    context = {
+        'lenders_info': lenders_info,               # for full table view
+        'grouped_lenders': dict(grouped_lenders),   # for categorized cards
+        'current_page': 'lenders',
+    }
+    return render(request, 'lenders_marketplace.html', context)
+
 
 #-------------------------- Funding Steps --------------------------
 

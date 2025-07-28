@@ -1,6 +1,6 @@
 import logging
-import socket
-from logging.handlers import RotatingFileHandler
+from concurrent_log_handler import ConcurrentRotatingFileHandler as RotatingFileHandler
+#import socket
 
 # Create a logger named 'django_actions'
 logger = logging.getLogger('django_actions')
@@ -11,7 +11,7 @@ logger.setLevel(logging.INFO)
 # Set up a rotating file handler to manage log file size and backups
 handler = RotatingFileHandler(
     'django_actions.log',      # Log file name
-    maxBytes=5*1024*1024,      # Rotate log after it reaches 5 MB
+    maxBytes=10*1024*1024,      # Rotate log after it reaches 10 MB
     backupCount=5              # Keep last 5 rotated log files as backup
 )
 

@@ -1,18 +1,28 @@
+/* ---------- Base Styling ---------- */
 body {
     background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
     color: white;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 
+.container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* ---------- Heading ---------- */
 .heading {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(19, 18, 18, 0.05);
     backdrop-filter: blur(4px);
     max-width: 95%;
-    margin: 28px auto 20px auto;
+    /* margin: 28px auto 20px auto; */
     text-align: center;
-    padding: 30px 20px;
+    margin: 5px auto 10px auto;
+    padding: 3px 20px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
@@ -30,45 +40,70 @@ body {
     margin: 0 auto;
 }
 
+.page-divider {
+    border: none;
+    height: 5px;
+    background-color: rgba(0, 186, 255, 1);
+    width: 100%;
+    margin: 40px auto;
+    display: block;
+}
+
+/* ---------- Table Container ---------- */
 .table-container {
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(8px);
-    padding: 0;
-    max-width: 98%;
-    width: 70%;
     margin: 30px auto;
-    overflow-x: auto;
+    max-width: 98%;          /* slightly more room */
+    width: 98%;
+    max-height: 480px;       /* allows scroll after 6 rows */
     overflow-y: auto;
-    max-height: 420px;
+    overflow-x: auto;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
 }
 
 table {
     width: 100%;
-    min-width: 900px;
+    min-width: 900px;       /* increased for a bigger table */
     border-collapse: collapse;
-    font-size: 1.2rem; /* Increased font size */
+    font-size: 1.2rem;
     color: #e0e0e0;
 }
 
 th, td {
-    padding: 18px 24px; /* Increased padding */
+    padding: 18px 24px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    text-align: center;
+    text-align: left;
     vertical-align: middle;
     word-break: break-word;
     height: 60px;
 }
 
 th {
-    background: rgba(0, 186, 255, 1); /* Fully opaque to prevent overlap issues */
+    background: rgba(0, 186, 255, 1);
     color: white;
     font-weight: 600;
+    text-align: center;
     position: sticky;
     top: 0;
     z-index: 10;
     border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-    height: 60px;
+}
+
+td.Lender_name{
+    padding-left: 4%;
+}
+td.Funding_amount{
+    padding-left: 3%;
+}
+td.Min_credit_score{
+    padding-left: 5%;
+}
+td.Time_to_fund {
+    padding-left: 3%;
+}
+td.Funding_type{
+    padding-left: 10%;
 }
 
 tr:hover {
@@ -76,28 +111,163 @@ tr:hover {
     transition: background 0.3s ease;
 }
 
-/* @media (max-width: 1024px) {
-    .page-title {
-        font-size: 1.8rem; 
+/* ---------- Main Section Heading ---------- */
+h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+    margin: 30px auto;
+    max-width: 90%;
+    padding: 10px;
+    backdrop-filter: blur(4px);
+}
+
+.funding-heading{
+    padding-left: 15px;
+}
+
+/* ---------- Product Card Container ---------- */
+.product-card-container {
+    display: flex;
+    flex-direction: column; /* stack heading + details cleanly */
+    align-items: center; /* center horizontally */
+    gap: 24px;
+    margin: 30px auto;
+    padding: 10px;
+    max-width: 1300px;
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* ---------- Product Card Heading ---------- */
+.product-card-heading {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+    padding-left: 20px;
+    border-right: 2px solid #15ff00;
+    padding-right: 20px;
+}
+
+.product-card-heading img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.product-card-heading h3 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #00f2ff;
+    margin: 0;
+    text-align: left;
+    text-decoration: underline;
+}
+
+/* ---------- Product Card Box ---------- */
+.product-card-new {
+    background: rgba(53, 39, 39, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+    max-width: 1150px; /* expanded for 1300px container */
+    padding: 30px 40px 40px 40px; /* balanced padding */
+    border-bottom: 2px solid #00f2ff;
+}
+
+/* ---------- Product Stats Row ---------- */
+.product-card-middle {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-template-rows: auto auto;         /* Two rows: stats, button */
+    gap: 16px;
+    width: 100%;
+}
+
+.product-stat {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    border-left: 2px solid #00f2ff;
+    border-right: 2px solid #00f2ff;
+}
+
+.time-to-fund-stat {
+    grid-column: 1 / span 3;  /* Span across all 3 columns, full width */
+}
+
+.product-stat .label {
+    font-size: 0.9rem;
+    color: #bbb; 
+}
+
+.product-stat .value {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/* ---------- Get Offer Button ---------- */
+.product-card-buttons {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    grid-column: 1 / span 4;
     }
 
-    .subheading {
-        font-size: 1rem;
-        padding: 0 10px;
-    }
+.btn-offer {
+    display: inline-block;
+    padding: 10px 10px;
+    background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    animation: sparkle 2s linear infinite;
+}
 
-    table {
-        min-width: 700px;
-        font-size: 0.95rem;
-    }
+.btn-offer:hover {
+    background: rgba(0, 186, 255, 1);
+}
 
-    th, td {
-        padding: 12px 16px;
-    }
-} */
+.product-card-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: auto;
+}
+
+.product-card-table td {
+    padding: 12px;
+    border: none;
+}
+
+.product-card-heading-td {
+    width: 25%;
+    min-width: 150px;
+}
+
+.product-card-content-td {
+    width: 75%;
+}
 
 
-/* Mobile card view */
+/* ---------- Responsive Adjustments ---------- */
 @media (max-width: 768px) {
     .responsive-table thead {
         display: none;
@@ -133,4 +303,11 @@ tr:hover {
         text-align: left;
         color: #00f2ff;
     }
+    @media (max-width: 768px) {
+    .product-card-new {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 }
+}
+
