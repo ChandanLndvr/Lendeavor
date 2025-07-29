@@ -10,14 +10,23 @@
 {% block body %}
 <div class="heading">
     <h1 class="page-title">Lenders / Marketplace</h1>
-    <p class="subheading">Empowering Your Practice with Smarter Financing Options.</p>
+    <p class="subheading" style="color:grey;">Empowering Your Practice with Smarter Financing Options.</p>
 </div>
+<br/>
 <div class="spider-diagram-container">
+    <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
+    max-width: 1500px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff);">
+        <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+        0 0 5px rgba(10, 10, 10, 0.6),
+        0 0 10px rgba(20, 20, 20, 0.6),
+        0 0 20px rgba(7, 7, 7, 0.6);">Partnered Lenders</h1>
+    </div> 
     {% include 'rotational_lenders.html' %}
 </div>
 
 
 <div class="container">
+    <br/>
     <div class="table-container">
         <table>
             <thead>
@@ -47,13 +56,15 @@
         </table>
     </div>
     <br/>
-    <div class="page-divider"></div>
-    <br/>
-
+    <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
+    max-width: 1500px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff);">
+        <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+        0 0 5px rgba(10, 10, 10, 0.6),
+        0 0 10px rgba(20, 20, 20, 0.6),
+        0 0 20px rgba(7, 7, 7, 0.6);">Our Top Lenders</h1>
+    </div>
     {% for category_name, lenders in grouped_lenders.items %}
-    
     <div class="funding-heading"><h1>{{ category_name }}</h1></div>
-
         <div class="product-card-container">
             <table class="product-card-table">
                 {% for lender in lenders %}
