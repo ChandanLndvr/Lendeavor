@@ -24,7 +24,7 @@ body {
     height: 900px;
     perspective: 1000px;
     margin-bottom: -90px;
-    margin-left: -30px;
+    margin-left: -120px;
   }
 
   svg.lines {
@@ -99,13 +99,27 @@ body {
   #finpart      { background: linear-gradient(135deg, #ffaa00, #ff5500); }
 
   .lender-info-panel {
-    max-width: 550px;
+    max-width: 500px;
     padding-left: 10px;
     background: rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     backdrop-filter: blur(6px);
     min-height: 180px;
-    font-size: 0.95rem;
+    /* font-size: 0.95rem; */
+  }
+
+  .lender-info-panel p {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    font-weight: 400;
+  }
+
+  .lender-info-panel p strong {
+  color: white;
+  }
+
+  .lender-info-panel p {
+    color: grey; /* light grey for non-strong text */
   }
 
   .lender-info-panel h2 {
