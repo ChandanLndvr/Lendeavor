@@ -40,4 +40,5 @@ urlpatterns = [
     path("careers/application/<uuid:job_id>/", views.job_applications, name = "jobApplication"),
     path("job/", include("job_posting_app.urls")),
     path("affiliate/", include("affiliate_app.urls")),
+    path('finance/news/', views.financial_news, name ="financial_news")
 ]

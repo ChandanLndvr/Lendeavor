@@ -11,6 +11,8 @@
     justify-content: center;
     gap: 0; /* Add this */
     justify-content: flex-start; /* Prevent centering that creates gaps */
+    position: relative;
+    z-index: 1;
 }
 
 .heading-container {
@@ -19,6 +21,9 @@
     max-width: 100%;
     display: flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 4;
+    margin-bottom: 100px;
 }
 
 .nested-image {
@@ -132,8 +137,21 @@ form {
     transform: translateY(0);
 }
 
-@media (max-width: 767px) {
-    .info-image-card {
-        flex-direction: column;
+/* Tablet and below */
+@media (max-width: 1024px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .form-group {
+        grid-column: span 2; /* forces all inputs to take full width */
+    }
+
+    .form-group.full-width {
+        grid-column: span 2;
+    }
+
+    .btn-primary {
+        grid-column: span 2;
     }
 }

@@ -490,6 +490,12 @@ def lenders_marketplace(request):
     return render(request, 'lenders_marketplace.html', context)
 
 
+#------------------------- Financial News --------------------------
+
+def financial_news(request):
+    return render(request, 'financial_news.html',{'current_page':'financial_news'})
+
+
 #-------------------------- Funding Steps --------------------------
 
 def funding_steps(request):
