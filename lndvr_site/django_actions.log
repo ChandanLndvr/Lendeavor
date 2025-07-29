@@ -1,1 +1,5 @@
 2025-07-29 08:58:09,993 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-07-29 10:44:24,325 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-07-29 12:58:09,988 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-07-29 13:20:49,086 - INFO - Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+2025-07-29 13:21:05,663 - INFO - Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser

@@ -73,14 +73,14 @@
                             href="{% url 'contact' %}">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' or current_page == 'faq' or current_page == 'lenders' %}active{% endif %}"
+                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' or current_page == 'faq' or current_page == 'lenders' or current_page == 'financial_news' %}active{% endif %}"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item {% if current_page == 'finance' %}active{% endif %}"
-                                    href="/financialNews">
+                                    href="{% url 'financial_news' %}">
                                     Financial News
                                 </a>
                             </li>
