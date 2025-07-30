@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+  <link rel="stylesheet" href="{% static 'CSS/add_news.css' %}">
+{% endblock head %}
+
+{% block title %} Add News | {% endblock title %}
+
+{% block body %}
+<div class="heading-container">
+  <h1>Add Financial News</h1>
+</div>
+<div class="addnews-container">
+
+  <form method="POST" class="news-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="title">News Title<span style="color: red;">*</span></label>
+      <input type="text" id="title" name="title" required maxlength="250">
+    </div>
+
+    <div class="form-group">
+      <label for="date_publish">News Published Date<span style="color: red;">*</span></label>
+      <input type="date" id="date_publish" name="date_publish" required>
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content<span style="color: red;">*</span></label>
+      <textarea id="content" name="content" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="summary">Summary</label>
+      <textarea id="summary" name="summary" rows="8"></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="added_by">Added By ?<span style="color: red;">*</span></label>
+      <input type="email" id="added_by" name="added_by" placeholder="Enter your email id" required>
+    </div>
+
+    <div class="form-group">
+      <label for="thumbnail">Thumbnail Image</label>
+      <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+    </div>
+
+    <div class="form-group checkbox">
+      <label><input type="checkbox" name="active" checked> Active <span style="color: red;">*</span></label>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock body %}

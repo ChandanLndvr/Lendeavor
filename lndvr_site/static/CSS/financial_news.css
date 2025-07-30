@@ -1,0 +1,132 @@
+/* ---------- Base Styling ---------- */
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Heading Section ---------- */
+.heading-container {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 95%;
+    margin: 20px auto 50px auto;
+    padding: 40px 20px 30px;  /* corrected padding */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;  /* ensure block layout */
+}
+
+.heading-container h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.heading-container p {
+    color: grey;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    font-weight: 2.5rem;
+}
+
+
+/* ---------- Container ---------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 20px 60px;
+}
+
+/* ---------- Add News Button ---------- */
+.add-news {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+}
+
+.add-news .btn {
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+    text-decoration: none;
+    background: linear-gradient(90deg, #88ff00, #00ffd5da, #88ff00);
+    transition: background-color 0.3s ease;
+    animation: sparkle 2s linear infinite;
+}
+
+.add-news .btn:hover {
+    background: linear-gradient(135deg, #3ea645, #257f4c);
+}
+
+/* ---------- News Table ---------- */
+.news-table {
+    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.news-table table {
+    width: 100%;
+    border-collapse: collapse;
+    color: white;
+}
+
+.news-table th,
+.news-table td {
+    padding: 15px 20px;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.news-table th {
+    font-size: 1.4rem;
+    background: linear-gradient(90deg, #007bff, #00f2ff, #00f2ff);
+}
+
+.news-table tr:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.news-table a {
+    color: #4dd0e1;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.news-table a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .heading-container h1 {
+        font-size: 2rem;
+    }
+
+    .news-table th,
+    .news-table td {
+        padding: 10px 15px;
+        font-size: 0.95rem;
+    }
+
+    .add-news {
+        justify-content: center;
+    }
+
+    .add-news .btn {
+        width: 100%;
+        text-align: center;
+    }
+}

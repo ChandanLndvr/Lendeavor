@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'job_posting_app',
     'affiliate_app',
+    'financial_news_app',
 ]
 
 REST_FRAMEWORK = {

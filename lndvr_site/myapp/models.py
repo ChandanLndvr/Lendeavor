@@ -81,7 +81,7 @@ class UserApplications(models.Model):
     Funds_Requested = models.PositiveIntegerField()
     Existing_loans = models.CharField(max_length=5)
 
-    Documents = models.FileField(upload_to='uploaded_files/', null=True, blank=True)
+    Documents = models.FileField(upload_to='uploaded_files/user_applications/', null=True, blank=True)
     First_time = models.CharField(max_length=5, default='Yes')  
     Applied_on = models.DateTimeField(auto_now=True)
 
