@@ -1,0 +1,135 @@
+/* ---------- Add News Container ---------- */
+.addnews-container {
+    width: 95%;
+    max-width: 800px;
+    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 60px 40px;
+    border-radius: 16px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+/* ---------- Heading Section ---------- */
+.heading-container {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 95%;
+    margin: 20px auto 50px auto;
+    padding: 40px 20px 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+.heading-container h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.heading-container p {
+    color: grey;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 500;
+}
+
+/* ---------- Form Styling ---------- */
+.news-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #dddddd;
+    font-size: 1.1rem;
+}
+
+.form-group label span {
+    color: #ff7f7f;
+    margin-left: 4px;
+}
+
+.news-form input[type="text"],
+.news-form input[type="date"],
+.news-form input[type="email"],
+.news-form input[type="file"],
+.news-form textarea {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+    outline: none;
+    transition: background 0.3s ease;
+}
+
+.news-form input[type="file"] {
+    padding: 10px;
+}
+
+.news-form textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.news-form input:focus,
+.news-form textarea:focus {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* ---------- Checkbox ---------- */
+.form-group.checkbox {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+    margin-top: -10px;
+}
+
+/* ---------- Submit Button ---------- */
+.news-form button[type="submit"] {
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    font-size: 1.15rem;
+    cursor: pointer;
+    background: linear-gradient(90deg, #88ff00, #00f2ff, #88ff00);
+    background-size: 200% auto;
+    animation: sparkle 2s linear infinite;
+    font-weight: 600;
+}
+
+.news-form button[type="submit"]:hover {
+    background: linear-gradient(90deg, #88ff00, #00f2ff, #88ff00);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+    .addnews-container {
+        padding: 30px 20px;
+    }
+
+    .heading-container h1 {
+        font-size: 2rem;
+    }
+
+    .news-form {
+        gap: 25px;
+    }
+}

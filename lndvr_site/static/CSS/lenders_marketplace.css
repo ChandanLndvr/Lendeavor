@@ -19,7 +19,6 @@ body {
     background: rgba(19, 18, 18, 0.05);
     backdrop-filter: blur(4px);
     max-width: 95%;
-    /* margin: 28px auto 20px auto; */
     text-align: center;
     margin: 20px auto 50px auto;
     padding: 3px 20px;

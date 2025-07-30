@@ -1,1 +1,44 @@
 {% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+    <link rel="stylesheet" href="{% static 'css/financial_news.css' %}">
+{% endblock head %}
+
+{% block title %} Financial News | {% endblock title %}
+
+{% block body %}
+
+<div class='heading-container'>
+    <h1>Financial News</h1>
+    <p>Most recent News!</p>
+</div>
+
+<div class='container'>
+    <div class='add-news'>
+        <a href="{% url 'addNews' %}" class="btn btn-success btn-gradient1 mt-2" style="margin-right: 2%;">+ Add News</a>
+    </div>
+    <div class='news-table'>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Newsletter Title</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for data in financial_data%}
+                <tr>
+                    <td>{{data.Date_publish}}</td>
+                    <td><a href='#'>{{data.Title}}</a></td>
+                </tr>
+                {% empty %}
+                <tr>
+                    <td colspan="5">No lenders available at this time.</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock body %}
