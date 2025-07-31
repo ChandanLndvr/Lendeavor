@@ -4,6 +4,9 @@ from financial_news_app.serializers import Financial_news_serializers
 from django.urls import reverse
 from myapp.models import SignUp
 from django.shortcuts import get_object_or_404
+from myapp.custom_middleware.log_ip import log_action
+from django.conf import settings
+import jwt
 # Create your views here.
 
 
@@ -23,45 +26,65 @@ def financial_news(request):
     return render(request, 'financial_news.html', context)
         
 
-
 def add_news(request):
-    if request.method == "POST":
+    token = request.COOKIES.get('jwt_token')
+    user_email = None
+    added_by_user = None
+
+    if token:
         try:
-            added_by_email = request.POST.get('added_by')
-            added_by_user = None
-            if added_by_email:
-                added_by_user = get_object_or_404(SignUp, Email=added_by_email)
+            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+            user_email = payload.get('email')
+            if user_email:
+                added_by_user = get_object_or_404(SignUp, Email=user_email)
+                if added_by_user.User_type.lower() != 'admin':
+                    log_action(request, "Unauthorized news add attempt (not admin)", user_info=user_email)
+                    return render(request, 'add_news.html', {
+                        'error': "Only admin users are allowed to add news.",
+                        'current_page': 'financial_news',
+                        'user_email': user_email,
+                    })
+        except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
+            log_action(request, "JWT error on add_news", user_info=str(token))
+            return redirect(reverse('login') + "?error=Session expired, please log in again.")
 
-            cleaned_data = {
-                'Title': request.POST.get('title'),
-                'Date_publish': request.POST.get('date_publish'),
-                'Content': request.POST.get('content'),
-                'Summary': request.POST.get('summary'),
-                'Added_by': added_by_user.pk if added_by_user else None,
-                'Active': request.POST.get('active') == 'on',
-            }
-            print("cleaned data", cleaned_data)
+    else:
+        log_action(request, "Anonymous news add attempt", user_info="No token")
+        return redirect(reverse('login') + "?error=You must be logged in to add news.")
 
-            if 'thumbnail' in request.FILES:
-                cleaned_data['Thumbnail'] = request.FILES['thumbnail']
+    if request.method == "POST":
+        log_action(request, "Add news attempt", user_info=user_email)
+        cleaned_data = {
+            'Title': request.POST.get('title'),
+            'Date_publish': request.POST.get('date_publish'),
+            'Content': request.POST.get('content'),
+            'Summary': request.POST.get('summary'),
+            'Added_by': added_by_user.pk,  # Always set from logged-in user
+            'Active': request.POST.get('active') == 'on',
+        }
 
-            serializer = Financial_news_serializers(data=cleaned_data)
-            print(serializer)
+        if 'thumbnail' in request.FILES:
+            cleaned_data['Thumbnail'] = request.FILES['thumbnail']
 
-            if serializer.is_valid():
-                serializer.save()
-                return redirect(f"{reverse('financial_news')}?message=News added successfully!")
+        serializer = Financial_news_serializers(data=cleaned_data)
 
-            else:
-                print(serializer.errors)  
-                return redirect(f"{reverse('addNews')}?error=Something went wrong!")
-
-        except Exception as e:
+        if serializer.is_valid():
+            serializer.save()
+            log_action(request, "News added successfully", user_info=user_email)
+            return redirect(reverse('financial_news') + "?message=News added successfully!")
+        else:
+            log_action(request, "News add failed: validation error", user_info=user_email)
             return render(request, 'add_news.html', {
-                'error': str(e),
-                'current_page': 'financial_news'
+                'error': serializer.errors,
+                'current_page': 'financial_news',
+                'user_email': user_email,
+                'form_data': request.POST,
             })
 
+    # GET request: render form with email filled in readonly field
     return render(request, 'add_news.html', {
-        'current_page': 'financial_news'
+        'current_page': 'financial_news',
+        'user_email': user_email,
+        'message': request.GET.get('message'),
+        'error': request.GET.get('error'),
     })

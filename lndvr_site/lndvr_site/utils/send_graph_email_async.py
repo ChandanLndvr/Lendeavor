@@ -2,6 +2,8 @@ import threading
 import base64
 from lndvr_site.utils.graph_email import send_graph_email
 
+# this method is being made to handle the delay that was happening while submitting the form
+
 def send_graph_email_async(subject, body, to_emails, is_html=False, files=None):
     """
     Send email asynchronously with optional file attachments.
