@@ -19,7 +19,10 @@ class Financial_news(models.Model):
     class Meta:
         db_table = 'Financial_news'
 
+    def __str__(self):
+        return str(self.Added_by)
+
     def save(self, *args, **kwargs):
-        if not self.slug:
-            self.slug = slugify(f"{self.Title}-{self.Date_publish}")
+        if not self.Slug:
+            self.Slug = slugify(f"{self.Title}-{self.Date_publish}")
         super().save(*args, **kwargs)
