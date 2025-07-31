@@ -429,8 +429,6 @@ def contact(request):
 
 #-------------------------- lenders / Marketplace ---------------------
 
-from collections import defaultdict
-
 def lenders_marketplace(request):
     lenders_info = Lenders.objects.all().order_by('Lender_name')
 
