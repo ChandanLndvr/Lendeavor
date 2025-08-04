@@ -153,6 +153,11 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # global static folder (optional)
 ]
 
+# Media configuration
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = BASE_DIR / 'uploaded_files'
+
 # Manually added
 
 # # for local testing of forget password

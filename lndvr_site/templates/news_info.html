@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+  <link rel="stylesheet" href="{% static 'css/news_info.css' %}">
+{% endblock head %}
+
+{% block title %}News Info |{% endblock title %}
+
+{% block body %}
+
+<!-- Header block moved outside of blurred container -->
+<div class="news-header">
+  <h1>{{ news.Title }}</h1>
+</div>
+
+<div class="news-info-container">
+
+  <div class="news-field">
+    {% if news.Thumbnail %}
+      <img src="{{ news.Thumbnail.url }}" alt="Thumbnail" class="thumbnail-image">
+    {% else %}
+      <div class="field-value">No thumbnail available.</div>
+    {% endif %}
+  </div>
+
+  <div class="news-field date">
+    <label>Published on: <span class="field-value content-block" style="background-color: rgba(26, 24, 24, 0.08); color: #f1f1f1c7;;">{{ news.Date_publish }}</span></label>
+    
+  </div>
+
+  <div class="news-field content">
+    <div class="field-value content-block">{{ news.Content }}</div>
+  </div>
+
+  <div class="news-field summary">
+    <label>Summary</label>
+    <div class="field-value content-block">{{ news.Summary }}</div>
+  </div>
+
+</div>
+
+{% endblock body %}

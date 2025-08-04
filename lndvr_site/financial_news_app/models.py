@@ -14,7 +14,7 @@ class Financial_news(models.Model):
     Added_by = models.ForeignKey(SignUp, on_delete=models.SET_NULL, null = True, db_column='added_by')
     Active = models.BooleanField(default=True)
     Added_on = models.DateTimeField(auto_now_add=True)
-    Thumbnail = models.ImageField(upload_to='uploaded_files/newsletter_thumb/', blank=True)
+    Thumbnail = models.ImageField(upload_to='newsletter_thumb/', blank=True)
 
     class Meta:
         db_table = 'Financial_news'
