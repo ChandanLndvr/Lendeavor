@@ -81,7 +81,7 @@ class UserApplications(models.Model):
     Funds_Requested = models.PositiveIntegerField()
     Existing_loans = models.CharField(max_length=5)
 
-    Documents = models.FileField(upload_to='uploaded_files/user_applications/', null=True, blank=True)
+    Documents = models.FileField(upload_to='user_applications/', null=True, blank=True)
     First_time = models.CharField(max_length=5, default='Yes')  
     Applied_on = models.DateTimeField(auto_now=True)
 
@@ -123,7 +123,7 @@ class JobApplications(models.Model):
     Degree_year = models.IntegerField()
     Expected_salary  = models.IntegerField(null=True, blank=True)
     Gender = models.CharField(max_length=50)
-    Resume = models.FileField(upload_to='uploaded_files/resume/', null=True, blank=True)
+    Resume = models.FileField(upload_to='resume/', null=True, blank=True)
     Applied_on = models.DateField(auto_now=True)
 
     def save(self, *args, **kwargs):

@@ -13,7 +13,8 @@ import jwt
 #------------------------- Financial News --------------------------
 
 def financial_news(request):
-    financial_data = Financial_news.objects.all()
+    # Fetch financial news sorted descending by Date_publish
+    financial_data = Financial_news.objects.filter(Active=True).order_by('-Date_publish')[:20]
     message = request.GET.get('message')
     error = request.GET.get('error')
     print(financial_data)
@@ -25,6 +26,7 @@ def financial_news(request):
     }
     return render(request, 'financial_news.html', context)
         
+#---------------------- add the financial news -------------------
 
 def add_news(request):
     token = request.COOKIES.get('jwt_token')
@@ -88,3 +90,17 @@ def add_news(request):
         'message': request.GET.get('message'),
         'error': request.GET.get('error'),
     })
+
+
+#------------------------- To see the particular news ------------------------
+
+def news_info(request, news_id):
+    try:
+        if request.method == "GET":
+            news = get_object_or_404(Financial_news, News_id = news_id)
+            print("path",news.Thumbnail.path)  # full absolute path to the image file
+            print("url",news.Thumbnail.url) 
+            context = {'news': news, 'current_page': 'financial_news'}
+            return render(request, 'news_info.html', context)
+    except Exception as e:
+        return render(request, 'news_info.html')

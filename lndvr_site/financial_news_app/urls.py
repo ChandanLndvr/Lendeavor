@@ -18,8 +18,10 @@ Including another URLconf
 from django.urls import path
 from financial_news_app import views
 
-
 urlpatterns = [
     path('news/', views.financial_news, name = "financial_news"),
     path('addNews/', views.add_news, name='addNews'),
+    path('<int:news_id>/', views.news_info, name='getNews'),
 ]
+
+

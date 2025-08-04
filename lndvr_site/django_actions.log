@@ -41,3 +41,31 @@
 2025-07-31 16:31:20,350 - INFO - Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
 2025-07-31 16:31:20,355 - INFO - Method: POST | Action: Job posted successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
 2025-07-31 16:31:25,405 - INFO - Method: POST | Action: Single job delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 09:02:49,441 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 09:06:20,849 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 09:06:51,809 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-04 09:07:01,919 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-04 09:07:07,225 - INFO - Method: GET | Action: Unauthorized news add attempt (not admin) | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-04 09:07:11,742 - INFO - Method: GET | Action: Unauthorized news add attempt (not admin) | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-04 09:07:22,847 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-04 09:07:40,054 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 09:42:41,399 - INFO - Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+2025-08-04 09:46:23,483 - INFO - Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+2025-08-04 11:09:32,509 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 11:12:27,002 - INFO - Method: GET | Action: Anonymous news add attempt | IP: 127.0.0.1 | User: No token
+2025-08-04 11:12:38,983 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 11:14:41,200 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 11:14:41,429 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 11:31:59,090 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 11:31:59,154 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:49:02,887 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:49:02,902 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:49:35,305 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:49:57,772 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:49:57,780 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:51:38,184 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:51:38,196 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:53:50,035 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 13:53:50,049 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 14:21:39,158 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 14:21:39,229 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com

@@ -30,7 +30,7 @@
                 {% for data in financial_data%}
                 <tr>
                     <td>{{data.Date_publish}}</td>
-                    <td><a href='#'>{{data.Title}}</a></td>
+                    <td><a href="{% url 'getNews' data.News_id %}">{{data.Title}}</a></td>
                 </tr>
                 {% empty %}
                 <tr>
