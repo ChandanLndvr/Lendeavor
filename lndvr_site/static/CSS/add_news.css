@@ -119,6 +119,47 @@
     background: linear-gradient(90deg, #88ff00, #00f2ff, #88ff00);
 }
 
+/* ----------------- for update page ------------------------ */
+
+.thumbnail-preview {
+    position: relative;
+    display: inline-block;
+    max-width: 200px;
+  }
+
+  .thumbnail-preview img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+
+  .delete-thumbnail-btn {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-weight: bold;
+    color: red;
+    cursor: pointer;
+    line-height: 24px;
+    text-align: center;
+    padding: 0;
+    user-select: none;
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    transition: background-color 0.3s ease;
+  }
+
+  .delete-thumbnail-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+  }
+  
+/* -------------------------------------------------------------------- */ 
+
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .addnews-container {

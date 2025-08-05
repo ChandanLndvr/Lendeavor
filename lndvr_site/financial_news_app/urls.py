@@ -22,6 +22,8 @@ urlpatterns = [
     path('news/', views.financial_news, name = "financial_news"),
     path('addNews/', views.add_news, name='addNews'),
     path('<int:news_id>/', views.news_info, name='getNews'),
+    path('edit/<int:news_id>/', views.update_or_delete_news, name="editNews"),
+    path('bulkDelte/', views.bulk_delete_news, name='bulkDelteNews')
 ]
 
 

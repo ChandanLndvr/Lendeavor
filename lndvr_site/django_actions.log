@@ -69,3 +69,117 @@
 2025-08-04 13:53:50,049 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
 2025-08-04 14:21:39,158 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
 2025-08-04 14:21:39,229 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:07,610 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:07,624 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:21,868 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:21,874 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:43,572 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 15:07:43,579 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 16:33:45,645 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 16:43:17,667 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-04 16:43:35,155 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: abc@gmail.com
+2025-08-05 09:20:06,984 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 09:29:52,757 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 09:30:30,320 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 09:30:30,546 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:25:32,475 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:31:55,504 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:32:21,656 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:36:51,746 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:36:51,818 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:37:29,972 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:41:05,868 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:41:05,879 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:41:22,523 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:42:35,725 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:42:35,788 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:42:49,113 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 10:59:16,642 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:00:19,686 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:00:19,699 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:00:34,511 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:11:49,738 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:11:49,797 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:12:19,217 - INFO - Method: POST | Action: Add job attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:12:19,252 - INFO - Method: POST | Action: Job posted successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:12:30,816 - INFO - Method: POST | Action: Single job update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:12:35,850 - INFO - Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+2025-08-05 11:13:13,851 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:32:11,586 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:32:11,606 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:32:26,368 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:34:21,944 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:34:37,132 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:34:37,139 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:34:51,282 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:38:46,291 - INFO - Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:39:12,708 - INFO - Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:41:29,883 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:41:29,896 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:45:38,624 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:47:03,291 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:56:41,234 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:56:41,246 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:56:48,574 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 11:57:01,417 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:09:49,015 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:10:19,765 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:10:56,207 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:20:03,287 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:20:03,297 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:22:55,668 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:22:55,671 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:01,693 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:01,694 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:10,792 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:10,793 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:31,724 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:23:31,725 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:25:21,040 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:25:21,043 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:25:31,826 - INFO - Method: POST | Action: Single news update attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:25:31,827 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:28:53,531 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:28:53,552 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:31:50,594 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:31:50,602 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:42:46,635 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:42:46,642 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:42,970 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:51,908 - INFO - Method: POST | Action: News action attempted: delete | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:51,909 - INFO - Method: POST | Action: Single news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:51,912 - INFO - Method: POST | Action: News deleted successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:59,093 - INFO - Method: POST | Action: News action attempted: delete | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:59,095 - INFO - Method: POST | Action: Single news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 12:44:59,101 - INFO - Method: POST | Action: News deleted successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:25:53,073 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:25:53,083 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:27:00,668 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:27:00,678 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:52:35,404 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:52:35,411 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:52:55,352 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:52:55,352 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:57:08,403 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:57:08,407 - INFO - Method: POST | Action: Exception during update: Field.__init__() got an unexpected keyword argument 'files' | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:59:55,194 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 13:59:55,212 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:00:32,589 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:00:32,758 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:23:33,351 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:23:33,362 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:24:48,062 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:24:48,070 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:25:22,929 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:25:22,937 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:25:33,537 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:28:17,373 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 14:28:23,682 - INFO - Method: POST | Action: Bulk news delete attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:27:08,762 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:27:08,850 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:30:45,050 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:30:45,057 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:38:12,123 - INFO - Method: POST | Action: Add news attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:38:12,135 - INFO - Method: POST | Action: News added successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:59:38,107 - INFO - Method: POST | Action: News action attempted: update | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+2025-08-05 15:59:38,117 - INFO - Method: POST | Action: News updated successfully | IP: 127.0.0.1 | User: chandan@lendeavorusa.com

@@ -12,20 +12,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Confirmation for single job update
         if (action === 'update') {
-            if (!confirm("Are you sure you want to update this job?")) {
+            if (!confirm("Are you sure you want to update this job or news?")) {
                 // User clicked Cancel, prevent form submission
                 e.preventDefault();
             }
         } 
         // Confirmation for single job delete
         else if (action === 'delete') {
-            if (!confirm("Are you sure you want to delete this job? This action cannot be undone.")) {
+            if (!confirm("Are you sure you want to delete this job or news? This action cannot be undone.")) {
                 e.preventDefault();
             }
         }
         // Confirmation for bulk job deletion (multiple selected jobs)
         else if (action === 'delete_selected') {
-            if (!confirm("Are you sure you want to delete the selected job(s)? This action cannot be undone.")) {
+            if (!confirm("Are you sure you want to delete the selected job(s) or news? This action cannot be undone.")) {
                 e.preventDefault();
             }
         }
