@@ -133,13 +133,22 @@
 
 
     <!-- 3D Background -->
-    <div id="vanta-bg"></div>
+    <div id="vanta-bg" style="width: 100vw; height: 100vh; position: fixed; top:0; left:0; z-index: -1;"></div>
 
     <!-- Vanta.js and Three.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
     <script>
-        VANTA.NET({
+
+        let vantaEffect = null;
+
+        function initVanta() {
+        if (vantaEffect) {
+            vantaEffect.destroy();
+            vantaEffect = null;
+        }
+        
+        vantaEffect = VANTA.NET({
             el: "#vanta-bg",
             mouseControls: true,
             touchControls: true,
@@ -151,9 +160,30 @@
             backgroundColor: 0x000000,
             points: 15.0,
             maxDistance: 20.0,
-            spacing: 15.0
+            spacing: 15.0,
+            width: window.innerWidth,
+            height: window.innerHeight
         });
+        }
+
+        // On load:
+        window.addEventListener('load', initVanta);
+
+        // On resize:
+        window.addEventListener('resize', () => {
+        if (vantaEffect) {
+            // Instead of resize, destroy & re-init
+            initVanta();
+        }
+        });
+
+        // On orientation change:
+        window.addEventListener('orientationchange', () => {
+        initVanta();
+        });
+
     </script>
+
     <!-- color: 0x1b740f - green, 0x1b74ff - blue, cooment out color to get pink colour, 0x00ffff - Bright aqua/cyan, 0xFFFFFF - white, 0xRRGGBB- plain background -->
 
     {% block body %}{% endblock body %}
