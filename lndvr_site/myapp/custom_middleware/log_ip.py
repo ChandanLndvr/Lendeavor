@@ -1,34 +1,42 @@
 import logging
 from concurrent_log_handler import ConcurrentRotatingFileHandler as RotatingFileHandler
-#import socket
+from datetime import datetime
+import pytz
 
-# Create a logger named 'django_actions'
+# --- Custom Formatter that logs in US Eastern Time (handles EDT/EST) ---
+class ESTFormatter(logging.Formatter):
+    def converter(self, timestamp):
+        dt_utc = datetime.utcfromtimestamp(timestamp).replace(tzinfo=pytz.utc)
+        return dt_utc.astimezone(pytz.timezone("US/Eastern"))
+
+    def formatTime(self, record, datefmt=None):
+        dt = self.converter(record.created)
+        if datefmt:
+            return dt.strftime(datefmt)
+        return dt.isoformat()
+
+# === Logger Setup ===
 logger = logging.getLogger('django_actions')
-
-# Set the logging level to INFO to capture info, warnings, errors, and critical messages
 logger.setLevel(logging.INFO)
 
-# Set up a rotating file handler to manage log file size and backups
 handler = RotatingFileHandler(
-    'django_actions.log',      # Log file name
-    maxBytes=10*1024*1024,      # Rotate log after it reaches 10 MB
-    backupCount=5              # Keep last 5 rotated log files as backup
+    'django_actions.log',
+    maxBytes=10 * 1024 * 1024,
+    backupCount=5
 )
 
-# Define the format of the log messages to include timestamp, log level, and the message
-formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+# Use ESTFormatter to log in Eastern Time
+formatter = ESTFormatter('%(asctime)s - %(levelname)s - %(message)s', datefmt='%Y-%m-%d %I:%M:%S %p %Z')
 handler.setFormatter(formatter)
 
-# Add the configured handler to the logger
 logger.addHandler(handler)
 
+# === Utility Functions ===
 
 def get_client_ip(request):
     """
     Extract the client IP address from the Django request object.
-    Handles the case where the client is behind a proxy by
-    checking 'HTTP_X_FORWARDED_FOR' header; otherwise uses 'REMOTE_ADDR'.
-    Returns the first IP if multiple IPs are forwarded.
+    Checks 'HTTP_X_FORWARDED_FOR' for proxy scenarios; falls back to 'REMOTE_ADDR'.
     """
     ip = request.META.get('HTTP_X_FORWARDED_FOR')
     if ip:
@@ -37,16 +45,14 @@ def get_client_ip(request):
         ip = request.META.get('REMOTE_ADDR')
     return ip
 
-
 def log_action(request, action_desc, user_info=None):
     """
-    Helper function to log an action with useful details.
-    Logs include HTTP method, action description, client IP, and user info.
-    
-    Parameters:
-    - request: Django HttpRequest object.
-    - action_desc: A string describing the action being logged (e.g., "User signup").
-    - user_info: Optional custom user identifier; defaults to request.user or 'Anonymous'.
+    Logs an action with timestamp, method, description, IP, and user info.
+
+    Args:
+    - request: Django request object.
+    - action_desc (str): Description of the action.
+    - user_info (str): Optional user identifier (email, username).
     """
     ip = get_client_ip(request)
     method = request.method
