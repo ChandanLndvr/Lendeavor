@@ -41,8 +41,19 @@
       <input type="email" id="added_by" name="added_by" value="{{ user_email }}" readonly>
     </div>
 
+    {% comment %} <div class="form-group">
+      <label for="thumbnail">Thumbnail Image</label>
+      <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+    </div> {% endcomment %}
+
     <div class="form-group">
       <label for="thumbnail">Thumbnail Image</label>
+
+      <div class="thumbnail-preview" id="newThumbnailPreview" style="display: none;">
+        <img id="previewImage" alt="Preview Thumbnail" style="max-width: 200px; height: auto; border-radius: 8px;">
+        <button type="button" class="delete-thumbnail-btn" onclick="clearNewThumbnail()">✖</button>
+      </div>
+
       <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
     </div>
 
@@ -55,4 +66,30 @@
     </div>
   </form>
 </div>
+
+<script>
+  // Get references to input and preview elements
+  const fileInput = document.getElementById('thumbnail');            // File input field
+  const previewWrapper = document.getElementById('newThumbnailPreview'); // Div wrapping preview image and delete button
+  const previewImage = document.getElementById('previewImage');      // The image element to show thumbnail
+
+  // Handle file selection and show preview
+  fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];  // Get the selected file
+    if (file) {
+      // Generate and show preview using object URL
+      previewImage.src = URL.createObjectURL(file);
+      previewWrapper.style.display = 'block';
+    }
+  });
+
+  // Function to clear preview and reset file input
+  function clearNewThumbnail() {
+    fileInput.value = '';                // Reset file input
+    previewImage.src = '';               // Clear preview image
+    previewWrapper.style.display = 'none'; // Hide preview container
+  }
+</script>
+
+
 {% endblock body %}

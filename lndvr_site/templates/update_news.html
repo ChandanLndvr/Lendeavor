@@ -1,0 +1,107 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+ <link rel="stylesheet" href="{% static 'CSS/add_news.css' %}">
+{% endblock head %}
+
+{% block title %} Edit News | 
+{% endblock title %}
+
+{% block body %}
+
+<div class="heading-container">
+  <h1>Update / Delete Financial News</h1>
+</div>
+<div class="addnews-container">
+
+  <form method="POST" enctype="multipart/form-data" class="news-form">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <label for="title">News Title<span style="color: red;">*</span></label>
+      <input type="text" id="title" name="title" value="{{news.Title}}" required maxlength="250">
+    </div>
+
+    <div class="form-group">
+      <label for="date_publish">Publish Date<span style="color: red;">*</span></label>
+      <input type="date" id="date_publish" name="date_publish" value="{{ news.Date_publish|date:'Y-m-d' }}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content<span style="color: red;">*</span></label>
+      <textarea id="content" name="content" required>{{ news.Content|safe }}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="summary">Summary</label>
+      <textarea id="summary" name="summary" rows="8" >{{news.Summary|safe}}</textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="added_by">Added By<span style="color: red;">*</span></label>
+      <input type="email" id="added_by" name="added_by" value="{{ news.Added_by }}" readonly>
+    </div>
+
+    <div class="form-group">
+      <label for="thumbnail">Thumbnail Image</label>
+
+      <div class="thumbnail-preview" id="thumbnailPreview" {% if not news.Thumbnail %}style="display: none;"{% endif %}>
+        <img id="previewImage" src="{% if news.Thumbnail %}{{ news.Thumbnail.url }}{% endif %}"
+            alt="Current Thumbnail"
+            style="max-width: 200px; height: auto; border-radius: 8px;">
+        <button type="button" class="delete-thumbnail-btn" id="deleteThumbnailBtn">✖</button>
+      </div>
+
+      <input type="hidden" id="delete_thumbnail_flag" name="delete_thumbnail" value="false">
+      <input type="file" id="thumbnail" name="thumbnail" accept="image/*">
+    </div>
+
+    
+    <div class="form-group checkbox">
+      <label><input type="checkbox" name="active" value="on" {% if news.Active %}checked{% endif %}> Active <span style="color: red;">*</span></label>
+    </div>
+
+    <div class="d-flex justify-content-between gap-2 mt-4">
+        <button type="submit" name="action" value="delete" class="btn btn-danger flex-fill"
+            style="background: linear-gradient(90deg, #daad59, #ff0055); color: white; font-weight: bold;">
+            Delete News
+        </button>
+        <button type="submit" name="action" value="update" class="btn btn-success flex-fill"
+            style="background: linear-gradient(90deg, #00f2ff, #00ff37); color: white; font-weight: bold;">
+            Update News
+        </button>
+    </div>
+  </form>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const fileInput = document.getElementById("thumbnail");
+    const previewWrapper = document.getElementById("thumbnailPreview");
+    const previewImage = document.querySelector("#thumbnailPreview img");
+    const deleteFlag = document.getElementById("delete_thumbnail_flag");
+    const deleteBtn = document.querySelector(".delete-thumbnail-btn");
+
+    // Show preview of selected image
+    fileInput?.addEventListener("change", () => {
+      const file = fileInput.files[0];
+      if (file && previewImage) {
+        previewImage.src = URL.createObjectURL(file);
+        previewWrapper.style.display = "block";
+        if (deleteFlag) deleteFlag.value = "false";
+      }
+    });
+
+    // Handle delete/cancel click
+    deleteBtn?.addEventListener("click", () => {
+      if (previewWrapper) previewWrapper.style.display = "none";
+      if (fileInput) fileInput.value = "";
+      if (previewImage) previewImage.src = "";
+      if (deleteFlag) deleteFlag.value = "true";
+    });
+  });
+</script>
+
+<script src = "{% static 'js/job_crud_popup.js' %}"></script>
+{% endblock body %}

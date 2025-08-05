@@ -2,7 +2,8 @@
 
 {% block head %}
 {% load static %}
-    <link rel="stylesheet" href="{% static 'css/financial_news.css' %}">
+<link rel="stylesheet" href="{% static 'css/financial_news.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 {% endblock head %}
 
 {% block title %} Financial News | {% endblock title %}
@@ -15,30 +16,112 @@
 </div>
 
 <div class='container'>
+    {% if show_admin_tools %}
     <div class='add-news'>
         <a href="{% url 'addNews' %}" class="btn btn-success btn-gradient1 mt-2" style="margin-right: 2%;">+ Add News</a>
     </div>
+    {% endif %}
+    {% if show_admin_tools %}
+    <form method="post" action="{% url 'bulkDelteNews' %}">
+        {% csrf_token %}
+        <div class="d-flex justify-content-end align-items-center gap-2 mb-4 pb-2"
+            style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
+            
+            <input type="checkbox" id="select-all" class="form-check-input" style="cursor: pointer;">
+            <label for="select-all" class="text-light mt-1" style="cursor: pointer;">
+                Select All
+            </label>
+
+            <button type="submit" id="delete-selected-button" name="action" value="delete_selected" class="btn btn-link p-0"
+                style="font-weight: 550; color: #ddecec; text-decoration: none;">
+                | <i class="bi bi-trash"></i> Delete Selected
+            </button>
+        </div>
+    {% endif %}
+
     <div class='news-table'>
         <table>
             <thead>
                 <tr>
+                    {% if show_admin_tools %}
+                    <th>Select</th>
+                    {% endif %}
                     <th>Date</th>
                     <th>Newsletter Title</th>
+                    {% if show_admin_tools %}
+                    <th>Edit</th>
+                    {% endif %}
                 </tr>
             </thead>
             <tbody>
-                {% for data in financial_data%}
+                {% for data in financial_data %}
                 <tr>
-                    <td>{{data.Date_publish}}</td>
-                    <td><a href="{% url 'getNews' data.News_id %}">{{data.Title}}</a></td>
+                    {% if show_admin_tools %}
+                    <td>
+                        <input type="checkbox" class="form-check-input select-news" name="news_id" value="{{ data.News_id }}">
+                    </td>
+                    {% endif %}
+                    <td>{{ data.Date_publish }}</td>
+                    <td><a href="{% url 'getNews' data.News_id %}">{{ data.Title }}</a></td>
+                    {% if show_admin_tools %}
+                    <td>
+                        <a href="{% url 'editNews' data.News_id %}" class="text-light"><i class="bi bi-pencil-square"></i></a>
+                    </td>
+                    {% endif %}
                 </tr>
                 {% empty %}
                 <tr>
-                    <td colspan="5">No lenders available at this time.</td>
+                    <td colspan="4">No news available at this time.</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
+
+    {% if show_admin_tools %}
+    </form> <!-- closes the <form> around the table and delete button -->
+    {% endif %}
 </div>
+
+<!-- Attach the controlling JS -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // Get the "Delete Selected" button
+    const deleteBtn = document.getElementById('delete-selected-button');
+
+    // Get all individual news selection checkboxes (name="job_ids")
+    const checkboxes = document.querySelectorAll('input[name="news_id"]');
+
+    // Get the "Select All" checkbox
+    const selectAll = document.getElementById('select-all');
+
+    // Function to toggle visibility of the "Delete Selected" button
+    function toggleDeleteButton() {
+        // Check if any news checkbox is checked
+        const anyChecked = Array.from(checkboxes).some(cb => cb.checked);
+
+        // Show the delete button if any news is selected; otherwise hide it
+        deleteBtn.style.display = anyChecked ? 'inline-block' : 'none';
+    }
+
+    // Add event listeners on individual news checkboxes to update delete button visibility
+    checkboxes.forEach(cb => cb.addEventListener('change', toggleDeleteButton));
+
+    // Add event listener on the "Select All" checkbox to toggle all individual checkboxes
+    selectAll.addEventListener('change', function () {
+        const checked = this.checked;
+
+        // Set all individual checkboxes to the same state as "Select All"
+        checkboxes.forEach(cb => cb.checked = checked);
+
+        // Update delete button visibility
+        toggleDeleteButton();
+    });
+
+    // Initialize delete button visibility on page load
+    toggleDeleteButton();
+    });
+</script>
+<script src = "{% static 'js/job_crud_popup.js' %}"></script>
+
 {% endblock body %}
