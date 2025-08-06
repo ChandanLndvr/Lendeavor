@@ -3514,3 +3514,273 @@ INFO 2025-08-06 13:02:43,081 django.server "GET /faq/ HTTP/1.1" 200 21300
 INFO 2025-08-06 13:02:43,113 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
 INFO 2025-08-06 13:02:46,038 django.server "GET /careers/ HTTP/1.1" 200 22179
 INFO 2025-08-06 13:02:47,003 django.server "GET /contact/ HTTP/1.1" 200 14376
+INFO 2025-08-06 15:22:02,658 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-06 15:22:03,261 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 15:22:03,283 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 15:22:11,545 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 15:22:16,712 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 15:22:18,421 django.server "GET /products/ HTTP/1.1" 200 25691
+INFO 2025-08-06 15:22:40,130 django.server "GET /careers/ HTTP/1.1" 200 22179
+INFO 2025-08-06 15:22:40,155 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 304 0
+INFO 2025-08-06 15:22:44,925 django.server "GET /contact/ HTTP/1.1" 200 14376
+INFO 2025-08-06 15:22:53,530 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 15:22:53,570 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 3811
+INFO 2025-08-06 15:23:02,457 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: abc@gmail.com
+INFO 2025-08-06 15:23:02,819 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-08-06 15:23:02,826 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 15:23:07,134 django.server "GET /careers/ HTTP/1.1" 200 22100
+INFO 2025-08-06 15:23:12,689 django.server "GET /finance/news/ HTTP/1.1" 200 13975
+INFO 2025-08-06 15:23:17,059 django.server "GET /finance/2/ HTTP/1.1" 200 12689
+INFO 2025-08-06 15:23:17,077 django.server "GET /static/css/news_info.css HTTP/1.1" 304 0
+INFO 2025-08-06 15:23:17,078 django.server "GET /media/newsletter_thumb/landing_img4.png HTTP/1.1" 304 0
+INFO 2025-08-06 15:23:27,305 django.server "GET /finance/1/ HTTP/1.1" 200 14030
+INFO 2025-08-06 15:23:27,327 django.server "GET /media/newsletter_thumb/Screenshot_2025-06-06_132202.png HTTP/1.1" 304 0
+INFO 2025-08-06 15:23:36,226 django.server "GET /finance/2/ HTTP/1.1" 200 12689
+INFO 2025-08-06 15:23:39,922 django.server "GET /finance/28/ HTTP/1.1" 200 11642
+INFO 2025-08-06 16:02:03,622 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:02:03,632 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:02:14,809 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:02:14,829 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-06 16:02:14,829 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 3811
+INFO 2025-08-06 16:02:14,829 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-06 16:02:14,848 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-08-06 16:02:14,849 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-08-06 16:02:14,849 django.server "GET /static/landing_img2.jpg HTTP/1.1" 200 103797
+INFO 2025-08-06 16:02:14,852 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-08-06 16:02:14,852 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-08-06 16:02:14,852 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-06 16:02:14,859 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-06 16:02:14,859 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+WARNING 2025-08-06 16:02:14,865 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-06 16:02:14,865 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7909
+INFO 2025-08-06 16:02:23,584 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: abc@gmail.com
+INFO 2025-08-06 16:02:23,593 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:02:23,600 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20882
+INFO 2025-08-06 16:02:23,615 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:02:25,726 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 16:02:25,747 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:02:33,299 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:02:33,652 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:02:33,659 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:03:04,799 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:03:08,978 django.server "GET /apply HTTP/1.1" 301 0
+INFO 2025-08-06 16:03:09,006 django.server "GET /apply/ HTTP/1.1" 200 21330
+INFO 2025-08-06 16:03:09,026 django.server "GET /static/css/apply.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:03:09,027 django.server "GET /static/js/applynow.js HTTP/1.1" 304 0
+INFO 2025-08-06 16:03:09,027 django.server "GET /static/js/auto_formatter.js HTTP/1.1" 304 0
+INFO 2025-08-06 16:03:16,170 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:03:18,018 django.server "GET /products/ HTTP/1.1" 200 25612
+INFO 2025-08-06 16:03:36,934 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:04:08,264 django.server "GET /contact/ HTTP/1.1" 200 14297
+INFO 2025-08-06 16:04:13,857 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:04:26,456 django.server "GET /caseStudy/ HTTP/1.1" 200 16664
+INFO 2025-08-06 16:04:32,247 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:04:34,641 django.server "GET /finance/2/ HTTP/1.1" 200 12689
+INFO 2025-08-06 16:04:45,576 django.server "GET /caseStudy/ HTTP/1.1" 200 16664
+INFO 2025-08-06 16:04:55,507 django.server "GET /affiliate/ HTTP/1.1" 200 19387
+INFO 2025-08-06 16:05:02,541 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 51601
+INFO 2025-08-06 16:05:19,015 django.server "GET /apply/ HTTP/1.1" 200 21330
+INFO 2025-08-06 16:05:22,041 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 51601
+INFO 2025-08-06 16:05:27,695 django.server "GET /steps/ HTTP/1.1" 200 13277
+INFO 2025-08-06 16:05:39,634 django.server "GET /faq/ HTTP/1.1" 200 21221
+INFO 2025-08-06 16:05:49,299 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:05:49,308 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:05:49,313 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20882
+INFO 2025-08-06 16:05:51,379 django.server "GET /products/ HTTP/1.1" 200 25691
+INFO 2025-08-06 16:05:52,684 django.server "GET /careers/ HTTP/1.1" 200 22179
+INFO 2025-08-06 16:09:28,813 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-08-06 16:09:28,828 django.server "GET /careers/application/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/ HTTP/1.1" 200 16865
+INFO 2025-08-06 16:09:28,855 django.server "GET /static/css/job_apply.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:09:30,315 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:09:32,488 django.server "GET /apply/ HTTP/1.1" 200 21409
+INFO 2025-08-06 16:16:47,054 django.server "GET /products/ HTTP/1.1" 200 25691
+INFO 2025-08-06 16:17:27,202 django.server "GET /contact/ HTTP/1.1" 200 14376
+INFO 2025-08-06 16:18:35,474 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 16:18:44,548 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:18:44,899 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:18:44,906 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:18:47,095 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:19:01,833 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:19:04,656 django.server "GET /finance/addNews/ HTTP/1.1" 200 13966
+INFO 2025-08-06 16:19:04,682 django.server "GET /static/CSS/add_news.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:19:32,792 django.server "GET /finance/edit/2/ HTTP/1.1" 200 15739
+INFO 2025-08-06 16:20:24,760 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:20:29,657 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:21:25,607 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:21:25,620 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:21:30,958 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 16:21:31,277 django.server "GET /contact/ HTTP/1.1" 200 14297
+INFO 2025-08-06 16:21:32,108 django.server "GET /apply/ HTTP/1.1" 200 21330
+INFO 2025-08-06 16:21:32,502 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-08-06 16:21:32,504 django.server "GET /careers/application/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/ HTTP/1.1" 200 16786
+INFO 2025-08-06 16:21:35,687 django.server "GET /affiliate/ HTTP/1.1" 200 19387
+INFO 2025-08-06 16:21:50,074 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:21:50,082 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:21:50,085 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20882
+INFO 2025-08-06 16:21:50,109 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:21:53,668 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:22:17,102 django.server "GET /apply/ HTTP/1.1" 200 21409
+INFO 2025-08-06 16:22:47,676 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:34:24,998 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-06 16:34:25,456 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-06 16:34:32,075 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-06 16:34:32,468 django.utils.autoreload Watching for file changes with StatReloader
+WARNING 2025-08-06 16:36:13,483 django.request Not Found: /
+WARNING 2025-08-06 16:36:13,483 django.server "GET / HTTP/1.1" 404 7752
+WARNING 2025-08-06 16:36:13,533 django.request Not Found: /favicon.ico
+WARNING 2025-08-06 16:36:13,534 django.server "GET /favicon.ico HTTP/1.1" 404 7803
+INFO 2025-08-06 16:37:21,329 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-06 16:37:21,784 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-06 16:37:22,318 django.server "GET / HTTP/1.1" 200 20889
+INFO 2025-08-06 16:37:33,984 django.server "GET / HTTP/1.1" 200 20889
+INFO 2025-08-06 16:37:34,001 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:37:37,928 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 16:37:37,947 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:37:44,659 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:37:45,014 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:37:45,020 django.server "GET / HTTP/1.1" 200 20810
+WARNING 2025-08-06 16:40:08,345 django.request Not Found: /mainPage
+WARNING 2025-08-06 16:40:08,347 django.server "GET /mainPage HTTP/1.1" 404 7789
+INFO 2025-08-06 16:41:58,688 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-06 16:41:59,233 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-06 16:43:24,192 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:43:24,229 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-06 16:43:25,366 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:43:26,297 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:43:27,156 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:43:28,300 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:43:29,666 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:43:30,650 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:45:16,195 django.server "GET /apply/ HTTP/1.1" 200 21330
+INFO 2025-08-06 16:45:23,149 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:45:27,820 django.server "GET /faq/ HTTP/1.1" 200 21221
+INFO 2025-08-06 16:45:29,814 django.server "GET /steps/ HTTP/1.1" 200 13277
+INFO 2025-08-06 16:45:34,029 django.server "GET /affiliate/ HTTP/1.1" 200 19387
+INFO 2025-08-06 16:45:36,554 django.server "GET /caseStudy/ HTTP/1.1" 200 16664
+INFO 2025-08-06 16:45:43,491 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 51601
+INFO 2025-08-06 16:46:25,012 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:46:35,383 django.server "GET /job/create/ HTTP/1.1" 200 14311
+INFO 2025-08-06 16:46:41,801 django.server "GET /products/ HTTP/1.1" 200 25612
+INFO 2025-08-06 16:46:53,470 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:47:01,927 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:47:02,802 django.server "GET /contact/ HTTP/1.1" 200 14297
+INFO 2025-08-06 16:47:06,409 django.server "GET /steps/ HTTP/1.1" 200 13277
+INFO 2025-08-06 16:47:11,316 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:47:23,282 django.server "GET /steps/ HTTP/1.1" 200 13277
+INFO 2025-08-06 16:47:39,958 django.server "GET /caseStudy/ HTTP/1.1" 200 16664
+INFO 2025-08-06 16:47:45,569 django.server "GET /steps/ HTTP/1.1" 200 13277
+INFO 2025-08-06 16:47:52,910 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 51601
+INFO 2025-08-06 16:48:34,692 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:48:39,652 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:48:45,485 django.server "GET /finance/addNews/ HTTP/1.1" 200 13966
+INFO 2025-08-06 16:48:50,619 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:48:58,402 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:49:00,598 django.server "GET /finance/2/ HTTP/1.1" 200 12689
+INFO 2025-08-06 16:49:06,922 django.server "GET /finance/news/ HTTP/1.1" 200 16755
+INFO 2025-08-06 16:49:08,453 django.server "GET /finance/8/ HTTP/1.1" 200 12198
+INFO 2025-08-06 16:49:08,473 django.server "GET /media/newsletter_thumb/JP_MORGAN.jpg HTTP/1.1" 304 0
+INFO 2025-08-06 16:49:14,482 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:49:20,687 django.server "GET /apply/ HTTP/1.1" 200 21330
+INFO 2025-08-06 16:49:49,089 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:50:30,289 django.server "GET /aboutus/ HTTP/1.1" 200 14544
+INFO 2025-08-06 16:50:33,193 django.server "GET /products/ HTTP/1.1" 200 25612
+INFO 2025-08-06 16:50:35,231 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:50:36,304 django.server "GET /contact/ HTTP/1.1" 200 14297
+INFO 2025-08-06 16:50:38,081 django.server "GET /careers/ HTTP/1.1" 200 25884
+INFO 2025-08-06 16:50:39,525 django.server "GET /job/edit/23ae4423-ebdd-4a32-97a8-3dadd9d8b657/ HTTP/1.1" 200 15000
+INFO 2025-08-06 16:51:03,662 django.server "GET /careers/ HTTP/1.1" 200 22179
+INFO 2025-08-06 16:51:03,674 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 304 0
+INFO 2025-08-06 16:51:48,618 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:51:50,976 django.server "GET /apply/ HTTP/1.1" 200 21409
+INFO 2025-08-06 16:52:08,279 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:52:19,055 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:52:29,302 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:52:37,452 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:52:38,354 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:52:44,303 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:52:49,416 django.server "GET /products/ HTTP/1.1" 200 25691
+INFO 2025-08-06 16:52:51,039 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:53:07,846 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:53:15,024 django.server "GET /careers/ HTTP/1.1" 200 22179
+INFO 2025-08-06 16:53:15,982 django.server "GET /contact/ HTTP/1.1" 200 14376
+INFO 2025-08-06 16:53:24,637 django.server "GET /aboutus/ HTTP/1.1" 200 14623
+INFO 2025-08-06 16:53:31,681 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:53:33,044 django.server "GET /apply/ HTTP/1.1" 200 21409
+INFO 2025-08-06 16:54:53,781 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+ERROR 2025-08-06 16:54:53,890 django.request Internal Server Error: /logout/
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 114, in logout_user
+    response = redirect(reverse('mainPage') + "?message=You have successfully logged out.")
+                        ~~~~~~~^^^^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\lndvr_test\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'mainPage' not found. 'mainPage' is not a valid view function or pattern name.
+ERROR 2025-08-06 16:54:53,892 django.server "GET /logout/ HTTP/1.1" 500 83986
+INFO 2025-08-06 16:55:47,471 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-06 16:55:47,863 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-06 16:55:49,062 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:55:49,092 django.server "GET /login/?error=Session%20expired%20or%20logged%20out.%20Please%20log%20in%20again. HTTP/1.1" 200 11680
+ERROR 2025-08-06 16:55:54,695 django.request Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\lendeavor\lndvr_site\myapp\views.py", line 23, in main
+    return render(request, 'mainPage.html')
+  File "C:\lndvr_test\env\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\loader.py", line 62, in render_to_string
+    return template.render(context, request)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\backends\django.py", line 107, in render
+    return self.template.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 171, in render
+    return self._render(context)
+           ~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+           ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 163, in _render
+    return self.nodelist.render(context)
+           ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 1016, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+                               ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\base.py", line 977, in render_annotated
+    return self.render(context)
+           ~~~~~~~~~~~^^^^^^^^^
+  File "C:\lndvr_test\env\Lib\site-packages\django\template\defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "C:\lndvr_test\env\Lib\site-packages\django\urls\base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "C:\lndvr_test\env\Lib\site-packages\django\urls\resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'home' not found. 'home' is not a valid view function or pattern name.
+ERROR 2025-08-06 16:55:54,700 django.server "GET / HTTP/1.1" 500 144159
+INFO 2025-08-06 16:56:40,385 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:56:41,572 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:56:42,436 django.server "GET / HTTP/1.1" 200 20882
+INFO 2025-08-06 16:56:49,336 django.server "GET /login/ HTTP/1.1" 200 11518
+INFO 2025-08-06 16:56:56,802 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:56:57,154 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:56:57,162 django.server "GET / HTTP/1.1" 200 20803
+INFO 2025-08-06 16:56:58,670 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-08-06 16:56:58,677 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-08-06 16:56:58,683 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 20882
