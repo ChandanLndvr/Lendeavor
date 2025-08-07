@@ -157,6 +157,48 @@ html, body {
     margin-top: 10px;
 }
 
+.custom-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 120px;
+    height: 42px;
+    padding: 8px 16px;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    text-align: center;
+    line-height: 1.2;
+}
+
+/* Apply now */
+.primary-btn {
+    background: rgba(255, 255, 255, 0.05);
+    color: #00f2ff;
+    animation: sparkle 2s linear infinite;
+    backdrop-filter: blur(1px);
+    text-decoration: underline;
+    border: none;
+}
+
+/* Login / Logout */
+.green-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+}
+
+/* Sign up */
+.outline-btn {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+
 .apply-button:hover {
     background-color: #009edc;
 }
