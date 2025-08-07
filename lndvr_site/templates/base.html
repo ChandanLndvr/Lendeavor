@@ -119,14 +119,19 @@
                 </ul>
 
                 <!-- Right side buttons -->
-                <div class="d-flex mt-2 mt-lg-0 gap-2">
+                <div class="d-flex mt-2 mt-lg-0 gap-3 align-items-center">
                     {% if request.COOKIES.jwt_token %}
-                    <a href="{% url 'logout' %}" class="btn btn-success">Logout</a>
+                        <a href="{% url 'apply' %}" class="custom-btn primary-btn">Apply now <span class="arrow">↗</span></a>
+                        <a href="{% url 'logout' %}" class="custom-btn green-btn">Logout</a>
                     {% else %}
-                    <a href="{% url 'signup' %}" class="btn btn-outline-light">Sign up</a>
-                    <a href="{% url 'login' %}" class="btn btn-success">Login</a>
+                        <a href="{% url 'apply' %}" class="custom-btn primary-btn">Apply now <span class="arrow">↗</span></a>
+                        <a href="{% url 'signup' %}" class="custom-btn outline-btn">Sign up</a>
+                        <a href="{% url 'login' %}" class="custom-btn green-btn">Login</a>
                     {% endif %}
                 </div>
+
+
+
             </div>
         </div>
     </nav>
