@@ -154,15 +154,15 @@ class UserApplicationsSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("First time must be 'yes' or 'no'.")
         return value.lower()
 
-    def validate_Documents(self, value):
-        if value:
-            if not value.name.endswith('.pdf'):
-                raise serializers.ValidationError("Uploaded document must be a PDF.")
-            if value.size > 12 * 1024 * 1024:  # 10MB limit
-                raise serializers.ValidationError("File size must be under 10MB.")
-        else:
-            raise serializers.ValidationError("Financial statement upload is required.")
-        return value
+    # def validate_Documents(self, value):
+    #     if value:
+    #         if not value.name.endswith('.pdf'):
+    #             raise serializers.ValidationError("Uploaded document must be a PDF.")
+    #         if value.size > 12 * 1024 * 1024:  # 10MB limit
+    #             raise serializers.ValidationError("File size must be under 10MB.")
+    #     else:
+    #         raise serializers.ValidationError("Financial statement upload is required.")
+    #     return value
     
 #--------------------- Job application --------------------
 

@@ -17,17 +17,40 @@ def send_graph_email_async(subject, body, to_emails, is_html=False, files=None):
     def run():
         try:
             attachments = []
+
             if files:
                 for file_obj in files:
+                    # Reset file pointer to the start before reading
+                    # This is critical because if the file was read previously,
+                    # the pointer would be at the end, causing empty content to be read
+                    file_obj.seek(0)
+
+                    # Read the full content of the file as bytes
                     content = file_obj.read()
-                    attachments.append({
+
+                    # Encode file content in base64 as required by Microsoft Graph API
+                    encoded_content = base64.b64encode(content).decode('utf-8')
+
+                    # Prepare the attachment dictionary for the Graph API
+                    # Use file_obj.name for the filename
+                    # Use file_obj.content_type if available; fallback to 'application/octet-stream'
+                    attachment = {
                         "@odata.type": "#microsoft.graph.fileAttachment",
                         "name": file_obj.name,
-                        "contentType": file_obj.content_type,
-                        "contentBytes": base64.b64encode(content).decode('utf-8')
-                    })
+                        "contentType": getattr(file_obj, 'content_type', 'application/octet-stream'),
+                        "contentBytes": encoded_content
+                    }
+
+                    # Add the attachment dict to the attachments list
+                    attachments.append(attachment)
+
+            # Call your existing synchronous email sending function
+            # Pass attachments if any, otherwise None
             send_graph_email(subject, body, to_emails, is_html, attachments if attachments else None)
+
         except Exception as e:
+            # Log or print errors occurring during the async email sending
             print(f"[Async Email Error] {e}")
 
+    # Run the email sending logic in a separate thread to avoid blocking the main thread
     threading.Thread(target=run).start()

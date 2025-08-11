@@ -55,10 +55,10 @@
                         <label class="form-label">Entity Type <span style="color: red;">*</span></label>
                         <select id="entity" name="entity" required>
                             <option value="">Select</option>
-                            <option>LLC</option>
-                            <option>Corporation</option>
-                            <option>Sole Proprietor</option>
-                            <option>Partnership</option>
+                            <option value="llc">LLC</option>
+                            <option value="corporation">Corporation</option>
+                            <option value="sole_proprietor">Sole Proprietor</option>
+                            <option value="partnership">Partnership</option>
                         </select>
                     </div>
                     <div class="col-md-4">
@@ -170,9 +170,15 @@
                     </div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Upload Financial Statement <i style = "color: grey">(PDF only)</i><span
-                            style="color:red;">*</span></label>
-                    <input type="file" id="financial_statement" name="financial_statement" accept=".pdf" required />
+                    <label class="form-label">
+                        Upload Financial Statements <i style="color: grey">(PDF only)</i>
+                        <span style="color:red;">*</span>
+                    </label>
+                    <div class="drop-zone" id="dropZone">
+                        <p>Drag & drop your PDFs here, or click to browse</p>
+                        <input type="file" id="financial_statement" name="financial_statement" accept=".pdf" multiple required />
+                        <div class="file-list" id="fileList"></div>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label class="terms-label">
@@ -195,6 +201,8 @@
 <script src="{% static 'js/applynow.js' %}"></script>
 <!-- Auto formatter for tax id and ssn-->
 <script src="{% static 'js/auto_formatter.js' %}"></script>
+<!-- Drag and drop the documanets -->
+ <script src="{% static 'js/drag_drop_docs.js' %}"></script>
 
 <!-- google api for address completion with intelligence -->
 <!-- <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initAutocomplete" async

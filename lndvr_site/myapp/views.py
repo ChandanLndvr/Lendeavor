@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from django.http import HttpResponse
-from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken, Lenders
+from myapp.models import SignUp, UserApplications, JobApplications, BlacklistedToken, Lenders, ApplicationDocument
 from myapp.utils.auth_utils import hash_password, verify_password, generate_jwt
 from django.conf import settings
 from .models import PasswordResetToken
@@ -202,7 +202,20 @@ def apply(request):
             log_action(request, "Funding application attempt", user_info=request.POST.get('bemail'))
             data = request.POST.dict()
             files = request.FILES.getlist('financial_statement')
-            doc = files[0] if files else None
+
+            # Server-side check for max 3 files
+            if len(files) > 3:
+                return render(request, 'apply.html', {
+                    'error': "You can upload a maximum of 3 files only.",
+                    'data': request.POST  # repopulate form if needed
+                })
+
+            # Validate all uploaded PDFs
+            for f in files:
+                if not f.name.lower().endswith('.pdf'):
+                    return render(request, 'apply.html', {'error': "Only PDF files are allowed."})
+                if f.size > 10 * 1024 * 1024:
+                    return render(request, 'apply.html', {'error': "Each file must be under 10MB."})
 
             # Map POST keys to serializer fields, normalize entity & first_time
             cleaned_data = {
@@ -226,35 +239,38 @@ def apply(request):
                 'Funds_Requested': data.get('fund'),
                 'Existing_loans': data.get('existing_loans'),
                 'First_time': data.get('application_no', '').lower(),
-                'Documents': doc,
             }
 
-            # Check existing instance for update
             instance = UserApplications.objects.filter(SSN=cleaned_data['SSN']).first() if cleaned_data['First_time'] == "yes" else None
-            
+
             serializer = UserApplicationsSerializer(instance, data=cleaned_data)
             if serializer.is_valid():
-                serializer.save()
+                application = serializer.save()
+
+                # Save all PDFs
+                for f in files:
+                    ApplicationDocument.objects.create(application=application, file=f)
+
                 message_text = "Application updated successfully!" if instance else "Application submitted successfully!"
 
-                # Build HTML table email body with bold labels
+                # Build HTML email body with bold labels
                 rows = ''.join(
                     f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
                     f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
-                    for field, value in serializer.validated_data.items() if field != 'Documents'
+                    for field, value in serializer.validated_data.items()
                 )
                 email_body = f"<h3>New / Updated Business Application</h3><table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
 
-                # Prepare attachments for async email (pass actual file obj)
+                # Send email asynchronously with attachments
                 send_graph_email_async(
                     subject="New / Updated Business Application",
                     body=email_body,
                     to_emails=[cleaned_data['Business_Email'], settings.CONTACT_EMAIL],
                     is_html=True,
-                    files=[doc] if doc else None
+                    files=files if files else None
                 )
 
-                # Redirect to prevent form resubmission
+                # Redirect with success message
                 return redirect(f"{reverse('apply')}?message={message_text}")
 
             return render(request, 'apply.html', {'error': serializer.errors})
@@ -266,6 +282,7 @@ def apply(request):
         'message': request.GET.get('message'),
         'error': request.GET.get('error')
     })
+
 
 #----------------------------- About us ----------------------------
 
