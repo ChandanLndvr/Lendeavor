@@ -81,7 +81,6 @@ class UserApplications(models.Model):
     Funds_Requested = models.PositiveIntegerField()
     Existing_loans = models.CharField(max_length=5)
 
-    Documents = models.FileField(upload_to='user_applications/', null=True, blank=True)
     First_time = models.CharField(max_length=5, default='Yes')  
     Applied_on = models.DateTimeField(auto_now=True)
 
@@ -90,6 +89,18 @@ class UserApplications(models.Model):
 
     def __str__(self):
         return f"{self.Owner_First_Name} {self.Owner_Last_Name}"
+    
+# User applivcation documents
+
+class ApplicationDocument(models.Model):
+    application = models.ForeignKey(UserApplications, on_delete=models.CASCADE, related_name="documents")
+    file = models.FileField(upload_to="user_applications/")
+
+    class Meta:
+        db_table = 'User_Docs'
+
+    def __str__(self):
+        return self.file.name
 
 # Job Applications
  
