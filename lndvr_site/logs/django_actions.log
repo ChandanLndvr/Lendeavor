@@ -14011,3 +14011,36 @@ INFO 2025-08-13 15:26:38,532 django.server "GET /static/lenders_logo/wallstreet.
 INFO 2025-08-13 15:26:38,536 django.server "GET /static/lenders_logo/tabbank.png HTTP/1.1" 200 1047
 INFO 2025-08-13 15:26:38,536 django.server "GET /static/lenders_logo/northeastern.png HTTP/1.1" 200 26192
 INFO 2025-08-13 15:26:38,715 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 15:28:56,224 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 15:29:00,521 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40486
+INFO 2025-08-13 15:29:00,555 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+INFO 2025-08-13 15:29:29,599 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+WARNING 2025-08-13 15:29:29,633 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 15:29:29,634 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 15:35:37,483 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40486
+INFO 2025-08-13 15:35:37,522 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,001 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40570
+INFO 2025-08-13 15:37:23,015 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,015 django.server "GET /static/css/divider_mission.css HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,018 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,030 django.server "GET /static/lenders_logo/peac.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,031 django.server "GET /static/lenders_logo/libertas.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,031 django.server "GET /static/lenders_logo/channel.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,032 django.server "GET /static/lenders_logo/mulligan.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,046 django.server "GET /static/js/message_fade.js HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,046 django.server "GET /static/lenders_logo/headway.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,046 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,046 django.server "GET /static/lenders_logo/finpart.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,053 django.server "GET /static/lenders_logo/ondeck.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,053 django.server "GET /static/lenders_logo/idea.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,053 django.server "GET /static/lenders_logo/iou.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,053 django.server "GET /static/lenders_logo/kalamata.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,060 django.server "GET /static/lenders_logo/tabbank.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,060 django.server "GET /static/lenders_logo/wallstreet.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,060 django.server "GET /static/lenders_logo/pirs.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,061 django.server "GET /static/lenders_logo/northeastern.png HTTP/1.1" 304 0
+INFO 2025-08-13 15:37:23,085 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 200 10491
+INFO 2025-08-13 15:37:23,086 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 200 7890
+INFO 2025-08-13 15:39:16,068 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+WARNING 2025-08-13 15:39:16,110 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 15:39:16,111 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
