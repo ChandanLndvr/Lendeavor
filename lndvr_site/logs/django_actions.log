@@ -11358,3 +11358,422 @@ INFO 2025-08-13 09:21:15,723 django.server "GET /lenders/marketplace/ HTTP/1.1" 
 WARNING 2025-08-13 09:21:33,999 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2025-08-13 09:21:34,000 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7909
 INFO 2025-08-13 09:22:01,469 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 51595
+INFO 2025-08-13 09:25:07,439 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 09:25:09,117 django.server "GET /aboutus/ HTTP/1.1" 200 14777
+INFO 2025-08-13 09:25:09,134 django.server "GET /static/css/aboutus.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:25:38,269 django.server "GET /aboutus/ HTTP/1.1" 200 14800
+INFO 2025-08-13 09:26:14,395 django.server "GET /aboutus/ HTTP/1.1" 200 14800
+INFO 2025-08-13 09:26:14,429 django.server "GET /static/css/aboutus.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:26:27,273 django.server "GET /aboutus/ HTTP/1.1" 200 14777
+INFO 2025-08-13 09:26:53,354 django.server "GET /aboutus/ HTTP/1.1" 200 14800
+INFO 2025-08-13 09:26:58,204 django.server "GET /products/ HTTP/1.1" 200 25845
+INFO 2025-08-13 09:26:59,580 django.server "GET /careers/ HTTP/1.1" 200 22333
+INFO 2025-08-13 09:27:00,734 django.server "GET /products/ HTTP/1.1" 200 25845
+WARNING 2025-08-13 09:27:09,811 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 09:27:09,812 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7909
+INFO 2025-08-13 09:27:39,230 django.server "GET /careers HTTP/1.1" 301 0
+INFO 2025-08-13 09:27:39,242 django.server "GET /careers/ HTTP/1.1" 200 22333
+WARNING 2025-08-13 09:27:39,294 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 09:27:39,296 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 7909
+INFO 2025-08-13 09:27:39,440 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 09:27:39,440 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 09:27:39,443 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-08-13 09:27:39,444 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 09:27:39,447 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 09:27:39,448 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 09:27:39,501 django.server "GET /static/css/careers.css HTTP/1.1" 200 1569
+INFO 2025-08-13 09:27:39,525 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-08-13 09:27:42,902 django.server "GET /contact/ HTTP/1.1" 200 14530
+INFO 2025-08-13 09:27:46,681 django.server "GET /finance/news/ HTTP/1.1" 200 14208
+INFO 2025-08-13 09:27:46,739 django.server "GET /static/css/financial_news.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:34:37,883 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 09:34:38,354 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 09:35:33,169 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-13 09:35:33,552 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 09:35:36,952 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-13 09:35:37,370 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 09:35:50,105 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-08-13 09:35:50,490 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 09:44:14,578 django.server "GET /finance/news/ HTTP/1.1" 200 14480
+INFO 2025-08-13 09:44:14,600 django.server "GET /static/css/financial_news.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:44:23,683 django.server "GET /sell-business/ HTTP/1.1" 200 18273
+INFO 2025-08-13 09:46:37,625 django.server "GET /sell-business/ HTTP/1.1" 200 18278
+INFO 2025-08-13 09:49:20,945 django.server "GET /sell-business/ HTTP/1.1" 200 18275
+INFO 2025-08-13 09:49:20,997 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 0
+INFO 2025-08-13 09:50:23,085 django.server "GET /sell-business/ HTTP/1.1" 200 18275
+INFO 2025-08-13 09:50:23,121 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1513
+INFO 2025-08-13 09:51:36,317 django.server "GET /sell-business/ HTTP/1.1" 200 18786
+INFO 2025-08-13 09:51:36,346 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:51:57,497 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 09:51:57,516 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 09:51:57,517 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 09:53:15,461 django.server "GET /sell-business/ HTTP/1.1" 200 18786
+INFO 2025-08-13 09:53:15,495 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 09:55:51,546 django.server "GET /terms/ HTTP/1.1" 200 14595
+INFO 2025-08-13 09:55:51,580 django.server "GET /static/css/terms_privacy.css HTTP/1.1" 200 995
+INFO 2025-08-13 09:55:55,306 django.server "GET /privacy/ HTTP/1.1" 200 14708
+INFO 2025-08-13 09:56:38,206 django.server "GET /sell-business/ HTTP/1.1" 200 16667
+INFO 2025-08-13 09:56:38,247 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1544
+WARNING 2025-08-13 09:56:38,301 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 09:57:31,877 django.server "POST /sell-business/ HTTP/1.1" 200 16667
+INFO 2025-08-13 09:57:31,911 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:00:25,868 django.server "POST /sell-business/ HTTP/1.1" 200 16599
+INFO 2025-08-13 10:00:25,912 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1513
+INFO 2025-08-13 10:02:36,130 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:02:36,160 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:03:14,988 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:03:15,026 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1809
+WARNING 2025-08-13 10:03:15,041 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:05:21,906 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:05:21,951 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1809
+WARNING 2025-08-13 10:05:21,976 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:05:41,331 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:05:41,366 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1809
+WARNING 2025-08-13 10:05:41,377 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:06:26,189 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:06:26,203 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:06:26,204 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:06:52,900 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:06:52,946 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:06:52,948 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:06:52,953 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:06:52,953 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:06:52,954 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:06:52,968 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:06:52,968 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1809
+WARNING 2025-08-13 10:06:52,969 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:06:53,034 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:06:53,249 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:07:33,229 django.server "POST /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:07:33,256 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 1809
+WARNING 2025-08-13 10:07:33,293 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:08:02,708 django.server "GET /finance/news/ HTTP/1.1" 200 14485
+INFO 2025-08-13 10:08:02,744 django.server "GET /static/css/financial_news.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:08:06,454 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:08:06,470 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:09:46,915 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:09:46,963 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2475
+WARNING 2025-08-13 10:09:46,999 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:10:20,539 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:10:20,578 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:10:23,352 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:10:23,352 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:10:26,929 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:10:26,965 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:10:26,975 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:10:26,976 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:10:27,034 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:10:29,915 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:10:29,945 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:10:29,947 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+WARNING 2025-08-13 10:10:29,960 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:10:29,961 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 10:10:29,961 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:10:29,962 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2475
+INFO 2025-08-13 10:10:29,962 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 10:10:29,962 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:10:30,008 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:10:30,183 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:11:01,100 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:11:01,131 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:11:06,038 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:11:06,039 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:11:10,456 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:11:10,487 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:11:10,507 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:11:10,508 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:11:10,562 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:11:13,585 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:11:13,625 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:11:13,627 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:11:13,629 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2475
+INFO 2025-08-13 10:11:13,631 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 10:11:13,635 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:11:13,636 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-08-13 10:11:13,637 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:11:13,637 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:11:13,754 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:11:13,899 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:12:39,966 django.server "GET /sell-business/ HTTP/1.1" 200 17209
+INFO 2025-08-13 10:12:40,004 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:12:40,005 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:12:40,010 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:12:40,011 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:12:40,012 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:12:40,025 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:12:40,026 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2471
+WARNING 2025-08-13 10:12:40,026 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:12:40,103 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:12:40,332 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:13:48,037 django.server "GET /sell-business/ HTTP/1.1" 200 17087
+INFO 2025-08-13 10:13:48,063 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:14:00,658 django.server "GET /sell-business/ HTTP/1.1" 200 17019
+INFO 2025-08-13 10:14:00,685 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:14:51,356 django.server "GET /sell-business/ HTTP/1.1" 200 17019
+INFO 2025-08-13 10:14:51,393 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2472
+WARNING 2025-08-13 10:14:51,408 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:14:59,812 django.server "GET /sell-business/ HTTP/1.1" 200 17019
+INFO 2025-08-13 10:14:59,841 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+WARNING 2025-08-13 10:14:59,855 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:15:29,559 django.server "GET /sell-business/ HTTP/1.1" 200 17019
+INFO 2025-08-13 10:15:29,602 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+WARNING 2025-08-13 10:15:29,617 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:15:37,533 django.server "GET /sell-business/ HTTP/1.1" 200 17019
+INFO 2025-08-13 10:15:37,574 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+WARNING 2025-08-13 10:15:37,585 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:18:03,897 django.server "GET /sell-business/ HTTP/1.1" 200 17005
+INFO 2025-08-13 10:18:03,928 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:19:27,043 django.server "GET /sell-business/ HTTP/1.1" 200 17053
+INFO 2025-08-13 10:19:27,070 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:19:52,943 django.server "GET /sell-business/ HTTP/1.1" 200 17109
+INFO 2025-08-13 10:19:52,966 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:22:54,244 django.server "GET /sell-business/ HTTP/1.1" 200 17113
+INFO 2025-08-13 10:22:54,273 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:23:52,050 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:23:52,086 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:25:47,966 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:25:48,011 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+WARNING 2025-08-13 10:25:48,030 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:25:49,526 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:25:49,546 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:25:51,818 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:25:51,850 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:25:51,850 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:25:57,337 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:25:57,364 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:25:57,379 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:25:57,380 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:25:57,444 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:26:04,652 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:26:04,681 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:26:04,705 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:26:06,585 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:26:06,627 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:26:06,628 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:26:40,491 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:26:40,525 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:26:40,539 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:26:49,702 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:26:49,732 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+WARNING 2025-08-13 10:26:49,751 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:27:12,176 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:27:12,207 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:27:12,208 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:27:45,410 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:27:45,455 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:27:45,455 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:27:45,457 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:27:45,462 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:27:45,462 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 10:27:45,464 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:27:45,465 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:27:45,466 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:27:45,546 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:27:45,758 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:28:08,431 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:28:08,450 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:28:08,450 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:28:08,452 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:28:08,453 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:28:08,456 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:28:08,457 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:28:08,468 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:28:08,469 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:28:08,549 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:28:08,688 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:28:19,464 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+WARNING 2025-08-13 10:28:19,491 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:28:19,492 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:28:19,494 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:28:19,494 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:28:19,495 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:28:19,495 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:28:19,495 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 10:28:19,496 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:28:19,601 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:28:19,726 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:28:28,126 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:28:28,149 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:28:28,150 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:28:28,153 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:28:28,153 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:28:28,156 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-08-13 10:28:28,160 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:28:28,160 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:28:28,160 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 10:28:28,233 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:28:28,349 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:28:37,279 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:28:37,305 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:28:37,307 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+WARNING 2025-08-13 10:28:37,312 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 10:28:37,312 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:28:37,314 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 10:28:37,315 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 10:28:37,315 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 10:28:37,316 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-08-13 10:28:37,400 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:28:37,524 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:36:06,089 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:36:06,132 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 10:36:06,132 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 10:36:06,136 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 10:36:06,138 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 10:36:06,139 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 10:36:06,139 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-08-13 10:36:06,153 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 10:36:06,154 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 10:36:06,218 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:36:06,419 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 10:36:10,732 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:36:13,339 django.server "GET /aboutus/ HTTP/1.1" 200 15077
+INFO 2025-08-13 10:36:13,353 django.server "GET /static/css/aboutus.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:36:14,385 django.server "GET /products/ HTTP/1.1" 200 26122
+INFO 2025-08-13 10:36:15,250 django.server "GET /careers/ HTTP/1.1" 200 22610
+INFO 2025-08-13 10:36:15,959 django.server "GET /contact/ HTTP/1.1" 200 14807
+INFO 2025-08-13 10:36:18,759 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:40:01,694 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 10:40:02,256 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 10:40:44,551 django.server "GET /sell-business/ HTTP/1.1" 200 17155
+INFO 2025-08-13 10:40:44,579 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:42:00,321 django.server "GET /sell-business/ HTTP/1.1" 200 17170
+INFO 2025-08-13 10:42:46,494 django.server "GET /sell-business/ HTTP/1.1" 200 17170
+INFO 2025-08-13 10:42:46,523 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:44:42,763 django.server "GET /sell-business/ HTTP/1.1" 200 17135
+INFO 2025-08-13 10:44:42,792 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:45:46,379 django.server "POST /sell-business/ HTTP/1.1" 200 17308
+INFO 2025-08-13 10:52:39,231 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 10:52:39,652 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 10:52:51,485 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 10:52:51,939 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 10:53:14,075 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 10:53:14,621 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 10:53:31,789 django.server "POST /sell-business/ HTTP/1.1" 302 0
+INFO 2025-08-13 10:53:31,803 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17313
+INFO 2025-08-13 10:53:31,835 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 10:53:31,872 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 10:54:13,056 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17313
+INFO 2025-08-13 10:56:54,563 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17635
+INFO 2025-08-13 10:56:54,597 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 10:58:24,052 django.server "POST /sell-business/ HTTP/1.1" 302 0
+INFO 2025-08-13 10:58:24,058 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17635
+INFO 2025-08-13 11:00:26,734 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17985
+INFO 2025-08-13 11:00:26,765 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 11:00:31,994 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:00:31,994 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:00:36,604 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17985
+WARNING 2025-08-13 11:00:36,642 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:00:36,642 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 11:00:36,707 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:00:39,738 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 17985
+INFO 2025-08-13 11:00:39,932 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+WARNING 2025-08-13 11:00:39,938 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:00:39,938 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:00:39,946 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 11:00:39,951 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:00:39,952 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 11:00:39,953 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 11:00:39,953 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 11:00:39,981 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:00:40,138 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 11:03:08,055 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18105
+WARNING 2025-08-13 11:03:08,115 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:04:04,991 django.server "POST /sell-business/ HTTP/1.1" 302 0
+INFO 2025-08-13 11:04:04,995 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18105
+INFO 2025-08-13 11:04:05,026 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-08-13 11:05:45,653 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18142
+INFO 2025-08-13 11:06:27,668 django.server "POST /sell-business/ HTTP/1.1" 302 0
+INFO 2025-08-13 11:06:27,673 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18142
+INFO 2025-08-13 11:09:49,052 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 11:09:49,075 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:09:49,076 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:09:54,027 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18142
+WARNING 2025-08-13 11:09:54,071 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:09:54,072 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 11:09:54,127 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:10:00,324 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18142
+INFO 2025-08-13 11:10:00,353 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 11:10:00,354 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+WARNING 2025-08-13 11:10:00,366 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 11:10:00,367 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 11:10:00,367 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-08-13 11:10:00,368 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:10:00,369 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 11:10:00,369 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 11:10:00,539 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:10:00,716 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 11:10:16,672 django.server "POST /sell-business/ HTTP/1.1" 302 0
+INFO 2025-08-13 11:10:16,677 django.server "GET /sell-business/?message=Your%20business%20information%20has%20been%20submitted%20successfully! HTTP/1.1" 200 18142
+INFO 2025-08-13 11:10:16,724 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 11:10:16,724 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 11:10:16,725 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:10:16,725 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 11:10:16,726 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 11:10:16,727 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 11:10:16,735 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:10:16,735 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 11:10:16,815 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:12:58,000 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-08-13 11:12:58,461 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-13 11:13:13,993 django.server "GET /sell-business/ HTTP/1.1" 200 17964
+WARNING 2025-08-13 11:13:14,034 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:13:14,035 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:13:14,156 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 11:13:14,166 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 11:13:14,169 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 11:13:14,171 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 11:13:14,172 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:13:14,173 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-08-13 11:13:14,199 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:13:16,451 django.server "GET /sell-business/ HTTP/1.1" 200 17964
+WARNING 2025-08-13 11:13:16,488 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:13:16,489 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:13:19,499 django.server "GET /sell-business/ HTTP/1.1" 200 17964
+INFO 2025-08-13 11:13:19,534 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+WARNING 2025-08-13 11:13:19,541 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-13 11:13:19,542 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 11:13:19,543 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2473
+INFO 2025-08-13 11:13:19,543 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:13:19,543 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 11:13:19,544 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-08-13 11:13:19,544 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 11:13:19,604 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:13:19,792 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 11:13:36,678 django.server "POST /sell-business/ HTTP/1.1" 200 18114
+INFO 2025-08-13 11:18:44,835 django.server "POST /sell-business/ HTTP/1.1" 200 18213
+INFO 2025-08-13 11:18:44,862 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-08-13 11:18:44,895 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:18:54,886 django.server "POST /sell-business/ HTTP/1.1" 200 18213
+INFO 2025-08-13 11:19:00,366 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+INFO 2025-08-13 11:20:19,773 django.server "GET /terms/ HTTP/1.1" 200 14595
+INFO 2025-08-13 11:20:24,532 django.server "GET /privacy/ HTTP/1.1" 200 14708
+INFO 2025-08-13 11:21:20,814 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+INFO 2025-08-13 11:21:21,869 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+WARNING 2025-08-13 11:21:23,533 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:21:23,533 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:21:28,410 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+WARNING 2025-08-13 11:21:28,445 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:21:28,445 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+WARNING 2025-08-13 11:21:28,509 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:21:31,875 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+INFO 2025-08-13 11:21:31,906 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+INFO 2025-08-13 11:21:31,909 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+WARNING 2025-08-13 11:21:31,922 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:21:31,924 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:21:31,925 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:21:31,925 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 11:21:31,925 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 11:21:31,933 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2505
+WARNING 2025-08-13 11:21:31,994 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:21:32,191 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-08-13 11:22:19,843 django.server "GET /sell-business/ HTTP/1.1" 200 18002
+INFO 2025-08-13 11:22:19,885 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-13 11:22:19,886 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4637
+WARNING 2025-08-13 11:22:19,895 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-13 11:22:19,897 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8178
+INFO 2025-08-13 11:22:19,897 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-13 11:22:19,898 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-13 11:22:19,898 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-13 11:22:19,904 django.server "GET /static/css/sell_business.css HTTP/1.1" 200 2586
+WARNING 2025-08-13 11:22:19,986 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1880
+INFO 2025-08-13 11:22:20,195 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379

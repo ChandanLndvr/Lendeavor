@@ -510,6 +510,70 @@ def lenders_marketplace(request):
 def funding_steps(request):
     return render(request, 'funding_steps.html', {'current_page':'steps'})
 
+
+#-------------------------- sell business --------------------------
+
+def sell_business(request):
+    if request.method == 'POST':
+
+        phone = request.POST.get('phone', '').strip()
+        
+        # Server-side validation: must be exactly 10 digits
+        import re
+        if not re.fullmatch(r'\d{10}', phone):
+            return render(request, 'sell_business.html', {
+                'current_page': 'sell_business',
+                'error': 'Phone number must be exactly 10 digits.',
+                'form_data': request.POST
+            })  
+        
+        # Collect form data
+        cleaned_data = {
+            'Name': request.POST.get('name'),
+            'Email': request.POST.get('email'),
+            'Phone': request.POST.get('phone'),
+            'Business Name': request.POST.get('business_name'),
+            'Industry': request.POST.get('industry'),
+            'Location': request.POST.get('location'),
+            'Year Established': request.POST.get('established'),
+            'Annual Revenue': request.POST.get('revenue'),
+            'Asking Price': request.POST.get('asking_price'),
+            'Reason for Selling': request.POST.get('reason'),
+            'Business Description': request.POST.get('description'),
+            'Terms Accepted': 'Yes' if request.POST.get('terms') == 'on' else 'No'
+        }
+
+        print("cleaned data", cleaned_data)
+
+        # Create HTML table
+        table_rows = ""
+        for field, value in cleaned_data.items():
+            table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+
+        email_body = f"""
+        <h3>New Sell Business Submission</h3>
+        <table style='border-collapse:collapse;width:100%;'>
+            {table_rows}
+        </table>
+        """
+
+        # Send email asynchronously
+        send_graph_email_async(
+            subject="New Sell Business Submission",
+            body=email_body,
+            to_emails=[settings.CONTACT_EMAIL],
+            is_html=True
+        )
+
+        return redirect(reverse("sell_business") + "?message=Your business information has been submitted successfully!")
+
+    # Handle GET
+    return render(request, 'sell_business.html', {
+        'current_page': 'sell_business',
+        'message': request.GET.get('message'),
+        'error': request.GET.get('error')
+    })
+
 #-------------------------- FAQs -----------------------------------
 
 def faq(request):
