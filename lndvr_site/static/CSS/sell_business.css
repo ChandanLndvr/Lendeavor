@@ -1,0 +1,117 @@
+/* ---------- Heading Section ---------- */
+.page-header {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 95%;
+    margin: 20px auto 50px auto;
+    padding: 40px 20px 30px;  /* corrected padding */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;  /* ensure block layout */
+}
+
+.page-header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.page-header p {
+    color: grey;
+    font-size: 0.9rem;
+    max-width: 700px;
+    margin: 0 auto;
+    display: block;
+    font-weight: 2.2rem;
+}
+
+
+/* Page background */
+.sell-business-section {
+    background: url('/static/images/business-bg.jpg') no-repeat center center/cover;
+    padding: 50px 0;
+}
+
+/* Page title */
+.page-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Blurred card container (used for each section) */
+.sell-business-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+    color: white;
+    padding: 30px;
+}
+
+/* Section heading */
+.sell-business-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Input fields */
+.sell-business-card .form-control {
+    background: rgba(255, 255, 255, 0.15);
+    border: none; /* keep default look */
+    border-radius: 8px;
+    color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.sell-business-card .form-control:focus {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: none;
+    outline: none;
+    color: white;
+}
+
+/* Labels with icons */
+.sell-business-card label {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 5px;
+}
+
+/* Placeholder color */
+.sell-business-card ::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+
+/* Checkbox label */
+.sell-business-card .form-check-label {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Button */
+.sell-business-card .btn {
+    padding: 12px;
+    font-weight: bold;
+    border-radius: 8px;
+    background: linear-gradient(90deg,  #00f7ff, #0084ff, #00f7ff);
+    animation: sparkle 2s linear infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .sell-business-card {
+        padding: 20px;
+    }
+    .page-title {
+        font-size: 1.8rem;
+    }
+}

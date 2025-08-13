@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/sell_business.css' %}">
+{% endblock head %}
+
+{% block title %}Sell Business | {% endblock title %}
+
+{% block body %}
+
+<section class="sell-business-section py-5">
+    <div class="container">
+        <div class="page-header text-center mb-5">
+            <h1 class="page-title">Sell Your Business with Confidence</h1>
+            <p class="lead" style="color:grey;">Connect with serious buyers and get the best value for your business, fast.</p>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+
+                <!-- Your Information Section -->
+                <div class="sell-business-card mb-4 p-4">
+                    <h4 class="mb-4 text-center" style="color: #00f2ff; text-decoration: underline;">Your Information</h4>
+                    <form method="post" action="{% url 'sell_business' %}" novalidate>
+                        {% csrf_token %}
+                        <div class="form-group mb-3">
+                            <label for="name"><i class="fas fa-user"></i> Full Name<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" value="{{ form_data.name|default_if_none:'' }}" required minlength="2">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="email"><i class="fas fa-envelope"></i> Email<span style="color:red;">*</span></label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" value="{{ form_data.email|default_if_none:'' }}" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="phone"><i class="fas fa-phone"></i> Phone<span style="color:red;">*</span></label>
+                            <input type="tel" class="form-control" id="phone" name="phone" pattern="\d{10}" inputmode="numeric" maxlength="10" placeholder="Optional - e.g.234 567 8900" value="{{ form_data.phone|default_if_none:'' }}" required>
+                        </div>
+                </div>
+
+                <!-- Business Information Section -->
+                <div class="sell-business-card mb-4 p-4">
+                    <h4 class="mb-4 text-center" style="color: #00f2ff; text-decoration: underline;">Business Information</h4>
+                        <div class="form-group mb-3">
+                            <label for="business_name"><i class="fas fa-building"></i> Business Name<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Enter your business name" value="{{ form_data.business_name|default_if_none:'' }}" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="industry"><i class="fas fa-industry"></i> Industry<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="industry" name="industry" placeholder="E.g., Retail, Technology" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="location"><i class="fas fa-map-marker-alt"></i> Address<span style="color:red;">*</span></label>
+                            <input type="text" class="form-control" id="location" name="location" placeholder="Enter your office address" required>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="established"><i class="fas fa-calendar"></i> Year Established</label>
+                            <input type="number" class="form-control" id="established" name="established" min="1800" max="2025">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="revenue"><i class="fas fa-dollar-sign"></i> Annual Revenue</label>
+                            <input type="number" class="form-control" id="revenue" name="revenue" placeholder="Enter amount in USD"  min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="asking_price"><i class="fas fa-tags"></i> Asking Price</label>
+                            <input type="number" class="form-control" id="asking_price" name="asking_price" placeholder="Enter amount in USD"  min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="reason"><i class="fas fa-question-circle"></i> Reason for Selling</label>
+                            <input type="text" class="form-control" id="reason" name="reason" placeholder="Short explanation">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="description"><i class="fas fa-comment-dots"></i> Business Description<span style="color:red;">*</span></label>
+                            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Describe your business, strengths, customers, etc." required>{{ form_data.description|default_if_none:'' }}</textarea>
+                        </div>
+                        <div class="form-check mb-3">
+                            <input type="checkbox" class="form-check-input" id="terms" name="terms"  {% if form_data.terms %}checked{% endif %} required>
+                            <label class="form-check-label" for="terms">
+                                I agree to the 
+                                <a href="{% url 'terms' %}" target="_blank" style="text-decoration:underline;">Terms & Conditions</a> 
+                                and 
+                                <a href="{% url 'privacy' %}" target="_blank" style="text-decoration:underline;">Privacy Policy</a>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">
+                            <i class="fas fa-paper-plane"></i> Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const termsCheckbox = document.getElementById('terms');
+    if (!termsCheckbox.checked) {
+        e.preventDefault();
+        alert("You must agree to the Terms & Conditions and Privacy Policy to submit the form.");
+    }
+});
+</script>
+{% endblock body %}
