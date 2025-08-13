@@ -1,136 +1,133 @@
 {% extends 'base.html' %}
 
-{% block title %}Marketplace | {% endblock title %}
+{% block title %}
+  Marketplace |
+{% endblock %}
 
 {% block head %}
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/lenders_marketplace.css' %}">
-{% endblock head %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/lenders_marketplace.css' %}" />
+{% endblock %}
 
 {% block body %}
-<div class="heading">
+  <div class="heading">
     <h1 class="page-title">Lenders / Marketplace</h1>
     <p class="subheading" style="color:grey;">Empowering Your Practice with Smarter Financing Options.</p>
-</div>
-<br/>
-<div class="spider-diagram-container">
+  </div>
+  <br />
+  <div class="spider-diagram-container">
     <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
     max-width: 1500px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff);">
-        <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+      <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
         0 0 5px rgba(10, 10, 10, 0.6),
         0 0 10px rgba(20, 20, 20, 0.6),
         0 0 20px rgba(7, 7, 7, 0.6);">Partnered Lenders</h1>
-    </div> 
+    </div>
     <div class="marketplace-container">
-        <div class="spider-diagram" id="spiderDiagram">
-          <svg class="lines" width="900" height="900"></svg>
+      <div class="spider-diagram" id="spiderDiagram">
+        <svg class="lines" width="900" height="900"></svg>
 
-          <div class="lender central" id="lendeavor">Lendeavor</div>
-          <div class="lender" id="iou">IOU</div>
-          <div class="lender" id="kalamata">Kalamata</div>
-          <div class="lender" id="pirs">PIRS</div>
-          <div class="lender" id="wallstreet">Wall Street</div>
-          <div class="lender" id="channel">Channel</div>
-          <div class="lender" id="libertas">Libertas</div>
-          <div class="lender" id="peac">PEAC</div>
-          <div class="lender" id="mulligan">Mulligan</div>
-          <div class="lender" id="northeastern">Northeastern</div>
-          <div class="lender" id="tabbank">Tab Bank</div>
-          <div class="lender" id="idea">Idea</div>
-          <div class="lender" id="headway">Headway</div>
-          <div class="lender" id="ondeck">On Deck</div>
-          <div class="lender" id="finpart">Fin Part</div>
-        </div>
-        <div class="lender-info-panel" id="lenderInfo">
-          <h2>Lendeavor</h2>
-          <p>Lendeavor is a financing platform that partners with various lenders to provide smart funding options for your practice.</p>
-        </div>
+        <div class="lender central" id="lendeavor">Lendeavor</div>
+        <div class="lender" id="iou">IOU</div>
+        <div class="lender" id="kalamata">Kalamata</div>
+        <div class="lender" id="pirs">PIRS</div>
+        <div class="lender" id="wallstreet">Wall Street</div>
+        <div class="lender" id="channel">Channel</div>
+        <div class="lender" id="libertas">Libertas</div>
+        <div class="lender" id="peac">PEAC</div>
+        <div class="lender" id="mulligan">Mulligan</div>
+        <div class="lender" id="northeastern">Northeastern</div>
+        <div class="lender" id="tabbank">Tab Bank</div>
+        <div class="lender" id="idea">Idea</div>
+        <div class="lender" id="headway">Headway</div>
+        <div class="lender" id="ondeck">On Deck</div>
+        <div class="lender" id="finpart">Fin Part</div>
+      </div>
+      <div class="lender-info-panel" id="lenderInfo">
+        <h2>Lendeavor</h2>
+        <p>Lendeavor is a financing platform that partners with various lenders to provide smart funding options for your practice.</p>
+      </div>
     </div>
-</div>
+  </div>
 
-
-<div class="container">
-    <br/>
+  <div class="container">
+    <br />
     <div class="table-container">
-        <table>
-            <thead>
-                <tr>
-                    <th>Lenders</th>
-                    <th>Funding Type</th>
-                    <th>Funding Range</th>
-                    <th>Min Credit Score</th>
-                    <th>Time to Fund</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for lender in lenders_info %}
-                <tr>
-                    <td class="Lender_name">{{ lender.Lender_name }}</td>
-                    <td class="Funding_type">{{ lender.Funding_type }}</td>
-                    <td class="Funding_amount">{{ lender.Funding_amount }}</td>
-                    <td class="Min_credit_score">{{ lender.Min_credit_score }}</td>
-                    <td class="Time_to_fund">{{ lender.Time_to_fund }}</td>
-                </tr>
-                {% empty %}
-                <tr>
-                    <td colspan="5">No lenders available at this time.</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+      <table>
+        <thead>
+          <tr>
+            <th>Lenders</th>
+            <th>Funding Type</th>
+            <th>Funding Range</th>
+            <th>Min Credit Score</th>
+            <th>Time to Fund</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for lender in lenders_info %}
+            <tr>
+              <td class="Lender_name">{{ lender.Lender_name }}</td>
+              <td class="Funding_type">{{ lender.Funding_type }}</td>
+              <td class="Funding_amount">{{ lender.Funding_amount }}</td>
+              <td class="Min_credit_score">{{ lender.Min_credit_score }}</td>
+              <td class="Time_to_fund">{{ lender.Time_to_fund }}</td>
+            </tr>
+          {% empty %}
+            <tr>
+              <td colspan="5">No lenders available at this time.</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
     </div>
-    <br/>
+    <br />
     <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
     max-width: 1500px; background: linear-gradient(135deg, #00ff9d, #00c3ff);">
-        <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+      <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
         0 0 5px rgba(10, 10, 10, 0.6),
         0 0 10px rgba(20, 20, 20, 0.6),
         0 0 20px rgba(7, 7, 7, 0.6);">Our Top Lenders</h1>
     </div>
     {% for category_name, lenders in grouped_lenders.items %}
-    <div class="funding-heading"><h1>{{ category_name }}</h1></div>
-        <div class="product-card-container">
-            <table class="product-card-table">
-                {% for lender in lenders %}
-                    <tr>
-                        <td class="product-card-heading-td">
-                            <div class="product-card-heading">
-                                <img src="{% static lender.logo_path %}" alt="{{ lender.Lender_name|lower }}">
-                                <h3>{{ lender.Lender_name }}</h3>
-                            </div>
-                        </td>
-                        <td class="product-card-content-td">
-                            <div class="product-card-new">
-                                <div class="product-card-middle">
-                                    <div class="product-stat">
-                                        <div class="label">Funding Amount</div>
-                                        <div class="value">{{ lender.Funding_amount }}</div>
-                                    </div>
-                                    <div class="product-stat">
-                                        <div class="label">Terms</div>
-                                        <div class="value">{{ lender.Terms }}</div>
-                                    </div>
-                                    <div class="product-stat">
-                                        <div class="label">Min Credit Score</div>
-                                        <div class="value">{{ lender.Min_credit_score }}</div>
-                                    </div>
-                                    <div class="product-stat">
-                                        <div class="label">Time to Fund</div>
-                                        <div class="value">{{ lender.Time_to_fund }}</div>
-                                    </div>
-                                </div>
-                                <div class="product-card-buttons">
-                                    <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                {% endfor %}
-            </table>
-        </div>
-        <div class="page-divider" style="max-width: 1280px;"></div>
+      <div class="funding-heading">
+        <h1>{{ category_name }}</h1>
+      </div>
+      <div class="product-card-container">
+        {% for lender in lenders %}
+          <div class="product-card-wrapper">
+            <div class="product-card-heading">
+              <img src="{% static lender.logo_path %}" alt="{{ lender.Lender_name|lower }}" />
+              <h3>{{ lender.Lender_name }}</h3>
+            </div>
+            <div class="product-card-new">
+              <div class="product-card-middle">
+                <div class="product-stat">
+                  <div class="label">Funding Amount</div>
+                  <div class="value">{{ lender.Funding_amount }}</div>
+                </div>
+                <div class="product-stat">
+                  <div class="label">Terms</div>
+                  <div class="value">{{ lender.Terms }}</div>
+                </div>
+                <div class="product-stat">
+                  <div class="label">Min Credit Score</div>
+                  <div class="value">{{ lender.Min_credit_score }}</div>
+                </div>
+                <div class="product-stat">
+                  <div class="label">Time to Fund</div>
+                  <div class="value">{{ lender.Time_to_fund }}</div>
+                </div>
+              </div>
+              <div class="product-card-buttons">
+                <a href="{% url 'apply' %}" class="btn-offer">Get an offer</a>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      <div class="page-divider" style="max-width: 1280px;"></div>
     {% endfor %}
-</div>
+  </div>
 
-<script src="{% static 'js/rotational_lenders.js' %}"></script>
-{% endblock body %}
+  <script src="{% static 'js/rotational_lenders.js' %}"></script>
+{% endblock %}
