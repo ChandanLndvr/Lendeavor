@@ -13,7 +13,7 @@ pipeline {
                 echo "Building.."
                 sh '''
                 cd lndvr_site 
-                pip install -r requirements.txt
+                python3 -m pip install -r requirements.txt
                 '''
             }
         }
