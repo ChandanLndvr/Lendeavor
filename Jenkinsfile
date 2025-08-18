@@ -12,7 +12,8 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                echo "doing build stuff.."
+                cd lendeavor/lndvr_site
+                pip install -r requirements.txt
                 '''
             }
         }
