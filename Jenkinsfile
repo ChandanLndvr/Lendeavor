@@ -12,18 +12,9 @@ pipeline {
             steps {
                 echo "Building.."
                 sh '''
-                apt-get update && apt-get install -y \
-                    build-essential \
-                    libmysqlclient-dev \
-                    libssl-dev \
-                    rustc \
-                    libjpeg-dev \
-                    zlib1g-dev \
-                    libpng-dev
-
                 cd lndvr_site
-                python3 -m pip install --upgrade pip
-                python3 -m pip install -r requirements.txt
+                python -m pip install --upgrade pip
+                python -m pip install -r requirements.txt
                 '''
             }
         }
