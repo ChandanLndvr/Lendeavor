@@ -1,0 +1,48 @@
+# =========================
+# Docker Compose for Lendeavor
+# =========================
+
+services:
+  # =========================
+  # Django Web App
+  # =========================
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: chandanlndvr/lendeavor:latest
+    container_name: lendeavor_web
+    command: gunicorn lndvr_site.wsgi:application --bind 0.0.0.0:8000
+    volumes:
+      - .:/code
+    ports:
+      - "8001:8000"
+    depends_on:
+      - db
+    env_file:
+      - ./lndvr_site/.env
+    environment:
+      - DJANGO_SETTINGS_MODULE=lndvr_site.settings
+      - PYTHONPATH=/app/lndvr_site
+    working_dir: /app/lndvr_site
+
+  # =========================
+  # MySQL Database
+  # =========================
+  db:
+    image: mysql:8.0
+    container_name: lendeavor_db
+    restart: always
+    environment:
+      MYSQL_DATABASE: Lendeavor
+      MYSQL_ROOT_PASSWORD: Ansh@1234
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql              # Persist DB data
+
+# =========================
+# Named Volumes
+# =========================
+volumes:
+  mysql_data:
