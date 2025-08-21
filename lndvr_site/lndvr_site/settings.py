@@ -87,21 +87,6 @@ WSGI_APPLICATION = 'lndvr_site.wsgi.application'
 #     }
 # }
 
-# Manually added
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'Lendeavor', #'your_db_name',
-        'USER': 'root', #'your_db_user',
-        'PASSWORD': 'Ansh@1234', #'your_db_password',
-        'HOST': 'localhost',  # or your DB host
-        'PORT': '3306',        # default MySQL port
-        'OPTIONS': {
-            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
-        }
-    }
-}
 
 
 
@@ -184,6 +169,25 @@ MS_GRAPH_CLIENT_SECRET = env("MS_GRAPH_CLIENT_SECRET")
 MS_GRAPH_TENANT_ID = env("MS_GRAPH_TENANT_ID")
 GRAPH_SENDER_EMAIL = env("GRAPH_SENDER_EMAIL")
 CONTACT_EMAIL = env("CONTACT_EMAIL")
+
+
+# Manually added database configurations
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': env("DB_NAME"),
+        'USER': env("DB_USER"),
+        'PASSWORD': env("DB_PASSWORD"),
+        'HOST': env("DB_HOST"),
+        'PORT': env.int("DB_PORT"),
+        'OPTIONS': {
+            'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        }
+    }
+}
+
+
 
 #----------------- maually added for creating logs of important actions -----------------------
 
