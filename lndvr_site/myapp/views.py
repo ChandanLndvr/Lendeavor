@@ -310,7 +310,7 @@ def career_page(request):
         if payload:
             user_type = payload.get('user_type')
 
-    show_admin_tools = (user_type == 'Admin')
+    show_admin_tools = (str(user_type).lower() == 'admin')
 
     context = {
         'jobs': all_jobs,
