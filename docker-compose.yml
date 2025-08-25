@@ -15,8 +15,10 @@ services:
     command: gunicorn lndvr_site.wsgi:application --bind 0.0.0.0:8000
     volumes:
       - .:/code
-    ports:
-      - "8001:8000"
+      - ./lndvr_site/staticfiles:/app/staticfiles
+      - ./lndvr_site/media:/app/media
+    expose:
+      - "8000"   # expose internally for nginx
     depends_on:
       - db
     env_file:
@@ -39,7 +41,22 @@ services:
     ports:
       - "3307:3306"
     volumes:
-      - mysql_data:/var/lib/mysql              # Persist DB data
+      - mysql_data:/var/lib/mysql
+
+  # =========================
+  # NGINX Reverse Proxy
+  # =========================
+  nginx:
+    image: nginx:latest
+    container_name: nginx_proxy
+    depends_on:
+      - web
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./lndvr_site/staticfiles:/app/staticfiles:ro
+      - ./lndvr_site/media:/app/media:ro
 
 # =========================
 # Named Volumes
