@@ -8,6 +8,50 @@
     color: white;
 }
 
+/* Careers Page Search Bar */
+
+#job-search,
+#job-location {
+    background: rgba(255, 255, 255, 0.05); /* subtle transparent background */
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    backdrop-filter: blur(6px); /* blur effect */
+    transition: all 0.3s ease;
+}
+
+#job-search::placeholder,
+#job-location::placeholder {
+    color: rgba(255, 255, 255, 0.6); /* faded white placeholder */
+}
+
+.search-bar-container {
+    display: flex;               /* ensure flex layout */
+    max-width: 98%;              /* take almost full width */
+    justify-content: space-between; /* spread inputs & button */
+    align-items: center;         /* vertical alignment */
+    margin: 10px auto;           /* vertical spacing + center horizontally */
+    gap: 10px;                   /* spacing between items */
+    flex-wrap: nowrap;            /* keep all items in one line */
+}
+
+#job-search {
+    flex: 1 1 60%; /* grows to 60% of the row width */
+    min-width: 200px;
+}
+
+#job-location {
+    flex: 1 1 25%; /* grows to 25% of the row width */
+    min-width: 150px;
+}
+
+#job-filter-btn {
+    flex: 1 1 15%; /* button takes remaining 15% */
+    min-width: 100px;
+}
+
 /* ==== Job Card Styling ==== */
 .job-card {
     background: rgba(255, 255, 255, 0.05);
@@ -67,4 +111,19 @@
 .btn-gradient1:hover {
     opacity: 0.9;
     transform: scale(1.02);
+}
+
+/* Responsive - no wrapping */
+@media (max-width: 768px) {
+    .search-bar-container {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    #job-search,
+    #job-location,
+    #job-filter-btn {
+        flex: 1 1 100%;
+        width: 100%;
+    }
 }

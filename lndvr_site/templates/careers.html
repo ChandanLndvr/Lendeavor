@@ -17,26 +17,31 @@
         <p class="lead" style="color: grey;">We're building something great. Be a part of it.</p>
     </div>
 
-    <!-- Bulk Delete Form -->
+    <!-- Search & Filter Inputs (Text Fields) -->
+    <div class="row mb-4">
+        <div class="col-12 d-flex gap-2 justify-content-between align-items-center search-bar-container">
+            <input type="text" id="job-search" class="form-control" placeholder="Search job role...">
+            <input type="text" id="job-location" class="form-control" placeholder="Enter location...">
+            <button type="button" id="job-filter-btn" class="btn btn-primary" style="background: linear-gradient(90deg,  #0084ff, #00f7ff, #0084ff);">Search</button>
+        </div>
+    </div>
+
+    <!-- Bulk Delete Form (Admins) -->
     <form method="post" action="{% url 'bulkDeleteJobs' %}">
         {% csrf_token %}
 
-        <!-- Select All and Delete Selected -->
-         {% if show_admin_tools %}
+        {% if show_admin_tools %}
         <div class="d-flex justify-content-end align-items-center gap-2 mb-4 pb-2"
-            style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
+             style="background: rgba(255, 255, 255, 0.05); font-weight: 500; backdrop-filter: blur(6px); border-radius: 8px; padding: 8px;">
 
             <!-- Select All -->
-            
             <input type="checkbox" id="select-all" class="form-check-input" style="cursor: pointer;">
-            <label for="select-all" class="text-light mt-1" style="cursor: pointer;">
-                Select All
-            </label>
-        
+            <label for="select-all" class="text-light mt-1" style="cursor: pointer;">Select All</label>
+
             <!-- Delete Selected Button -->
             <button type="submit" id="delete-selected-button" name="action" value="delete_selected" class="btn btn-link p-0"
-                style="font-weight: 550; color: #ddecec; display: none; text-decoration: none;">|
-                <i class="bi bi-trash"></i> Delete Selected
+                    style="font-weight: 550; color: #ddecec; display: none; text-decoration: none;">
+                | <i class="bi bi-trash"></i> Delete Selected
             </button>
         </div>
         {% endif %}
@@ -44,14 +49,15 @@
         <!-- Job Cards -->
         <div class="row">
             {% for job in jobs %}
-            <div class="col-md-6 mb-4">
+            <div class="col-md-6 mb-4 job-card-wrapper" 
+                 data-title="{{ job.Title|lower }}" 
+                 data-location="{{ job.Location|lower }}">
                 <div class="job-card h-100 p-4 position-relative">
 
-                    <!-- Checkbox for selection (top-left corner) -->
                     {% if show_admin_tools %}
                     <div class="position-absolute top-0 start-0 mt-1 ms-2">
                         <input class="form-check-input" type="checkbox" name="job_ids" value="{{ job.Job_id }}"
-                            id="jobCheck{{ forloop.counter }}" style="cursor: pointer;">
+                               id="jobCheck{{ forloop.counter }}" style="cursor: pointer;">
                     </div>
                     {% endif %}
 
@@ -70,26 +76,15 @@
                     </div>
 
                     <!-- Job Details -->
-                    <p class="text-muted mb-2">
-                        <strong>Location:</strong>
-                        <span style="color: grey;">{{ job.Location }}</span>
-                    </p>
-                    <p class="text-light">
-                        <strong>Skills:</strong>
-                        <span style="color: grey;">{{ job.Skills }}</span>
-                    </p>
-                    <p class="text-light">
-                        <strong>Description:</strong>
-                        <a href="{% url 'jobApplication' job.Job_id %}"
-                            style="color: rgb(0, 204, 255); text-decoration: none;">
-                            View
-                        </a>
+                    <p class="text-muted mb-2"><strong>Location:</strong> <span style="color: grey;">{{ job.Location }}</span></p>
+                    <p class="text-light"><strong>Skills:</strong> <span style="color: grey;">{{ job.Skills }}</span></p>
+                    <p class="text-light"><strong>Description:</strong> 
+                        <a href="{% url 'jobApplication' job.Job_id %}" style="color: rgb(0, 204, 255); text-decoration: none;">View</a>
                     </p>
 
                     <!-- Apply Now Button -->
                     <div class="d-flex justify-content-end mt-auto pt-3">
-                        <a href="{% url 'jobApplication' job.Job_id %}" class="btn btn-success btn-gradient"
-                            style="margin-top: -12px;">
+                        <a href="{% url 'jobApplication' job.Job_id %}" class="btn btn-success btn-gradient" style="margin-top: -12px;">
                             Apply Now <span class="arrow">↗</span>
                         </a>
                     </div>
@@ -100,20 +95,17 @@
         </div>
 
         <!-- Add Job Button -->
-
         <div class="text-end mb-4">
             {% if show_admin_tools %}
-            <a href="{% url 'jobPost' %}" class="btn btn-success btn-gradient1 mt-2">
-                + Add Jobs
-            </a>
+            <a href="{% url 'jobPost' %}" class="btn btn-success btn-gradient1 mt-2">+ Add Jobs</a>
             {% endif %}
         </div>
-
-
     </form>
+
 </section>
 
-<!-- Attach the controlling JS -->
+<!-- JS: Live Filtering -->
 <script src="{% static 'js/select_bulk_delete_jobs.js' %}"></script>
-<script src = "{% static 'js/job_crud_popup.js' %}"></script>
+<script src="{% static 'js/job_crud_popup.js' %}"></script>
+<script src="{% static 'js/job_search.js' %}"></script>
 {% endblock %}
