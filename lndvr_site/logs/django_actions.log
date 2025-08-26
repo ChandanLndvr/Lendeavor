@@ -16194,3 +16194,39 @@ INFO 2025-08-26 12:50:32,740 django.server "GET /static/js/job_search.js HTTP/1.
 INFO 2025-08-26 12:51:38,825 django.server "GET /careers/ HTTP/1.1" 200 16652
 INFO 2025-08-26 12:51:38,857 django.server "GET /static/css/careers.css HTTP/1.1" 304 0
 INFO 2025-08-26 12:51:38,877 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-08-26 14:09:21,622 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-26 14:09:34,832 django.server "GET / HTTP/1.1" 200 21327
+INFO 2025-08-26 14:09:34,864 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 304 0
+INFO 2025-08-26 14:09:34,866 django.server "GET /static/landing_page.png HTTP/1.1" 304 0
+INFO 2025-08-26 14:09:34,867 django.server "GET /static/people/lucas.png HTTP/1.1" 304 0
+INFO 2025-08-26 14:09:34,868 django.server "GET /static/people/kat.png HTTP/1.1" 304 0
+INFO 2025-08-26 14:09:34,869 django.server "GET /static/people/anish.png HTTP/1.1" 304 0
+INFO 2025-08-26 14:09:34,873 django.server "GET /static/people/casey.png HTTP/1.1" 304 0
+WARNING 2025-08-26 14:09:38,801 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-26 14:09:38,802 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-08-26 14:09:40,963 django.server "GET /careers HTTP/1.1" 301 0
+INFO 2025-08-26 14:09:40,974 django.server "GET /careers/ HTTP/1.1" 200 16652
+WARNING 2025-08-26 14:09:41,002 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-08-26 14:09:41,003 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-08-26 14:09:41,124 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4673
+INFO 2025-08-26 14:09:41,126 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-08-26 14:09:41,128 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-26 14:09:41,129 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-26 14:09:41,133 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-26 14:09:41,134 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-08-26 14:09:41,137 django.server "GET /static/css/careers.css HTTP/1.1" 200 3126
+INFO 2025-08-26 14:09:41,137 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-08-26 14:09:41,138 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-26 14:11:15,451 django.server "GET /careers/ HTTP/1.1" 200 16652
+INFO 2025-08-26 14:11:15,493 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-08-26 14:11:15,493 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4673
+INFO 2025-08-26 14:11:15,502 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-08-26 14:11:15,502 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-08-26 14:11:15,504 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+WARNING 2025-08-26 14:11:15,516 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-08-26 14:11:15,517 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-08-26 14:11:15,517 django.server "GET /static/css/careers.css HTTP/1.1" 200 3124
+WARNING 2025-08-26 14:11:15,517 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-08-26 14:11:15,519 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-08-26 14:11:15,519 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-08-26 14:11:15,806 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
