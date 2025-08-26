@@ -7,10 +7,10 @@ const addFiles = files => {
   const currentCount = dt.files.length;
   const newFiles = Array.from(files);
 
-  if (currentCount + newFiles.length > 3) {
-    alert("You can upload up to 3 files only.");
+  if (currentCount + newFiles.length > 4) {
+    alert("You can upload up to 4 files only.");
     // Optionally add only files that fit in the limit
-    const allowedFiles = newFiles.slice(0, 3 - currentCount);
+    const allowedFiles = newFiles.slice(0, 4 - currentCount);
     for (const file of allowedFiles) {
       if (![...dt.files].some(f => f.name === file.name && f.size === file.size)) {
         dt.items.add(file);

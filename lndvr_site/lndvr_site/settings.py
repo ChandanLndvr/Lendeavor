@@ -139,7 +139,7 @@ STATICFILES_DIRS = [
 ]
 
 # Production static files (for Docker)
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # <-- THIS IS REQUIRED
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # <-- THIS IS REQUIRED
 
 # Media configuration
 
