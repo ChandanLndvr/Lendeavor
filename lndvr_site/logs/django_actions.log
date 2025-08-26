@@ -17479,3 +17479,14 @@ INFO 2025-08-26 16:19:16,135 django.server "GET /products/ HTTP/1.1" 200 26122
 INFO 2025-08-26 16:19:18,134 django.server "GET / HTTP/1.1" 200 21480
 INFO 2025-08-26 16:19:18,150 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
 INFO 2025-08-26 16:19:58,788 django.server "GET / HTTP/1.1" 200 21480
+INFO 2025-08-26 16:25:03,178 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-08-26 16:25:05,985 django.server "GET /apply/ HTTP/1.1" 200 22294
+INFO 2025-08-26 16:25:06,006 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-08-26 16:25:06,007 django.server "GET /static/css/apply.css HTTP/1.1" 304 0
+INFO 2025-08-26 16:25:06,011 django.server "GET /static/js/auto_formatter.js HTTP/1.1" 304 0
+INFO 2025-08-26 16:25:06,012 django.server "GET /static/js/applynow.js HTTP/1.1" 304 0
+INFO 2025-08-26 16:25:06,013 django.server "GET /static/js/drag_drop_docs.js HTTP/1.1" 304 0
+INFO 2025-08-26 16:25:31,733 django.server "GET /apply/ HTTP/1.1" 200 22294
+INFO 2025-08-26 16:25:32,974 django.server "GET /apply/ HTTP/1.1" 200 22294
+INFO 2025-08-26 16:31:27,072 django.server "GET /products/ HTTP/1.1" 200 26122
+INFO 2025-08-26 16:31:27,091 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
