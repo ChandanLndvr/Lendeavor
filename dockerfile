@@ -6,8 +6,8 @@ FROM python:3.11-slim
 # =========================
 # Environment Variables
 # =========================
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
 
 # =========================
 # Work Directory
