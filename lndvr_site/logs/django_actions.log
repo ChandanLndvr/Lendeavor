@@ -22194,3 +22194,35 @@ INFO 2025-09-02 10:23:31,805 django.server "GET /faq/ HTTP/1.1" 200 22999
 INFO 2025-09-02 10:23:31,822 django.server "GET /static/js/faq_search.js HTTP/1.1" 304 0
 INFO 2025-09-02 10:23:31,822 django.server "GET /static/css/faq.css HTTP/1.1" 304 0
 INFO 2025-09-02 10:23:33,858 django.server "GET /careers/ HTTP/1.1" 200 16652
+INFO 2025-09-02 10:27:17,732 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-02 10:27:20,282 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:27:22,643 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:27:23,643 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:27:23,948 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:49,792 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:51,066 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:52,060 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:52,451 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:52,786 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-02 10:30:53,037 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+WARNING 2025-09-02 10:30:55,804 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 10:30:55,805 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 10:31:07,216 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+WARNING 2025-09-02 10:31:07,252 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 10:31:07,253 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 10:31:10,657 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+WARNING 2025-09-02 10:31:10,685 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 10:31:10,688 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 10:31:10,799 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 4673
+INFO 2025-09-02 10:31:10,799 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6030
+INFO 2025-09-02 10:31:10,802 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-02 10:31:10,802 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-02 10:31:10,803 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-02 10:31:10,803 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-02 10:31:10,805 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-02 10:31:10,809 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-02 10:31:10,811 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-02 10:31:10,811 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-02 10:31:10,825 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-02 10:31:10,828 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 10:31:10,965 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
