@@ -20,7 +20,30 @@
             </p>
         </div>
 
+        <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
+            max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff); margin-bottom: 50px;">
+                <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+                    0 0 5px rgba(10, 10, 10, 0.6),
+                    0 0 10px rgba(20, 20, 20, 0.6),
+                    0 0 20px rgba(7, 7, 7, 0.6);
+                    ">How does it work?</h1>
+        </div>
+
         <div class="row justify-content-center">
+            <div class="nested-image text-center full-height flex-fill">
+                <img src="{% static 'sellBusiness.png' %}" alt="Lendeavor Affiliate Banner"
+                    class="side-image img-fluid">
+
+                <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
+                    max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff); margin-top: 30px; margin-bottom: 50px;">
+                        <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
+                            0 0 5px rgba(10, 10, 10, 0.6),
+                            0 0 10px rgba(20, 20, 20, 0.6),
+                            0 0 20px rgba(7, 7, 7, 0.6);
+                            ">Fill the form to connect</h1>
+                </div>
+            </div>
+
             <div class="col-lg-8">
 
                 <!-- Your Information Section -->
@@ -45,51 +68,65 @@
                 <!-- Business Information Section -->
                 <div class="sell-business-card mb-4 p-4">
                     <h4 class="mb-4 text-center" style="color: #00f2ff; text-decoration: underline;">Business Information</h4>
-                        <div class="form-group mb-3">
-                            <label for="business_name"><i class="fas fa-building"></i> Business Name<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Enter your business name" value="{{ form_data.business_name|default_if_none:'' }}" required>
+                    
+                    <div class="row">
+                        <!-- Left Column -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="business_name"><i class="fas fa-building"></i> Business Name<span style="color:red;">*</span></label>
+                                <input type="text" class="form-control" id="business_name" name="business_name" placeholder="Enter your business name" value="{{ form_data.business_name|default_if_none:'' }}" required>
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <label for="location"><i class="fas fa-map-marker-alt"></i> Address<span style="color:red;">*</span></label>
+                                <input type="text" class="form-control" id="location" name="location" placeholder="Enter your office address" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="revenue"><i class="fas fa-dollar-sign"></i> Annual Revenue</label>
+                                <input type="number" class="form-control" id="revenue" name="revenue" placeholder="Enter amount in USD" min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="description"><i class="fas fa-comment-dots"></i> Business Description<span style="color:red;">*</span></label>
+                                <textarea class="form-control" id="description" name="description" rows="4" placeholder="Describe your business, strengths, customers, etc." required>{{ form_data.description|default_if_none:'' }}</textarea>
+                            </div>
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="industry"><i class="fas fa-industry"></i> Industry<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control" id="industry" name="industry" placeholder="E.g., Retail, Technology" required>
+
+                        <!-- Right Column -->
+                        <div class="col-md-6">
+                            <div class="form-group mb-3">
+                                <label for="industry"><i class="fas fa-industry"></i> Industry<span style="color:red;">*</span></label>
+                                <input type="text" class="form-control" id="industry" name="industry" placeholder="E.g., Retail, Technology" required>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="established"><i class="fas fa-calendar"></i> Year Established</label>
+                                <input type="number" class="form-control" id="established" name="established" min="1800" max="2025">
+                            </div>
+                            
+                            <div class="form-group mb-3">
+                                <label for="asking_price"><i class="fas fa-tags"></i> Asking Price</label>
+                                <input type="number" class="form-control" id="asking_price" name="asking_price" placeholder="Enter amount in USD" min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="reason"><i class="fas fa-question-circle"></i> Reason for Selling</label>
+                                <textarea type="text" class="form-control" id="reason" name="reason" rows="4" placeholder="Short explanation">{{ form_data.reason|default_if_none:'' }}</textarea>
+                            </div>
+                            
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="location"><i class="fas fa-map-marker-alt"></i> Address<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control" id="location" name="location" placeholder="Enter your office address" required>
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="established"><i class="fas fa-calendar"></i> Year Established</label>
-                            <input type="number" class="form-control" id="established" name="established" min="1800" max="2025">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="revenue"><i class="fas fa-dollar-sign"></i> Annual Revenue</label>
-                            <input type="number" class="form-control" id="revenue" name="revenue" placeholder="Enter amount in USD"  min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="asking_price"><i class="fas fa-tags"></i> Asking Price</label>
-                            <input type="number" class="form-control" id="asking_price" name="asking_price" placeholder="Enter amount in USD"  min="0" max="999999999999" oninput="this.value = this.value.slice(0,12);">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="reason"><i class="fas fa-question-circle"></i> Reason for Selling</label>
-                            <input type="text" class="form-control" id="reason" name="reason" placeholder="Short explanation">
-                        </div>
-                        <div class="form-group mb-3">
-                            <label for="description"><i class="fas fa-comment-dots"></i> Business Description<span style="color:red;">*</span></label>
-                            <textarea class="form-control" id="description" name="description" rows="4" placeholder="Describe your business, strengths, customers, etc." required>{{ form_data.description|default_if_none:'' }}</textarea>
-                        </div>
-                        <div class="form-check mb-3">
-                            <input type="checkbox" class="form-check-input" id="terms" name="terms"  {% if form_data.terms %}checked{% endif %} required>
-                            <label class="form-check-label" for="terms">
-                                I agree to the 
-                                <a href="{% url 'terms' %}" target="_blank" style="text-decoration:underline;">Terms & Conditions</a> 
-                                and 
-                                <a href="{% url 'privacy' %}" target="_blank" style="text-decoration:underline;">Privacy Policy</a>
-                            </label>
-                        </div>
-                        <button type="submit" class="btn btn-primary w-100">
-                            <i class="fas fa-paper-plane"></i> Submit
-                        </button>
-                    </form>
+                    </div>
+
+                    <!-- Terms & Submit -->
+                    <div class="form-check mb-3">
+                        <input type="checkbox" class="form-check-input" id="terms" name="terms" {% if form_data.terms %}checked{% endif %} required>
+                        <label class="form-check-label" for="terms">
+                            I agree to the 
+                            <a href="{% url 'terms' %}" target="_blank" style="text-decoration:underline;">Terms & Conditions</a> 
+                            and 
+                            <a href="{% url 'privacy' %}" target="_blank" style="text-decoration:underline;">Privacy Policy</a>
+                        </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">
+                        <i class="fas fa-paper-plane"></i> Submit
+                    </button>
                 </div>
             </div>
         </div>
