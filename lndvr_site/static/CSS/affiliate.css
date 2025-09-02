@@ -7,74 +7,91 @@ html, body {
   color: white;
 }
 
-/* Updated CSS for Affiliate Form to match clean, modern two-column form */
-
-.info-image-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-    max-width: 1250px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 0; /* Add this */
-    justify-content: flex-start; /* Prevent centering that creates gaps */
-    position: relative;
-    z-index: 1;
-}
-
+/* Hero Section */
 .heading-container {
-    background: rgba(24, 23, 23, 0.05);
-    backdrop-filter: blur(3px);
-    max-width: 100%;
     display: flex;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 4;
-    margin-bottom: 100px;
+    padding: 2rem 12rem;       /* Reduced from 4rem */
+    margin-bottom: 2rem;      /* Reduced from 3rem */
+    margin-top: 2rem;         /* Reduced from 5rem */
 }
 
-.nested-image {
-    flex: 1;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-    /* max-width: 700px; */
-}
-
-.blurred-heading p{
-    max-width: 70%;
+.blurred-heading {
     text-align: center;
-    margin: 0 auto; 
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 1000px;
+    margin: 15px auto 30px auto;  /* Reduced margins */
+    padding: 30px 20px 25px;      /* Reduced padding */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;  
 }
 
-.nested-info {
-    flex: 1;
-    padding: 2rem;
+.blurred-heading p {
+    margin: 1rem auto 1.5rem auto;  /* Reduced bottom margin */
+    text-align: center;
+    display: block;                 /* Changed from inline-block to block */
+    font-weight: 300;
+    width: 100%;                    /* Ensure full width for proper centering */
 }
 
-.nested-image img.side-image {
+/* Titles: How does it work? / Join our affiliate */
+.title, .join-title {
+    display: block;
+    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto;        /* Reduced from 50px */
+    background: linear-gradient(135deg, #00ff9d, #00c3ff);
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+.title h1, .join-title h1 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 
+        0 0 5px rgba(10,10,10,0.6),
+        0 0 10px rgba(20,20,20,0.6),
+        0 0 20px rgba(7,7,7,0.6);
+}
+
+/* Affiliate Image */
+.affiliate-image {
+    max-width: 1000px;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    max-width: none; /* Remove 600px limit */
+    background: rgba(24, 23, 23, 0.05);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;      /* Reduced from 2rem */
+    padding: 1.5rem;          /* Reduced from 2rem */
+    min-height: 250px;        /* Reduced from 300px */
 }
 
-.side-image:hover {
-    transform: scale(1.05);
+.affiliate-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.nested-info h3 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #ffffff;
-    text-align: center;
+/* Affiliate Form Card */
+.nested-info {
+    background: rgba(24, 23, 23, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1.5rem auto;      /* Reduced from 2rem */
+    padding: 1.5rem;          /* Reduced from 2rem */
 }
 
+/* Form Grid */
 form {
-   display: grid;
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     width: 100%;
@@ -85,7 +102,6 @@ form {
     display: flex;
     flex-direction: column;
     text-align: left;
-    width: 100%;
 }
 
 .form-group.full-width {
@@ -121,7 +137,7 @@ form {
     box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
 }
 
-.form-group .radio-group {
+.radio-group {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -129,6 +145,7 @@ form {
     font-weight: 500;
 }
 
+/* Buttons */
 .btn-primary {
     grid-column: span 2;
     background-color: #007bff;
@@ -152,21 +169,88 @@ form {
     transform: translateY(0);
 }
 
-/* Tablet and below */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
     form {
         grid-template-columns: 1fr;
     }
-
-    .form-group {
-        grid-column: span 2; /* forces all inputs to take full width */
-    }
-
-    .form-group.full-width {
-        grid-column: span 2;
-    }
-
+    .form-group,
+    .form-group.full-width,
     .btn-primary {
-        grid-column: span 2;
+        grid-column: span 1; /* Changed from span 2 to span 1 */
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    .heading-container {
+        padding: 1rem 0.5rem;    /* Further reduced padding */
+        margin-top: 1rem;        /* Much smaller top margin */
+        margin-bottom: 1rem;     /* Smaller bottom margin */
+    }
+    
+    .blurred-heading {
+        margin: 0px auto 10px auto;  /* Smaller margins */
+        padding: 7px 10px;           /* Smaller padding */
+    }
+    
+    .blurred-heading h1 {
+        font-size: 2rem !important;   /* Smaller font size */
+    }
+    
+    .blurred-heading p {
+        margin: 0.8rem auto 1rem auto;
+        font-size: 0.9rem;            /* Smaller text */
+    }
+    
+    .title, .join-title {
+        margin: 20px auto;            /* Much smaller margins */
+        padding: 0.8rem;              /* Smaller padding */
+    }
+    
+    .title h1, .join-title h1 {
+        font-size: 1.5rem;            /* Smaller headings */
+    }
+    
+    .affiliate-image {
+        margin: 1rem auto;
+        padding: 1rem;
+        min-height: 200px;
+    }
+    
+    .nested-info {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    form {
+        gap: 0.8rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    .heading-container {
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .blurred-heading {
+        margin: 5px auto 10px auto;
+        padding: 15px 10px;
+    }
+    
+    .blurred-heading h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .title, .join-title {
+        margin: 15px auto;
+        padding: 0.6rem;
+    }
+    
+    .title h1, .join-title h1 {
+        font-size: 1.2rem;
     }
 }
