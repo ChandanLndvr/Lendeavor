@@ -50,12 +50,12 @@ html, body {
     margin-top: 0;
 }
 
- .nav-item.active > .nav-link,
-    .nav-item.active > .nav-link.dropdown-toggle {
-        background-color: #0d6efd !important;
-        color: white !important;
-        border-radius: 5px;
-    }
+.nav-item.active > .nav-link,
+.nav-item.active > .nav-link.dropdown-toggle {
+    background-color: #0d6efd !important;
+    color: white !important;
+    border-radius: 5px;
+}
 
 .dropdown-item {
     color: #fff;
@@ -79,7 +79,7 @@ html, body {
     justify-content: center;
     align-items: center;
     height: 200px;
-    padding-top: 50px;
+    padding-top: 120px;
 }
 
 .blurred-heading {
@@ -92,9 +92,6 @@ html, body {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
-.main-heading {
-    font-size: 64px;
-}
 
 /* ---------- Info Card ---------- */
 .info-image-card {
@@ -115,34 +112,34 @@ html, body {
 .nested-image img.side-image {
     width: 100%;
     max-width: 400px;
-    border-radius: 20px;
+    border-radius: 18px;
     opacity: 0.9;
     transition: opacity 0.3s ease-in-out;
 }
 
 .nested-info {
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     flex: 1;
     max-width: 500px;
     color: white;
-    text-align: left;
+    text-align: center;
     font-family: 'Raleway', sans-serif;
-    text-align: center; /* ✅ center text horizontally */
-    display: flex;       /* ✅ for vertical centering */
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 .nested-info h3 {
-    font-size: 24px;
+    font-size: 28px;
     margin-top: 0;
-    color: #fff;
+    color: white;
 }
 
 .nested-info p {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.6;
-    color: #e0e0e0;
     margin-bottom: 20px;
 }
 
@@ -199,10 +196,64 @@ html, body {
     border: 1px solid white;
 }
 
-
 .apply-button:hover {
     background-color: #009edc;
 }
+
+/* ---------- Robot Animation ---------- */
+
+.robot-circle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* center horizontally */
+    gap: 15px; /* spacing between platform images */
+}
+
+
+
+.robot {
+    width: 300px;
+    height: auto;
+    display: block;
+    margin: 05px auto;
+    filter: drop-shadow(0 0 50px rgba(0, 195, 255, 0.6));
+    animation: floatIdle 3s ease-in-out infinite, glowPulse 2s ease-in-out infinite;
+    transition: transform 0.1s ease;
+    cursor: pointer;
+}
+
+.robot-container img {
+    display: block;         /* ensure each image is block-level */
+}
+
+.bolt_platform {
+    width: 280px;
+    filter: drop-shadow(0 0 50px rgba(0, 195, 255, 0.6));
+    animation: floatIdle 3s ease-in-out infinite alternate;
+    animation-delay: 1s; /* half of duration = opposite phase */
+    margin-top: 1.5px;
+}
+
+
+/* ---------- Animations ---------- */
+
+@keyframes floatIdle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-12px); }
+}
+
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 20px rgba(0, 195, 255, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 50px rgba(0, 195, 255, 1));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(0, 195, 255, 0.4));
+    }
+}
+
 
 /* ---------- Footer ---------- */
 .footer {
@@ -232,10 +283,14 @@ html, body {
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .main-heading {
-        font-size: 32px;
+        font-size: 20px;
     }
 
     .blurred-heading {
         padding: 40px 20px;
+    }
+
+    .robot {
+        width: 160px;
     }
 }
