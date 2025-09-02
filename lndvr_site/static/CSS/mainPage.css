@@ -206,7 +206,6 @@ html, body {
     display: flex;
     flex-direction: column;
     align-items: center; /* center horizontally */
-    gap: 15px; /* spacing between platform images */
 }
 
 
@@ -231,7 +230,6 @@ html, body {
     filter: drop-shadow(0 0 50px rgba(0, 195, 255, 0.6));
     animation: floatIdle 3s ease-in-out infinite alternate;
     animation-delay: 1s; /* half of duration = opposite phase */
-    margin-top: 1.5px;
 }
 
 
