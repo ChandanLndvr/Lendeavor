@@ -90,6 +90,28 @@ class UserApplications(models.Model):
     def __str__(self):
         return f"{self.Owner_First_Name} {self.Owner_Last_Name}"
     
+# Quick user application
+
+class QuickApplication(models.Model):
+    ID = models.AutoField(primary_key=True)
+    Business_name = models.CharField(max_length=250)
+    Industry = models.CharField(max_length=250)
+    Business_Start_date = models.CharField(max_length=7)
+    Owner_First_Name = models.CharField(max_length=100)
+    Owner_Last_Name = models.CharField(max_length=100)
+    Phone_no = models.CharField(max_length=10)
+    Credit_score = models.PositiveIntegerField()
+    Monthly_Revenue = models.PositiveIntegerField()
+    Funds_Requested = models.PositiveIntegerField()
+    Existing_loans = models.CharField(max_length=5)
+    Applied_on = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        db_table = 'Quick_User_Applications'
+
+    def __str__(self):
+        return f"{self.Owner_First_Name} {self.Owner_Last_Name}"
+    
 # User applivcation documents
 
 class ApplicationDocument(models.Model):

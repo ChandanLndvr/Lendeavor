@@ -24172,3 +24172,835 @@ INFO 2025-09-02 16:27:03,166 django.server "GET /static/people/anish.png HTTP/1.
 INFO 2025-09-02 16:27:03,167 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
 INFO 2025-09-02 16:27:03,173 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
 INFO 2025-09-02 16:27:03,435 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-02 16:29:26,026 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-02 16:29:29,562 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-02 16:29:29,601 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:31:33,070 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-02 16:31:33,100 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:36:12,236 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-02 16:36:12,275 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:36:14,291 django.server "GET /aboutus/ HTTP/1.1" 200 15251
+INFO 2025-09-02 16:36:47,027 django.server "GET /products/ HTTP/1.1" 200 35921
+INFO 2025-09-02 16:37:10,972 django.server "GET /careers/ HTTP/1.1" 200 18616
+INFO 2025-09-02 16:37:10,991 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:37:13,421 django.server "GET /contact/ HTTP/1.1" 200 14723
+INFO 2025-09-02 16:37:23,038 django.server "GET /sell-business/ HTTP/1.1" 200 20326
+WARNING 2025-09-02 16:37:23,070 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-02 16:38:33,748 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+WARNING 2025-09-02 16:38:33,761 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 16:38:33,761 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:39:06,800 django.server "GET /steps/ HTTP/1.1" 200 13703
+WARNING 2025-09-02 16:39:06,842 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 16:39:06,842 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:39:06,969 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-02 16:39:06,972 django.server "GET /static/fs_step3.png HTTP/1.1" 200 62296
+INFO 2025-09-02 16:39:06,974 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-02 16:39:06,975 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-02 16:39:06,976 django.server "GET /static/fs_step1.png HTTP/1.1" 200 60876
+INFO 2025-09-02 16:39:06,977 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 16:39:06,978 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-02 16:39:06,979 django.server "GET /static/fs_step2.png HTTP/1.1" 200 69755
+INFO 2025-09-02 16:39:06,987 django.server "GET /static/css/aboutus.css HTTP/1.1" 200 2767
+INFO 2025-09-02 16:39:14,575 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40486
+INFO 2025-09-02 16:39:14,609 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+WARNING 2025-09-02 16:39:14,617 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-02 16:39:14,618 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+WARNING 2025-09-02 16:39:14,618 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:39:14,619 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-02 16:39:14,626 django.server "GET /static/lenders_logo/channel.png HTTP/1.1" 200 3114
+INFO 2025-09-02 16:39:14,628 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 200 10491
+INFO 2025-09-02 16:39:14,630 django.server "GET /static/lenders_logo/libertas.png HTTP/1.1" 200 3689
+INFO 2025-09-02 16:39:14,630 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-02 16:39:14,633 django.server "GET /static/lenders_logo/peac.png HTTP/1.1" 200 8976
+INFO 2025-09-02 16:39:14,633 django.server "GET /static/lenders_logo/mulligan.png HTTP/1.1" 200 1231
+INFO 2025-09-02 16:39:14,633 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 16:39:14,644 django.server "GET /static/lenders_logo/finpart.png HTTP/1.1" 200 8296
+INFO 2025-09-02 16:39:14,645 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 200 7890
+INFO 2025-09-02 16:39:14,647 django.server "GET /static/lenders_logo/iou.png HTTP/1.1" 200 3561
+INFO 2025-09-02 16:39:14,648 django.server "GET /static/lenders_logo/headway.png HTTP/1.1" 200 9236
+INFO 2025-09-02 16:39:14,648 django.server "GET /static/lenders_logo/idea.png HTTP/1.1" 200 9974
+INFO 2025-09-02 16:39:14,648 django.server "GET /static/lenders_logo/ondeck.png HTTP/1.1" 200 7264
+INFO 2025-09-02 16:39:14,656 django.server "GET /static/lenders_logo/kalamata.png HTTP/1.1" 200 7077
+INFO 2025-09-02 16:39:14,657 django.server "GET /static/lenders_logo/pirs.png HTTP/1.1" 200 19371
+INFO 2025-09-02 16:39:14,661 django.server "GET /static/lenders_logo/tabbank.png HTTP/1.1" 200 1047
+INFO 2025-09-02 16:39:14,662 django.server "GET /static/lenders_logo/northeastern.png HTTP/1.1" 200 26192
+INFO 2025-09-02 16:39:14,662 django.server "GET /static/lenders_logo/wallstreet.png HTTP/1.1" 200 4146
+INFO 2025-09-02 16:39:32,323 django.server "GET /affiliate/ HTTP/1.1" 200 19779
+INFO 2025-09-02 16:39:32,360 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-02 16:39:32,361 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-02 16:39:32,369 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-02 16:39:32,369 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-02 16:39:32,371 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-02 16:39:32,380 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-02 16:39:32,381 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-09-02 16:39:32,382 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:39:32,382 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-02 16:39:32,382 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-02 16:39:32,383 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6030
+INFO 2025-09-02 16:39:32,384 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-02 16:39:32,389 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 16:39:32,392 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-02 16:40:00,950 django.server "GET /caseStudy/ HTTP/1.1" 200 17090
+WARNING 2025-09-02 16:40:00,982 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-02 16:40:00,984 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:40:00,985 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-02 16:40:00,988 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-02 16:40:00,989 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-02 16:40:00,990 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-02 16:40:00,992 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-02 16:40:00,993 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-02 16:40:00,993 django.server "GET /static/case_study1.webp HTTP/1.1" 200 47706
+INFO 2025-09-02 16:40:00,995 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-02 16:40:00,996 django.server "GET /static/case_study2.webp HTTP/1.1" 200 75122
+INFO 2025-09-02 16:40:00,998 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 16:40:00,998 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-02 16:40:00,999 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-02 16:40:01,002 django.server "GET /static/css/case_study.css HTTP/1.1" 200 1911
+INFO 2025-09-02 16:40:09,712 django.server "GET /finance/news/ HTTP/1.1" 200 15992
+INFO 2025-09-02 16:40:09,750 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+WARNING 2025-09-02 16:40:09,756 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-02 16:40:09,757 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-09-02 16:40:09,758 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-02 16:40:09,758 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-02 16:40:09,758 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-02 16:40:09,763 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-02 16:40:09,767 django.server "GET /static/css/financial_news.css HTTP/1.1" 200 2784
+INFO 2025-09-02 16:40:09,775 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-09-02 16:43:38,780 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-02 16:43:38,807 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:43:38,809 django.server "GET /static/bolt_platform.png HTTP/1.1" 304 0
+INFO 2025-09-02 16:54:23,652 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-02 16:54:23,688 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-02 16:55:18,271 django.server "GET / HTTP/1.1" 200 22375
+INFO 2025-09-03 09:07:31,849 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 09:07:42,286 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:07:42,295 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:07:42,373 django.server "GET /static/bolt_platform.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:32,983 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:09:34,842 django.server "GET /aboutus/ HTTP/1.1" 200 15335
+INFO 2025-09-03 09:09:34,862 django.server "GET /static/services.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:34,862 django.server "GET /static/welcome.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:34,863 django.server "GET /static/nextstep.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:36,609 django.server "GET /products/ HTTP/1.1" 200 36005
+INFO 2025-09-03 09:09:36,623 django.server "GET /static/css/products.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:37,503 django.server "GET /careers/ HTTP/1.1" 200 16652
+INFO 2025-09-03 09:09:37,524 django.server "GET /static/js/job_search.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:37,524 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:37,524 django.server "GET /static/css/careers.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:38,171 django.server "GET /contact/ HTTP/1.1" 200 14807
+INFO 2025-09-03 09:09:38,186 django.server "GET /static/css/contact.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:40,201 django.server "GET /finance/news/ HTTP/1.1" 200 14052
+INFO 2025-09-03 09:09:41,839 django.server "GET /caseStudy/ HTTP/1.1" 200 17174
+INFO 2025-09-03 09:09:43,613 django.server "GET /affiliate/ HTTP/1.1" 200 19863
+INFO 2025-09-03 09:09:43,633 django.server "GET /static/affiliate.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:43,633 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:46,527 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40570
+INFO 2025-09-03 09:09:48,672 django.server "GET /steps/ HTTP/1.1" 200 13787
+INFO 2025-09-03 09:09:50,500 django.server "GET /sell-business/ HTTP/1.1" 200 20410
+INFO 2025-09-03 09:09:50,519 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:50,519 django.server "GET /static/sellBusiness.png HTTP/1.1" 304 0
+WARNING 2025-09-03 09:09:50,559 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-03 09:09:54,445 django.server "GET /faq/ HTTP/1.1" 200 22999
+INFO 2025-09-03 09:09:54,461 django.server "GET /static/css/faq.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:09:54,462 django.server "GET /static/js/faq_search.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:10:02,718 django.server "GET /finance/news/ HTTP/1.1" 200 14052
+INFO 2025-09-03 09:11:05,554 django.server "GET /finance/2/ HTTP/1.1" 200 13589
+INFO 2025-09-03 09:11:05,571 django.server "GET /media/newsletter_thumb/landing_img4_dEv0pcb.png HTTP/1.1" 304 0
+INFO 2025-09-03 09:11:05,572 django.server "GET /static/css/news_info.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:13:37,614 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:16:32,388 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:18:52,468 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:18:53,458 django.server "GET / HTTP/1.1" 200 22459
+WARNING 2025-09-03 09:18:55,829 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:18:55,830 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:18:59,213 django.server "GET / HTTP/1.1" 200 22459
+WARNING 2025-09-03 09:18:59,252 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:18:59,253 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:19:01,447 django.server "GET / HTTP/1.1" 200 22459
+WARNING 2025-09-03 09:19:01,483 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:19:01,487 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:19:01,657 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-03 09:19:01,660 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:19:01,664 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:19:01,666 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:19:01,671 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:19:01,674 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:19:01,677 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:19:01,677 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:19:01,678 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:19:01,678 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 09:19:01,683 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:19:01,684 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:19:01,909 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:19:23,140 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:19:23,180 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-03 09:19:25,428 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:19:25,457 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:19:29,348 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+WARNING 2025-09-03 09:19:29,353 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:19:29,353 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:19:32,736 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:19:32,769 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+WARNING 2025-09-03 09:19:32,782 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:19:32,782 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:19:35,590 django.server "GET / HTTP/1.1" 200 22459
+WARNING 2025-09-03 09:19:35,632 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:19:35,636 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:19:35,638 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-03 09:19:35,639 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:19:35,639 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:19:35,640 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:19:35,643 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 09:19:35,648 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:19:35,650 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:19:35,650 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:19:35,651 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:19:35,651 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:19:35,655 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:19:35,657 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:19:35,881 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:19:55,515 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:19:55,557 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5861
+INFO 2025-09-03 09:20:05,645 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+WARNING 2025-09-03 09:20:05,652 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:20:05,653 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:20:42,246 django.server "GET / HTTP/1.1" 200 22459
+WARNING 2025-09-03 09:20:42,282 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:20:42,284 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:20:42,284 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:20:42,285 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:20:42,287 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:20:42,289 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:20:42,296 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 09:20:42,300 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:20:42,300 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:20:42,300 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:20:42,301 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:20:42,305 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:20:42,310 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:20:42,310 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:20:42,580 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:21:03,694 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:21:03,733 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:21:03,733 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:21:03,747 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:21:03,751 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:21:03,751 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:21:03,751 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:21:03,753 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+WARNING 2025-09-03 09:21:03,762 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:21:03,762 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8348
+INFO 2025-09-03 09:21:03,763 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:21:03,764 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:21:03,769 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:21:03,769 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:21:03,770 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:21:03,977 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:21:52,724 django.server "GET / HTTP/1.1" 200 22459
+INFO 2025-09-03 09:21:52,755 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:24:59,521 django.server "GET /apply/ HTTP/1.1" 200 22294
+INFO 2025-09-03 09:24:59,539 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:24:59,539 django.server "GET /static/css/apply.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:24:59,540 django.server "GET /static/js/applynow.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:24:59,540 django.server "GET /static/js/auto_formatter.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:24:59,542 django.server "GET /static/js/drag_drop_docs.js HTTP/1.1" 304 0
+INFO 2025-09-03 09:41:22,058 django.server "GET /products/ HTTP/1.1" 200 36005
+INFO 2025-09-03 09:41:22,078 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:42:27,542 django.server "GET /careers/ HTTP/1.1" 200 16652
+INFO 2025-09-03 09:42:34,455 django.server "GET /contact/ HTTP/1.1" 200 14807
+INFO 2025-09-03 09:43:32,702 django.server "GET /aboutus/ HTTP/1.1" 200 15335
+INFO 2025-09-03 09:43:32,718 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:45:05,654 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-09-03 09:45:06,487 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 09:47:18,059 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 09:47:18,619 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 09:47:29,502 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\urls.py changed, reloading.
+INFO 2025-09-03 09:47:30,146 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 09:49:22,273 django.server "GET /aboutus/ HTTP/1.1" 200 15335
+INFO 2025-09-03 09:49:22,303 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:49:22,931 django.server "GET / HTTP/1.1" 200 22467
+INFO 2025-09-03 09:50:22,686 django.server "GET /signup/ HTTP/1.1" 200 13753
+INFO 2025-09-03 09:50:22,715 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-03 09:50:22,739 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:50:24,721 django.server "GET /login/ HTTP/1.1" 200 12294
+INFO 2025-09-03 09:50:30,980 django.server "GET / HTTP/1.1" 200 22467
+WARNING 2025-09-03 09:50:40,967 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:50:40,968 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:51:00,829 django.server "GET / HTTP/1.1" 200 22467
+WARNING 2025-09-03 09:51:00,872 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:51:00,873 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:51:03,328 django.server "GET / HTTP/1.1" 200 22467
+WARNING 2025-09-03 09:51:03,365 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:51:03,368 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:51:03,370 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:51:03,371 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:51:03,371 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:51:03,373 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:51:03,379 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:51:03,380 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:51:03,380 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:51:03,382 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:51:03,383 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 09:51:03,385 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:51:03,391 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:51:03,393 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:51:03,655 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:52:26,765 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 09:52:26,807 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:52:26,808 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+WARNING 2025-09-03 09:52:26,811 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:52:26,813 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:52:26,813 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 09:52:26,814 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:52:26,814 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 09:52:26,816 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 09:52:26,817 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 09:52:26,818 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:52:26,819 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 09:52:26,820 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:52:26,824 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 09:52:26,826 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 09:52:27,197 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:52:35,827 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 09:52:55,100 django.server "GET /quick-apply/ HTTP/1.1" 200 17748
+WARNING 2025-09-03 09:53:39,358 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:53:39,359 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:54:53,845 django.server "GET /quick-apply/ HTTP/1.1" 200 17749
+INFO 2025-09-03 09:54:53,878 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:54:53,878 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:54:53,881 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:54:53,883 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-09-03 09:54:53,895 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:54:53,896 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:54:53,897 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:54:53,897 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:54:53,908 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:54:54,187 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:56:51,013 django.server "GET /quick-apply/ HTTP/1.1" 200 17769
+INFO 2025-09-03 09:56:51,047 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:56:51,047 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:56:51,049 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:56:51,050 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:56:51,057 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:56:51,058 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:56:51,059 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-03 09:56:51,070 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:56:51,071 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:56:51,363 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:57:18,380 django.server "GET /quick-apply/ HTTP/1.1" 200 17771
+INFO 2025-09-03 09:57:18,419 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:57:18,419 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:57:18,424 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:57:18,424 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:57:18,424 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:57:18,424 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-03 09:57:18,433 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:57:18,435 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:57:18,435 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:57:18,686 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:57:41,405 django.server "GET /quick-apply/ HTTP/1.1" 200 17777
+INFO 2025-09-03 09:57:41,437 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:57:41,438 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:57:41,442 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:57:41,442 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+WARNING 2025-09-03 09:57:41,449 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-03 09:57:41,450 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:57:41,451 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:57:41,452 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-03 09:57:41,452 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:57:41,702 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:58:01,369 django.server "GET /quick-apply/ HTTP/1.1" 200 17766
+INFO 2025-09-03 09:58:01,403 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:58:01,404 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:58:01,406 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:58:01,406 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:58:01,407 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:58:01,407 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-03 09:58:01,413 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:58:01,415 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:58:01,416 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:58:01,659 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:58:28,026 django.server "GET /quick-apply/ HTTP/1.1" 200 17485
+INFO 2025-09-03 09:58:28,057 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:58:28,057 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:58:28,058 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:58:28,059 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:58:28,063 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:58:28,064 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:58:28,070 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-03 09:58:28,080 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:58:28,081 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:58:28,455 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:59:10,259 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 09:59:10,297 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:59:10,297 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:59:10,303 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:59:10,303 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:59:10,306 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 09:59:10,307 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+WARNING 2025-09-03 09:59:10,313 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:59:10,314 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:59:10,314 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:59:10,621 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:59:33,718 django.server "GET /quick-apply/ HTTP/1.1" 200 17485
+INFO 2025-09-03 09:59:33,746 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:59:33,747 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:59:33,751 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:59:33,753 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:59:33,755 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:59:33,755 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-09-03 09:59:33,762 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 09:59:33,763 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:59:33,763 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 09:59:34,025 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 09:59:47,488 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 09:59:47,526 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 09:59:47,527 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 09:59:47,530 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 09:59:47,530 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 09:59:47,538 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 09:59:47,539 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+WARNING 2025-09-03 09:59:47,544 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-03 09:59:47,544 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-03 09:59:47,545 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 09:59:47,819 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 23379
+INFO 2025-09-03 10:05:56,885 django.server "GET /quick-apply/ HTTP/1.1" 200 17510
+INFO 2025-09-03 10:05:56,919 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:05:59,745 django.server "GET /quick-apply/ HTTP/1.1" 200 17510
+INFO 2025-09-03 10:06:07,487 django.server "GET /quick-apply/ HTTP/1.1" 200 17510
+INFO 2025-09-03 10:16:15,545 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:15,576 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:16:16,608 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:17,480 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:17,737 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:17,978 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:18,234 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:18,463 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:18,698 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:16:18,983 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+WARNING 2025-09-03 10:16:21,210 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 10:16:21,211 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 10:16:24,397 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+WARNING 2025-09-03 10:16:24,433 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 10:16:24,434 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 10:16:26,909 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+WARNING 2025-09-03 10:16:26,938 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 10:16:26,941 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 10:16:26,945 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 10:16:26,945 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 10:16:26,946 django.server "GET /static/css/apply.css HTTP/1.1" 200 3862
+INFO 2025-09-03 10:16:26,947 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 10:16:26,947 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-03 10:16:26,948 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 10:16:26,949 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 10:16:27,190 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-03 10:20:06,360 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:25:26,378 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:25:26,402 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:25:26,597 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 10:26:24,129 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:28:11,790 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:29:19,946 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:29:20,166 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 10:30:29,170 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:30:31,560 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:31:25,884 django.server "GET /privacy HTTP/1.1" 301 0
+INFO 2025-09-03 10:31:25,905 django.server "GET /privacy/ HTTP/1.1" 200 14716
+INFO 2025-09-03 10:31:25,929 django.server "GET /static/css/terms_privacy.css HTTP/1.1" 200 995
+INFO 2025-09-03 10:31:40,934 django.server "GET /aboutus/ HTTP/1.1" 200 15343
+INFO 2025-09-03 10:31:42,395 django.server "GET /products/ HTTP/1.1" 200 36013
+INFO 2025-09-03 10:31:42,824 django.server "GET /careers/ HTTP/1.1" 200 16660
+INFO 2025-09-03 10:31:43,514 django.server "GET /contact/ HTTP/1.1" 200 14815
+INFO 2025-09-03 10:31:50,858 django.server "GET /quick-apply/ HTTP/1.1" 200 17484
+INFO 2025-09-03 10:32:41,997 django.server "GET /quick-apply/ HTTP/1.1" 200 17485
+INFO 2025-09-03 10:32:42,027 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:32:42,234 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 10:33:02,841 django.server "GET /quick-apply/ HTTP/1.1" 200 17485
+INFO 2025-09-03 10:33:48,038 django.server "GET /quick-apply/ HTTP/1.1" 200 17485
+INFO 2025-09-03 10:38:05,280 django.server "GET /quick-apply/ HTTP/1.1" 200 17782
+INFO 2025-09-03 10:38:05,479 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 10:40:03,627 django.server "GET /quick-apply/ HTTP/1.1" 200 17782
+INFO 2025-09-03 10:40:03,663 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:53:53,427 django.server "GET / HTTP/1.1" 200 22475
+INFO 2025-09-03 10:53:53,445 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 10:55:27,411 django.server "GET /quick-apply/ HTTP/1.1" 200 17782
+INFO 2025-09-03 11:08:28,190 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:08:28,882 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:08:47,863 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:08:48,427 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:09:13,491 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:09:14,098 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:10:21,938 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:10:22,545 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:10:29,315 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:10:29,902 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:11:09,262 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:11:09,832 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:11:47,134 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:11:47,724 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:12:24,009 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:12:24,610 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:12:32,423 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:12:33,008 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:13:16,419 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:13:16,989 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:14:00,379 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:14:00,952 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:14:09,736 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 11:14:10,305 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:51:20,334 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:52:05,348 django.server "GET /quick-apply/ HTTP/1.1" 200 17957
+INFO 2025-09-03 11:52:05,401 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 11:52:05,614 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 11:53:46,711 django.server "GET /quick-apply/ HTTP/1.1" 200 17957
+INFO 2025-09-03 11:55:45,082 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\serializers.py changed, reloading.
+INFO 2025-09-03 11:55:45,646 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:56:12,774 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\serializers.py changed, reloading.
+INFO 2025-09-03 11:56:13,317 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 11:56:48,600 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\serializers.py changed, reloading.
+INFO 2025-09-03 11:56:49,150 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:01:41,017 django.server "GET /quick-apply/ HTTP/1.1" 200 18040
+INFO 2025-09-03 12:01:42,171 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 12:01:42,189 django.server "GET /static/bolt_platform.png HTTP/1.1" 304 0
+INFO 2025-09-03 12:05:42,795 django.server "GET /aboutus/ HTTP/1.1" 200 15426
+INFO 2025-09-03 12:05:44,736 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 12:05:50,656 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 12:10:33,139 django.server "GET /quick-apply/ HTTP/1.1" 200 18040
+INFO 2025-09-03 12:10:33,158 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 12:20:48,151 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:20:48,774 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:21:14,035 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:21:14,586 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:24:02,750 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:24:03,334 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:29:17,172 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:29:17,979 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:30:16,016 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:30:16,570 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:30:39,819 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:30:41,376 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:30:54,313 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:30:54,879 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:31:12,914 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:31:13,460 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:31:28,411 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:31:28,962 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:31:31,619 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:31:32,177 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:34:37,202 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:34:37,796 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:37:21,816 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:37:22,613 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:41:25,198 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:41:25,778 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:41:49,094 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:41:49,714 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:42:48,693 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:42:49,242 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:43:06,212 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:43:06,781 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:43:21,593 django.server "GET /quick-apply/ HTTP/1.1" 200 18040
+INFO 2025-09-03 12:43:21,625 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 12:43:21,867 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 12:44:46,992 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+ERROR 2025-09-03 12:44:47,087 django.request Internal Server Error: /quick-apply/
+Traceback (most recent call last):
+  File "C:\lndvr_test\Lendeavor\env\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\lndvr_test\Lendeavor\env\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py", line 296, in quick_apply
+    'Industry': request.get('industry'),
+                ^^^^^^^^^^^
+AttributeError: 'WSGIRequest' object has no attribute 'get'. Did you mean: 'GET'?
+ERROR 2025-09-03 12:44:47,090 django.server "POST /quick-apply/ HTTP/1.1" 500 75923
+WARNING 2025-09-03 12:44:47,148 django.request Not Found: /favicon.ico
+WARNING 2025-09-03 12:44:47,149 django.server "GET /favicon.ico HTTP/1.1" 404 8502
+INFO 2025-09-03 12:45:51,714 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:45:52,095 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:45:55,594 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-03 12:45:55,614 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 12:45:55,625 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22558
+INFO 2025-09-03 12:47:42,013 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:47:42,675 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:47:43,482 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22558
+INFO 2025-09-03 12:48:38,506 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:48:39,332 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:50:23,054 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 12:50:23,797 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 12:50:24,936 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 12:50:29,317 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 12:50:33,867 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 12:50:35,495 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 13:42:58,189 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:42:58,812 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:44:39,517 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:44:40,082 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:46:17,605 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:46:18,408 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:47:10,236 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:47:10,992 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:47:27,178 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:47:27,982 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:47:36,721 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 13:47:36,747 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 13:48:40,271 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: jash@amazon.com
+INFO 2025-09-03 13:48:40,287 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 13:48:40,297 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 13:59:02,780 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:59:03,319 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 13:59:42,737 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 13:59:43,168 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:00:46,394 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:00:46,644 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:00:47,685 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:02:18,814 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\models.py changed, reloading.
+INFO 2025-09-03 14:02:19,399 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:02:40,368 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:02:48,777 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:03:37,159 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: abcd@gmail.com
+INFO 2025-09-03 14:03:37,173 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:03:37,181 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:04:37,884 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:05:45,501 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: yadavchandan214@gmail.com
+INFO 2025-09-03 14:05:45,513 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:05:45,524 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:10:07,432 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:10:07,894 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:14:27,859 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:14:27,877 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:16:30,109 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-03 14:16:30,127 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:16:30,136 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:16:30,162 django.server "GET /static/bolt_platform.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:18:36,628 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:18:37,190 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:19:02,085 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:19:11,806 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:19:54,584 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-03 14:19:54,597 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:19:54,604 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:21:02,616 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:21:03,193 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:22:10,277 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:22:48,368 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: abcd@gmail.com
+INFO 2025-09-03 14:22:48,383 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:22:48,392 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:24:29,914 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:24:30,333 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:25:05,719 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:25:06,140 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:26:44,546 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:26:45,039 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:27:32,691 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 14:27:33,111 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 14:27:37,353 django.server "GET /quick-apply/ HTTP/1.1" 200 18054
+INFO 2025-09-03 14:28:29,092 django_actions Method: POST | Action: quick funding application attempt | IP: 127.0.0.1 | User: vinny@gmail.com
+INFO 2025-09-03 14:28:29,106 django.server "POST /quick-apply/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:28:29,116 django.server "GET /?message=Application%20submitted%20successfully! HTTP/1.1" 200 22713
+INFO 2025-09-03 14:33:14,940 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:34:11,800 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:34:11,993 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:35:27,479 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:35:32,728 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:37:06,289 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:39:40,253 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:39:52,615 django.server "GET /aboutus/ HTTP/1.1" 200 15426
+INFO 2025-09-03 14:39:52,638 django.server "GET /static/css/aboutus.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:39:53,776 django.server "GET /products/ HTTP/1.1" 200 36096
+INFO 2025-09-03 14:39:55,258 django.server "GET /apply/ HTTP/1.1" 200 22861
+INFO 2025-09-03 14:40:05,820 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:40:15,757 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:40:17,620 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:40:22,147 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:40:38,792 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:40:48,988 django.server "GET /products/ HTTP/1.1" 200 36096
+INFO 2025-09-03 14:40:49,671 django.server "GET /careers/ HTTP/1.1" 200 16743
+INFO 2025-09-03 14:40:49,692 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 304 0
+INFO 2025-09-03 14:40:51,794 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-03 14:40:51,828 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 17366
+INFO 2025-09-03 14:40:51,848 django.server "GET /static/css/job_apply.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:40:55,341 django.server "GET /aboutus/ HTTP/1.1" 200 15426
+INFO 2025-09-03 14:40:58,042 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:41:01,217 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:41:28,344 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:41:31,956 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:41:34,318 django.server "GET /affiliate/ HTTP/1.1" 200 19954
+INFO 2025-09-03 14:41:34,340 django.server "GET /static/affiliate.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:41:35,880 django.server "GET /caseStudy/ HTTP/1.1" 200 17265
+INFO 2025-09-03 14:41:35,901 django.server "GET /static/css/case_study.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:41:35,901 django.server "GET /static/case_study1.webp HTTP/1.1" 304 0
+INFO 2025-09-03 14:41:35,902 django.server "GET /static/case_study2.webp HTTP/1.1" 304 0
+INFO 2025-09-03 14:41:42,635 django.server "GET /aboutus/ HTTP/1.1" 200 15426
+INFO 2025-09-03 14:41:43,419 django.server "GET /products/ HTTP/1.1" 200 36096
+INFO 2025-09-03 14:41:44,307 django.server "GET /careers/ HTTP/1.1" 200 16743
+INFO 2025-09-03 14:41:59,730 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-03 14:41:59,736 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 17295
+INFO 2025-09-03 14:42:01,266 django.server "GET /aboutus/ HTTP/1.1" 200 15426
+INFO 2025-09-03 14:42:01,625 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:42:02,596 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:42:26,195 django.server "GET /sell-business/ HTTP/1.1" 200 20501
+WARNING 2025-09-03 14:42:26,243 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-03 14:42:27,892 django.server "GET /steps/ HTTP/1.1" 200 13878
+INFO 2025-09-03 14:42:27,915 django.server "GET /static/fs_step1.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:27,915 django.server "GET /static/fs_step2.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:27,915 django.server "GET /static/fs_step3.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,201 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 40661
+INFO 2025-09-03 14:42:30,223 django.server "GET /static/lenders_logo/libertas.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,223 django.server "GET /static/lenders_logo/channel.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,223 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,227 django.server "GET /static/lenders_logo/peac.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,228 django.server "GET /static/lenders_logo/mulligan.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,228 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,232 django.server "GET /static/lenders_logo/finpart.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,233 django.server "GET /static/lenders_logo/idea.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,233 django.server "GET /static/lenders_logo/iou.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,233 django.server "GET /static/lenders_logo/ondeck.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,233 django.server "GET /static/lenders_logo/kalamata.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,233 django.server "GET /static/lenders_logo/headway.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,235 django.server "GET /static/lenders_logo/pirs.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,236 django.server "GET /static/lenders_logo/northeastern.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,236 django.server "GET /static/lenders_logo/wallstreet.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:30,237 django.server "GET /static/lenders_logo/tabbank.png HTTP/1.1" 304 0
+INFO 2025-09-03 14:42:34,461 django.server "GET / HTTP/1.1" 200 22558
+INFO 2025-09-03 14:42:44,483 django.server "GET /affiliate/ HTTP/1.1" 200 19954
+INFO 2025-09-03 14:43:02,913 django.server "GET /sell-business/ HTTP/1.1" 200 20501
+INFO 2025-09-03 14:50:11,438 django.server "GET /sell-business/ HTTP/1.1" 200 20501
+INFO 2025-09-03 14:50:11,479 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:50:13,151 django.server "GET / HTTP/1.1" 200 22574
+INFO 2025-09-03 14:50:14,584 django.server "GET /quick-apply/ HTTP/1.1" 200 18341
+INFO 2025-09-03 14:56:02,837 django.server "GET / HTTP/1.1" 200 22665
+INFO 2025-09-03 14:56:39,477 django.server "GET /login/ HTTP/1.1" 200 12294
+INFO 2025-09-03 14:56:39,494 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 14:56:47,060 django_actions Method: POST | Action: login attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-03 14:56:47,414 django.server "POST /login/ HTTP/1.1" 302 0
+INFO 2025-09-03 14:56:47,421 django.server "GET / HTTP/1.1" 200 22581
+INFO 2025-09-03 14:59:33,211 django.server "GET /quick-apply/ HTTP/1.1" 200 18348
+INFO 2025-09-03 15:07:39,389 django.server "GET / HTTP/1.1" 200 22763
+INFO 2025-09-03 15:07:39,622 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 304 0
+INFO 2025-09-03 15:08:30,103 django.server "GET /quick-apply/ HTTP/1.1" 200 18530
+INFO 2025-09-03 15:08:49,181 django.server "GET / HTTP/1.1" 200 22763
+INFO 2025-09-03 15:09:20,090 django.server "GET /quick-apply/ HTTP/1.1" 200 18530
+INFO 2025-09-03 15:10:44,988 django.server "GET /quick-apply/ HTTP/1.1" 200 18530
+INFO 2025-09-03 15:13:17,848 django.server "GET / HTTP/1.1" 200 22770
+INFO 2025-09-03 15:13:38,523 django_actions Method: GET | Action: logout attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-03 15:13:38,534 django.server "GET /logout/ HTTP/1.1" 302 0
+INFO 2025-09-03 15:13:38,539 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 23007
+WARNING 2025-09-03 15:13:59,113 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:13:59,114 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:21:22,549 django.server "GET /?message=You%20have%20successfully%20logged%20out. HTTP/1.1" 200 23276
+INFO 2025-09-03 15:21:33,810 django.server "GET /quick-apply/ HTTP/1.1" 200 18890
+INFO 2025-09-03 15:21:41,329 django.server "GET /products/ HTTP/1.1" 200 36645
+INFO 2025-09-03 15:21:42,154 django.server "GET /quick-apply/ HTTP/1.1" 200 18890
+INFO 2025-09-03 15:22:11,526 django.utils.autoreload C:\lndvr_test\Lendeavor\lndvr_site\myapp\views.py changed, reloading.
+INFO 2025-09-03 15:22:12,442 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-03 15:22:13,782 django.server "GET /quick-apply/ HTTP/1.1" 200 18896
+INFO 2025-09-03 15:22:15,598 django.server "GET /contact/ HTTP/1.1" 200 15447
+INFO 2025-09-03 15:22:17,164 django.server "GET /finance/news/ HTTP/1.1" 200 14692
+INFO 2025-09-03 15:22:17,181 django.server "GET /static/css/financial_news.css HTTP/1.1" 304 0
+INFO 2025-09-03 15:22:20,893 django.server "GET /quick-apply/ HTTP/1.1" 200 18896
+INFO 2025-09-03 15:22:23,022 django.server "GET /careers/ HTTP/1.1" 200 17298
+INFO 2025-09-03 15:22:28,828 django.server "GET / HTTP/1.1" 200 23123
+INFO 2025-09-03 15:22:36,115 django.server "GET /login/ HTTP/1.1" 200 12294
+INFO 2025-09-03 15:24:48,132 django.server "GET / HTTP/1.1" 200 23123
+INFO 2025-09-03 15:24:48,176 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 15:24:50,419 django.server "GET /signup/ HTTP/1.1" 200 14191
+INFO 2025-09-03 15:25:11,303 django.server "GET /signup/ HTTP/1.1" 200 14022
+INFO 2025-09-03 15:25:14,834 django.server "GET /login/ HTTP/1.1" 200 12732
+INFO 2025-09-03 15:25:28,997 django.server "GET /login/ HTTP/1.1" 200 12563
+INFO 2025-09-03 15:25:33,394 django.server "GET /contact/ HTTP/1.1" 200 15447
+INFO 2025-09-03 15:25:34,004 django.server "GET /quick-apply/ HTTP/1.1" 200 18896
+INFO 2025-09-03 15:25:35,130 django.server "GET /products/ HTTP/1.1" 200 36645
+INFO 2025-09-03 15:25:35,902 django.server "GET /aboutus/ HTTP/1.1" 200 15975
+INFO 2025-09-03 15:25:36,898 django.server "GET /contact/ HTTP/1.1" 200 15447
+INFO 2025-09-03 15:25:39,219 django.server "GET /aboutus/ HTTP/1.1" 200 15975
+INFO 2025-09-03 15:25:41,185 django.server "GET /login/ HTTP/1.1" 200 12563
+INFO 2025-09-03 15:25:42,361 django.server "GET / HTTP/1.1" 200 23123
+INFO 2025-09-03 15:25:43,121 django.server "GET /signup/ HTTP/1.1" 200 14022
+INFO 2025-09-03 15:25:44,395 django.server "GET /login/ HTTP/1.1" 200 12563
+INFO 2025-09-03 15:25:45,490 django.server "GET / HTTP/1.1" 200 23123
+WARNING 2025-09-03 15:25:50,979 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:25:50,979 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:31:32,129 django.server "GET / HTTP/1.1" 200 23123
+INFO 2025-09-03 15:31:33,923 django.server "GET /signup/ HTTP/1.1" 200 14022
+INFO 2025-09-03 15:31:33,941 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-03 15:31:35,713 django.server "GET /quick-apply/ HTTP/1.1" 200 18896
+INFO 2025-09-03 15:33:42,623 django.server "GET /quick-apply/ HTTP/1.1" 200 18897
+INFO 2025-09-03 15:33:43,841 django.server "GET / HTTP/1.1" 200 23124
+INFO 2025-09-03 15:35:29,365 django.server "GET / HTTP/1.1" 200 23123
+INFO 2025-09-03 15:35:31,107 django.server "GET /affiliate/ HTTP/1.1" 200 20497
+INFO 2025-09-03 15:36:25,319 django.server "GET / HTTP/1.1" 200 23116
+WARNING 2025-09-03 15:36:27,497 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:27,498 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:33,851 django.server "GET / HTTP/1.1" 200 23116
+WARNING 2025-09-03 15:36:33,891 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:33,892 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:36,810 django.server "GET / HTTP/1.1" 200 23116
+WARNING 2025-09-03 15:36:36,844 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:36,846 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:37,037 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-03 15:36:37,043 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 15:36:37,043 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 15:36:37,044 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 15:36:37,046 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 15:36:37,050 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 15:36:37,051 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 15:36:37,053 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 15:36:37,055 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 15:36:37,057 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 15:36:37,061 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-03 15:36:37,065 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 15:36:37,365 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-03 15:36:40,637 django.server "GET /affiliate/ HTTP/1.1" 200 20490
+WARNING 2025-09-03 15:36:40,685 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:40,686 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:40,688 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 15:36:40,689 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 15:36:40,692 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 877
+INFO 2025-09-03 15:36:40,693 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 15:36:40,701 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 15:36:40,701 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-03 15:36:40,702 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-03 15:36:40,702 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-03 15:36:40,703 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-03 15:36:40,704 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 15:36:40,706 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6030
+INFO 2025-09-03 15:36:40,706 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-03 15:36:42,207 django.server "GET /careers/ HTTP/1.1" 200 17285
+WARNING 2025-09-03 15:36:42,243 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:42,243 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:42,247 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 15:36:42,250 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 15:36:42,252 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 15:36:42,256 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 15:36:42,257 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 15:36:42,261 django.server "GET /static/css/careers.css HTTP/1.1" 200 3124
+INFO 2025-09-03 15:36:42,268 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-09-03 15:36:42,269 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-09-03 15:36:42,270 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-09-03 15:36:44,380 django.server "GET /faq/ HTTP/1.1" 200 23626
+WARNING 2025-09-03 15:36:44,419 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-03 15:36:44,420 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8613
+INFO 2025-09-03 15:36:44,421 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 5915
+INFO 2025-09-03 15:36:44,421 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 975
+INFO 2025-09-03 15:36:44,425 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-03 15:36:44,427 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-03 15:36:44,428 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-03 15:36:44,434 django.server "GET /static/css/faq.css HTTP/1.1" 200 3407
+INFO 2025-09-03 15:36:44,439 django.server "GET /static/js/faq_search.js HTTP/1.1" 200 1308
+INFO 2025-09-03 15:37:41,372 django.server "GET /faq/ HTTP/1.1" 200 23626
+INFO 2025-09-03 15:37:43,175 django.server "GET /signup/ HTTP/1.1" 200 14025
+INFO 2025-09-03 15:37:44,485 django.server "GET /aboutus/ HTTP/1.1" 200 15968
+INFO 2025-09-03 15:37:45,890 django.server "GET /products/ HTTP/1.1" 200 36638
+INFO 2025-09-03 15:37:46,902 django.server "GET /quick-apply/ HTTP/1.1" 200 18889
+INFO 2025-09-03 15:37:48,124 django.server "GET /contact/ HTTP/1.1" 200 15440
+INFO 2025-09-03 15:37:49,426 django.server "GET /affiliate/ HTTP/1.1" 200 20490
+INFO 2025-09-03 15:37:51,285 django.server "GET /steps/ HTTP/1.1" 200 14414
+INFO 2025-09-03 15:37:53,251 django.server "GET /faq/ HTTP/1.1" 200 23626
+INFO 2025-09-03 15:37:54,481 django.server "GET /contact/ HTTP/1.1" 200 15440
+INFO 2025-09-03 15:37:57,057 django.server "GET /signup/ HTTP/1.1" 200 14025
+INFO 2025-09-03 15:37:59,378 django.server "GET /affiliate/ HTTP/1.1" 200 20490
+INFO 2025-09-03 15:38:01,637 django.server "GET /login/ HTTP/1.1" 200 12566
+INFO 2025-09-03 15:38:03,293 django.server "GET /affiliate/ HTTP/1.1" 200 20490
+INFO 2025-09-03 15:38:06,841 django.server "GET /login/ HTTP/1.1" 200 12566
+INFO 2025-09-03 15:39:21,163 django.server "GET / HTTP/1.1" 200 23116

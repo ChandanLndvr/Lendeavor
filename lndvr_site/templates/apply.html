@@ -106,8 +106,11 @@
                         <input type="email" id="bemail" name="bemail" placeholder="Business email" required>
                     </div>
                     <div class="col-md-6">
-                        <label class="form-label">Phone Number<span style="color: red;">*</span></label>
-                        <input type="tel" id="phone" maxlength="10" name="phone" placeholder="Phone number" required>
+                        <label class="form-label">Phone Number <span style="color:red;">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text">+1</span>
+                            <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" required>
+                        </div>
                     </div>
                 </div>
 
@@ -133,13 +136,19 @@
             <!-- Financial Tab -->
             <div class="tab-content" id="financial" style="display:none;">
                 <div class="mb-3">
-                    <label class="form-label">Monthly Revenue<span style="color:red;">*</span></label>
-                    <input type="number" id="monthly_revenue" name="monthly_revenue" placeholder="Monthly Revenue"
-                        required>
+                    <label class="form-label">Monthly Revenue <span style="color:red;">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" id="monthly_revenue" name="monthly_revenue" class="form-control" placeholder="Monthly Revenue" required>
+                    </div>
                 </div>
+
                 <div class="mb-3">
-                    <label class="form-label">Funds Requested<span style="color:red;">*</span></label>
-                    <input type="number" id="fund" name="fund" placeholder="Enter the amount" required />
+                    <label class="form-label">Funds Requested <span style="color:red;">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" id="fund" name="fund" class="form-control" placeholder="Enter the amount" required>
+                    </div>
                 </div>
                 <div class="mb-3">
                     <label class="form-label">Do you have existing business loans?<span

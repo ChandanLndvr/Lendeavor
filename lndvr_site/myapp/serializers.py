@@ -2,7 +2,7 @@ from rest_framework import serializers
 from .models import UserApplications
 from .models import SignUp
 from datetime import datetime
-from .models import JobApplications, JobDetails
+from .models import JobApplications, JobDetails, QuickApplication
 
 #--------------------- signup ----------------------
 
@@ -153,6 +153,59 @@ class UserApplicationsSerializer(serializers.ModelSerializer):
         if value.lower() not in ['yes', 'no']:
             raise serializers.ValidationError("First time must be 'yes' or 'no'.")
         return value.lower()
+    
+
+#--------------------- Quick user application -----------------------
+
+class QuickApplicationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = QuickApplication
+        fields = '__all__'
+
+    def validate_Business_name(self, value):
+        if not value:
+            raise serializers.ValidationError("Legal name of business is required.")
+        return value
+
+    def validate_Industry(self, value):
+        if not value:
+            raise serializers.ValidationError("Industry is required.")
+        return value
+        
+    def validate_Business_Start_date(self, value):
+        if value:
+            try:
+                datetime.strptime(value, "%Y-%m")
+            except ValueError:
+                raise serializers.ValidationError("Start Date must be in YYYY-MM format.")
+        else:
+            raise serializers.ValidationError("Business start date is required.")
+        return value
+    
+    def validate_Owner_First_Name(self, value):
+        if not value:
+            raise serializers.ValidationError("First name is required.")
+        return value
+    
+    def validate_Owner_Last_Name(self, value):
+        if not value:
+            raise serializers.ValidationError("Last name is required.")
+        return value
+    
+    def validate_Credit_score(self, value):
+        if not value:
+            raise serializers.ValidationError("Credit score is required.")
+        return value
+    
+    def validate_Monthly_Revenue(self, value):
+        if value < 0:
+            raise serializers.ValidationError("Monthly revenue cannot be negative.")
+        return value
+
+    def validate_Funds_Requested(self, value):
+        if value < 500:
+            raise serializers.ValidationError("Requested funds should be at least $500.")
+        return value
     
 #--------------------- Job application --------------------
 

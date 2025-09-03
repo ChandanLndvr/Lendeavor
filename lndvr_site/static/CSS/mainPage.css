@@ -291,4 +291,8 @@ html, body {
     .robot {
         width: 160px;
     }
+
+    .bolt_platform {
+        width: 140px;
+    }
 }

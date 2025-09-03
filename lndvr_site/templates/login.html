@@ -55,59 +55,65 @@
                             href="{% url 'products' %}">Products</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if current_page == 'careers' %}active{% endif %}"
-                            href="/careers">Careers</a>
+                        <a class="nav-link {% if current_page == 'quick_apply' %}active{% endif %}"
+                            href="{% url 'quick_apply' %}">Quick Apply</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if current_page == 'contact' %}active{% endif %}"
                             href="{% url 'contact' %}">Contact us</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'steps' or current_page == 'financial_news' or current_page == 'sell_business' %}active{% endif %}"
+                        <a class="nav-link dropdown-toggle {% if current_page == 'case_study' or current_page == 'affiliates' or current_page == 'lenders' or current_page == 'careers'  or current_page == 'steps' or current_page == 'financial_news' or current_page == 'faq' or current_page == 'lenders' or current_page == 'sell_business' %}active{% endif %}"
                             href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                             More
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item {% if current_page == 'finance' %}active{% endif %}"
-                                    href="{% url 'financial_news' %}">
-                                    Financial News
+                                <a class="dropdown-item"
+                                    href="{% url 'affiliates' %}">
+                                    Become an Affiliate
+                                </a>
+                            </li>
+                             <li>
+                                <a class="dropdown-item"
+                                    href="{% url 'careers' %}">
+                                    Careers
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'case_study' %}active{% endif %}"
+                                <a class="dropdown-item"
                                     href="{% url 'caseStudy' %}">
                                     Case Study
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'affiliates' %}active{% endif %}"
-                                    href="{% url 'affiliates' %}">
-                                    Become an Affiliate
+                                <a class="dropdown-item"
+                                    href="{% url 'faq' %}">
+                                    FAQs
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'lenders' %}active{% endif %}"
-                                    href="{% url 'lenders' %}">
-                                    Our Lenders
+                                <a class="dropdown-item"
+                                    href="{% url 'financial_news' %}">
+                                    Financial News
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'steps' %}active{% endif %}"
+                                <a class="dropdown-item"
                                     href="{% url 'steps' %}">
                                     Funding Steps
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'sell_business' %}active{% endif %}"
-                                    href="{% url 'sell_business' %}">
-                                    Sell your Business
+                                <a class="dropdown-item"
+                                    href="{% url 'lenders' %}">
+                                    Lenders / Marketplace
                                 </a>
                             </li>
                             <li>
-                                <a class="dropdown-item {% if current_page == 'faq' %}active{% endif %}"
-                                    href="{% url 'faq' %}">
-                                    FAQs
+                                <a class="dropdown-item"
+                                    href="{% url 'sell_business' %}">
+                                    Sell your Business
                                 </a>
                             </li>
                         </ul>

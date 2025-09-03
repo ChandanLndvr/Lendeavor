@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/apply.css' %}">
+{% endblock head %}
+
+{% block title %}Quick Apply Form | Lendeavor{% endblock title %}
+
+{% block body %}
+<div class="container">
+    <div class="application-wrapper">
+        <h2 class="text-center mb-4">Quick Application</h2>
+
+        <div class="step-header tabs">
+            <button class="tab-button active" data-tab="business">Business Information</button>
+            <button class="tab-button" data-tab="ownership">Ownership Information</button>
+            <button class="tab-button" data-tab="financial">Financial Information</button>
+        </div>
+
+        <form id="multi-step-form" class="applicationForm" method="POST" action="{% url 'quick_apply' %}">
+            {% csrf_token %}
+            <!-- Business Tab -->
+            <div class="tab-content" id="business">
+                <div class="mb-3">
+                        <label class="form-label">Legal name of business <span style="color: red;">*</span></label>
+                        <input type="text" id="business_name" name="business_name" placeholder="Your business name"
+                         required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Industry <span style="color: red;">*</span></label>
+                    <input type="text" id="industry" name="industry" placeholder="e.g. Retail, Services" required>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Start Date <span style="color: red;">*</span></label>
+                    <input type="month" id="startdate" name="startdate" required>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-primary mt-3 next-btn">Continue ▶</button>
+                </div>
+            </div>
+
+            <!-- Ownership Tab -->
+            <div class="tab-content" id="ownership" style="display:none;">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">First Name<span style="color: red;">*</span></label>
+                        <input type="text" id="fname" name="fname" placeholder="First Name" required>
+                    </div>
+        
+                    <div class="col-md-6">
+                        <label class="form-label">Last Name<span style="color: red;">*</span></label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" required>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Business Email<span style="color: red;">*</span></label>
+                        <input type="email" id="bemail" name="bemail" placeholder="Business email" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Phone Number <span style="color:red;">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-text">+1</span>
+                            <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-12">
+                        <label class="form-label">Credit Score<span style="color: red;">*</span></label>
+                        <input type="number" id="credit_score" name="credit_score" maxlength="3" placeholder="Credit Score" min="300" 
+                                max="850" 
+                                step="1"
+                                oninput="this.setCustomValidity('');"
+                                oninvalid="this.setCustomValidity('Please enter a credit score between 300 and 850.');" required>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-secondary mt-3 back-btn">◀ Back</button>
+                    <button type="button" class="btn btn-primary mt-3 next-btn">Continue ▶</button>
+                </div>
+            </div>
+
+            <!-- Financial Tab -->
+            <div class="tab-content" id="financial" style="display:none;">
+                <div class="mb-3">
+                    <label class="form-label">Monthly Revenue <span style="color:red;">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" id="monthly_revenue" name="monthly_revenue" class="form-control" placeholder="Monthly Revenue" required>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Funds Requested <span style="color:red;">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" id="fund" name="fund" class="form-control" placeholder="Enter the amount" required>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Do you have existing financing with an alternative lender?<span
+                            style="color:red;">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-option">
+                            <input type="radio" name="existing_loans" value="yes" required />
+                            <span>Yes</span>
+                        </label>
+                        <label class="radio-option">
+                            <input type="radio" name="existing_loans" value="no" />
+                            <span>No</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label class="terms-label">
+                        <input type="checkbox" name="agree_terms" required />
+                        I agree to the <a href="/terms" target="_blank">Terms and Conditions<span
+                                style="color:red;">*</span></a>
+                    </label>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" class="btn btn-secondary mt-3 back-btn">◀ Back</button>
+                    <button type="submit" class="btn btn-primary mt-3">Submit Application</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- JS -->
+<script src="{% static 'js/applynow.js' %}"></script>
+
+{% endblock body %}
