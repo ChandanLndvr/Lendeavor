@@ -83,9 +83,10 @@ html, body {
 }
 
 .page-title {
-  font-size: 2.75rem;
+  font-size: 3rem;
   color: white;
   margin-bottom: 10px;
+  font-weight: 100;
 }
 
 .page-subtitle {

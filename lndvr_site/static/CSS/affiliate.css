@@ -183,15 +183,10 @@ form {
 
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
-    .heading-container {
+    .container, .heading-container {
         padding: 1rem 0.5rem;    /* Further reduced padding */
         margin-top: 1rem;        /* Much smaller top margin */
-        margin-bottom: 1rem;     /* Smaller bottom margin */
-    }
-    
-    .blurred-heading {
-        margin: 0px auto 10px auto;  /* Smaller margins */
-        padding: 7px 10px;           /* Smaller padding */
+        margin-bottom: 3rem;     /* Smaller bottom margin */
     }
     
     .blurred-heading h1 {
@@ -204,7 +199,8 @@ form {
     }
     
     .title, .join-title {
-        margin: 20px auto;            /* Much smaller margins */
+        margin-top: 80px;
+        margin-bottom:20px;
         padding: 0.8rem;              /* Smaller padding */
     }
     
@@ -236,21 +232,21 @@ form {
         margin-bottom: 0.5rem;
     }
     
-    .blurred-heading {
-        margin: 5px auto 10px auto;
-        padding: 15px 10px;
-    }
-    
     .blurred-heading h1 {
         font-size: 1.5rem !important;
     }
     
     .title, .join-title {
-        margin: 15px auto;
-        padding: 0.6rem;
+        margin-top: 80px;
+        margin-bottom:20px;
+        padding: 0.8rem; 
     }
     
     .title h1, .join-title h1 {
         font-size: 1.2rem;
+    }
+
+    .blurred-heading p {
+        margin: 0.8rem auto 1rem auto;
     }
 }

@@ -22,12 +22,15 @@
     <div class="info-image-card d-flex flex-column flex-md-row align-items-center justify-content-center my-5 px-3">
         <div class="robot-circle-container">
             <!-- Main Bolt in Circle -->
-            <div class="circle">
-                <img src="{% static 'BOLT.png' %}" alt="Lendeavor Robot" class="robot">
-            </div>
+            <a href="{% url 'mainPage' %}">
+                <div class="circle">
+                    <img src="{% static 'BOLT.png' %}" alt="Lendeavor Robot" class="robot">
+                </div>
 
-            <!-- Platform Images Below -->
-            <img src="{% static 'bolt_platform.png' %}" alt="Bolt Platform" class="bolt_platform mt-3">
+                <!-- Platform Images Below -->
+                
+                <img src="{% static 'bolt_platform.png' %}" alt="Bolt Platform" class="bolt_platform mt-3">
+            </a>
         </div>
         <div class="nested-info ps-md-5 mt-4 mt-md-0 text-white">
             <h3 class="fw-bold" style="font-family:'Open Sans', sans-serif;">YOUR FUNDING STARTS HERE</h3>
