@@ -13,14 +13,16 @@ from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
 from lndvr_site.utils.graph_email import send_graph_email
 from lndvr_site.utils.send_graph_email_async import send_graph_email_async
-from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer
+from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer, QuickApplicationSerializer
 from myapp.custom_middleware.log_ip import log_action
 from collections import defaultdict
 
 #----------------------- Main page ------------------------
 
 def main(request):
-    return render(request, 'mainPage.html')
+    message = request.GET.get('message')
+    error = request.GET.get('error')
+    return render(request, 'mainPage.html', {'message': message, 'error':error})
 
 #------------------------ Signup --------------------------
 
@@ -155,9 +157,6 @@ def forgot_password(request):
     message = request.GET.get('message')
     error = request.GET.get('error')
 
-    print("Message:", message)
-    print("Error:", error)
-
     return render(request, "forgot_password.html", {
         "message": message,
         "error": error
@@ -259,11 +258,11 @@ def apply(request):
                     f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
                     for field, value in serializer.validated_data.items()
                 )
-                email_body = f"<h3>New / Updated Business Application</h3><table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+                email_body = f"<h3>New / Updated Business Funding Application</h3><table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
 
                 # Send email asynchronously with attachments
                 send_graph_email_async(
-                    subject="New / Updated Business Application",
+                    subject="New / Updated Business Funding Application",
                     body=email_body,
                     to_emails=[cleaned_data['Business_Email'], settings.CONTACT_EMAIL],
                     is_html=True,
@@ -282,6 +281,80 @@ def apply(request):
         'message': request.GET.get('message'),
         'error': request.GET.get('error')
     })
+
+
+#------------------------------- Quick Apply for funding ----------------------------------------
+
+def quick_apply(request):
+    if request.method == "POST":
+        log_action(request, "quick funding application attempt", user_info=request.POST.get('bemail'))
+        data = request.POST.dict()
+
+        cleaned_data = {
+            'Business_name': data.get('business_name'),
+            'Industry': data.get('industry'),
+            'Business_Start_date': data.get('startdate'),
+            'Owner_First_Name': data.get('fname'),
+            'Owner_Last_Name': data.get('lname'),
+            'Business_Email': data.get('bemail'),
+            'Credit_score': data.get('credit_score'),
+            'Phone_no': data.get('phone'),'Monthly_Revenue': data.get('monthly_revenue'),
+            'Funds_Requested': data.get('fund'),
+            'Existing_loans': data.get('existing_loans'),
+        }
+
+        serializer = QuickApplicationSerializer(data=cleaned_data)
+        if serializer.is_valid():
+            serializer.save()
+
+            # Build HTML email body with bold labels
+            rows = ''.join(
+                f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
+                f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+                for field, value in serializer.validated_data.items()
+            )
+
+            # Extract applicant's name for company subject/body
+            first_name = cleaned_data.get("Owner_First_Name", "")
+            last_name = cleaned_data.get("Owner_Last_Name", "")
+
+            # Company email body
+            company_email_body = (
+                f"<h3>New Business Funding Application from {first_name} {last_name}</h3>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # User email body (thank you + same table)
+            user_email_body = (
+                "<h3>Thank you for applying for Business Funding at Lendeavor</h3>"
+                "<p>We appreciate your interest. Our team will review your application shortly and get in touch with you.</p>"
+                "<p>Here’s a copy of your submitted application details:</p>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # Send email to company
+            send_graph_email_async(
+                subject=f"New Business Funding Application from {first_name} {last_name}",
+                body=company_email_body,
+                to_emails=[settings.CONTACT_EMAIL],
+                is_html=True
+            )
+
+            # Send email to user
+            send_graph_email_async(
+                subject="Your Business Funding Application at Lendeavor",
+                body=user_email_body,
+                to_emails=[cleaned_data['Business_Email']],
+                is_html=True
+            )
+            message_text = "Application submitted successfully!"
+            # Redirect with success message
+            return redirect(f"{reverse('mainPage')}?message={message_text}")
+        else:
+            return render(request, 'quick_apply.html', {'error': serializer.errors})
+    return render(request, "quick_apply_form.html", {'current_page':'quick_apply', 
+            'message': request.GET.get('message'),
+            'error': request.GET.get('error')})
 
 
 #----------------------------- About us ----------------------------
