@@ -2,7 +2,7 @@
   max-width: 900px;
   margin: 50px auto;
   padding: 0 15px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #fff;
 }
 
@@ -106,7 +106,7 @@ select {
   color: #fff;
   outline: none;
   transition: border-color 0.3s ease, background 0.3s ease;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: 'Open Sans', sans-serif;
 }
 
 input::placeholder {
