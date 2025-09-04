@@ -17,19 +17,19 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from myapp import views
-from django.contrib.auth import views as auth_views #inbuilt views by django
+#from django.contrib.auth import views as auth_views #inbuilt views by django
 
 urlpatterns = [
     path('', views.main, name = "mainPage"),
-    path('signup/', views.signUp, name = "signup"),
-    path('login/', views.login_user, name = "login"),
-    path('logout/', views.logout_user, name='logout'),
+    path("signup/", views.signUp, name = "signup"),
+    path("login/", views.login_user, name = "login"),
+    path("logout/", views.logout_user, name="logout"),
     path("forgot-password/", views.forgot_password, name="forgot_password"),
     path("reset-password/<str:token>/", views.reset_password, name="reset_password"),
     path("aboutus/", views.aboutus, name="aboutus"),
     path("products/", views.products, name="products"),
     path("contact/", views.contact, name="contact"),
-    path("careers/", views.career_page, name='careers'),
+    path("careers/", views.career_page, name="careers"),
     path("quick-apply/", views.quick_apply, name = "quick_apply"),
     path("apply/", views.apply, name = "apply"),
     path("steps/", views.funding_steps, name = "steps"),
@@ -42,5 +42,6 @@ urlpatterns = [
     path("careers/application/<uuid:job_id>/", views.job_applications, name = "jobApplication"),
     path("job/", include("job_posting_app.urls")),
     path("affiliate/", include("affiliate_app.urls")),
-    path('finance/', include("financial_news_app.urls")),
+    path("finance/", include("financial_news_app.urls")),
+    path("bolt/", include("bolt_app.urls")),
 ]

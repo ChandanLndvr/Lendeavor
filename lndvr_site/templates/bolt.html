@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block head %} 
+
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'CSS/bolt.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+{% endblock head %}
+
+{% block title %} Bolt | {% endblock title %}
+
+{% block body %} 
+
+<div class="container">
+
+    <div class="heading-container">
+        <h1> MEET BOLT </h1>
+        <p>BOLT is our "Business Optimization & Lending Technology"</p>
+    </div>
+
+    <div class="center-page">
+        <div class="robot-circle-container">
+            <!-- Main Bolt in Circle -->
+            <a href="{% url 'bolt' %}">
+                <div class="circle">
+                    <img src="{% static 'BOLT.png' %}" alt="Lendeavor Robot" class="robot">
+                </div>
+
+                <!-- Platform Images Below -->
+                
+                <img src="{% static 'bolt_platform.png' %}" alt="Bolt Platform" class="bolt_platform mt-3">
+            </a>
+        </div>
+        <div class="bolt-info">
+            <div class="info-heading">
+                <h3>BOLT is our "Business Optimization & <span style="color: #00f7ff;">Lending Technology</span>"</h3>
+            </div>
+
+            <!-- Swiper container -->
+            <div class="swiper bolt-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide info-para">
+                        <h5>"Access the entire market in 1 place with 1 click"</h5>
+                        <p>Experience the future of financing with BOLT, 
+                            our cutting-edge AI lending assistant designed to streamline your funding journey. 
+                            BOLT leverages advanced algorithms and an extensive network of lenders to provide you with tailored lending solutions in real-time.
+                            At Lendeavor, we specialize in connecting businesses with the funding they need to thrive. 
+                            Powered by cutting-edge technology and a dedicated team of experts, 
+                            we proudly introduce BOLT our innovative AI robot designed to optimize and streamline your funding process.
+                        </p>
+                    </div>
+                    <div class="swiper-slide info-para">
+                        <h5>"Leave no stone unturned"</h5>
+                        <p>We understand as a business owner, 
+                            you want to guarantee that you’re receiving nothing but the best available options.  
+                            With BOLT on your side, you can say goodbye to the hassle of navigating the complex world of business loans. 
+                            Our advanced AI analyzes your unique business profile and matches you with the most suitable lenders from our extensive network of over 80 partners. 
+                            By narrowing down the best competitive options, BOLT ensures that you receive tailored funding solutions, 
+                            placing the best deals on the market directly into your hands. No more headaches, no more rookie sales calls, no more wasting time. 
+                            You deserve to know you are getting the best deal.
+                        </p>
+                    </div>
+                    <div class="swiper-slide info-para">
+                        <h5>"We will never abandon the human touch"</h5>
+                        <p>We understand that technology alone isn’t enough. 
+                            That's why we are committed to maintaining a strong human touch throughout the process. 
+                            Our team of seasoned experts will personally reach out to guide you every step of the way. 
+                            We advocate on your behalf, negotiating with lenders to secure the most favorable terms possible.
+                            What sets us apart from our competitors is our belief in the power of collaboration between technology and human expertise. 
+                            We’ve created a dynamic marketplace where we fight for your business, 
+                            ensuring you not only get the funding you need but also the best deal available in the market.
+                        </p>
+                    </div>
+                    <div class="swiper-slide info-para">
+                        <h5>"Apply, Sit Back, Relax, Get Funded"</h5>
+                        <p>Experience the perfect blend of innovation and personal service at Lendeavor. Let us empower your business journey today!</p>
+                    </div>
+                </div>
+                <div class="swiper-pagination"><span style="justify-content: center;"></spna></div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Robot Animation Script -->
+<script>
+  window.addEventListener("load", () => {
+    const robot = document.getElementById("robot");
+
+    // Wave animation on load
+    robot.style.animation = "wave 2s ease-in-out";
+
+    // After wave, switch back to idle floating + glowing
+    setTimeout(() => {
+      robot.style.animation = "floatIdle 3s ease-in-out infinite, glow 2s ease-in-out infinite alternate";
+    }, 2000); // duration of wave
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+<script src="{% static 'js/bolt_swiper.js' %}"></script>
+{% endblock body %}
