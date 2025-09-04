@@ -295,4 +295,9 @@ html, body {
     .bolt_platform {
         width: 140px;
     }
+    .navbar-brand{
+    margin-left: auto;
+    margin-right: auto;
+    }
+    
 }

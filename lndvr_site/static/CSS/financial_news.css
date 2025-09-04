@@ -21,8 +21,8 @@ html, body {
 }
 
 .heading-container h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
+    font-size: 3rem;
+    font-weight: 100;
     color: white;
     margin-bottom: 10px;
     display: block;
@@ -30,11 +30,10 @@ html, body {
 
 .heading-container p {
     color: grey;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     max-width: 700px;
     margin: 0 auto;
     display: block;
-    font-weight: 2.5rem;
 }
 
 
