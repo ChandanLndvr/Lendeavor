@@ -16,6 +16,10 @@
   outline: none;
 }
 
+.contact-section{
+  padding-top: 60px;
+}
+
 /* When input or textarea is focused */
 .contact-card input:focus,
 .contact-card textarea:focus {

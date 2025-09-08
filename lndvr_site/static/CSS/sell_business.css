@@ -4,8 +4,8 @@
     background: rgba(19, 18, 18, 0.05);
     backdrop-filter: blur(4px);
     max-width: 95%;
-    margin: 20px auto 50px auto;
-    padding: 40px 20px 30px;  /* corrected padding */
+    margin: 10px auto 50px auto;
+    padding: 5px 20px 30px;  /* corrected padding */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     display: block;  /* ensure block layout */
 }
@@ -44,11 +44,11 @@
 
 /* Blurred card container (used for each section) */
 .sell-business-card {
-    background: rgba(255, 255, 255, 0.08);
+    background: rgba(24, 23, 23, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.18);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(5px);
     border-radius: 15px;
     color: white;
     padding: 30px;

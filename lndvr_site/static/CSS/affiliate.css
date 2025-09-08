@@ -7,6 +7,10 @@ html, body {
   color: white;
 }
 
+.container{
+    padding-top: 60px;
+}
+
 /* Hero Section */
 .heading-container {
     display: flex;
@@ -121,7 +125,7 @@ form {
     padding: 0.6rem 0.75rem;
     border: none;
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.15);
     color: #fff;
     font-size: 1rem;
     transition: background 0.3s, box-shadow 0.3s;
@@ -184,9 +188,8 @@ form {
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
     .container, .heading-container {
-        padding: 1rem 0.5rem;    /* Further reduced padding */
-        margin-top: 1rem;        /* Much smaller top margin */
-        margin-bottom: 3rem;     /* Smaller bottom margin */
+        padding: 2rem 1.0rem;    /* Further reduced padding */
+        margin-top:65px;
     }
     
     .blurred-heading h1 {
@@ -199,7 +202,7 @@ form {
     }
     
     .title, .join-title {
-        margin-top: 80px;
+        margin-top: 150px;
         margin-bottom:20px;
         padding: 0.8rem;              /* Smaller padding */
     }
@@ -235,9 +238,15 @@ form {
     .blurred-heading h1 {
         font-size: 1.5rem !important;
     }
+
+    .join-title {
+        margin-top: 30px;
+        margin-bottom:20px;
+        padding: 0.8rem;
+    }
     
-    .title, .join-title {
-        margin-top: 80px;
+    .title {
+        margin-top: 150px;
         margin-bottom:20px;
         padding: 0.8rem; 
     }
