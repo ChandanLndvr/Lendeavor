@@ -15,23 +15,27 @@
 
 <div class="container">
 
-    <div class="heading-container">
-        <h1> MEET BOLT </h1>
-        <p>BOLT is our "Business Optimization & Lending Technology"</p>
+    <div class="heading-wrapper">
+        <div class="heading-container">
+            <h1> MEET BOLT </h1>
+            <p>BOLT is our "Business Optimization & Lending Technology"</p>
+        </div>
     </div>
 
     <div class="center-page">
-        <div class="robot-circle-container">
-            <!-- Main Bolt in Circle -->
-            <a href="{% url 'bolt' %}">
-                <div class="circle">
-                    <img src="{% static 'BOLT.png' %}" alt="Lendeavor Robot" class="robot">
-                </div>
+        <div class="robot-wrapper">
+            <div class="robot-circle-container">
+                <!-- Main Bolt in Circle -->
+                <a href="{% url 'bolt' %}">
+                    <div class="circle">
+                        <img src="{% static 'BOLT.png' %}" alt="Lendeavor Robot" class="robot">
+                    </div>
 
-                <!-- Platform Images Below -->
-                
-                <img src="{% static 'bolt_platform.png' %}" alt="Bolt Platform" class="bolt_platform mt-3">
-            </a>
+                    <!-- Platform Images Below -->
+                    
+                    <img src="{% static 'bolt_platform.png' %}" alt="Bolt Platform" class="bolt_platform mt-3">
+                </a>
+            </div>
         </div>
         <div class="bolt-info">
             <div class="info-heading">

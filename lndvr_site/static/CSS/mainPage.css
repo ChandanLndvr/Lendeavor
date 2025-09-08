@@ -276,7 +276,6 @@ html, body {
     padding-left: 30px;
 }
 
-/* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .main-heading {
         font-size: 20px;
@@ -293,9 +292,52 @@ html, body {
     .bolt_platform {
         width: 140px;
     }
-    .navbar-brand{
-    margin-left: auto;
-    margin-right: auto;
+
+    /* Navbar adjustments for mobile */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap; /* allow items to wrap */
+        padding: 12px 10px;
     }
-    
+
+    .navbar-brand {
+        margin: 0;
+        order: 1;
+    }
+
+    .navbar-brand img {
+        width: 180px; /* optional: reduce logo size */
+        margin-left: 0;
+    }
+
+    .navbar-toggler {
+        order: 2;
+        margin-left: auto; /* push it to the right */
+        margin-right: 0;   /* optional: keep it flush from right edge */
+    }
+
+    .navbar-collapse {
+        width: 100%;
+        order: 3;           /* appear below logo + toggler */
+        margin-top: 10px;
+        display: none;      /* hidden by default, controlled by collapse */
+        flex-direction: column;
+        transition: none !important;
+    }
+
+    .navbar-collapse.show {
+        display: flex;      /* when toggled, show vertically */
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .nav-item {
+        margin: 10px 0;
+    }
 }

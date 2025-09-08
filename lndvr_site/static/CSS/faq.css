@@ -57,7 +57,7 @@ html, body {
 .faq-questions-card {
     flex: 2 1 650px;
     max-width: 900px;
-    padding: 40px 50px;
+    padding: 60px 50px;
 }
 
 /* FAQ title */
