@@ -8,6 +8,12 @@
     color: white;
 }
 
+.page-title{
+    color: white; 
+    font-size:3rem; 
+    font-weight: 100;
+}
+
 /* Careers Page Search Bar */
 
 #job-search,
@@ -118,6 +124,10 @@
     .search-bar-container {
         flex-wrap: wrap;
         gap: 10px;
+    }
+
+    .page-title{
+        font-size: 40px;
     }
     
     #job-search,

@@ -45,24 +45,46 @@ def affiliate(request):
         if serializer.is_valid():
             instance = serializer.save()
 
-            # Prepare email in tabular format
-            table_rows = ""
-            for field, value in serializer.validated_data.items():
-                pretty_field = field.replace("_", " ").title()
-                table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{pretty_field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+            # Build HTML table rows with bold labels
+            rows = ''.join(
+                f"<tr>"
+                f"<td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
+                f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td>"
+                f"</tr>"
+                for field, value in serializer.validated_data.items()
+            )
 
-            email_body = f"""
-            <h3>New Affiliate Application Received</h3>
-            <table style='border-collapse:collapse;width:100%;'>
-                {table_rows}
-            </table>
-            """
+            # Extract applicant's name for email subject/body
+            first_name = cleaned_data.get("First_name", "")
+            last_name = cleaned_data.get("Last_name", "")
 
-            # Send email asynchronously without blocking
+            # Email body for the company
+            company_email_body = (
+                f"<h3>New Affiliate Application from {first_name} {last_name}</h3>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # Email body for the user
+            user_email_body = (
+                "<h3>Thank you for applying at Lendeavor</h3>"
+                "<p>We appreciate your interest in our 'Affiliate Program'. Our team will get in touch with you shortly.</p>"
+                "<p>Here’s a copy of your submitted application details:</p>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # Send email to company
             send_graph_email_async(
-                subject="New Affiliate Application Received",
-                body=email_body,
+                subject=f"New Affiliate Application from {first_name} {last_name}",
+                body=company_email_body,
                 to_emails=[settings.CONTACT_EMAIL],
+                is_html=True
+            )
+
+            # Send email to user
+            send_graph_email_async(
+                subject="Your Affiliate Application at Lendeavor",
+                body=user_email_body,
+                to_emails=[serializer.validated_data.get('Email')],
                 is_html=True
             )
 
