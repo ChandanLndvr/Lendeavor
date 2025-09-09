@@ -53,11 +53,15 @@
             <label class="form-label text-white">Email:<span style="color:red;">*</span></label>
             <input type='email' name="email" class="email" id="email" required>
         </div>
-        <div class="mb-3">
+
+        <div class="mb-3 form-group">
             <label class="form-label text-white">Phone Number<span style="color:red;">*</span></label>
-            <input type='text' name="phone" class="phone" id="phone" maxlength="10"
-                required>
+            <div class="input-group">
+                <span class="input-group-text">+1</span>
+                <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" required>
+            </div>
         </div>
+
         <div class="mb-3">
             <label class="form-label text-white">Experience:<span style="color:red;">*</span></label>
             <select name="experience" class="form-select" required>
