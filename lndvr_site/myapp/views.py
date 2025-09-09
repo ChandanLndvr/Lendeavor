@@ -434,27 +434,52 @@ def job_applications(request, job_id):
             if serializer.is_valid():
                 instance = serializer.save()
 
-                table_rows = ""
-                for field, value in serializer.validated_data.items():
-                    if field == 'Resume':
-                        continue
-                    pretty_field = field.replace('_', ' ').title()
-                    table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{pretty_field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
+                # Build HTML table rows for email (skip Resume)
+                rows = ''.join(
+                    f"<tr>"
+                    f"<td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
+                    f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td>"
+                    f"</tr>"
+                    for field, value in serializer.validated_data.items() if field != 'Resume'
+                )
 
-                email_body = f"""
-                    <h3>New Job Application for {job.Title}</h3>
-                    <table style='border-collapse:collapse;width:90%;margin-top:10px;'>{table_rows}</table>
-                    <p>Please find the attached resume for further details.</p>
-                """
+                # Extract applicant's name for email personalization
+                first_name = cleaned_data.get("First_name", "")
+                last_name = cleaned_data.get("Last_name", "")
 
+                # Email body for the company
+                company_email_body = (
+                    f"<h3>New Job Application for {job.Title} (ID: {job.Job_id}) from {first_name} {last_name}</h3>"
+                    f"<table style='border-collapse:collapse;width:90%;margin-top:10px;'>{rows}</table>"
+                    "<p>Please find the attached resume for further details.</p>"
+                )
+
+                # Email body for the user (includes job title and job ID)
+                user_email_body = (
+                    f"<h3>Thank you for applying for {job.Title} role (Job ID: {job.Job_id}) at Lendeavor</h3>"
+                    "<p>We appreciate your interest. Our team will review your profile and reach out to you shortly.</p>"
+                    "<p>Here’s a copy of your submitted application details:</p>"
+                    f"<table style='border-collapse:collapse;width:90%;margin-top:10px;'>{rows}</table>"
+                )
+
+                # Attach resume if exists
                 files = [resume_file] if resume_file else []
 
+                # Send email to company
                 send_graph_email_async(
-                    subject=f"New Job Application for {job.Title}",
-                    body=email_body,
+                    subject=f"New Job Application for {job.Title} (ID: {job.Job_id})",
+                    body=company_email_body,
                     to_emails=[job.Email, settings.CONTACT_EMAIL],
                     is_html=True,
                     files=files
+                )
+
+                # Send email to user
+                send_graph_email_async(
+                    subject=f"Your Job Application for {job.Title} (Job ID: {job.Job_id}) at Lendeavor",
+                    body=user_email_body,
+                    to_emails=[serializer.validated_data.get("Email")],
+                    is_html=True
                 )
 
                 return redirect(

@@ -1,19 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-  const swiper = new Swiper('.bolt-swiper', {
-    loop: true,
-    spaceBetween: 40,
-    effect: 'fade',
-    fadeEffect: { crossFade: true },
-    speed: 800,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-      dynamicBullets: true,
-    },
+document.addEventListener("DOMContentLoaded", function () {
+  const swiper = new Swiper(".bolt-swiper", {
+    loop: false,           // you can set true if you want continuous loop
+    slidesPerView: 1,
+    slidesPerGroup: 1,
+    spaceBetween: 30,
     autoplay: {
-      delay: 3000,
-      disableOnInteraction: false,
+      delay: 4000,          // 4 seconds per slide
+      disableOnInteraction: false, // continue autoplay after user interacts
     },
-    keyboard: { enabled: true },
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+    },
   });
 });

@@ -1,15 +1,27 @@
+.swiper-pagination {
+  z-index: 10;
+}
+
+.review-swiper {
+  min-height: 360px; /* or height of your testimonial cards */
+}
+
 /* Force all testimonial cards to have the same height */
 .testimonial-card {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 320px; /* or any preferred value */
-    padding: 1.5rem;
-    background: rgba(0, 0, 0, 0.6);
-    border-radius: 1rem;
-    color: white;
-    box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 320px; /* or any preferred value */
+  padding: 1.5rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+}
+
+.swiper-wrapper {
+  margin-bottom: 40px;
 }
 
 .stars {
@@ -20,10 +32,10 @@
 
 /* Author section stays at the bottom */
 .testimonial-author {
-    display: flex;
-    align-items: center;
-    margin-top: 1rem;
-    gap: 0.75rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  gap: 0.75rem;
 }
 
 .testimonial-author img {
