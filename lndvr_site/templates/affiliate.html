@@ -32,7 +32,7 @@
         </div>
 
         <div class="title">
-                <h1>How does it work?</h1>
+            <h1>How does it work?</h1>
         </div>
 
         <div class="affiliate-image">
@@ -41,7 +41,7 @@
         </div>
 
         <div class="join-title">
-                <h1>Join our affiliate program!</h1>
+            <h1>Join our affiliate program!</h1>
         </div>
 
         <!-- Intro Section -->
@@ -53,34 +53,48 @@
                     <label>First Name<span style="color:red;">*</span></label>
                     <input type="text" name="first_name" id="first_name" required>
                 </div>
+
                 <div class="form-group">
                     <label>Last Name<span style="color:red;">*</span></label>
                     <input type="text" name="last_name" id="last_name" required>
                 </div>
+
                 <div class="form-group">
                     <label>Email<span style="color:red;">*</span></label>
                     <input type="email" name="email" id="email" required>
                 </div>
+
                 <div class="form-group">
-                    <label>Cell Phone<span style="color:red;">*</span></label>
-                    <input type="tel" name="phone" id="phone" maxlength="10" required>
+                    <label class="form-label">Cell Phone <span style="color:red;">*</span></label>
+                    <div class="input-group">
+                        <span class="input-group-text">+1</span>
+                        <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" required>
+                    </div>
                 </div>
+
                 <div class="form-group">
                     <label>Company</label>
                     <input type="text" name="company" id="company">
                 </div>
+
                 <div class="form-group">
                     <label>Title</label>
                     <input type="text" name="title" id="title">
                 </div>
+
                 <div class="form-group">
                     <label>Website</label>
                     <input type="url" name="website" id="website" placeholder="Website URL">
                 </div>
+
                 <div class="form-group">
-                    <label>Business Phone</label>
-                    <input type="tel" name="business_phone" maxlength="10" id="business_phone">
+                    <label class="form-label">Business Phone </label>
+                    <div class="input-group">
+                        <span class="input-group-text">+1</span>
+                        <input type="tel" id="business_phone" name="business_phone" maxlength="10" class="form-control" placeholder="Phone number">
+                    </div>
                 </div>
+
                 <div class="form-group full-width">
                     <label>Are you able to accept commission?<span style="color:red;">*</span></label>
                     <div class="radio-group">
@@ -90,6 +104,7 @@
                         <label for="payment_no">No</label>
                     </div>
                 </div>
+
                 <div class="form-group full-width">
                     <label>Are you a Social Media Influencer?<span style="color:red;">*</span></label>
                     <div class="radio-group">
@@ -99,6 +114,7 @@
                         <label for="influencer_no">No</label>
                     </div>
                 </div>
+
                 <div class="terms form-group full-width">
                     <label>
                         <input type="checkbox" name="terms" id="terms" required>
@@ -106,6 +122,7 @@
                             Conditions<span style="color:red;">*</span></a>
                     </label>
                 </div>
+
                 <button type="submit" class="btn btn-primary" style="background: linear-gradient(90deg,  #00f7ff, #0084ff, #00f7ff);
                     animation: sparkle 2s linear infinite;"><i class="fas fa-paper-plane"></i> Submit</button>
             </form>

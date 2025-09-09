@@ -35675,3 +35675,445 @@ INFO 2025-09-09 13:59:51,401 django.server "GET /bolt/ HTTP/1.1" 200 17508
 INFO 2025-09-09 13:59:51,454 django.server "GET /static/js/bolt_swiper.js HTTP/1.1" 200 505
 WARNING 2025-09-09 14:00:40,961 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
 WARNING 2025-09-09 14:00:40,962 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 14:09:42,605 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-09 14:09:45,799 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 14:09:45,823 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 304 0
+INFO 2025-09-09 14:09:45,829 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 304 0
+WARNING 2025-09-09 14:09:50,076 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 14:09:50,077 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 14:10:21,114 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 14:11:45,128 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 14:13:38,842 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 14:13:38,874 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:23:12,933 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 15:23:12,979 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:23:12,980 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:23:12,980 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 304 0
+INFO 2025-09-09 15:23:15,886 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 15:23:27,183 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 15:23:36,066 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 15:23:37,743 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:27:09,998 django.server "GET / HTTP/1.1" 200 23195
+INFO 2025-09-09 15:27:12,132 django.server "GET /affiliate/ HTTP/1.1" 200 21421
+INFO 2025-09-09 15:27:12,150 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:27:38,204 django_actions Method: POST | Action: Affiliate application attempt | IP: 127.0.0.1 | User: chandan@lendeavor.com
+INFO 2025-09-09 15:27:38,247 django.server "POST /affiliate/ HTTP/1.1" 302 0
+INFO 2025-09-09 15:27:38,257 django.server "GET /affiliate/?message=Your%20application%20has%20been%20submitted%20successfully! HTTP/1.1" 200 21590
+INFO 2025-09-09 15:31:39,212 django.server "GET /affiliate/ HTTP/1.1" 200 21825
+INFO 2025-09-09 15:32:00,459 django.server "GET /affiliate/ HTTP/1.1" 200 21595
+INFO 2025-09-09 15:32:22,600 django_actions Method: POST | Action: Affiliate application attempt | IP: 127.0.0.1 | User: chandan@lendeavorusa.com
+INFO 2025-09-09 15:32:22,611 django.server "POST /affiliate/ HTTP/1.1" 302 0
+INFO 2025-09-09 15:32:22,621 django.server "GET /affiliate/?message=Your%20application%20has%20been%20submitted%20successfully! HTTP/1.1" 200 21764
+INFO 2025-09-09 15:35:00,157 django.server "GET /aboutus/ HTTP/1.1" 200 16280
+INFO 2025-09-09 15:35:04,772 django.server "GET /careers/ HTTP/1.1" 200 19507
+INFO 2025-09-09 15:35:04,795 django.server "GET /static/css/careers.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:35:06,998 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:35:07,004 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18033
+INFO 2025-09-09 15:37:11,542 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:37:11,566 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:37:37,915 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:37:37,934 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18170
+INFO 2025-09-09 15:37:37,963 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 304 0
+INFO 2025-09-09 15:38:01,101 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:38:01,106 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:38:46,156 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:38:46,159 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:39:15,626 django_actions Method: POST | Action: Job application attempt | IP: 127.0.0.1 | User: abc@lendeavorusa.com
+INFO 2025-09-09 15:39:15,649 django.server "POST /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 302 0
+INFO 2025-09-09 15:39:15,655 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:39:15,658 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/?message=You%20have%20successfully%20applied%20for%20this%20job. HTTP/1.1" 200 18344
+INFO 2025-09-09 15:47:26,757 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:47:26,761 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/?message=You%20have%20successfully%20applied%20for%20this%20job. HTTP/1.1" 200 18344
+WARNING 2025-09-09 15:47:32,006 django.request Not Found: /careers/application/
+WARNING 2025-09-09 15:47:32,006 django.server "GET /careers/application/ HTTP/1.1" 404 8767
+WARNING 2025-09-09 15:47:32,047 django.request Not Found: /favicon.ico
+WARNING 2025-09-09 15:47:32,048 django.server "GET /favicon.ico HTTP/1.1" 404 8740
+INFO 2025-09-09 15:47:56,087 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:47:56,090 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:48:01,207 django.server "GET /careers/ HTTP/1.1" 200 19507
+INFO 2025-09-09 15:48:03,385 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:48:03,387 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+INFO 2025-09-09 15:49:29,444 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:49:29,447 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+INFO 2025-09-09 15:49:29,477 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:49:31,858 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:49:31,862 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+WARNING 2025-09-09 15:49:35,628 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:49:35,629 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:49:40,878 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:49:40,881 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+WARNING 2025-09-09 15:49:40,924 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:49:40,925 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:49:44,129 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:49:44,132 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+WARNING 2025-09-09 15:49:44,172 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:49:44,173 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:49:44,275 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:49:44,289 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:49:44,290 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:49:44,291 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:49:44,292 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:49:44,304 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 3092
+INFO 2025-09-09 15:49:44,528 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:50:09,727 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:50:09,730 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+WARNING 2025-09-09 15:50:09,776 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:50:09,777 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:50:09,777 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 2321
+INFO 2025-09-09 15:50:12,687 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:50:12,691 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+INFO 2025-09-09 15:50:12,725 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:50:12,726 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:50:12,727 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 2321
+WARNING 2025-09-09 15:50:12,731 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 15:50:12,732 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:50:12,733 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-09 15:50:12,733 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:50:12,734 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:50:13,008 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:50:23,417 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:50:23,420 django.server "GET /careers/application/8b73e08c-61f8-42ec-90f4-1d96d9fd5493/ HTTP/1.1" 200 18252
+INFO 2025-09-09 15:50:23,463 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:50:23,464 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+WARNING 2025-09-09 15:50:23,469 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:50:23,471 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:50:23,471 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:50:23,472 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:50:23,472 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 3092
+INFO 2025-09-09 15:50:23,472 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:50:23,753 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:50:51,956 django.server "GET /careers/ HTTP/1.1" 200 19507
+WARNING 2025-09-09 15:50:52,016 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:50:52,021 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:50:52,022 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:50:52,022 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:50:52,023 django.server "GET /static/css/careers.css HTTP/1.1" 200 3261
+INFO 2025-09-09 15:50:52,023 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:50:52,031 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-09-09 15:50:52,031 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:50:52,031 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:50:52,049 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-09-09 15:50:52,057 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-09-09 15:50:56,756 django.server "GET /job/edit/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 16247
+INFO 2025-09-09 15:50:56,789 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:50:56,790 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:50:56,790 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-09 15:50:56,796 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:50:56,799 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:50:56,799 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-09-09 15:50:56,800 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:50:56,800 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:50:56,800 django.server "GET /static/css/job_post.css HTTP/1.1" 200 603
+WARNING 2025-09-09 15:51:01,350 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:51:01,351 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+WARNING 2025-09-09 15:51:01,368 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:51:01,370 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:51:11,584 django.server "GET /aboutus/ HTTP/1.1" 200 16280
+WARNING 2025-09-09 15:51:11,620 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:51:11,623 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:51:11,625 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:51:11,626 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:51:11,628 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:51:11,629 django.server "GET /static/welcome.png HTTP/1.1" 200 45260
+INFO 2025-09-09 15:51:11,629 django.server "GET /static/services.png HTTP/1.1" 200 28124
+INFO 2025-09-09 15:51:11,630 django.server "GET /static/nextstep.png HTTP/1.1" 200 45531
+INFO 2025-09-09 15:51:11,633 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:51:11,635 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:51:11,636 django.server "GET /static/css/aboutus.css HTTP/1.1" 200 2791
+INFO 2025-09-09 15:51:23,037 django.server "GET / HTTP/1.1" 200 23195
+WARNING 2025-09-09 15:51:23,069 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:51:23,073 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:51:23,074 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:51:23,075 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:51:23,077 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:51:23,077 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:51:23,081 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:51:23,085 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:51:23,087 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:51:23,087 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:51:23,088 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:51:23,089 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-09 15:51:23,090 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-09 15:51:23,096 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:51:24,107 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:52:19,571 django.server "GET /careers/ HTTP/1.1" 200 19507
+WARNING 2025-09-09 15:52:19,626 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:52:19,628 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:52:19,630 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:52:19,631 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:52:19,631 django.server "GET /static/js/select_bulk_delete_jobs.js HTTP/1.1" 200 1492
+INFO 2025-09-09 15:52:19,631 django.server "GET /static/css/careers.css HTTP/1.1" 200 3261
+INFO 2025-09-09 15:52:19,634 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:52:19,635 django.server "GET /static/js/job_crud_popup.js HTTP/1.1" 200 1491
+INFO 2025-09-09 15:52:19,635 django.server "GET /static/js/job_search.js HTTP/1.1" 200 1358
+INFO 2025-09-09 15:52:19,639 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:52:19,639 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:52:21,455 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:52:21,458 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+WARNING 2025-09-09 15:52:21,499 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:52:21,502 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:52:21,503 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:52:21,504 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 3092
+INFO 2025-09-09 15:52:21,506 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:52:21,506 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:52:21,506 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:52:21,508 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:52:51,214 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:52:51,219 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:52:51,265 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:52:51,265 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:52:51,268 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:52:51,279 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:52:51,280 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-09 15:52:51,285 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:52:51,285 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:52:51,297 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 2774
+INFO 2025-09-09 15:52:51,560 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:54:03,369 django_actions Method: GET | Action: Job application attempt | IP: 127.0.0.1 | User: AnonymousUser
+INFO 2025-09-09 15:54:03,374 django.server "GET /careers/application/65d8fd4f-8bb7-40c4-a3be-db6663acdb04/ HTTP/1.1" 200 18181
+INFO 2025-09-09 15:54:03,423 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:54:03,425 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+WARNING 2025-09-09 15:54:03,430 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:54:03,432 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:54:03,433 django.server "GET /static/css/job_apply.css HTTP/1.1" 200 3092
+INFO 2025-09-09 15:54:03,434 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:54:03,434 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:54:03,434 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:54:03,764 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:54:07,642 django.server "GET / HTTP/1.1" 200 23195
+WARNING 2025-09-09 15:54:07,684 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 15:54:07,686 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+WARNING 2025-09-09 15:54:07,686 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:54:07,687 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:54:07,687 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:54:07,690 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:54:07,693 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:54:07,696 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:54:07,696 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-09 15:54:07,697 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:54:07,697 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:54:07,698 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-09 15:54:07,702 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:54:07,703 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:54:09,181 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:55:03,809 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:55:06,555 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+WARNING 2025-09-09 15:55:10,666 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:55:10,667 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:55:16,546 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+WARNING 2025-09-09 15:55:16,587 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:55:16,588 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:55:18,736 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+WARNING 2025-09-09 15:55:18,775 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 15:55:18,776 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:55:18,776 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:55:18,776 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-09 15:55:18,776 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:55:18,777 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-09 15:55:18,779 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:55:18,780 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:55:18,783 django.server "GET /static/css/apply.css HTTP/1.1" 200 4576
+INFO 2025-09-09 15:55:19,079 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:55:56,451 django.server "GET /products/ HTTP/1.1" 200 38335
+WARNING 2025-09-09 15:55:56,483 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:55:56,484 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:55:56,485 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:55:56,488 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:55:56,494 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:55:56,494 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:55:56,494 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:55:56,502 django.server "GET /static/css/products.css HTTP/1.1" 200 4052
+INFO 2025-09-09 15:55:59,832 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:55:59,863 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:55:59,864 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:55:59,869 django.server "GET /static/js/applynow.js HTTP/1.1" 200 2718
+INFO 2025-09-09 15:55:59,870 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:55:59,870 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:55:59,871 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-09 15:55:59,876 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:55:59,876 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:55:59,881 django.server "GET /static/css/apply.css HTTP/1.1" 200 4556
+INFO 2025-09-09 15:56:04,565 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:56:04,603 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:56:04,604 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:56:04,607 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+WARNING 2025-09-09 15:56:04,613 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 15:56:04,613 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:56:04,615 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 5924
+WARNING 2025-09-09 15:56:04,615 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:56:04,616 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:56:04,619 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:56:04,620 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:56:04,620 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 15:56:04,621 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:56:04,621 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:56:04,622 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:56:21,037 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:56:21,071 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:56:21,071 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:56:21,076 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:56:21,076 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:56:21,081 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+WARNING 2025-09-09 15:56:21,085 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:56:21,088 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:56:21,090 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:56:21,090 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6697
+INFO 2025-09-09 15:56:21,091 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:56:21,091 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:56:21,091 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:56:21,093 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:56:21,100 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:56:21,382 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:57:05,949 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:57:05,982 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:57:05,982 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:57:05,987 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:57:05,987 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-09 15:57:05,997 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 15:57:05,999 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+WARNING 2025-09-09 15:57:06,000 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:57:06,001 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:57:06,002 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:57:06,002 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 15:57:06,005 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:57:06,006 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6699
+INFO 2025-09-09 15:57:06,008 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:57:06,016 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:57:06,310 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:57:17,074 django.server "GET /quick-apply/ HTTP/1.1" 200 19085
+INFO 2025-09-09 15:57:17,109 django.server "GET /static/css/apply.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:57:53,458 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:57:53,476 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:58:02,902 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:58:02,934 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6697
+INFO 2025-09-09 15:58:15,958 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:58:15,985 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:59:11,366 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:59:11,412 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6655
+INFO 2025-09-09 15:59:27,752 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:59:27,793 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6612
+INFO 2025-09-09 15:59:30,341 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:59:30,365 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-09 15:59:32,210 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+WARNING 2025-09-09 15:59:32,224 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:59:32,225 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:59:36,575 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:59:36,604 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+WARNING 2025-09-09 15:59:36,611 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:59:36,612 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:59:38,994 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+WARNING 2025-09-09 15:59:39,027 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:59:39,029 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:59:39,030 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 15:59:39,032 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:59:39,033 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6612
+INFO 2025-09-09 15:59:39,033 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:59:39,034 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:59:39,034 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:59:39,036 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 15:59:39,037 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:59:39,039 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:59:39,041 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:59:39,042 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:59:39,044 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:59:39,309 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 15:59:54,196 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 15:59:54,236 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 15:59:54,236 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+WARNING 2025-09-09 15:59:54,242 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 15:59:54,245 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 15:59:54,247 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 15:59:54,247 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6697
+INFO 2025-09-09 15:59:54,248 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 15:59:54,248 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 15:59:54,249 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 15:59:54,250 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 15:59:54,252 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 15:59:54,252 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 15:59:54,253 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 15:59:54,253 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 15:59:54,541 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 16:00:41,334 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 16:00:41,374 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 16:00:41,375 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+WARNING 2025-09-09 16:00:41,382 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 16:00:41,383 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 16:00:41,383 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-09 16:00:41,385 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:00:41,386 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 16:00:41,387 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 16:00:41,389 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 16:00:41,390 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 16:00:41,391 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 16:00:41,392 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6696
+INFO 2025-09-09 16:00:41,394 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 16:00:41,394 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 16:00:41,701 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 16:00:46,587 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 16:00:46,615 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+WARNING 2025-09-09 16:00:46,625 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 16:00:46,625 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:00:49,188 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+WARNING 2025-09-09 16:00:49,226 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 16:00:49,228 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+WARNING 2025-09-09 16:00:49,228 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:00:49,228 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 16:00:49,228 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 16:00:49,229 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 16:00:49,229 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6696
+INFO 2025-09-09 16:00:49,238 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 16:00:49,238 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 16:00:49,239 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 16:00:49,239 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 16:00:49,239 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 16:00:49,240 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 16:00:49,246 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 16:00:49,517 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 16:01:18,761 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 16:01:18,798 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+WARNING 2025-09-09 16:01:18,807 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-09 16:01:18,809 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 16:01:18,810 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 16:01:18,813 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+WARNING 2025-09-09 16:01:18,817 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:01:18,817 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 16:01:18,820 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 16:01:18,821 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 16:01:18,825 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 16:01:18,825 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6696
+INFO 2025-09-09 16:01:18,825 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 16:01:18,828 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 16:01:18,831 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 16:01:19,152 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 16:01:48,080 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+WARNING 2025-09-09 16:01:48,119 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 16:01:48,122 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:01:48,122 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 16:01:48,123 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 16:01:48,123 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 16:01:48,124 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-09 16:01:48,129 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 16:01:48,130 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 16:01:48,130 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 16:01:48,131 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 16:01:48,131 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 16:01:48,135 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 16:01:48,136 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 16:01:48,138 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6697
+INFO 2025-09-09 16:01:48,510 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-09 16:01:56,160 django.server "GET /affiliate/ HTTP/1.1" 200 21594
+INFO 2025-09-09 16:01:56,189 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7593
+INFO 2025-09-09 16:01:56,192 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+WARNING 2025-09-09 16:01:56,201 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-09 16:01:56,202 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-09 16:01:56,203 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-09 16:01:56,204 django.server "GET /static/css/affiliate.css HTTP/1.1" 200 6697
+INFO 2025-09-09 16:01:56,204 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-09 16:01:56,207 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-09 16:01:56,209 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-09 16:01:56,209 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-09 16:01:56,210 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-09 16:01:56,211 django.server "GET /static/affiliate.png HTTP/1.1" 200 47370
+INFO 2025-09-09 16:01:56,211 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-09 16:01:56,212 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-09 16:01:56,487 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242

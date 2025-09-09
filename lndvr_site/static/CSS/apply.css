@@ -89,6 +89,28 @@ label.form-label {
   font-size: 0.95rem;
 }
 
+/* Input group text (+1 prefix) */
+.input-group-text {
+  background: rgba(255, 255, 255, 0.1); /* transparent like other inputs */
+  color: #ffffff;                       /* white text */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px 0 0 8px;           /* rounded left side only */
+}
+
+/* Phone input field */
+.input-group .form-control {
+  background: rgba(255, 255, 255, 0.1); /* match other inputs */
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-left: none;                    /* merge with prefix */
+  border-radius: 0 8px 8px 0;           /* rounded right side only */
+}
+
+/* Placeholder styling */
+.input-group .form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
 input[type="text"],
 input[type="number"],
 input[type="month"],

@@ -118,6 +118,28 @@ form {
     font-weight: 500;
 }
 
+/* Input group text (+1 prefix) */
+.input-group-text {
+    background: rgba(255, 255, 255, 0.1); /* transparent like other inputs */
+    color: #ffffff;                       /* white text */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px 0 0 8px;           /* rounded left side only */
+}
+
+/* Phone input field */
+.input-group .form-control {
+    background: rgba(255, 255, 255, 0.1); /* match other inputs */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;                    /* merge with prefix */
+    border-radius: 0 8px 8px 0;           /* rounded right side only */
+}
+
+/* Placeholder styling */
+.input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group input[type="tel"],
@@ -125,7 +147,7 @@ form {
     padding: 0.6rem 0.75rem;
     border: none;
     border-radius: 0.5rem;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.12);
     color: #fff;
     font-size: 1rem;
     transition: background 0.3s, box-shadow 0.3s;
