@@ -74,7 +74,7 @@
                 <option value="10+">10+</option>
             </select>
         </div>
-        <div class="mb-3">
+        {% comment %} <div class="mb-3">
             <label class="form-label text-white">Qualification Level:<span style="color:red;">*</span></label>
             <select name="qualification" class="form-select" required>
                 <option value="">-- Select Mode --</option>
@@ -98,17 +98,36 @@
         <div class="mb-3">
             <label class="form-label text-white">Expected salary in $:</label>
             <input type='text' name="salary" class="salary" id="salary" maxlength="10">
-        </div>
+        </div> {% endcomment %}
         <div class="mb-3">
             <label class="form-label text-white">Gender:<span style="color:red;">*</span></label><br>
             <input type="radio" name="gender" value="male" required> <span>Male</span> &nbsp;
             <input type="radio" name="gender" value="female"> <span>Female</span>
         </div>
-        <div class="mb-3">
+        <div class="mb-3" style="position:relative; max-width:850px;">
             <label class="form-label text-white">Resume<span style="color:red;">*</span></label>
-            <input type="file" name="resume" class="resume" id="resume"
+            
+            <!-- File input wrapped in a container -->
+            <input type="file" name="resume" id="resume" class="resume form-control"
                 accept=".pdf,.doc,.docx,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                required>
+                required style="padding-right:30px;">
+            
+            <!-- Cancel button inside input area -->
+            <button type="button" id="cancelResume" style="
+                position:absolute;
+                right:8px;
+                top:72%;
+                transform:translateY(-50%);
+                background:#ff4d4d;
+                border:none;
+                width:24px;
+                height:24px;
+                border-radius:50%;
+                color:white;
+                font-weight:bold;
+                cursor:pointer;
+                display:none; /* hidden initially */
+            ">X</button>
         </div>
         <div>
             <button type="submit" class="btn btn-success w-100 mt-4"
@@ -118,4 +137,25 @@
         </div>
     </form>
 </div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const fileInput = document.getElementById("resume");
+    const cancelBtn = document.getElementById("cancelResume");
+
+    fileInput.addEventListener("change", () => {
+        if (fileInput.files.length > 0) {
+            cancelBtn.style.display = "flex"; // Show X
+        } else {
+            cancelBtn.style.display = "none"; // Hide X
+        }
+    });
+
+    cancelBtn.addEventListener("click", () => {
+        fileInput.value = "";            // Clear file input
+        cancelBtn.style.display = "none"; // Hide X
+    });
+});
+</script>
+
 {% endblock body %}

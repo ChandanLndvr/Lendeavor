@@ -21,12 +21,12 @@
         </div>
 
         <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
-            max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff); margin-bottom: 50px;">
+            max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff, #00ff9d); margin-bottom: 50px;">
                 <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
                     0 0 5px rgba(10, 10, 10, 0.6),
                     0 0 10px rgba(20, 20, 20, 0.6),
                     0 0 20px rgba(7, 7, 7, 0.6);
-                    ">How does it work?</h1>
+                    ">How Does It Work?</h1>
         </div>
 
         <div class="row justify-content-center">
@@ -35,12 +35,12 @@
                     class="side-image img-fluid">
 
                 <div class="title" style="display: flex; justify-content: center; align-items: center; height: 70px; text-decoration: underline; 
-                    max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff); margin-top: 30px; margin-bottom: 50px;">
+                    max-width: 1000px; margin: 0 auto; background: linear-gradient(135deg, #00ff9d, #00c3ff, #00ff9d); margin-top: 30px; margin-bottom: 50px;">
                         <h1 style="color: white; text-align: center; width: 100%; margin: 0; text-shadow: 
                             0 0 5px rgba(10, 10, 10, 0.6),
                             0 0 10px rgba(20, 20, 20, 0.6),
                             0 0 20px rgba(7, 7, 7, 0.6);
-                            ">Fill the form to connect</h1>
+                            ">Fill The Form To Connect</h1>
                 </div>
             </div>
 
@@ -49,11 +49,11 @@
                 <!-- Your Information Section -->
                 <div class="sell-business-card mb-4 p-4">
                     <h4 class="mb-4 text-center" style="color: #00f2ff; text-decoration: underline;">Your Information</h4>
-                    <form method="post" action="{% url 'sell_business' %}" novalidate>
+                    <form method="post" action="{% url 'sell_business' %}">
                         {% csrf_token %}
                         <div class="form-group mb-3">
                             <label for="name"><i class="fas fa-user"></i> Full Name<span style="color:red;">*</span></label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" value="{{ form_data.name|default_if_none:'' }}" required minlength="2">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your full name" value="{{ form_data.name|default_if_none:'' }}" minlength="2" required >
                         </div>
                         <div class="form-group mb-3">
                             <label for="email"><i class="fas fa-envelope"></i> Email<span style="color:red;">*</span></label>
@@ -61,7 +61,7 @@
                         </div>
                         <div class="form-group mb-3">
                             <label for="phone"><i class="fas fa-phone"></i> Phone<span style="color:red;">*</span></label>
-                            <input type="tel" class="form-control" id="phone" name="phone" pattern="\d{10}" inputmode="numeric" maxlength="10" placeholder="Optional - e.g.234 567 8900" value="{{ form_data.phone|default_if_none:'' }}" required>
+                            <input type="tel" class="form-control" id="phone" name="phone" pattern="\d{10}" inputmode="numeric" maxlength="10" placeholder="e.g.2345678900" value="{{ form_data.phone|default_if_none:'' }}" required>
                         </div>
                 </div>
 

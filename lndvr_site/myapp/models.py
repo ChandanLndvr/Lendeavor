@@ -150,11 +150,11 @@ class JobApplications(models.Model):
     Email = models.EmailField()
     Phone_no = models.CharField(max_length=15)
     Expirence = models.CharField(max_length=150, choices=experience_choices)
-    Qualification_level = models.CharField(max_length=200, choices=qualification_level)
-    Major = models.CharField(max_length=200)
-    School_name = models.CharField(max_length=200)
-    Degree_year = models.IntegerField()
-    Expected_salary  = models.IntegerField(null=True, blank=True)
+    # Qualification_level = models.CharField(max_length=200, choices=qualification_level)
+    # Major = models.CharField(max_length=200)
+    # School_name = models.CharField(max_length=200)
+    # Degree_year = models.IntegerField()
+    # Expected_salary  = models.IntegerField(null=True, blank=True)
     Gender = models.CharField(max_length=50)
     Resume = models.FileField(upload_to='resume/', null=True, blank=True)
     Applied_on = models.DateField(auto_now=True)
@@ -182,7 +182,7 @@ class JobApplications(models.Model):
         db_table = 'Job_applications'
 
     def __str__(self):
-        return f"{self.First_name} + {self.Last_name}"
+        return f"{self.First_name} {self.Last_name}"
     
 # blacklisted tokens for logout
 

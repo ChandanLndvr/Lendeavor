@@ -44,7 +44,8 @@ html, body {
     text-align: center;
     max-width: 1000px;
     margin: 40px auto;        /* Reduced from 50px */
-    background: linear-gradient(135deg, #00ff9d, #00c3ff);
+    background: linear-gradient(135deg, #00ff9d, #00c3ff, #00ff9d); 
+    /* background: linear-gradient(90deg,  #00f7ff, #0084ff, #00f7ff); */
     text-decoration: underline;
     padding: 1rem;
 }

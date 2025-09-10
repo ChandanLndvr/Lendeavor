@@ -215,18 +215,26 @@ class JobApplicationsSerializer(serializers.ModelSerializer):
         fields = '__all__'
         read_only_fields = ['Application_id', 'Applied_on']
 
-    def validate_Degree_year(self, value):
-        from datetime import date
-        current_year = date.today().year
-        if value > current_year:
-            raise serializers.ValidationError("Degree year cannot be in the future.")
-        return value
+    # def validate_Degree_year(self, value):
+    #     from datetime import date
+    #     current_year = date.today().year
+    #     if value > current_year:
+    #         raise serializers.ValidationError("Degree year cannot be in the future.")
+    #     return value
 
     def validate_Phone_no(self, value):
         if not value.isdigit():
             raise serializers.ValidationError("Phone number must contain digits only.")
         if len(value) < 10:
             raise serializers.ValidationError("Phone number is too short.")
+        return value
+    
+    def validate_Resume(self, value):
+        if not value:
+            return value # allow empty 
+        max_size = 2* 1024 * 1024 #2mb
+        if value.size > max_size:
+            raise serializers.ValidationError("File size can not be greater than 2 MB.")
         return value
     
     def create(self, validated_data):

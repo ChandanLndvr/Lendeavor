@@ -16,6 +16,7 @@ from lndvr_site.utils.send_graph_email_async import send_graph_email_async
 from .serializers import SignUpSerializer, UserApplicationsSerializer, JobApplicationsSerializer, QuickApplicationSerializer
 from myapp.custom_middleware.log_ip import log_action
 from collections import defaultdict
+import re
 
 #----------------------- Main page ------------------------
 
@@ -413,11 +414,11 @@ def job_applications(request, job_id):
                 'Email': data.get('email'),
                 'Phone_no': data.get('phone'),
                 'Expirence': data.get('experience'),
-                'Qualification_level': data.get('qualification'),
-                'Major': data.get('major'),
-                'School_name': data.get('school'),
-                'Degree_year': data.get('year'),
-                'Expected_salary': data.get('salary') or None,
+                # 'Qualification_level': data.get('qualification'),
+                # 'Major': data.get('major'),
+                # 'School_name': data.get('school'),
+                # 'Degree_year': data.get('year'),
+                # 'Expected_salary': data.get('salary') or None,
                 'Gender': data.get('gender'),
                 'Resume': resume_file
             }
@@ -613,57 +614,87 @@ def funding_steps(request):
 
 def sell_business(request):
     if request.method == 'POST':
+        try:
+            phone = request.POST.get('phone', '').strip()
 
-        phone = request.POST.get('phone', '').strip()
-        
-        # Server-side validation: must be exactly 10 digits
-        import re
-        if not re.fullmatch(r'\d{10}', phone):
+            # Server-side validation: must be exactly 10 digits
+            if not re.fullmatch(r'\d{10}', phone):
+                return render(request, 'sell_business.html', {
+                    'current_page': 'sell_business',
+                    'error': 'Phone number must be exactly 10 digits.',
+                    'form_data': request.POST
+                })
+
+            # Collect form data
+            cleaned_data = {
+                'Name': request.POST.get('name'),
+                'Email': request.POST.get('email'),
+                'Phone': request.POST.get('phone'),
+                'Business Name': request.POST.get('business_name'),
+                'Industry': request.POST.get('industry'),
+                'Location': request.POST.get('location'),
+                'Year Established': request.POST.get('established'),
+                'Annual Revenue': request.POST.get('revenue'),
+                'Asking Price': request.POST.get('asking_price'),
+                'Reason for Selling': request.POST.get('reason'),
+                'Business Description': request.POST.get('description'),
+                'Terms Accepted': 'Yes' if request.POST.get('terms') == 'on' else 'No'
+            }
+
+            # Build HTML table rows with bold labels
+            rows = ''.join(
+                f"<tr>"
+                f"<td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field.replace('_', ' ').title()}</td>"
+                f"<td style='border:1px solid #ccc;padding:8px;'>{value}</td>"
+                f"</tr>"
+                for field, value in cleaned_data.items()
+            )
+
+            # Extract applicant's name for email subject/body
+            full_name = cleaned_data.get("Name", "")
+
+            # Email body for the company
+            company_email_body = (
+                f"<h3>New Sell Business Submission from {full_name}</h3>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # Email body for the user
+            user_email_body = (
+                "<h3>Thank you for submitting your business details at Lendeavor</h3>"
+                "<p>We appreciate your interest in our platform. Our team will review your submission and get in touch with you shortly.</p>"
+                "<p>Here’s a copy of your submitted business details:</p>"
+                f"<table style='border-collapse:collapse;border:1px solid #ccc;width:100%'>{rows}</table>"
+            )
+
+            # Send email to company
+            send_graph_email_async(
+                subject=f"New Sell Business Submission from {full_name}",
+                body=company_email_body,
+                to_emails=[settings.CONTACT_EMAIL],
+                is_html=True
+            )
+
+            # Send email to user
+            send_graph_email_async(
+                subject="Your Business Submission at Lendeavor",
+                body=user_email_body,
+                to_emails=[cleaned_data.get("Email")],
+                is_html=True
+            )
+
+            return redirect(
+                reverse("sell_business") + "?message=Your business information has been submitted successfully!"
+            )
+
+        except Exception as e:
+            import traceback
+            traceback.print_exc()  # log full error in console/logs
             return render(request, 'sell_business.html', {
                 'current_page': 'sell_business',
-                'error': 'Phone number must be exactly 10 digits.',
+                'error': f"An unexpected error occurred: {str(e)}",
                 'form_data': request.POST
-            })  
-        
-        # Collect form data
-        cleaned_data = {
-            'Name': request.POST.get('name'),
-            'Email': request.POST.get('email'),
-            'Phone': request.POST.get('phone'),
-            'Business Name': request.POST.get('business_name'),
-            'Industry': request.POST.get('industry'),
-            'Location': request.POST.get('location'),
-            'Year Established': request.POST.get('established'),
-            'Annual Revenue': request.POST.get('revenue'),
-            'Asking Price': request.POST.get('asking_price'),
-            'Reason for Selling': request.POST.get('reason'),
-            'Business Description': request.POST.get('description'),
-            'Terms Accepted': 'Yes' if request.POST.get('terms') == 'on' else 'No'
-        }
-
-        print("cleaned data", cleaned_data)
-
-        # Create HTML table
-        table_rows = ""
-        for field, value in cleaned_data.items():
-            table_rows += f"<tr><td style='border:1px solid #ccc;padding:8px;font-weight:bold;'>{field}</td><td style='border:1px solid #ccc;padding:8px;'>{value}</td></tr>"
-
-        email_body = f"""
-        <h3>New Sell Business Submission</h3>
-        <table style='border-collapse:collapse;width:100%;'>
-            {table_rows}
-        </table>
-        """
-
-        # Send email asynchronously
-        send_graph_email_async(
-            subject="New Sell Business Submission",
-            body=email_body,
-            to_emails=[settings.CONTACT_EMAIL],
-            is_html=True
-        )
-
-        return redirect(reverse("sell_business") + "?message=Your business information has been submitted successfully!")
+            })
 
     # Handle GET
     return render(request, 'sell_business.html', {
@@ -671,6 +702,7 @@ def sell_business(request):
         'message': request.GET.get('message'),
         'error': request.GET.get('error')
     })
+
 
 #-------------------------- FAQs -----------------------------------
 
