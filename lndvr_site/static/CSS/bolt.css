@@ -131,7 +131,7 @@ html, body {
 }
 
 .robot {
-  width: 440px;
+  width: 530px;
   height: auto;
   display: block;
   margin: 05px auto;
@@ -146,14 +146,6 @@ html, body {
   margin: 0 auto;
   padding: 0;
 }
-
-.bolt_platform {
-  width: 380px;
-  filter: drop-shadow(0 0 50px rgba(0, 195, 255, 0.6));
-  animation: floatIdle 3s ease-in-out infinite alternate;
-  animation-delay: 1s; /* half of duration = opposite phase */
-}
-
 
 /* ---------- Animations ---------- */
 

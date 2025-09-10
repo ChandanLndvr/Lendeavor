@@ -81,11 +81,19 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
+.job-application-container select:focus{
+    background: rgba(255, 255, 255, 0.1); /* still transparent */
+    backdrop-filter: blur(3px);
+    color:black;
+}
+
 /* On focus */
 .job-application-container input:focus,
-.job-application-container select:focus,
+.job-application-container text:focus,
+.job-application-container tel:focus,
 .job-application-container textarea:focus {
     background: rgba(255, 255, 255, 0.15); /* still transparent */
+    backdrop-filter: blur(3px);
     color: #ffffff; /* keep white text */
     border-color: #00f2ff;
     box-shadow: 0 0 6px rgba(0, 242, 255, 0.4);
