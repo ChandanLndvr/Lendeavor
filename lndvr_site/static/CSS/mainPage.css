@@ -21,10 +21,9 @@ html, body {
     padding: 22px;
     background-color: black;
     font-family: 'Open Sans', sans-serif;
-}
-
-.navbar-brand {
-    margin-right: 20rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-brand img {
@@ -33,8 +32,18 @@ html, body {
     margin-left: 20px;
 }
 
+.navbar-nav {
+    display: flex;
+    justify-content: center; /* centers items */
+    width: 100%;       
+}
+
+.nav-link {
+    white-space: nowrap; /* keeps text in one line */
+}
+
 .nav-item {
-    margin: 20px;
+    margin: 0 12px;
     color: white;
 }
 
@@ -283,11 +292,12 @@ html, body {
 }
 
 @media (max-width: 768px) {
+    /* Headings and other content */
     .main-heading {
         font-size: 28px;
     }
 
-    .nested-info h3{
+    .nested-info h3 {
         font-size: 20px;
     }
 
@@ -303,18 +313,15 @@ html, body {
         width: 230px;
     }
 
-    /* Navbar adjustments for mobile */
+    /* ---------- Navbar adjustments ---------- */
     .navbar {
-        display: flex;
-        justify-content: space-between;
+        flex-direction: column;
         align-items: center;
-        flex-wrap: wrap; /* allow items to wrap */
-        padding: 12px 10px;
+        justify-content: center;
     }
 
     .navbar-brand {
-        margin: 0;
-        order: 1;
+        margin: 0 auto;
     }
 
     .navbar-brand img {
@@ -324,46 +331,50 @@ html, body {
 
     .navbar-toggler {
         order: 2;
-        margin-left: auto; /* push it to the right */
-        margin-right: 0;   /* optional: keep it flush from right edge */
+        margin-left: auto; /* push toggler to the right */
     }
 
+    /* Collapse menu styling */
     .navbar-collapse {
         width: 100%;
-        order: 3;           /* appear below logo + toggler */
-        margin-top: 10px;
-        display: none;      /* hidden by default, controlled by collapse */
+        order: 3; /* appear below logo + toggler */
+        display: none; /* hidden by default, controlled by collapse */
         flex-direction: column;
-        transition: none !important;
     }
 
     .navbar-collapse.show {
-        display: flex;      /* when toggled, show vertically */
+        display: flex; /* show vertically when toggled */
     }
 
     .navbar-nav {
         flex-direction: column;
-        align-items: flex-start;
         width: 100%;
+        align-items: center;
     }
 
     .nav-item {
-        margin: 10px 0;
+        margin: 8px 0;            
     }
 
-    .robot-circle-container{
+    .nav-link {
+        white-space: nowrap;      /* prevent line breaks */
+    }
+
+    /* Robot circle container */
+    .robot-circle-container {
         max-width: 40px;
     }
 
+    /* Footer adjustments */
     .footer-column {
         display: flex;
         flex-direction: column;
         align-items: center !important;
     }
-    
+
     .footer-logo {
         order: 1;
-        margin: 0 auto; 
+        margin: 0 auto;
         padding-left: 0 !important;
     }
 
@@ -371,3 +382,4 @@ html, body {
         order: 2;
     }
 }
+

@@ -154,7 +154,7 @@ html, body {
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
     .faq-container {
         flex-direction: column;
         align-items: flex-start; /* corrected from 'top' to valid value */
