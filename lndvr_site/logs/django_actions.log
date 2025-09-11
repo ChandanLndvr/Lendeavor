@@ -40408,3 +40408,374 @@ INFO 2025-09-11 13:23:57,893 django.server "GET /affiliate/ HTTP/1.1" 200 21672
 INFO 2025-09-11 13:23:58,517 django.server "GET / HTTP/1.1" 200 23279
 INFO 2025-09-11 14:08:12,736 django.server "GET / HTTP/1.1" 200 23279
 INFO 2025-09-11 14:08:12,760 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 14:33:46,029 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-11 14:33:46,901 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 14:33:46,919 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 14:33:51,534 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 14:33:53,226 django.server "GET /aboutus/ HTTP/1.1" 200 16290
+INFO 2025-09-11 14:33:55,111 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 14:33:56,796 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 14:33:59,530 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+INFO 2025-09-11 14:33:59,546 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-11 14:34:03,051 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 41803
+INFO 2025-09-11 14:34:03,068 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+INFO 2025-09-11 14:34:03,070 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 304 0
+INFO 2025-09-11 14:34:07,019 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 14:34:08,260 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 14:45:16,461 django.server "GET /contact/ HTTP/1.1" 200 15733
+INFO 2025-09-11 14:45:21,466 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+INFO 2025-09-11 14:49:31,126 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+INFO 2025-09-11 14:49:52,120 django.server "GET /products/ HTTP/1.1" 200 37258
+INFO 2025-09-11 14:49:53,392 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 14:49:55,098 django.server "GET /contact/ HTTP/1.1" 200 15733
+INFO 2025-09-11 14:49:56,305 django.server "GET /aboutus/ HTTP/1.1" 200 16290
+INFO 2025-09-11 14:50:02,770 django.server "GET /careers/ HTTP/1.1" 200 17543
+INFO 2025-09-11 14:50:07,577 django.server "GET /finance/news/ HTTP/1.1" 200 14965
+INFO 2025-09-11 14:50:10,462 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 41803
+INFO 2025-09-11 14:55:30,824 django.server "GET /caseStudy/ HTTP/1.1" 200 18121
+INFO 2025-09-11 14:55:55,209 django.server "GET /caseStudy/ HTTP/1.1" 200 18121
+INFO 2025-09-11 14:56:14,207 django.server "GET /caseStudy/ HTTP/1.1" 200 18121
+INFO 2025-09-11 15:05:40,411 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-11 15:05:55,395 django.server "GET /caseStudy/ HTTP/1.1" 200 18121
+INFO 2025-09-11 15:05:55,426 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:05:57,135 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 41803
+INFO 2025-09-11 15:05:57,172 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:05:57,172 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:05:57,173 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 304 0
+WARNING 2025-09-11 15:06:01,808 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:06:01,809 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:06:46,081 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 41803
+INFO 2025-09-11 15:07:11,886 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 15:07:35,043 django.server "GET /sell-business/ HTTP/1.1" 200 21312
+INFO 2025-09-11 15:07:35,060 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:07:35,082 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-11 15:08:23,667 django.server "GET /caseStudy/ HTTP/1.1" 200 18121
+INFO 2025-09-11 15:09:06,613 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:09:19,200 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:09:42,305 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:10:09,623 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:10:23,050 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+INFO 2025-09-11 15:10:23,070 django.server "GET /static/css/affiliate.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:10:28,982 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+INFO 2025-09-11 15:10:30,706 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:11:05,360 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:11:35,938 django.server "GET /bolt/ HTTP/1.1" 200 17451
+INFO 2025-09-11 15:11:35,958 django.server "GET /static/js/bolt_swiper.js HTTP/1.1" 304 0
+INFO 2025-09-11 15:11:44,114 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 15:11:45,675 django.server "GET /contact/ HTTP/1.1" 200 15733
+INFO 2025-09-11 15:11:52,063 django.server "GET /contact/ HTTP/1.1" 200 15733
+INFO 2025-09-11 15:11:55,258 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 15:11:57,995 django.server "GET /affiliate/ HTTP/1.1" 200 21672
+WARNING 2025-09-11 15:12:12,565 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:12:12,566 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:12:42,183 django.server "GET /login/ HTTP/1.1" 200 12819
+WARNING 2025-09-11 15:12:42,221 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:12:42,222 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:12:42,310 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:12:42,319 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:12:42,321 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:12:42,331 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 431
+INFO 2025-09-11 15:13:00,001 django.server "GET /login/ HTTP/1.1" 200 12819
+WARNING 2025-09-11 15:13:05,376 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:13:05,377 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:13:18,612 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:13:19,447 django.server "GET /signup/ HTTP/1.1" 200 14278
+WARNING 2025-09-11 15:13:25,710 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:13:25,710 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:14:45,926 django.server "GET /login/ HTTP/1.1" 200 12819
+INFO 2025-09-11 15:14:47,259 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:14:49,060 django.server "GET /login/ HTTP/1.1" 200 12819
+INFO 2025-09-11 15:14:51,414 django.server "GET /forgot-password/ HTTP/1.1" 200 7704
+INFO 2025-09-11 15:14:51,440 django.server "GET /static/css/password_reset.css HTTP/1.1" 200 2043
+WARNING 2025-09-11 15:17:03,027 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:17:03,027 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:18:37,372 django.server "GET /login/ HTTP/1.1" 200 12819
+INFO 2025-09-11 15:18:37,414 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 431
+INFO 2025-09-11 15:18:37,414 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+WARNING 2025-09-11 15:18:37,422 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:18:37,423 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:18:37,424 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:18:37,424 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:18:37,656 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:23:24,928 django.server "GET /login/ HTTP/1.1" 200 12819
+WARNING 2025-09-11 15:23:29,561 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:23:29,562 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:28:07,749 django.server "GET /login/ HTTP/1.1" 200 12819
+WARNING 2025-09-11 15:28:07,784 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:28:07,786 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:28:07,787 django.server - Broken pipe from ('127.0.0.1', 49614)
+INFO 2025-09-11 15:28:07,788 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:28:07,789 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:28:07,789 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:28:07,804 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 607
+INFO 2025-09-11 15:28:08,026 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:29:04,475 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:29:04,503 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:29:04,504 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 607
+WARNING 2025-09-11 15:29:04,504 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:29:04,504 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:29:04,505 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:29:04,505 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:29:04,742 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:29:05,353 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:29:05,381 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:29:05,382 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:29:05,383 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:29:05,383 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:29:05,383 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 607
+WARNING 2025-09-11 15:29:05,384 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:29:05,609 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:29:05,649 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:29:05,674 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:29:05,676 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:29:05,677 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 607
+INFO 2025-09-11 15:29:05,678 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:29:05,678 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:29:05,678 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:29:05,904 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:29:15,830 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:29:15,865 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:29:15,865 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:29:15,865 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:29:21,541 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:29:21,574 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:29:21,576 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:29:21,576 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 607
+INFO 2025-09-11 15:29:21,576 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:29:21,576 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:29:21,577 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:29:21,776 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:03,201 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:03,234 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:31:03,235 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-11 15:31:03,236 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:03,236 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:03,236 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:31:03,242 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:31:03,453 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:04,072 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:04,104 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:31:04,105 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:04,106 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:31:04,106 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:31:04,107 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:04,107 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:31:04,306 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:04,447 django.server "GET /login/ HTTP/1.1" 200 12827
+INFO 2025-09-11 15:31:04,471 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+WARNING 2025-09-11 15:31:04,478 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:31:04,479 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+WARNING 2025-09-11 15:31:04,480 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:04,480 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:31:04,481 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:04,667 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:04,816 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:04,844 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:31:04,847 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:04,848 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:31:04,849 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:31:04,849 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:31:04,849 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:05,053 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:05,153 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:05,183 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:31:05,185 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:05,186 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:31:05,186 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:31:05,186 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:05,186 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:31:05,375 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:31:11,472 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:11,501 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:31:11,502 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:31:11,503 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:15,290 django.server "GET /login/ HTTP/1.1" 200 12827
+WARNING 2025-09-11 15:31:15,321 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:31:15,322 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:31:15,323 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:31:15,324 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:31:15,324 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:31:15,324 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:31:15,530 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:33:17,242 django.server "GET /login/ HTTP/1.1" 200 12832
+INFO 2025-09-11 15:33:17,269 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+INFO 2025-09-11 15:33:17,269 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:33:17,269 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+WARNING 2025-09-11 15:33:17,272 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:33:17,273 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-11 15:33:17,273 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:33:17,516 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:33:18,879 django.server "GET /login/ HTTP/1.1" 200 12832
+INFO 2025-09-11 15:33:18,911 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:33:18,911 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+WARNING 2025-09-11 15:33:18,916 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:33:18,916 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:33:18,916 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+WARNING 2025-09-11 15:33:18,917 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:33:19,118 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:33:24,508 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:33:24,536 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:33:24,537 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:33:27,563 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:33:27,597 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:33:27,599 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 580
+WARNING 2025-09-11 15:33:27,599 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:33:27,599 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:33:27,600 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:33:27,600 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:33:27,809 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:35:01,373 django.server "GET /login/ HTTP/1.1" 200 12832
+INFO 2025-09-11 15:35:01,412 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:35:01,413 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-11 15:35:01,419 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:01,420 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:01,421 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:35:01,427 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:35:01,646 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:35:02,719 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:35:02,745 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:02,747 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:02,747 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:35:02,747 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:35:02,748 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:35:02,748 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:35:02,970 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:35:03,104 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:35:03,124 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:03,124 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:03,125 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:35:03,126 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:35:03,127 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:35:03,128 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:35:03,349 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:35:44,032 django.server "GET /login/ HTTP/1.1" 200 12832
+INFO 2025-09-11 15:35:44,054 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:35:46,846 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:46,846 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:51,921 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:35:51,968 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:35:51,969 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:35:51,969 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:55,273 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:35:55,303 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:55,304 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:55,305 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:35:55,305 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:35:55,305 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:35:55,306 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:35:55,505 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:35:57,785 django.server "GET /login/ HTTP/1.1" 200 12832
+WARNING 2025-09-11 15:35:57,814 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:35:57,816 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:35:57,816 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:35:57,817 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:35:57,817 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:35:57,818 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:35:58,018 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:41:34,786 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 15:41:34,802 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:41:36,335 django.server "GET /signup/ HTTP/1.1" 200 14304
+INFO 2025-09-11 15:41:36,353 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:41:38,543 django.server "GET /signup/ HTTP/1.1" 200 14304
+WARNING 2025-09-11 15:41:41,815 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:41:41,817 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:41:54,331 django.server "GET /signup/ HTTP/1.1" 200 14304
+WARNING 2025-09-11 15:41:54,366 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:41:54,367 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:41:58,956 django.server "GET /signup/ HTTP/1.1" 200 14304
+WARNING 2025-09-11 15:41:58,986 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:41:58,987 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:41:58,989 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:41:58,990 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:41:58,991 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:41:58,992 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:41:59,199 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:42:04,047 django.server "GET /signup/ HTTP/1.1" 200 14304
+INFO 2025-09-11 15:43:17,175 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:43:17,195 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:43:17,880 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:43:32,328 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:43:32,982 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:43:33,197 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:43:36,237 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:43:36,238 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:43:43,706 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:43:43,734 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:43:43,735 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:43:49,565 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:43:49,598 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:43:49,602 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:43:49,603 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:43:49,603 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:43:49,603 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:43:49,615 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 433
+INFO 2025-09-11 15:43:49,817 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:13,778 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:44:13,809 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:44:13,812 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:13,813 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:44:13,813 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:13,813 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:44:13,824 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 578
+INFO 2025-09-11 15:44:14,042 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:14,633 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:44:14,685 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+INFO 2025-09-11 15:44:14,686 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 578
+INFO 2025-09-11 15:44:14,686 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+WARNING 2025-09-11 15:44:14,687 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:14,687 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:44:14,687 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:14,879 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:14,893 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:44:14,924 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:44:14,924 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 578
+INFO 2025-09-11 15:44:14,925 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:14,925 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-11 15:44:14,934 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:44:14,935 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:15,143 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:44:15,179 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:44:15,181 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:15,182 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:44:15,183 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:15,183 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 578
+INFO 2025-09-11 15:44:15,183 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:44:15,397 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:23,338 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:44:23,367 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:44:23,370 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:23,370 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:44:23,372 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 837
+INFO 2025-09-11 15:44:23,372 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:44:23,372 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:23,620 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:52,742 django.server "GET /signup/ HTTP/1.1" 200 14330
+WARNING 2025-09-11 15:44:52,789 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:44:52,791 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:44:52,792 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 15:44:52,792 django.server "GET /static/CSS/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 15:44:52,792 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 15:44:52,800 django.server "GET /static/CSS/signUp.css HTTP/1.1" 200 754
+INFO 2025-09-11 15:44:53,045 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 15:44:57,454 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:44:57,481 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:45:37,986 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:45:38,013 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:45:39,788 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 15:45:39,788 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 15:45:44,183 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 15:45:44,214 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:45:46,686 django.server "GET /login/ HTTP/1.1" 200 12877
+INFO 2025-09-11 15:45:50,072 django.server "GET /login/ HTTP/1.1" 200 12877
+INFO 2025-09-11 15:45:50,092 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:45:54,415 django.server "GET /login/ HTTP/1.1" 200 12877
+INFO 2025-09-11 15:46:03,644 django.server "GET /aboutus/ HTTP/1.1" 200 16290
+INFO 2025-09-11 15:46:03,661 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:46:04,635 django.server "GET /products/ HTTP/1.1" 200 37258
+INFO 2025-09-11 15:46:05,373 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+INFO 2025-09-11 15:46:05,394 django.server "GET /static/css/apply.css HTTP/1.1" 304 0
+INFO 2025-09-11 15:46:06,588 django.server "GET /contact/ HTTP/1.1" 200 15733
+INFO 2025-09-11 15:46:09,939 django.server "GET /sell-business/ HTTP/1.1" 200 21312
+INFO 2025-09-11 15:46:09,957 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+WARNING 2025-09-11 15:46:09,970 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-11 15:47:25,848 django.server "GET /sell-business/ HTTP/1.1" 200 21312
