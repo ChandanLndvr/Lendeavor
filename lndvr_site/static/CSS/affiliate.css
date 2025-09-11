@@ -7,31 +7,39 @@ html, body {
   color: white;
 }
 
-.container{
-    padding-top: 60px;
+
+.page-header {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 95%;
+    margin: 40px auto 10px auto;
+    padding: 5px 20px 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;
 }
 
 /* Hero Section */
-.heading-container {
+/* .heading-container {
     display: flex;
-    padding: 2rem 12rem;       /* Reduced from 4rem */
-    margin-bottom: 2rem;      /* Reduced from 3rem */
-    margin-top: 2rem;         /* Reduced from 5rem */
-}
+    padding: 2rem 12rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+} */
 
 .blurred-heading {
     text-align: center;
     background: rgba(19, 18, 18, 0.05);
     backdrop-filter: blur(4px);
     max-width: 1000px;
-    margin: 15px auto 30px auto;  /* Reduced margins */
-    padding: 30px 20px 25px;      /* Reduced padding */
+    margin: 10px auto 15px auto;  /* Reduced margins */
+    padding: 10px 20px 5px;      /* Reduced padding */
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     display: block;  
 }
 
 .blurred-heading p {
-    margin: 1rem auto 1.5rem auto;  /* Reduced bottom margin */
+    margin: 1rem auto 0.5rem auto;  /* Reduced bottom margin */
     text-align: center;
     display: block;                 /* Changed from inline-block to block */
     font-weight: 300;
@@ -210,9 +218,9 @@ form {
 
 /* Mobile specific adjustments */
 @media (max-width: 768px) {
-    .container, .heading-container {
-        padding: 2rem 1.0rem;    /* Further reduced padding */
-        margin-top:65px;
+    .container{
+        padding: 0rem 1.0rem;    /* Further reduced padding */
+        margin-top:20px;
     }
     
     .blurred-heading h1 {
@@ -221,11 +229,11 @@ form {
     
     .blurred-heading p {
         margin: 0.8rem auto 1rem auto;
-        font-size: 0.9rem;            /* Smaller text */
+        font-size: 1rem;            /* Smaller text */
     }
     
     .title, .join-title {
-        margin-top: 150px;
+        margin-top: 45px;
         margin-bottom:20px;
         padding: 0.8rem;              /* Smaller padding */
     }
@@ -252,14 +260,9 @@ form {
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-    .heading-container {
-        padding: 0.5rem;
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-    }
     
     .blurred-heading h1 {
-        font-size: 1.5rem !important;
+        font-size: 2rem;
     }
 
     .join-title {
@@ -269,7 +272,7 @@ form {
     }
     
     .title {
-        margin-top: 150px;
+        margin-top: 45px;
         margin-bottom:20px;
         padding: 0.8rem; 
     }
@@ -280,5 +283,6 @@ form {
 
     .blurred-heading p {
         margin: 0.8rem auto 1rem auto;
+        font-size: 1rem;
     }
 }
