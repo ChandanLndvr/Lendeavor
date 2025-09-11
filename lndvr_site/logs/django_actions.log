@@ -40804,3 +40804,57 @@ INFO 2025-09-11 16:32:10,730 django.server "GET /login/ HTTP/1.1" 200 12871
 INFO 2025-09-11 16:32:12,285 django.server "GET / HTTP/1.1" 200 23279
 INFO 2025-09-11 16:32:21,826 django.server "GET /signup/ HTTP/1.1" 200 14330
 INFO 2025-09-11 16:32:24,284 django.server "GET /login/ HTTP/1.1" 200 12871
+INFO 2025-09-11 16:50:05,928 django.utils.autoreload Watching for file changes with StatReloader
+INFO 2025-09-11 16:50:11,145 django.server "GET /sell-business/ HTTP/1.1" 200 21312
+INFO 2025-09-11 16:50:11,183 django.server "GET /static/css/sell_business.css HTTP/1.1" 304 0
+INFO 2025-09-11 16:50:11,183 django.server "GET /static/css/mainPage.css HTTP/1.1" 304 0
+WARNING 2025-09-11 16:50:11,220 django.server "GET /static/images/business-bg.jpg HTTP/1.1" 404 1993
+INFO 2025-09-11 16:50:13,118 django.server "GET /login/ HTTP/1.1" 200 12871
+INFO 2025-09-11 16:50:13,137 django.server "GET /static/CSS/signUp.css HTTP/1.1" 304 0
+INFO 2025-09-11 16:50:13,765 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 16:50:15,635 django.server "GET /signup/ HTTP/1.1" 200 14330
+INFO 2025-09-11 16:50:16,682 django.server "GET /login/ HTTP/1.1" 200 12871
+INFO 2025-09-11 16:50:18,034 django.server "GET / HTTP/1.1" 200 23279
+INFO 2025-09-11 16:50:34,487 django.server "GET /quick-apply/ HTTP/1.1" 200 19266
+WARNING 2025-09-11 16:51:04,513 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 16:51:04,514 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 17:00:13,426 django.server "GET / HTTP/1.1" 200 23279
+WARNING 2025-09-11 17:00:13,469 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 17:00:13,470 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 17:00:13,592 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 17:00:13,594 django.server "GET /static/people/lucas.png HTTP/1.1" 200 4337
+INFO 2025-09-11 17:00:13,597 django.server "GET /static/people/kat.png HTTP/1.1" 200 4843
+INFO 2025-09-11 17:00:13,600 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-11 17:00:13,604 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 17:00:13,607 django.server "GET /static/people/anish.png HTTP/1.1" 200 6868
+INFO 2025-09-11 17:00:13,610 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-11 17:00:13,611 django.server "GET /static/people/casey.png HTTP/1.1" 200 8319
+INFO 2025-09-11 17:00:13,612 django.server "GET /static/css/cust_feedback.css HTTP/1.1" 200 1027
+INFO 2025-09-11 17:00:13,619 django.server "GET /static/bolt_platform.png HTTP/1.1" 200 179128
+INFO 2025-09-11 17:00:13,623 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+INFO 2025-09-11 17:00:13,930 django.server "GET /static/BOLT.png HTTP/1.1" 200 363002
+INFO 2025-09-11 17:00:14,060 django.server "GET /static/logo/lndvrlogo.png HTTP/1.1" 200 1242
+INFO 2025-09-11 17:00:16,139 django.server "GET /lenders/marketplace/ HTTP/1.1" 200 41803
+INFO 2025-09-11 17:00:16,177 django.server "GET /static/css/divider_mission.css HTTP/1.1" 200 974
+INFO 2025-09-11 17:00:16,178 django.server "GET /static/css/mainPage.css HTTP/1.1" 200 7802
+INFO 2025-09-11 17:00:16,179 django.server "GET /static/css/lenders_marketplace.css HTTP/1.1" 200 10490
+INFO 2025-09-11 17:00:16,179 django.server "GET /static/logo/logo_writting.png HTTP/1.1" 200 13510
+WARNING 2025-09-11 17:00:16,184 django.request Not Found: /.well-known/appspecific/com.chrome.devtools.json
+WARNING 2025-09-11 17:00:16,184 django.server "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 8851
+INFO 2025-09-11 17:00:16,187 django.server "GET /static/lenders_logo/channel.png HTTP/1.1" 200 3114
+INFO 2025-09-11 17:00:16,190 django.server "GET /static/lenders_logo/libertas.png HTTP/1.1" 200 3689
+INFO 2025-09-11 17:00:16,193 django.server "GET /static/lenders_logo/mulligan.png HTTP/1.1" 200 1231
+INFO 2025-09-11 17:00:16,195 django.server "GET /static/lenders_logo/peac.png HTTP/1.1" 200 8976
+INFO 2025-09-11 17:00:16,198 django.server "GET /static/js/swiper_cust.js HTTP/1.1" 200 533
+INFO 2025-09-11 17:00:16,198 django.server "GET /static/js/rotational_lenders.js HTTP/1.1" 200 7890
+INFO 2025-09-11 17:00:16,201 django.server "GET /static/js/message_fade.js HTTP/1.1" 200 415
+INFO 2025-09-11 17:00:16,204 django.server "GET /static/lenders_logo/finpart.png HTTP/1.1" 200 8296
+INFO 2025-09-11 17:00:16,206 django.server "GET /static/lenders_logo/headway.png HTTP/1.1" 200 9236
+INFO 2025-09-11 17:00:16,213 django.server "GET /static/lenders_logo/idea.png HTTP/1.1" 200 9974
+INFO 2025-09-11 17:00:16,214 django.server "GET /static/lenders_logo/iou.png HTTP/1.1" 200 3561
+INFO 2025-09-11 17:00:16,214 django.server "GET /static/lenders_logo/ondeck.png HTTP/1.1" 200 7264
+INFO 2025-09-11 17:00:16,217 django.server "GET /static/lenders_logo/kalamata.png HTTP/1.1" 200 7077
+INFO 2025-09-11 17:00:16,225 django.server "GET /static/lenders_logo/wallstreet.png HTTP/1.1" 200 4146
+INFO 2025-09-11 17:00:16,226 django.server "GET /static/lenders_logo/pirs.png HTTP/1.1" 200 19371
+INFO 2025-09-11 17:00:16,229 django.server "GET /static/lenders_logo/tabbank.png HTTP/1.1" 200 1047
+INFO 2025-09-11 17:00:16,229 django.server "GET /static/lenders_logo/northeastern.png HTTP/1.1" 200 26192
