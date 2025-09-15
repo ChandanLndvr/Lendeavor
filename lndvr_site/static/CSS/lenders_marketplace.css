@@ -392,6 +392,24 @@ svg.lines {
 }
 
 @media screen and (max-width: 768px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
   .marketplace-container {
     width: 100%;
     padding: 0 10px;
@@ -411,6 +429,24 @@ svg.lines {
 }
 
 @media screen and (max-width: 600px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
   .product-card-heading {
     flex-direction: column;
     gap: 8px;
@@ -429,6 +465,24 @@ svg.lines {
 }
 
 @media screen and (max-width: 480px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
   .spider-diagram {
     width: min(90vw, 350px);
     height: min(90vw, 350px);
@@ -441,6 +495,24 @@ svg.lines {
 }
 
 @media screen and (max-width: 320px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
   .spider-diagram {
     width: 260px;
     height: 260px;

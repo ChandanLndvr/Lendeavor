@@ -223,6 +223,13 @@ html, body {
     align-items: center; /* center horizontally */
 }
 
+.robot-circle-container a {
+    display: flex;
+    flex-direction: column; /* stack images vertically */
+    align-items: center;    /* center horizontally */
+    text-align: center;     /* for inline text if any */
+}
+
 .robot {
     width: 300px;
     height: auto;
@@ -239,12 +246,23 @@ html, body {
 }
 
 .bolt_platform {
+    display: flex;
     width: 280px;
     filter: drop-shadow(0 0 50px rgba(0, 195, 255, 0.6));
     animation: floatIdle 3s ease-in-out infinite alternate;
     animation-delay: 1s; /* half of duration = opposite phase */
+    justify-content: center;
+    align-items: center;
 }
 
+
+.text-center h4{
+    font-size: 2.2rem;
+}
+
+.center-content{
+    font-size: 1.1rem;
+}
 
 /* ---------- Animations ---------- */
 
@@ -321,11 +339,11 @@ html, body {
     }
 
     .navbar-brand {
-        margin: 0 auto;
+        margin-right: 10px;
     }
 
     .navbar-brand img {
-        width: 180px; /* optional: reduce logo size */
+        width: 200px; /* optional: reduce logo size */
         margin-left: 0 !important;
     }
 
@@ -358,6 +376,14 @@ html, body {
 
     .nav-link {
         white-space: nowrap;      /* prevent line breaks */
+    }
+
+    .text-center h4{
+        font-size: 22px;
+    }
+
+    .center-content{
+        font-size: 17px;
     }
 
     /* Robot circle container */

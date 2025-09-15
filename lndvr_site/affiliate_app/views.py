@@ -8,23 +8,26 @@ from myapp.custom_middleware.log_ip import log_action
 
 def affiliate(request):
     token = request.COOKIES.get('jwt_token')
-    user_email = None
+    # user_email = None
 
-    if token:
-        try:
-            payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
-            user_email = payload.get('email')
-        except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
-            user_email = None
+    # if token:
+    #     try:
+    #         payload = jwt.decode(token, settings.SECRET_KEY, algorithms=['HS256'])
+    #         user_email = payload.get('email')
+    #     except (jwt.ExpiredSignatureError, jwt.InvalidTokenError):
+    #         user_email = None
 
     if request.method == 'POST':
         log_action(request, "Affiliate application attempt", user_info=request.POST.get('email'))
-        if not user_email:
-            return render(request, 'affiliate.html', {
-                'current_page': 'affiliates',
-                'error': "You must be signed up and logged in to apply for the affiliate program.",
-                'form_data': request.POST
-            })
+
+        # Allow to fill the form only when user is logged in
+        
+        # if not user_email:
+        #     return render(request, 'affiliate.html', {
+        #         'current_page': 'affiliates',
+        #         'error': "You must be signed up and logged in to apply for the affiliate program.",
+        #         'form_data': request.POST
+        #     })
 
         cleaned_data = {
             'First_name': request.POST.get('first_name'),

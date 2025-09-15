@@ -41,3 +41,18 @@
   font-size: 3rem;
   font-weight: 100;
 }
+
+@media (max-width: 768px){
+
+  .page-header .page-title {
+    font-size: 28px !important;
+  }
+
+  .page-header .lead {
+    font-size: 17px !important;
+  }
+
+  .contact-card h4{
+    margin-bottom: 30px;
+  }
+}

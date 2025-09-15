@@ -112,7 +112,11 @@ html, body {
 /* ---------- Responsive ---------- */
 @media (max-width: 768px) {
     .heading-container h1 {
-        font-size: 2rem;
+        font-size: 28px;
+    }
+
+    .heading-container p{
+        font-size: 17px;
     }
 
     .news-table th,
