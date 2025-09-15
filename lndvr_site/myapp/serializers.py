@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import UserApplications
 from .models import SignUp
 from datetime import datetime
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 from .models import JobApplications, JobDetails, QuickApplication
 
 #--------------------- signup ----------------------
@@ -109,6 +111,10 @@ class UserApplicationsSerializer(serializers.ModelSerializer):
     def validate_Business_Email(self, value):
         if not value:
             raise serializers.ValidationError("Business email is required.")
+        try:
+            validate_email(value)
+        except ValidationError:
+            raise serializers.ValidationError("Enter a valid email address.")
         return value
 
     def validate_Phone_no(self, value):
@@ -192,9 +198,25 @@ class QuickApplicationSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Last name is required.")
         return value
     
+    def validate_Business_Email(self, value):
+        if not value:
+            raise serializers.ValidationError("Business email is required.")
+        try:
+            validate_email(value)
+        except ValidationError:
+            raise serializers.ValidationError("Enter a valid email address.")
+        return value
+    
     def validate_Credit_score(self, value):
         if not value:
             raise serializers.ValidationError("Credit score is required.")
+        return value
+    
+    def validate_Phone_no(self, value):
+        if not value.isdigit():
+            raise serializers.ValidationError("Phone number must contain digits only.")
+        if len(value) < 10:
+            raise serializers.ValidationError("Phone number is too short.")
         return value
     
     def validate_Monthly_Revenue(self, value):
