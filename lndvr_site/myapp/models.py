@@ -99,6 +99,7 @@ class QuickApplication(models.Model):
     Business_Start_date = models.CharField(max_length=7)
     Owner_First_Name = models.CharField(max_length=100)
     Owner_Last_Name = models.CharField(max_length=100)
+    Business_Email = models.EmailField()
     Phone_no = models.CharField(max_length=10)
     Credit_score = models.PositiveIntegerField()
     Monthly_Revenue = models.PositiveIntegerField()

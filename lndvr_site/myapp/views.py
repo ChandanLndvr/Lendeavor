@@ -8,6 +8,8 @@ from .models import PasswordResetToken
 import uuid
 from job_posting_app.models import JobDetails
 from datetime import date, timedelta
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 import jwt
 from datetime import datetime, timezone as dt_timezone
 from .utils.auth_utils import decode_jwt
@@ -352,8 +354,10 @@ def quick_apply(request):
             # Redirect with success message
             return redirect(f"{reverse('mainPage')}?message={message_text}")
         else:
-            return render(request, 'quick_apply.html', {'error': serializer.errors})
-    return render(request, "quick_apply_form.html", {'current_page':'quick_apply', 
+            return render(request, 'quick_apply_form.html', {'error': serializer.errors, 'form_data': data,
+                'current_page': 'quick_apply'})
+        
+    return render(request, "quick_apply_form.html", {'current_page':'quick_apply', 'form_data': {},
             'message': request.GET.get('message'),
             'error': request.GET.get('error')})
 
@@ -488,6 +492,7 @@ def job_applications(request, job_id):
                 )
 
             context['error'] = serializer.errors
+            context['form_data'] = request.POST
             return render(request, "job_apply.html", context)
 
         context['message'] = request.GET.get('message')
@@ -508,6 +513,16 @@ def contact(request):
             email = request.POST.get('email')
             subject = request.POST.get('subject', 'No Subject')
             msg_body = request.POST.get('message')
+
+            try:
+                validate_email(email)
+            except ValidationError:
+                # Email is invalid
+                return render(request, 'contactus.html', {
+                    'error': 'Invalid email address',
+                    'form_data': request.POST,
+                    'current_page': 'contact'
+                })
 
             body = f"From: {name} <{email}>\n\n{msg_body}"
 
@@ -641,6 +656,14 @@ def sell_business(request):
                 'Terms Accepted': 'Yes' if request.POST.get('terms') == 'on' else 'No'
             }
 
+            try:
+                validate_email(cleaned_data['Email'])
+            except:
+                return render(request, 'sell_business.html', {
+                    'error': 'Invalid email address',
+                    'form_data': request.POST,
+                    'current_page': 'contact'
+                })
             # Build HTML table rows with bold labels
             rows = ''.join(
                 f"<tr>"
@@ -700,7 +723,8 @@ def sell_business(request):
     return render(request, 'sell_business.html', {
         'current_page': 'sell_business',
         'message': request.GET.get('message'),
-        'error': request.GET.get('error')
+        'error': request.GET.get('error'),
+        'form_data': {}
     })
 
 

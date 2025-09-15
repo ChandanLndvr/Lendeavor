@@ -43,22 +43,22 @@
         {% csrf_token %}
         <div class="mb-3">
             <label class="form-label text-white">First Name:<span style="color:red;">*</span></label>
-            <input type='text' name="fname" class="fname" id="fname" required>
+            <input type='text' name="fname" class="fname" id="fname" value="{{form_data.fname|default:''}}" required>
         </div>
         <div class="mb-3">
             <label class="form-label text-white">Last Name:<span style="color:red;">*</span></label>
-            <input type='text' name="lname" class="lname" id="lname" required>
+            <input type='text' name="lname" class="lname" id="lname" value="{{form_data.lname|default:''}}" required>
         </div>
         <div class="mb-3">
             <label class="form-label text-white">Email:<span style="color:red;">*</span></label>
-            <input type='email' name="email" class="email" id="email" required>
+            <input type='email' name="email" class="email" id="email" value="{{form_data.email|default:''}}" required>
         </div>
 
         <div class="mb-3 form-group">
             <label class="form-label text-white">Phone Number<span style="color:red;">*</span></label>
             <div class="input-group">
                 <span class="input-group-text">+1</span>
-                <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" required>
+                <input type="tel" id="phone" name="phone" maxlength="10" class="form-control" placeholder="Phone number" pattern="\d{10}" value="{{form_data.phone|default:''}}" required>
             </div>
         </div>
 
@@ -66,12 +66,12 @@
             <label class="form-label text-white">Experience:<span style="color:red;">*</span></label>
             <select name="experience" class="form-select" required>
                 <option value="">-- Select Mode --</option>
-                <option value="fresher">Fresher</option>
-                <option value="1-2">1-2</option>
-                <option value="3-4">3-4</option>
-                <option value="5-7">5-7</option>
-                <option value="8-10">8-10</option>
-                <option value="10+">10+</option>
+                <option value="fresher" {% if form_data.experience == "fresher" %}selected{% endif %}>Fresher</option>
+                <option value="1-2" {% if form_data.experience == "1-2" %}selected{% endif %}>1-2</option>
+                <option value="3-4" {% if form_data.experience == "3-4" %}selected{% endif %}>3-4</option>
+                <option value="5-7" {% if form_data.experience == "5-7" %}selected{% endif %}>5-7</option>
+                <option value="8-10" {% if form_data.experience == "8-10" %}selected{% endif %}>8-10</option>
+                <option value="10+" {% if form_data.experience == "10+" %}selected{% endif %}>10+</option>
             </select>
         </div>
         {% comment %} <div class="mb-3">
@@ -101,8 +101,8 @@
         </div> {% endcomment %}
         <div class="mb-3">
             <label class="form-label text-white">Gender:<span style="color:red;">*</span></label><br>
-            <input type="radio" name="gender" value="male" required> <span>Male</span> &nbsp;
-            <input type="radio" name="gender" value="female"> <span>Female</span>
+            <input type="radio" name="gender" value="male" {% if form_data.gender == "male" %}checked{% endif %} required> <span>Male</span> &nbsp;
+            <input type="radio" name="gender" value="female" {% if form_data.gender == "female" %}checked{% endif %} > <span>Female</span>
         </div>
         <div class="mb-3" style="position:relative; max-width:850px;">
             <label class="form-label text-white">Resume<span style="color:red;">*</span></label>
