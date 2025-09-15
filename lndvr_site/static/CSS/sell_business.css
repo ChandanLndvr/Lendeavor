@@ -121,10 +121,14 @@
         padding: 20px;
     }
     .page-title {
-        font-size: 2rem !important;
+        font-size: 28px !important;
     }
 
     .page-header p{
-        font-size: 1rem !important;
+        font-size: 17px !important;
+    }
+
+    .title h1{
+        font-size: 22px;
     }
 }

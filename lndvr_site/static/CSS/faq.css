@@ -171,5 +171,13 @@ html, body {
     .faq-questions-card {
         order: 2;
     }
+
+    .faq-card h1{
+        font-size: 28px;
+    }
+
+    .faq-section h3{
+        font-size: 20px;
+    }
 }
 

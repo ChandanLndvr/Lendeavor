@@ -77,5 +77,14 @@
     .news-field .field-value {
         font-size: 0.95rem;
         line-height: 1.5;
+        text-align: left;
+    }
+
+    .news-header h1{
+        font-size: 28px;
+    }
+
+    .news-field label{
+        font-size: 22px;
     }
 }

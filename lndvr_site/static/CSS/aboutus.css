@@ -157,3 +157,19 @@ html, body {
   justify-content: center;
   align-items: center;
 }
+
+/* Mobile Responsive: Reduce heading and subtitle */
+@media (max-width: 768px) {
+  .page-header .page-title {
+    font-size: 28px; /* reduce h1 */
+  }
+
+  .page-header .page-subtitle {
+    font-size: 17px; /* reduce subtitle */
+  }
+
+  /* Optional: adjust section titles too */
+  .section-title {
+    font-size: 28px; /* reduce h2 for mobile */
+  }
+}

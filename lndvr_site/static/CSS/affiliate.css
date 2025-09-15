@@ -223,13 +223,13 @@ form {
         margin-top:20px;
     }
     
-    .blurred-heading h1 {
-        font-size: 2rem !important;   /* Smaller font size */
+    .blurred-heading .main-heading {
+        font-size: 28px !important;   /* Smaller font size */
     }
     
     .blurred-heading p {
         margin: 0.8rem auto 1rem auto;
-        font-size: 1rem;            /* Smaller text */
+        font-size: 17px !important;            /* Smaller text */
     }
     
     .title, .join-title {

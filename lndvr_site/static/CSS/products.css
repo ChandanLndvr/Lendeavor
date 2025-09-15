@@ -175,11 +175,96 @@
 }
 
 @media (max-width: 768px) {
+    /* Stack product card vertically and center */
     .product-card-new {
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center; /* center horizontally */
+        text-align: center;
     }
+
+    /* Heading and subheading */
+    .heading .page-title {
+        font-size: 28px !important;
+    }
+
+    .heading .main-heading {
+        font-size: 20px !important;
+    }
+
+    .heading p {
+        font-size: 17px !important;
+    }
+
+    /* Left card content */
+    .product-card-left h5 {
+        font-size: 20px !important;
+    }
+
+    .product-card-left p {
+        font-size: 15px !important;
+    }
+
+    .product-card-buttons{
+        width: 290px;
+    }
+
+    .btn-offer{
+        width: 290px;
+        text-align: center;
+    }
+
+    .product-card-left {
+        flex: 1 1 250px;
+        text-align: left;
+    }
+
     .product-card-right {
-        justify-content: flex-start;
+        flex: 1 1 160px;
+    }
+
+    .product-card-new{
+        gap: 0;
+    }
+
+    /* Right card content */
+    .product-card-right {
+        justify-content: center; 
+        text-align: center;      
+    }
+
+    .product-card-right .product-stat {
+        margin-bottom: 10px;
+    }
+
+    /* Container for stats */
+    .product-card-right {
+        display: flex;
+        flex-wrap: wrap; 
+        justify-content: space-between; 
+        gap: 10px; 
+        margin-top: 10px; 
+    }
+
+    /* Each stat box */
+    .product-stat {
+        flex: 1 1 30%; 
+        min-width: 90px; 
+        text-align: center;
+        margin-bottom: 0; 
+    }
+
+    /* Label and value spacing */
+    .product-stat .label {
+        display: block;
+        font-size: 14px;
+        color: #aaa;
+        margin-bottom: 5px;
+    }
+
+    .product-stat .value {
+        font-size: 16px;
+        font-weight: 600;
+        color: white;
     }
 }
+
