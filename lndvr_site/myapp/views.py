@@ -300,7 +300,6 @@ def quick_apply(request):
             'Owner_First_Name': data.get('fname'),
             'Owner_Last_Name': data.get('lname'),
             'Business_Email': data.get('bemail'),
-            'Credit_score': data.get('credit_score'),
             'Phone_no': data.get('phone'),'Monthly_Revenue': data.get('monthly_revenue'),
             'Funds_Requested': data.get('fund'),
             'Existing_loans': data.get('existing_loans'),

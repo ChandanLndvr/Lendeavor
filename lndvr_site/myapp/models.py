@@ -101,7 +101,6 @@ class QuickApplication(models.Model):
     Owner_Last_Name = models.CharField(max_length=100)
     Business_Email = models.EmailField()
     Phone_no = models.CharField(max_length=10)
-    Credit_score = models.PositiveIntegerField()
     Monthly_Revenue = models.PositiveIntegerField()
     Funds_Requested = models.PositiveIntegerField()
     Existing_loans = models.CharField(max_length=5)

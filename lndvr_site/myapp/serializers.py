@@ -207,11 +207,6 @@ class QuickApplicationSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError("Enter a valid email address.")
         return value
     
-    def validate_Credit_score(self, value):
-        if not value:
-            raise serializers.ValidationError("Credit score is required.")
-        return value
-    
     def validate_Phone_no(self, value):
         if not value.isdigit():
             raise serializers.ValidationError("Phone number must contain digits only.")

@@ -71,18 +71,6 @@
                     </div>
                 </div>
 
-                <div class="row mb-3">
-                    <div class="col-md-12">
-                        <label class="form-label">Credit Score<span style="color: red;">*</span></label>
-                        <input type="number" id="credit_score" name="credit_score" maxlength="3" placeholder="Credit Score" min="300" 
-                                max="850"
-                                value="{{form_data.credit_score|default_if_none:''}}" 
-                                step="1"
-                                oninput="this.setCustomValidity('');"
-                                oninvalid="this.setCustomValidity('Please enter a credit score between 300 and 850.');" required>
-                    </div>
-                </div>
-
                 <div class="text-center">
                     <button type="button" class="btn btn-secondary mt-3 back-btn">◀ Back</button>
                     <button type="button" class="btn btn-primary mt-3 next-btn">Continue ▶</button>
