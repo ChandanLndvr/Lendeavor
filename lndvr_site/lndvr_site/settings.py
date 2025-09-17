@@ -120,31 +120,43 @@ USE_I18N = True
 
 USE_TZ = True
 
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
-
-STATIC_URL = 'static/'
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
-# Maunally added static files
+
+# --------------------- static files setting for development and testing in your own local system -------------------#
+
+STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),  # global static folder (optional)
 ]
 
-# Production static files (for Docker)
-# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # <-- THIS IS REQUIRED
-
 # Media configuration
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'uploaded_files'
+
+#-------------------------------------------------------------------------------------------------------------------#
+
+# --------------------- static files setting, while working with docker -------------------#
+
+# STATIC_URL = '/static/'
+
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static'),  # global static folder (optional)
+# ]
+
+# STATIC_ROOT = '/app/staticfiles'  # FOR DOCKER CONFIG
+
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = '/app/media' # for docker
+
+#------------------------------------------------------------------------------------------#
 
 # Manually added
 
