@@ -1,0 +1,58 @@
+.contact-card {
+  background: rgba(41, 40, 40, 0.05);
+  backdrop-filter: blur(3px);
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.contact-card input,
+.contact-card textarea {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: white;
+  padding: 10px;
+  outline: none;
+}
+
+.contact-section{
+  padding-top: 60px;
+}
+
+/* When input or textarea is focused */
+.contact-card input:focus,
+.contact-card textarea:focus {
+    background-color: #fff;
+    color: #000;
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.page-header{
+  background: rgba(41, 40, 40, 0.05);
+  backdrop-filter: blur(3px);
+  color: white;
+  transition: box-shadow 0.3s ease;
+}
+
+.page-title{
+  font-size: 3rem;
+  font-weight: 100;
+}
+
+@media (max-width: 768px){
+
+  .page-header .page-title {
+    font-size: 28px !important;
+  }
+
+  .page-header .lead {
+    font-size: 17px !important;
+  }
+
+  .contact-card h4{
+    margin-bottom: 30px;
+  }
+}

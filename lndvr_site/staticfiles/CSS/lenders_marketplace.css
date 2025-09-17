@@ -1,0 +1,525 @@
+/* ---------- Heading ---------- */
+.heading {
+  background: rgba(19, 18, 18, 0.05);
+  backdrop-filter: blur(4px);
+  max-width: 95%;
+  text-align: center;
+  margin: 20px auto 50px auto;
+  padding: 60px 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 100;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.subheading {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.page-divider {
+  border: none;
+  height: 5px;
+  background: linear-gradient(90deg, #00f2ff, #00ff9d, #c8ff00);
+  width: 100%;
+  margin: 40px auto;
+  display: block;
+}
+
+/* ---------- Container ---------- */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* ---------- RESPONSIVE TABLE STYLES ---------- */
+.table-container {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(8px);
+  margin-bottom: 60px;
+  max-width: 98%;
+  width: 98%;
+  max-height: 480px;
+  overflow-y: auto;
+  overflow-x: auto;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+  color: #e0e0e0;
+  min-width: 600px;
+}
+
+th, td {
+  padding: 18px 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  vertical-align: middle;
+  word-break: break-word;
+  height: 60px;
+}
+
+th {
+  background: rgba(0, 186, 255, 1);
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+td.Lender_name { padding-left: 4%; }
+td.Funding_amount { padding-left: 3%; }
+td.Min_credit_score { padding-left: 5%; }
+td.Time_to_fund { padding-left: 3%; }
+td.Funding_type { padding-left: 10%; }
+
+tr:hover {
+  background: rgba(255, 255, 255, 0.08);
+  transition: background 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+  .table-container { width: 100%; max-width: 100%; border-radius: 6px; }
+  table { font-size: 0.9rem; min-width: 500px; }
+  th, td { padding: 12px 16px; height: 50px; }
+  th { font-size: 0.85rem; }
+}
+
+@media screen and (max-width: 480px) {
+  .table-container { margin: 0 10px 30px 10px; width: calc(100% - 20px); }
+  table { font-size: 0.8rem; min-width: 450px; }
+  th, td { padding: 10px 12px; height: 45px; }
+  th { font-size: 0.8rem; }
+}
+
+/* ---------- VANTA BACKGROUND FIX ---------- */
+body, html {
+  margin: 0; padding: 0;
+  width: 100%; height: 100%;
+  overflow-x: hidden;
+}
+
+#vanta-bg {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: -1;
+}
+
+/* ---------- SPIDER DIAGRAM ---------- */
+.marketplace-container {
+  display: flex; align-items: center; justify-content: center;
+  margin-right: 70px; gap: 20px; flex-wrap: wrap;
+}
+
+.spider-diagram {
+  position: relative;
+  width: min(70vw, 900px);
+  height: min(70vw, 900px);
+  min-width: 400px;
+  min-height: 400px;
+  perspective: 1000px;
+  margin: 0;
+  flex-shrink: 0;
+}
+
+svg.lines {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none; z-index: 1;
+}
+
+.lender {
+  position: absolute;
+  width: clamp(60px, 8vw, 110px);
+  height: clamp(60px, 8vw, 110px);
+  color: #f0f0f0;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(var(--x, 0), var(--y, 0));
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: clamp(0.6rem, 1.4vw, 1rem);
+  font-weight: 600;
+  padding: 5px;
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 186, 255, 0.5);
+  text-shadow: 0 0 7px rgba(0,0,0,0.8);
+  user-select: none;
+}
+
+.lender.central {
+  width: clamp(80px, 10vw, 130px);
+  height: clamp(80px, 10vw, 130px);
+  font-size: clamp(0.8rem, 1.8vw, 1.1rem);
+  background: linear-gradient(135deg, #00ff9d, #00c3ff);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff66;
+}
+
+.lender:hover {
+  transform: translate(var(--x, 0), var(--y, 0)) scale(1.1) rotateX(10deg);
+  box-shadow: 0 0 40px white;
+}
+
+.lender.central:hover {
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 30px #00f2ff, 0 0 60px #00f2ff66;
+}
+
+/* lender colors */
+#iou { background: linear-gradient(135deg, #00f2ff, #007bff); }
+#kalamata { background: linear-gradient(135deg, #ff00f2, #8b00ff); }
+#pirs { background: linear-gradient(135deg, #00ff95, #00ffcc); }
+#wallstreet { background: linear-gradient(135deg, #ff7b00, #ffcc00); }
+#channel { background: linear-gradient(135deg, #ff0033, #ff6600); }
+#libertas { background: linear-gradient(135deg, #ff00aa, #ff55ff); }
+#peac { background: linear-gradient(135deg, #5500ff, #00aaff); }
+#mulligan { background: linear-gradient(135deg, #00ffaa, #00ff55); }
+#northeastern { background: linear-gradient(135deg, #aa00ff, #ff00aa); }
+#tabbank { background: linear-gradient(135deg, #00ffff, #00ffaa); }
+#idea { background: linear-gradient(135deg, #ff4444, #ff8800); }
+#headway { background: linear-gradient(135deg, #4488ff, #44ffaa); }
+#ondeck { background: linear-gradient(135deg, #88ff44, #44ff88); }
+#finpart { background: linear-gradient(135deg, #ffaa00, #ff5500); }
+
+.lender-info-panel {
+  max-width: 500px; min-width: 300px;
+  flex: 1 0 300px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  min-height: 180px;
+  padding: 20px;
+}
+
+.lender-info-panel p {
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  line-height: 1.8; color: grey; font-weight: 400;
+}
+
+.lender-info-panel p strong { color: white; }
+
+.lender-info-panel h2 {
+  color: #00f2ff; margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3rem);
+  text-decoration: underline;
+}
+
+.funding-heading {
+  margin-left: 70px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(8px);
+  padding: 5px 0;
+  max-width: 1260px;
+}
+
+.title { margin-bottom: 30px; }
+
+/* ---------- PRODUCT CARD STYLES ---------- */
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 30px auto;
+  padding: 10px;
+  max-width: 1300px;
+}
+
+.product-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  width: 100%;
+  align-items: center;
+}
+
+.product-card-heading {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0 20px;
+  min-width: 220px;
+  max-width: 400px;
+  width: 100%;
+  border-right: 2px solid #00ff55;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(6px);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.product-card-heading img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.product-card-heading h3 {
+  font-size: clamp(1.4rem, 3vw, 1.8rem);
+  font-weight: 700;
+  color: #00f2ff;
+  margin: 0;
+  text-decoration: underline;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  white-space: normal;
+}
+
+.product-card-new {
+  background: rgba(53, 39, 39, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 900px;
+  width: 100%;
+  padding: 30px 40px 40px 40px;
+  border-bottom: 2px solid #00f2ff;
+  flex-shrink: 1;
+}
+
+.product-card-middle {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.product-stat {
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+  border-left: 2px solid #00f2ff;
+  border-right: 2px solid #00f2ff;
+  min-height: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-stat .label {
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #bbb;
+  margin-bottom: 8px;
+}
+.product-stat .value {
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  font-weight: 600;
+  color: white;
+}
+
+.product-card-buttons {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+  margin-top: 10px;
+}
+
+.btn-offer {
+  display: inline-block;
+  padding: 12px 20px;
+  background: linear-gradient(90deg, #00f2ff, #007bff, #00f2ff);
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  max-width: none;
+  text-align: center;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  transition: background-color 0.3s ease;
+}
+.btn-offer:hover {
+  background: rgba(0, 186, 255, 1);
+}
+
+/* ---------- RESPONSIVE FIXES ---------- */
+@media screen and (max-width: 1024px) {
+  .marketplace-container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0;
+    gap: 20px;
+  }
+  .spider-diagram,
+  .lender-info-panel {
+    margin: 0 auto;
+  }
+
+  .product-card-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .product-card-heading {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    border-right: none;
+    margin-bottom: 15px;
+    padding: 0 10px;
+  }
+  .product-card-middle {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product-card-new {
+    max-width: 100%;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
+  .marketplace-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+  .spider-diagram {
+    width: min(90vw, 450px);
+    height: min(90vw, 450px);
+    min-width: 300px;
+    min-height: 300px;
+    margin: 0 auto;
+  }
+  .lender-info-panel {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 600px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
+  .product-card-heading {
+    flex-direction: column;
+    gap: 8px;
+    padding: 0;
+  }
+  .product-card-middle {
+    grid-template-columns: 1fr;
+  }
+  .product-card-new {
+    padding: 15px;
+  }
+  .product-stat {
+    min-height: 60px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
+  .spider-diagram {
+    width: min(90vw, 350px);
+    height: min(90vw, 350px);
+    min-width: 280px;
+    min-height: 280px;
+  }
+  .lender-info-panel {
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  .page-title{
+    font-size: 28px;
+  }
+
+  .subheading{
+    font-size: 17px;
+  }
+
+  .title h1{
+    font-size: 22px;
+  }
+
+  .funding-heading{
+    text-align: center;
+    margin-left:0;
+  }
+
+  .spider-diagram {
+    width: 260px;
+    height: 260px;
+    min-width: 260px;
+    min-height: 260px;
+  }
+  .lender {
+    font-size: 0.5rem;
+  }
+}

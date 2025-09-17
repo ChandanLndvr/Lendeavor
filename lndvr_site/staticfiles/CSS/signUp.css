@@ -1,0 +1,33 @@
+.btn.d-flex.align-items-center {
+    display: flex !important;      
+    flex-direction: row !important; 
+    align-items: center !important; 
+    white-space: nowrap;            
+}
+
+.btn.d-flex.align-items-center i {
+    display: inline-block !important;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    color: #fff;
+}
+
+.card input,
+.card label {
+    color: #fff;
+}
+
+.card input {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #fff;
+}

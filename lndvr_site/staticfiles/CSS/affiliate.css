@@ -1,0 +1,288 @@
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+}
+
+
+.page-header {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 95%;
+    margin: 40px auto 10px auto;
+    padding: 5px 20px 10px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;
+}
+
+/* Hero Section */
+/* .heading-container {
+    display: flex;
+    padding: 2rem 12rem;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+} */
+
+.blurred-heading {
+    text-align: center;
+    background: rgba(19, 18, 18, 0.05);
+    backdrop-filter: blur(4px);
+    max-width: 1000px;
+    margin: 10px auto 15px auto;  /* Reduced margins */
+    padding: 10px 20px 5px;      /* Reduced padding */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: block;  
+}
+
+.blurred-heading p {
+    margin: 1rem auto 0.5rem auto;  /* Reduced bottom margin */
+    text-align: center;
+    display: block;                 /* Changed from inline-block to block */
+    font-weight: 300;
+    width: 100%;                    /* Ensure full width for proper centering */
+}
+
+/* Titles: How does it work? / Join our affiliate */
+.title, .join-title {
+    display: block;
+    text-align: center;
+    max-width: 1000px;
+    margin: 40px auto;        /* Reduced from 50px */
+    background: linear-gradient(135deg, #00ff9d, #00c3ff, #00ff9d); 
+    /* background: linear-gradient(90deg,  #00f7ff, #0084ff, #00f7ff); */
+    text-decoration: underline;
+    padding: 1rem;
+}
+
+.title h1, .join-title h1 {
+    color: white;
+    margin: 0;
+    font-size: 2rem;
+    text-shadow: 
+        0 0 5px rgba(10,10,10,0.6),
+        0 0 10px rgba(20,20,20,0.6),
+        0 0 20px rgba(7,7,7,0.6);
+}
+
+/* Affiliate Image */
+.affiliate-image {
+    max-width: 1000px;
+    width: 100%;
+    background: rgba(24, 23, 23, 0.05);
+    backdrop-filter: blur(1px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem auto;      /* Reduced from 2rem */
+    padding: 1.5rem;          /* Reduced from 2rem */
+    min-height: 250px;        /* Reduced from 300px */
+}
+
+.affiliate-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Affiliate Form Card */
+.nested-info {
+    background: rgba(24, 23, 23, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 1.5rem auto;      /* Reduced from 2rem */
+    padding: 1.5rem;          /* Reduced from 2rem */
+}
+
+/* Form Grid */
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin: auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group.full-width {
+    grid-column: span 2;
+}
+
+.form-group label {
+    margin-bottom: 0.3rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* Input group text (+1 prefix) */
+.input-group-text {
+    background: rgba(255, 255, 255, 0.1); /* transparent like other inputs */
+    color: #ffffff;                       /* white text */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px 0 0 8px;           /* rounded left side only */
+}
+
+/* Phone input field */
+.input-group .form-control {
+    background: rgba(255, 255, 255, 0.1); /* match other inputs */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;                    /* merge with prefix */
+    border-radius: 0 8px 8px 0;           /* rounded right side only */
+}
+
+/* Placeholder styling */
+.input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group input[type="url"] {
+    padding: 0.6rem 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: #fff;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+}
+
+.form-group input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.form-group input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-primary {
+    grid-column: span 2;
+    background-color: #007bff;
+    border: none;
+    padding: 0.7rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+    width: 100%;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    form {
+        grid-template-columns: 1fr;
+    }
+    .form-group,
+    .form-group.full-width,
+    .btn-primary {
+        grid-column: span 1; /* Changed from span 2 to span 1 */
+    }
+}
+
+/* Mobile specific adjustments */
+@media (max-width: 768px) {
+    .container{
+        padding: 0rem 1.0rem;    /* Further reduced padding */
+        margin-top:20px;
+    }
+    
+    .blurred-heading .main-heading {
+        font-size: 28px !important;   /* Smaller font size */
+    }
+    
+    .blurred-heading p {
+        margin: 0.8rem auto 1rem auto;
+        font-size: 17px !important;            /* Smaller text */
+    }
+    
+    .title, .join-title {
+        margin-top: 45px;
+        margin-bottom:20px;
+        padding: 0.8rem;              /* Smaller padding */
+    }
+    
+    .title h1, .join-title h1 {
+        font-size: 1.5rem;            /* Smaller headings */
+    }
+    
+    .affiliate-image {
+        margin: 1rem auto;
+        padding: 1rem;
+        min-height: 200px;
+    }
+    
+    .nested-info {
+        margin: 1rem auto;
+        padding: 1rem;
+    }
+    
+    form {
+        gap: 0.8rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    
+    .blurred-heading h1 {
+        font-size: 2rem;
+    }
+
+    .join-title {
+        margin-top: 30px;
+        margin-bottom:20px;
+        padding: 0.8rem;
+    }
+    
+    .title {
+        margin-top: 45px;
+        margin-bottom:20px;
+        padding: 0.8rem; 
+    }
+    
+    .title h1, .join-title h1 {
+        font-size: 1.2rem;
+    }
+
+    .blurred-heading p {
+        margin: 0.8rem auto 1rem auto;
+        font-size: 1rem;
+    }
+}

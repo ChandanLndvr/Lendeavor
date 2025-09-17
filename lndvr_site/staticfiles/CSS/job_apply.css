@@ -1,0 +1,125 @@
+/* Container styling */
+.job-application-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    max-width: 850px;
+    padding: 40px 30px;
+    margin: 50px auto;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Headings */
+.job-application-container h3 {
+    font-size: 35px;
+    color: #00f2ff;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Paragraphs */
+.job-application-container p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 16px;
+    letter-spacing: 0.3px;
+}
+
+
+/* Label styling */
+.job-application-container label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 500;
+    color: #ffffff;
+}
+
+/* Input, select, textarea */
+.job-application-container input[type="text"],
+.job-application-container input[type="email"],
+.job-application-container input[type="number"],
+.job-application-container select,
+.job-application-container textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+}
+
+.job-application-container input::placeholder {
+    color: #ccc;
+}
+
+/* Input group text (+1 prefix) */
+.input-group-text {
+    background: rgba(255, 255, 255, 0.1); /* transparent like other inputs */
+    color: #ffffff;                       /* white text */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px 0 0 8px;           /* rounded left side only */
+}
+
+/* Phone input field */
+.input-group .form-control {
+    background: rgba(255, 255, 255, 0.1); /* match other inputs */
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: none;                    /* merge with prefix */
+    border-radius: 0 8px 8px 0;           /* rounded right side only */
+}
+
+/* Placeholder styling */
+.input-group .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.job-application-container select:focus{
+    background: rgba(255, 255, 255, 0.1); /* still transparent */
+    backdrop-filter: blur(3px);
+    color:black;
+}
+
+/* On focus */
+.job-application-container input:focus,
+.job-application-container text:focus,
+.job-application-container tel:focus,
+.job-application-container textarea:focus {
+    background: rgba(255, 255, 255, 0.15); /* still transparent */
+    backdrop-filter: blur(3px);
+    color: #ffffff; /* keep white text */
+    border-color: #00f2ff;
+    box-shadow: 0 0 6px rgba(0, 242, 255, 0.4);
+}
+
+/* Radio buttons */
+.job-application-container input[type="radio"] {
+    margin-right: 5px;
+    transform: scale(1.1);
+    accent-color: #00f2ff;
+}
+
+.job-application-container .radio-group {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Submit button */
+.job-application-container button[type="submit"]:hover {
+    background: linear-gradient(90deg, #00d9e6, #0056b3);
+}
+
+/* Responsive tweaks */
+@media screen and (max-width: 576px) {
+    .job-application-container {
+        padding: 25px 20px;
+    }
+}
